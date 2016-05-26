@@ -1,0 +1,22 @@
+Package: letiRmisc
+Title: LetiR Miscellaneous Functions
+Version: 0.1
+Authors@R: c(
+  person("Kevin", "Cazelles", email = "kevin.cazelles@um2.fr", role = c("aut", "cre")),
+  person("David", "Beauchesne", role = c("aut")),
+  person("Nicolas", "Casajus", role = c("aut")),
+  person("Steve", "Vissault", role = c("aut"))
+  )
+Description: Contains a set of R functions we find useful.
+Depends:
+    R (>= 3.2.3)
+License: GPL-3
+LazyData: true
+Imports:
+    magrittr
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1

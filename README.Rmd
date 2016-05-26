@@ -1,0 +1,54 @@
+---
+title: "'letiRmisc': miscellaneous functions to facilitate our R practice"
+output:
+    md_document:
+        variant: markdown_github
+---
+
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  fig.path = "inst/assets/img/",
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width=4,
+  fig.height=4
+)
+```
+
+
+# Description
+
+- Set of useful R functions.
+
+- Functions are written using Camel case (e.g. `findThem()`)
+
+
+
+# Install
+
+To install the package, use the [*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
+
+```{r eval=FALSE}
+if (!require("devtools")) install.packages("devtools")
+devtools::install_github("KevCaz/letiRmisc")
+```
+
+Then, load it:
+
+```{r eval=FALSE}
+library(letiRmisc)
+```
+
+
+# Main features
+
+
+
+
+
+# To do list
+
+1. No plan at current stage.

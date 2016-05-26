@@ -1,0 +1,15 @@
+# History files
+.Rhistory
+.Rapp.history
+
+
+# RStudio files
+.Rproj.user/
+
+
+
+# Others
+.DS_Store
+Makefile
+pkgup2date.R
+record_updates.txt

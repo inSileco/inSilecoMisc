@@ -1,0 +1,5 @@
+makefile
+pkg2date.R
+README.md
+README.rmd
+vignettes/*
