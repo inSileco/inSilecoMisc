@@ -11,6 +11,7 @@
 #' @return
 #' A dataframe with duplicated elements.
 #' @importFrom magrittr %>%
+#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' data(iris, package='datasets')
@@ -21,9 +22,9 @@
 #' @describeIn A dataframe with duplicated rows.
 duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
-    if (class(pos) == "character") 
+    if (class(pos) == "character")
         ord <- c(rownames(x), pos) else ord <- c(1:nrow(x), pos)
-    if (!append) 
+    if (!append)
         ord %<>% sort
     return(x[ord, ])
 }
@@ -31,9 +32,9 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
 #' @describeIn A dataframe with duplicated columns.
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
-    if (class(pos) == "character") 
+    if (class(pos) == "character")
         ord <- c(colnames(x), pos) else ord <- c(1:ncol(x), pos)
-    if (!append) 
+    if (!append)
         ord %<>% sort
     return(x[, ord])
 }

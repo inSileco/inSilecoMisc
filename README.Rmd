@@ -30,13 +30,13 @@ knitr::opts_chunk$set(
 
 
 
-# Install
+# Installation
 
-To install the package, use the [*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
+Use the [*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
 
 ```{r eval=FALSE}
 if (!require("devtools")) install.packages("devtools")
-devtools::install_github("KevCaz/letiRmisc")
+devtools::install_github("letiR/letiRmisc")
 ```
 
 Then, load it:
@@ -46,9 +46,12 @@ library(letiRmisc)
 ```
 
 
+
 # Main features
 
-
+```{r eval=FALSE}
+mycat <- categorize(stats::runif(40), categ=seq(0.25,0.5,0.75))
+```
 
 
 

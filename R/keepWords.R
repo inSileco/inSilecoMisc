@@ -13,6 +13,7 @@
 #'
 #' @return A vector of the selected words concatened for each string.
 #' @importFrom magrittr %>%
+#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
@@ -22,17 +23,17 @@
 
 
 keepWords <- function(string, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
-    ## 
-    if (punct.rm) 
+    ##
+    if (punct.rm)
         string %<>% gsub(pattern = "[[:punct:]]", replacement = "")
-    ## 
+    ##
     out <- string %>% stringsplit(split = " ") %>% lapply(FUN = function(x) x[slc])
-    ## 
-    if (na.rm) 
+    ##
+    if (na.rm)
         out %<>% lapply(function(x) x[!is.na(x)])
-    ## 
-    if (!is.null(collapse)) 
+    ##
+    if (!is.null(collapse))
         out %<>% lapply(paste, collapse = collapse)
-    ## 
+    ##
     return(out)
 }
