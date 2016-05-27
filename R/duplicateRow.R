@@ -27,7 +27,7 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     return(x[ord, ])
 }
 
-#' @describeIn duplicateCol A dataframe with duplicated columns.
+#' @describeIn duplicateRow A dataframe with duplicated columns.
 #' @export
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
