@@ -16,15 +16,15 @@ if (!as.numeric(args[2])) {
   ## format the code
   cat("tidy ........")
   formatR::tidy_dir("./R")
-  cat("DONE\n")
+  cat("====> DONE\n")
   ## load the package
   cat("load ........")
   devtools::load_all(".")
-  cat("DONE\n")
+  cat("====> DONE\n")
   ## document the package
   cat("document .... DONE")
   devtools::document(".")
-  cat("DONE\n")
+  cat("====> DONE\n")
   ## recording update
   cat(date(), "   DONE \n", file = "record_updates.txt", append=TRUE)
 }

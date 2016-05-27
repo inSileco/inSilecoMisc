@@ -10,6 +10,4 @@
 
 # Others
 .DS_Store
-Makefile
-pkgup2date.R
 record_updates.txt
