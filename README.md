@@ -3,6 +3,8 @@ letiRmisc
 
 [![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
 
+[![codecov](https://codecov.io/gh/letiR/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/letiR/letiRmisc)
+
 -   Set of useful R functions.
 
 -   Functions are written using Camel case (e.g. `keepWords()`)
