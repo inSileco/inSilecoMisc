@@ -3,4 +3,5 @@
 export(categorize)
 export(duplicateRow)
 export(keepWords)
+importFrom(magrittr,"%<>%")
 importFrom(magrittr,"%>%")
