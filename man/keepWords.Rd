@@ -26,9 +26,9 @@ Extract words based on their position in a character string, vectorised over \co
 }
 \examples{
 strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-keepWord(strex)
-keepWord(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE)
-keepWord(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
+keepWords(strex)
+keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE)
+keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
 }
 \author{
 Kevin Cazelles
