@@ -7,7 +7,7 @@
 #' @param x a data.frame.
 #' @param id.el identity of the elements to be duplicated.
 #' @param times number of times elements are duplicated. Could be a vector of the same length as id.el.
-#' @param append A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe.
+#' @param append A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce \code{NA}.
 #' @importFrom magrittr %>%
 #' @importFrom magrittr %<>%
 #' @export

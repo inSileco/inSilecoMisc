@@ -16,7 +16,7 @@ duplicateCol(x, id.el = 1, times = 1, append = FALSE)
 
 \item{times}{number of times elements are duplicated. Could be a vector of the same length as id.el.}
 
-\item{append}{A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe.}
+\item{append}{A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce \code{NA}.}
 }
 \description{
 Duplicates rows and colmns of a given a dataframe.
