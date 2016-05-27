@@ -18,6 +18,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
+
+
 
 # Description
 
