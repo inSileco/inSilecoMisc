@@ -1,5 +1,8 @@
-makefile
-pkg2date.R
-README.md
-README.rmd
-vignettes/*
+^\.Rproj\.user$
+^.*\.Rproj$
+^\.travis\.yml$
+^\.gitignore
+^Makefile
+^pkgup2date\.R
+^pkg2date\.R
+^README\.rmd
