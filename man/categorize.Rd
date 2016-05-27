@@ -4,7 +4,7 @@
 \alias{categorize}
 \title{Assign categories to a vector of values.}
 \usage{
-categorize(x, categ, lower = FALSE, sort_categ = FALSE)
+categorize(x, categ, lower = FALSE)
 }
 \arguments{
 \item{x}{A numeric, complex, character or logical vector.}
@@ -12,14 +12,12 @@ categorize(x, categ, lower = FALSE, sort_categ = FALSE)
 \item{categ}{A set of threshold that are used to assign categories.}
 
 \item{lower}{A logical, if TRUE elements equal to a given threshold values are included in the lower category, default is FALSE.}
-
-\item{sort_categ}{A logical indicating whether categories should be sorted.}
 }
 \value{
 A vector countaining values standing for categories into which elements of x have fallen.
 }
 \description{
-Assigns a category to each element of a vector for a given set of threshold values.
+Assigns a category to each element of a vector for a given set of threshold values. Note that category are always sorted.
 }
 \examples{
 categorize(stats::runif(40), categ=c(0.5,0.75))

@@ -1,13 +1,12 @@
 #' Assign categories to a vector of values.
 #'
-#' Assigns a category to each element of a vector for a given set of threshold values.
+#' Assigns a category to each element of a vector for a given set of threshold values. Note that category are always sorted.
 #'
 #' @author
 #' Kevin Cazelles
 #' @param x A numeric, complex, character or logical vector.
 #' @param categ A set of threshold that are used to assign categories.
 #' @param lower A logical, if TRUE elements equal to a given threshold values are included in the lower category, default is FALSE.
-#' @param sort_categ A logical indicating whether categories should be sorted.
 #' @return
 #' A vector countaining values standing for categories into which elements of x have fallen.
 #' @importFrom magrittr %>%
@@ -20,10 +19,9 @@
 #' categorize(LETTERS[floor(5*stats::runif(20))+1], categ=LETTERS[1:5], lower=TRUE)
 
 
-categorize <- function(x, categ, lower = FALSE, sort_categ = FALSE) {
-    categ %<>% unique
-    if (sort_categ) 
-        categ %<>% sort
+categorize <- function(x, categ, lower = FALSE) {
+    ## 
+    categ %<>% unique %>% sort
     ## 
     out <- rep(1, length(x))
     ## 
