@@ -9,22 +9,29 @@ args <- commandArgs(trailingOnly = TRUE)
 setwd(args[1])
 
 ## update README / documentation
+decor <- function(){
+  cat("DONE  ", paste(rep("=",60), collapse=""), "\n")
+}
+
 if (!as.numeric(args[2])) {
   ##
   rmarkdown::render("README.Rmd", "all", quiet=TRUE)
 } else {
   ## format the code
-  cat("tidy ........")
+  cat("tidying ........")
   formatR::tidy_dir("./R")
-  cat("====> DONE\n")
+  decor()
   ## load the package
-  cat("load ........")
+  cat("loading ........")
   devtools::load_all(".")
-  cat("====> DONE\n")
+  decor()
   ## document the package
-  cat("document .... DONE")
+  cat("documenting ....")
   devtools::document(".")
-  cat("====> DONE\n")
+  decor()
+  ## testing the code
+  cat("testing ........")
+  devtools::test()
   ## recording update
   cat(date(), "   DONE \n", file = "record_updates.txt", append=TRUE)
 }
