@@ -15,9 +15,6 @@ duplicateRow(x, id.el = 1, times = 1, append = FALSE)
 
 \item{append}{A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe.}
 }
-\value{
-A dataframe with duplicated elements.
-}
 \description{
 Duplicates rows and colmns of a given a dataframe.
 }

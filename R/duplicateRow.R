@@ -8,8 +8,6 @@
 #' @param id.el identity of the elements to be duplicated.
 #' @param times number of times elements are duplicated. Could be a vector of the same length as id.el.
 #' @param append A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe.
-#' @return
-#' A dataframe with duplicated elements.
 #' @importFrom magrittr %>%
 #' @importFrom magrittr %<>%
 #' @export
@@ -30,6 +28,7 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
 }
 
 #' @describeIn duplicateCol A dataframe with duplicated columns.
+#' @export
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
     if (class(pos) == "character") 
