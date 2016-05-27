@@ -12,6 +12,7 @@
 #' @param collapse An optional character string used to separate selected words. Not \code{NA_character_}.
 #'
 #' @return A vector of the selected words concatened for each string.
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'

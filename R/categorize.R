@@ -10,6 +10,7 @@
 #' @param sort_categ A logical indicating whether categories should be sorted.
 #' @return
 #' A vector countaining values standing for categories into which elements of x have fallen.
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' categorize(stats::runif(40), categ=c(0.5,0.75))

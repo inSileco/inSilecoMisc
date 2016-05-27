@@ -10,6 +10,7 @@
 #' @param append A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe.
 #' @return
 #' A dataframe with duplicated elements.
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' data(iris, package='datasets')
@@ -17,6 +18,7 @@
 #' iris3 <- duplicateCol(iris, id.el=c('Petal.Length', 'Petal.Width'), times=c(1,2), append=TRUE)
 
 
+#' @describeIn A dataframe with duplicated rows.
 duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
     if (class(pos) == "character") 
@@ -26,6 +28,7 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     return(x[ord, ])
 }
 
+#' @describeIn A dataframe with duplicated columns.
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
     if (class(pos) == "character") 
