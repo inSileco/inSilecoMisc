@@ -2,31 +2,27 @@ letiRmisc
 =========
 
 [![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
-
 [![codecov](https://codecov.io/gh/letiR/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/letiR/letiRmisc)
 
--   Set of useful R functions.
-
--   Functions are written using Camel case (e.g. `keepWords()`)
+-   set of useful R functions;
+-   functions are written using Camel case (e.g. `keepWords()`).
 
 Installation
 ============
 
 To get the current development version from github:
 
-Use the [*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
+Use the
+[*devtools*](http://cran.r-project.org/web/packages/devtools/index.html)
+package.
 
-``` r
-if (!require("devtools")) install.packages("devtools")
-devtools::install_github("letiR/letiRmisc")
-```
+    if (!require("devtools")) install.packages("devtools")
+    devtools::install_github("letiR/letiRmisc")
 
 Main features
 =============
 
-``` r
-mycat <- categorize(stats::runif(40), categ=seq(0.25,0.5,0.75))
-```
+    mycat <- categorize(stats::runif(40), categ=seq(0.25,0.5,0.75))
 
 To do list
 ==========
