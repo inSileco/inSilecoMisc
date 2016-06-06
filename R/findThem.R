@@ -16,18 +16,19 @@
 #' @examples
 #' findThem(c(10,4,100), stats::rpois(1000,10))
 
-findThem <- function(what, where, data=NULL){
-  if (!is.null(data)) {
-    attach(data)
-    on.exit(detach(data))
-  }
-  #
-  id <- which(what%in%where)
-  if (length(id)){
-    out <- cbind(vhat=id, where=sapply(what[id], function(x) which(where==x)))
-    rownames(out) <- what[id]
-  } else {
-    out <- NA_integer_
-  }
-  return(out)
+findThem <- function(what, where, data = NULL) {
+    if (!is.null(data)) {
+        attach(data)
+        on.exit(detach(data))
+    }
+    # 
+    id <- which(what %in% where)
+    if (length(id)) {
+        out <- cbind(vhat = id, where = sapply(what[id], function(x) which(where == 
+            x)))
+        rownames(out) <- what[id]
+    } else {
+        out <- NA_integer_
+    }
+    return(out)
 }
