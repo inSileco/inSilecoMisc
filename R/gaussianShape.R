@@ -5,16 +5,16 @@
 #' @author
 #' Kevin Cazelles
 #' @param x a numeric vector.
-#' @param optx the x values at which the maximum is reached.
-#' @param opty the maximum values.
-#' @param width the width of the bell-shaoed
+#' @param optx x-values at which the maximum is reached.
+#' @param opty extremum value.
+#' @param width the width of the bell.
 #' @param pow a real number.
 #' @return
 #' a vector countaining values standing for categories into which elements of x have fallen.
 #' @seealso \code{\link[stats]{dnorm}}
 #' @export
 #' @examples
-#' gaussianShape(seq(-10,10,0.1))
+#' gaussianShape(0)
 #' plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 
 

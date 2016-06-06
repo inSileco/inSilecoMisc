@@ -9,11 +9,11 @@ gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1, pow = 2)
 \arguments{
 \item{x}{a numeric vector.}
 
-\item{optx}{the x values at which the maximum is reached.}
+\item{optx}{x-values at which the maximum is reached.}
 
-\item{opty}{the maximum values.}
+\item{opty}{extremum value.}
 
-\item{width}{the width of the bell-shaoed}
+\item{width}{the width of the bell.}
 
 \item{pow}{a real number.}
 }
@@ -25,7 +25,7 @@ The \code{gaussianShape} function computes a gaussian function readily customiza
 Default values are the same as in \code{\link[stats]{dnorm}}.
 }
 \examples{
-gaussianShape(seq(-10,10,0.1))
+gaussianShape(0)
 plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 }
 \author{
