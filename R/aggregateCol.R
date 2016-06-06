@@ -15,7 +15,7 @@
 #' \code{0} indicates that the column must be unchanged, \code{NA} is used to remove a
 #' column.
 #' @param FUN a function to be applied to all group of columns.
-#' @param name_agreg column names for aggregated columns.
+#' @param names_agreg column names for aggregated columns.
 #' @param ... further arguments to be passed to \code{FUN}.
 #' @return
 #' A dataframe with the grouped columns.
@@ -26,13 +26,14 @@
 #' @examples
 #' mat1 <- matrix(1:70,10)
 #' grp1 <- c(NA,0,rep(1,5))
-#' aggregateCol(mat1, grp1, FUN= mean)
+#' aggregateCol(mat1, grp1, FUN = mean)
 
-aggregateCol <- function(data, grp, FUN = sum, name_agreg = NULL, ...) {
+aggregateCol <- function(data, grp, names_agreg = NULL, FUN = sum, ...) {
     ## format checking
     stopifnot(ncol(data) == length(grp))
     grp %<>% as.integer()
     data %<>% as.data.frame()
+    args <- list(...)
     ## remove NA
     id <- which(!is.na(grp))
     data <- data[, id]
@@ -47,10 +48,8 @@ aggregateCol <- function(data, grp, FUN = sum, name_agreg = NULL, ...) {
         tmp_df <- data.frame(matrix(nrow = nrow(data), ncol = length(tmp) + nz))
         if (nz) {
             tmp_df[, 1:nz] <- data[, idz]
-            if (!is.null(colnames(mat1))) 
+            if (!is.null(colnames(data))) 
                 colnames(tmp_df)[1:nz] <- colnames(data[, idz])
-        } else {
-            tmp <- grp
         }
         ## aggregate column by grp using FUN
         if (length(tmp)) {
@@ -60,8 +59,8 @@ aggregateCol <- function(data, grp, FUN = sum, name_agreg = NULL, ...) {
                 tmp_df[, nz + k] <- apply(data[, which(grp == i)], 1, FUN = FUN, 
                   ...)
             }
-            if (!is.null(name_agreg)) 
-                names(tmp_df)[(nz + 1):length(tmp_df)] <- name_agreg
+            if (!is.null(names_agreg)) 
+                names(tmp_df)[(nz + 1):length(tmp_df)] <- names_agreg
         }
         ## 
         out <- tmp_df

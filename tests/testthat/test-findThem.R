@@ -15,7 +15,6 @@ test_that("findThem output formats", {
   expect_equal(class(res2), "data.frame")
 })
 
-
 test_that("findThem output lengths", {
   expect_equal(length(res1), 1)
   expect_equal(ncol(res2), 3)
@@ -27,7 +26,6 @@ test_that("findThem output values", {
   expect_equal(res3[[2]], 143)
   expect_equal(length(unlist(res3)), 3)
 })
-
 
 test_that("findThem missings values", {
   expect_equal(res4, NA_integer_)
