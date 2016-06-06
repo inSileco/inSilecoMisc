@@ -1,4 +1,4 @@
-#' Aggregate columns according to an integer vector.
+#' Aggregate columns given an integer vector.
 #'
 #' The \code{aggregateCol} makes the computation of a given function on
 #' subsets of columns easy. An integer vector, whose length is the number of
@@ -37,17 +37,17 @@ aggregateCol <- function(data, grp, FUN = sum, name_agreg = NULL, ...) {
     id <- which(!is.na(grp))
     data <- data[, id]
     grp <- grp[id]
-    ## 
+    ##
     idz <- which(grp == 0)
     nz <- length(idz)
-    ## 
+    ##
     if (ncol(data)) {
         ## keep columns for which grp==0
         tmp <- grp %>% unique() %>% magrittr::extract(. != 0)
         tmp_df <- data.frame(matrix(nrow = nrow(data), ncol = length(tmp) + nz))
         if (nz) {
             tmp_df[, 1:nz] <- data[, idz]
-            colnames(tmp_df)[1:nz] <- colnames(data[, idz])
+            if (!is.null(colnames(mat1))) colnames(tmp_df)[1:nz] <- colnames(data[, idz])
         } else {
             tmp <- grp
         }
@@ -56,15 +56,15 @@ aggregateCol <- function(data, grp, FUN = sum, name_agreg = NULL, ...) {
             k <- 0
             for (i in tmp) {
                 k <- k + 1
-                tmp_df[, nz + k] <- apply(data[, which(grp == i)], 1, FUN = FUN, 
+                tmp_df[, nz + k] <- apply(data[, which(grp == i)], 1, FUN = FUN,
                   ...)
             }
-            if (!is.null(name_agreg)) 
+            if (!is.null(name_agreg))
                 names(tmp_df)[(nz + 1):length(tmp_df)] <- name_agreg
         }
-        ## 
+        ##
         out <- tmp_df
     } else out <- data
-    ## 
+    ##
     return(out)
 }
