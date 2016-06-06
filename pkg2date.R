@@ -24,6 +24,7 @@ if (!as.numeric(args[2])) {
   ## format the code
   cat("tidying ........\n")
   formatR::tidy_dir("./R")
+  formatR::tidy_dir("./tests/test_that")
   decor()
   ## load the package
   cat("loading ........\n")
