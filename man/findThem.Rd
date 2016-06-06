@@ -4,16 +4,14 @@
 \alias{findThem}
 \title{Find values in a given vector.}
 \usage{
-findThem(what, where, data = NULL, todf = FALSE)
+findThem(what, where, todf = FALSE)
 }
 \arguments{
 \item{what}{a vector a values to be searched for.}
 
 \item{where}{a vector where values will be searched on.}
 
-\item{data}{an optional dataframe to be added to the search path.}
-
-\item{todf}{a logical indicating whether the output must be a dataframe.}
+\item{todf}{a logical indicating whether the output object must be a dataframe.}
 }
 \value{
 A list indicating matched positions for each elements of \code{what}. If \code{todf} is
@@ -26,9 +24,9 @@ Given a set of values and a vetor where the values must be found, the
 vector where the values have been searched for.
 }
 \examples{
-wha <- stats::rpois(1000,10)
-findThem(c(10,4,100), wha)
-findThem(c(10,4,100), wha, todf=TRUE)
+x <- stats::rpois(1000,10)
+findThem(c(10,4,100), x)
+findThem(c(10,4,100), x, todf=TRUE)
 }
 \author{
 Kevin Cazelles

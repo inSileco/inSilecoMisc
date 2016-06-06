@@ -16,7 +16,7 @@
 #' column.
 #' @param FUN a function to be applied to all group of columns.
 #' @param name_agreg column names for aggregated columns.
-#' @param ...: further arguments to be passed to \code{FUN}.
+#' @param ... further arguments to be passed to \code{FUN}.
 #' @return
 #' A dataframe with the grouped columns.
 #' @importFrom magrittr %>%

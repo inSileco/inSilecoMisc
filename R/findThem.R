@@ -8,8 +8,7 @@
 #' Kevin Cazelles
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
-#' @param data an optional dataframe to be added to the search path.
-#' @param todf a logical indicating whether the output must be a dataframe.
+#' @param todf a logical indicating whether the output object must be a dataframe.
 #' @return
 #' A list indicating matched positions for each elements of \code{what}. If \code{todf} is
 #' TRUE then a three-columns dataframe is returned includeing values and positions
@@ -17,16 +16,13 @@
 #' @seealso \code{\link[base]{which}}
 #' @export
 #' @examples
-#' wha <- stats::rpois(1000,10)
-#' findThem(c(10,4,100), wha)
-#' findThem(c(10,4,100), wha, todf=TRUE)
+#' x <- stats::rpois(1000,10)
+#' findThem(c(10,4,100), x)
+#' findThem(c(10,4,100), x, todf=TRUE)
 
-findThem <- function(what, where, data = NULL, todf = FALSE) {
+findThem <- function(what, where, todf = FALSE) {
     what <- as.vector(what)
-    if (!is.null(data)) {
-        attach(data)
-        on.exit(detach(data))
-    }
+    where <- as.vector(where)
     # 
     out <- as.list(rep(NA, length(what)))
     # 

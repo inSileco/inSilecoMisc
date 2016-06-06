@@ -18,7 +18,7 @@ column.}
 
 \item{name_agreg}{column names for aggregated columns.}
 
-\item{...:}{further arguments to be passed to \code{FUN}.}
+\item{...}{further arguments to be passed to \code{FUN}.}
 }
 \value{
 A dataframe with the grouped columns.
