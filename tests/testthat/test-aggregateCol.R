@@ -13,7 +13,7 @@ res2 <- aggregateCol(mat1, grp2)
 grp3 <- rep(1:2, each=5)
 res3 <- aggregateCol(mat1, grp3)
 nms <- c("sum1", "sum2")
-res4 <- aggregateCol(mat1, grp3, names_agreg=nms)
+res4 <- aggregateCol(mat1, grp3, names_aggreg=nms)
 
 res5 <- aggregateCol(mat2, grp3)
 res6 <- aggregateCol(mat2, grp3, FUN=sum, na.rm=TRUE)

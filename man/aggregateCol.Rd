@@ -4,7 +4,7 @@
 \alias{aggregateCol}
 \title{Aggregate columns given an integer vector.}
 \usage{
-aggregateCol(data, grp, names_agreg = NULL, FUN = sum, ...)
+aggregateCol(data, grp, names_aggreg = NULL, FUN = sum, ...)
 }
 \arguments{
 \item{data}{a dataframe.}
@@ -14,7 +14,7 @@ used to compute operations on a subset of columns. Any integer is a valid group,
 \code{0} indicates that the column must be unchanged, \code{NA} is used to remove a
 column.}
 
-\item{names_agreg}{column names for aggregated columns.}
+\item{names_aggreg}{column names for aggregated columns.}
 
 \item{FUN}{a function to be applied to all group of columns.}
 
