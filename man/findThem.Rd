@@ -4,7 +4,7 @@
 \alias{findThem}
 \title{Find values in a given vector.}
 \usage{
-findThem(what, where, data = NULL)
+findThem(what, where, data = NULL, todf = FALSE)
 }
 \arguments{
 \item{what}{a vector a values to be searched for.}
@@ -12,9 +12,13 @@ findThem(what, where, data = NULL)
 \item{where}{a vector where values will be searched on.}
 
 \item{data}{an optional dataframe to be added to the search path.}
+
+\item{todf}{a logical indicating whether the output must be a dataframe.}
 }
 \value{
-A two-columns dataframe indicating the position of found elements in simple data frame
+A list indicating matched positions for each elements of \code{what}. If \code{todf} is
+TRUE then a three-columns dataframe is returned includeing values and positions
+in both \code{what} and \code{where} vectors.
 }
 \description{
 Given a set of values and a vetor where the values must be found, the
@@ -22,7 +26,9 @@ Given a set of values and a vetor where the values must be found, the
 vector where the values have been searched for.
 }
 \examples{
-findThem(c(10,4,100), stats::rpois(1000,10))
+wha <- stats::rpois(1000,10)
+findThem(c(10,4,100), wha)
+findThem(c(10,4,100), wha, todf=TRUE)
 }
 \author{
 Kevin Cazelles

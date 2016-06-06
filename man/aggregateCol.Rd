@@ -2,7 +2,7 @@
 % Please edit documentation in R/aggregateCol.R
 \name{aggregateCol}
 \alias{aggregateCol}
-\title{Aggregate columns according to an integer vector.}
+\title{Aggregate columns given an integer vector.}
 \usage{
 aggregateCol(data, grp, FUN = sum, name_agreg = NULL, ...)
 }
@@ -11,7 +11,7 @@ aggregateCol(data, grp, FUN = sum, name_agreg = NULL, ...)
 
 \item{grp}{an integer vector assigning a group to each column of \code{data}
 used to compute operations on a subset of columns. Any integer is a valid group,
-\cde{0} indicates that the column must be unchanged, \code{NA} is used to remove a
+\code{0} indicates that the column must be unchanged, \code{NA} is used to remove a
 column.}
 
 \item{FUN}{a function to be applied to all group of columns.}
