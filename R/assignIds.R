@@ -6,7 +6,11 @@
 #'
 #' @param x object to be coerced into character type
 #' @param alphabetical a logical indicating whether an alphabetical sorting must be applied.
-#'
+#' @return
+#' A vector of Ids.
+#' @importFrom magrittr %>%
+#' @importFrom magrittr %<>%
+#' @export
 #' @examples
 #' assignIds(list(2,'f', 'd', 'f'))
 

@@ -11,6 +11,9 @@ assignIds(vec, alphabetical = FALSE)
 
 \item{x}{object to be coerced into character type}
 }
+\value{
+A vector of Ids.
+}
 \description{
 This function is done mainly to assign an id to factor or similar character
 strings. Regarding factors, \code{as.integer} does such task
