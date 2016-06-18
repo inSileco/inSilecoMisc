@@ -15,11 +15,11 @@
 #' assignIds(list(2,'f', 'd', 'f'))
 
 
-assignIds <- function(vec, alphabetical = FALSE) {
-    tmp <- vec %>% as.character %>% unique
+assignIds <- function(x, alphabetical = FALSE) {
+    tmp <- x %>% as.character %>% unique
     if (alphabetical) 
         tmp %<>% sort
     out <- tmp %>% length %>% integer
-    for (i in 1:length(tmp)) out[vec == tmp[i]] <- i
+    for (i in 1:length(tmp)) out[x == tmp[i]] <- i
     return(out)
 }

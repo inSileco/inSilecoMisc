@@ -4,12 +4,12 @@
 \alias{assignIds}
 \title{Assign an id to a list of characters or factors}
 \usage{
-assignIds(vec, alphabetical = FALSE)
+assignIds(x, alphabetical = FALSE)
 }
 \arguments{
-\item{alphabetical}{a logical indicating whether an alphabetical sorting must be applied.}
-
 \item{x}{object to be coerced into character type}
+
+\item{alphabetical}{a logical indicating whether an alphabetical sorting must be applied.}
 }
 \value{
 A vector of Ids.
