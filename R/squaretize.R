@@ -42,8 +42,8 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
                 rownames(.)[idc])))
         ##--
         if (reorder) {
-            mat %<>% extract(order(rownames(.)), )
-            mat %<>% extract(, order(colnames(.)))
+            mat %<>% magrittr::extract(order(rownames(.)), )
+            mat %<>% magrittr::extract(, order(colnames(.)))
         }
     } else {
         mis <- mat %>% dim %>% diff
@@ -51,7 +51,7 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
             mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL, 
                 colnames(.))))
             if (!is.null(rownames(x))) 
-                mat %<>% set_rownames(c(rownames(.), nrow(x) + 1:mis))
+                rownames(mat) <- c(rownames(.), nrow(x) + 1:mis)
         } else {
             if (mis < 0) {
                 mis %<>% abs
