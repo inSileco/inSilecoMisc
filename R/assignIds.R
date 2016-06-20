@@ -4,7 +4,7 @@
 #' strings. Regarding factors, \code{as.integer} does such task
 #' but the order obtained could be different.
 #'
-#' @param x object to be coerced into character type
+#' @param x an R object to be coerced into character type.
 #' @param alphabetical a logical indicating whether an alphabetical sorting must be applied.
 #' @return
 #' A vector of Ids.

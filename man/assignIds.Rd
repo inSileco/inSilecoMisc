@@ -7,7 +7,7 @@
 assignIds(x, alphabetical = FALSE)
 }
 \arguments{
-\item{x}{object to be coerced into character type}
+\item{x}{an R object to be coerced into character type.}
 
 \item{alphabetical}{a logical indicating whether an alphabetical sorting must be applied.}
 }
