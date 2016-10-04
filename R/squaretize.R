@@ -25,7 +25,7 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
     mat <- x %>% as.matrix
     sz <- dim(mat)
     ## 
-    if (!(is.null(rownames(mat)) | is.null(colnames(mat)))) {
+    if (!is.null(rownames(mat)) & !is.null(colnames(mat))) {
         ##-- add rows
         idr <- colnames(mat) %in% rownames(mat) %>% `!` %>% which
         ra <- length(idr)
@@ -51,7 +51,7 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
             mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL, 
                 colnames(.))))
             if (!is.null(rownames(x))) 
-                rownames(mat) <- c(rownames(.), nrow(x) + 1:mis)
+                rownames(mat) <- c(rownames(x), paste0("X", nrow(x) + 1:mis))
         } else {
             if (mis < 0) {
                 mis %<>% abs
