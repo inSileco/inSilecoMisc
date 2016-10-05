@@ -68,11 +68,11 @@ devtools::install_github("letiR/letiRmisc")
   squaretize(mat, reorder=FALSE)
 ```
 
+## Adjust the size of a character string.
 
-<!-- ```{r}
-addZeros(12,4)
-addZeros(1:12,2)
-``` -->
+```{r adjustString}
+  paste0('myfilename', adjustString(c(1:2,10,100), 3))
+```
 
 
 

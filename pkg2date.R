@@ -19,6 +19,7 @@ cat(decoreq(35), " START ", decoreq(36), "\n\n")
 
 if (!as.numeric(args[2])) {
   ##
+  devtools::load_all(".")
   rmarkdown::render("README.Rmd", "all", quiet=TRUE)
 } else {
   ## format the code
