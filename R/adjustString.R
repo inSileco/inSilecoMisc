@@ -21,6 +21,9 @@
 #' @return
 #' A character vector of the concatenated characters.
 #'
+#' @importFrom magrittr %>%
+#' @importFrom magrittr %<>%
+#' @importFrom magrittr extract2
 #' @export
 #' @examples
 #' paste0('myfilename', adjustString(c(1:2,10,100), 3))
