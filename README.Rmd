@@ -74,6 +74,14 @@ devtools::install_github("letiR/letiRmisc")
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
 ```
 
+## Assign classes to the columns of a dataframe
+
+```{r assignClass2df}
+  df1 <- matrix(signif(runif(20),4), ncol=2)
+  df2 <- assignClass2df(df1, 2, 'character')
+  str(df1)
+  str(df2)
+```
 
 
 # To do list
