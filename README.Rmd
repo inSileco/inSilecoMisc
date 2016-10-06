@@ -20,8 +20,8 @@ knitr::opts_chunk$set(
 
 # letiRmisc
 
-This is set of useful R functions written using Camel case (*e.g.* `keepWords()`).
-
+The *letiRmisc* package is set of useful R functions.
+Function's names are written using Camel case (*e.g.* `keepWords()`).
 Current state:
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x5ngkcflyfiixr37?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc)
@@ -33,9 +33,8 @@ Current state:
 
 # Installation
 
-To get the current development version from Github:
-
-Use the [*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
+To get the current development version from Github, use the
+[*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
 
 ```{r eval=FALSE}
 if (!require("devtools")) install.packages("devtools")
