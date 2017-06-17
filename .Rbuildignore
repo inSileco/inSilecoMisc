@@ -7,3 +7,5 @@
 ^pkgup2date\.R
 ^pkg2date\.R
 ^README\.rmd
+LICENSE
+record_updates.txt

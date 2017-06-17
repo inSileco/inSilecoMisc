@@ -7,7 +7,7 @@
 #' Kevin Cazelles
 #'
 #' @param x a object to be coerced to numeric.
-#' @param inverse a logical. Should the inverse logit be computed?
+#' @param inv a logical. Should the inverse logit be computed?
 #'
 #' @importFrom magrittr %<>%
 #'

@@ -9,7 +9,7 @@ logit(x, inv = FALSE)
 \arguments{
 \item{x}{a object to be coerced to numeric.}
 
-\item{inverse}{a logical. Should the inverse logit be computed?}
+\item{inv}{a logical. Should the inverse logit be computed?}
 }
 \description{
 Compute the logit function and its inverse. Note that package \code{boot}

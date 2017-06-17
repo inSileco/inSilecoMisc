@@ -25,7 +25,8 @@
 keepWords <- function(string, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
     ## 
     if (punct.rm) 
-        string %<>% gsub("[[:punct:]]", " ", .) %>% gsub("  ", " ", .)
+        string %<>% gsub(pattern = "[[:punct:]]", replacement = " ") %>% gsub(pattern = "  ", 
+            replacement = " ")
     ## 
     out <- string %>% strsplit(split = " ") %>% lapply(FUN = function(x) x[slc])
     ## 

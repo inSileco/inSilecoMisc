@@ -14,5 +14,8 @@ $(md): $(rdm)
 $(chk): $(rfun) $(rtes) $(rtes) DESCRIPTION
 	Rscript --no-site-file --no-init-file $(rscr) 1
 
+check:
+	Rscript --no-init-file -e "devtools::check('.')"
+
 clean:
 	rm -rf man/* NAMESPACE
