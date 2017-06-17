@@ -29,4 +29,3 @@ mat2b <- squaretize(matb)
 \author{
 Kevin Cazelles
 }
-

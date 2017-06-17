@@ -33,4 +33,3 @@ keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse=
 \author{
 Kevin Cazelles
 }
-

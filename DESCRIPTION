@@ -13,11 +13,12 @@ Depends:
 License: GPL-3
 LazyData: true
 Imports:
-    magrittr
+    magrittr,
+    methods
 Suggests:
     knitr,
     rmarkdown,
     testthat,
     sp
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

@@ -22,4 +22,3 @@ but the order obtained could be different.
 \examples{
 assignIds(list(2,'f', 'd', 'f'))
 }
-

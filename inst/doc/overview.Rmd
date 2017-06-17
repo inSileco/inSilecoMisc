@@ -1,0 +1,15 @@
+---
+title: "Overview"
+author: "letiR group"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{An overview of letiRmisc package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+<!-- http://r-pkgs.had.co.nz/vignettes.html -->
+
+# Introduction

@@ -28,4 +28,3 @@ df2 <- assignClass2df(df1, 2, 'character')
 str(df1)
 str(df2)
 }
-

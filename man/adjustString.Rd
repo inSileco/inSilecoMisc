@@ -37,4 +37,3 @@ adjustString('# Comment', 20, '#', before=FALSE)
 \author{
 Kevin Cazelles
 }
-

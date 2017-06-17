@@ -35,10 +35,9 @@ mat1 <- matrix(1:70,10)
 grp1 <- c(NA,0,rep(1,5))
 aggregateCol(mat1, grp1, FUN = mean)
 }
-\author{
-Kevin Cazelles
-}
 \seealso{
 \code{\link[stats]{aggregate}}
 }
-
+\author{
+Kevin Cazelles
+}

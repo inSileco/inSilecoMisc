@@ -28,10 +28,9 @@ x <- stats::rpois(1000,10)
 findThem(c(10,4,100), x)
 findThem(c(10,4,100), x, todf=TRUE)
 }
-\author{
-Kevin Cazelles
-}
 \seealso{
 \code{\link[base]{which}}
 }
-
+\author{
+Kevin Cazelles
+}

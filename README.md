@@ -1,13 +1,26 @@
 letiRmisc
 =========
 
-The *letiRmisc* package is set of useful R functions. Function's names
-are written using Camel case (*e.g.* `keepWords()`). Current state:
+Short description
+-----------------
+
+The *letiRmisc* package is a set of useful R functions created to ease
+some operations we often and therefore considered worth having dedicated
+functions. All functions are quite easy to code and some may already be
+available in other packages. For now, we do not intend to release them
+in a R package that are quite easy to code but if you find one of them
+useful and intend to use in your own package, please, help yourself!
+
+Function's names are written using Camel case (*e.g.* `keepWords()`).
+
+Current status
+--------------
 
 [![Build
 status](https://ci.appveyor.com/api/projects/status/x5ngkcflyfiixr37?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc)
 [![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
 [![codecov](https://codecov.io/gh/letiR/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/letiR/letiRmisc)
+![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
 
 Installation
 ============
@@ -22,6 +35,8 @@ package.
 Main features
 =============
 
+      library(letiRmisc)
+
 Keep a selection of words
 -------------------------
 
@@ -33,20 +48,20 @@ Keep a selection of words
 Assign a category
 -----------------
 
-      seqv <- stats::runif(40) %T>% print
-    #>  [1] 0.97995661 0.78853051 0.41777281 0.11813707 0.54354485 0.67810542
-    #>  [7] 0.72655330 0.68577546 0.25121192 0.23074969 0.11360340 0.59829802
-    #> [13] 0.42930668 0.54442002 0.31096329 0.64838518 0.14487256 0.64315932
-    #> [19] 0.94408203 0.50568512 0.34531129 0.74281201 0.81507057 0.59164145
-    #> [25] 0.61592977 0.09156347 0.81140961 0.50167313 0.22147239 0.04559699
-    #> [31] 0.36419250 0.57904685 0.42738639 0.18850491 0.96154887 0.14843470
-    #> [37] 0.31030166 0.60505129 0.64971201 0.03240056
+      (seqv <- stats::runif(40))
+    #>  [1] 0.92106348 0.95516190 0.92149087 0.67616158 0.37269543 0.51993905
+    #>  [7] 0.75829336 0.95550640 0.62751132 0.11901294 0.52492968 0.83864208
+    #> [13] 0.85445091 0.11147787 0.84055843 0.55508269 0.03375310 0.46399790
+    #> [19] 0.63788949 0.91707918 0.86094325 0.49201681 0.75010947 0.32476200
+    #> [25] 0.84627897 0.95757644 0.85586580 0.49869588 0.35757314 0.29906145
+    #> [31] 0.73321408 0.05569763 0.31801044 0.10709715 0.54840669 0.74304321
+    #> [37] 0.83466896 0.63533699 0.19371069 0.39138847
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    #>  [1] 10  8  5  2  6  7  8  7  3  3  2  6  5  6  4  7  2  7 10  6  4  8  9
-    #> [24]  6  7  1  9  6  3  1  4  6  5  2 10  2  4  7  7  1
+    #>  [1] 10 10 10  7  4  6  8 10  7  2  6  9  9  2  9  6  1  5  7 10  9  5  8
+    #> [24]  4  9 10  9  5  4  3  8  1  4  2  6  8  9  7  2  4
 
-Turn a matrix or a dataframe into a squared matrix
---------------------------------------------------
+Turn a matrix or a data frame into a squared matrix
+---------------------------------------------------
 
       mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
       print(mat)
@@ -62,27 +77,27 @@ Turn a matrix or a dataframe into a squared matrix
     #> D 0 0 0  0  0
     #> E 0 0 0  0  0
 
-Adjust the size of a character string.
---------------------------------------
+Adjust the size of a character string
+-------------------------------------
 
       paste0('myfilename', adjustString(c(1:2,10,100), 3))
     #> [1] "myfilename001" "myfilename002" "myfilename010" "myfilename100"
 
-Assign classes to the columns of a dataframe
---------------------------------------------
+Assign classes to data frames' columns
+--------------------------------------
 
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    #>  num [1:10, 1:2] 0.843 0.584 0.311 0.156 0.271 ...
+    #>  num [1:10, 1:2] 0.495 0.328 0.363 0.496 0.566 ...
       str(df2)
     #> 'data.frame':    10 obs. of  2 variables:
-    #>  $ V1: num  0.843 0.584 0.311 0.156 0.271 ...
-    #>  $ V2: chr  "0.4348" "0.3302" "0.1909" "0.2099" ...
+    #>  $ V1: num  0.495 0.328 0.363 0.496 0.566 ...
+    #>  $ V2: chr  "0.4682" "0.4545" "0.8149" "0.3687" ...
 
 To do list
 ==========
 
-1.  No real plan at current stage.
-2.  Each time we think a function could be useful, let just put it in
-    the repo!
+-   \[ \] Each time we think a function could be useful and not related
+    to another package, let just put it in this repo
+    :stuck\_out\_tongue\_winking\_eye:

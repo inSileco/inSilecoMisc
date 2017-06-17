@@ -29,7 +29,7 @@ assignClass2df <- function(x, colid, cls) {
     sz <- length(colid)
     cl <- rep(cls, length.out = sz)
     ## 
-    for (i in 1:sz) out[, colid[i]] <- as(x[, colid[i]], cl[i])
+    for (i in 1:sz) out[, colid[i]] <- methods::as(x[, colid[i]], cl[i])
     ## 
     return(out)
 }

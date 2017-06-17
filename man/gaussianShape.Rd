@@ -28,10 +28,9 @@ Default values are the same as in \code{\link[stats]{dnorm}}.
 gaussianShape(0)
 plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 }
-\author{
-Kevin Cazelles
-}
 \seealso{
 \code{\link[stats]{dnorm}}
 }
-
+\author{
+Kevin Cazelles
+}
