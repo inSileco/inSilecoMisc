@@ -17,6 +17,7 @@ Imports:
 Suggests:
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    sp
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1

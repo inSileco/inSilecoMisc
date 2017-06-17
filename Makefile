@@ -1,14 +1,18 @@
 rfun := $(wildcard R/*.R)
+rman := $(wildcard man/)
 rtes := $(wildcard tests/testthat/*.R)
-rdm = ./README.Rmd
-md = ./README.md
+rdm = README.Rmd
+md = README.md
 chk = record_updates.txt
-
+rscr = ../pkg2date.R
 
 all: $(md) $(chk)
 
 $(md): $(rdm)
-	Rscript --no-site-file  --no-init-file pkg2date.R `pwd` 0
+	Rscript --no-site-file --no-init-file $(rscr) 0
 
-$(chk): $(rfun) $(rtes)
-	Rscript --no-site-file  --no-init-file pkg2date.R `pwd` 1
+$(chk): $(rfun) $(rtes) $(rtes) DESCRIPTION
+	Rscript --no-site-file --no-init-file $(rscr) 1
+
+clean:
+	rm -rf man/* NAMESPACE

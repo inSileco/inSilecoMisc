@@ -20,14 +20,18 @@ knitr::opts_chunk$set(
 
 # letiRmisc
 
-The *letiRmisc* package is set of useful R functions.
+## Short description
+
+The *letiRmisc* package is a set of useful R functions created to ease some operations we often and therefore considered worth having dedicated functions. All functions are quite easy to code and some may already be available in other packages. For now, we do not intend to release them in a R package that are quite easy to code but if you find one of them useful and intend to use in your own package, please, help yourself!
+
 Function's names are written using Camel case (*e.g.* `keepWords()`).
-Current state:
+
+## Current status
 
 [![Build status](https://ci.appveyor.com/api/projects/status/x5ngkcflyfiixr37?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc)
 [![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
 [![codecov](https://codecov.io/gh/letiR/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/letiR/letiRmisc)
-
+![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
 
 
 
@@ -59,7 +63,7 @@ devtools::install_github("letiR/letiRmisc")
   categorize(seqv, categ=seq(0.1,0.9, 0.1))
 ```
 
-## Turn a matrix or a dataframe into a squared matrix
+## Turn a matrix or a data frame into a squared matrix
 
 ```{r squaretize}
   mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
@@ -67,13 +71,13 @@ devtools::install_github("letiR/letiRmisc")
   squaretize(mat, reorder=FALSE)
 ```
 
-## Adjust the size of a character string.
+## Adjust the size of a character string
 
 ```{r adjustString}
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
 ```
 
-## Assign classes to the columns of a dataframe
+## Assign classes to data frames' columns 
 
 ```{r assignClass2df}
   df1 <- matrix(signif(runif(20),4), ncol=2)
@@ -83,7 +87,7 @@ devtools::install_github("letiR/letiRmisc")
 ```
 
 
+
 # To do list
 
-1. No real plan at current stage.
-2. Each time we think a function could be useful, let just put it in the repo!
+- [ ] Each time we think a function could be useful and not related to another package, let just put it in this repo :stuck_out_tongue_winking_eye:
