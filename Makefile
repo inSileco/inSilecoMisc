@@ -6,13 +6,13 @@ md = README.md
 chk = record_updates.txt
 rscr = ../pkg2date.R
 
-all: $(md) $(chk)
+all: $(md)
 
-$(md): $(rdm)
-	Rscript --no-site-file --no-init-file $(rscr) 0
+$(md): $(rdm) $(chk)
+	 Rscript --no-init-file $(rscr) 0
 
 $(chk): $(rfun) $(rtes) $(rtes) DESCRIPTION
-	Rscript --no-site-file --no-init-file $(rscr) 1
+	Rscript --no-init-file $(rscr) 1
 
 check:
 	Rscript --no-init-file -e "devtools::check('.')"

@@ -20,5 +20,6 @@ Suggests:
     rmarkdown,
     testthat,
     sp
+BugReports: https://github.com/letiR/letiRmisc/issues
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
