@@ -1,13 +1,14 @@
 library(letiRmisc)
 context("findThem")
 
-string <- unlist(strsplit("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat", ""))
+string <- unlist(strsplit("Lorem ipsum dolor sit amet", ""))
 
-res1 <- findThem("x", string)
-res2 <- findThem("x", string, todf=TRUE)
-res3 <- findThem(c("x","v"), string)
+res1 <- findThem("i", string)
+res2 <- findThem("i", string, todf=TRUE)
+res3 <- findThem(c("i","p"), string)
 res4 <- findThem(c("y"), string)
-res5 <- findThem(c("x","v","y"), string)
+res5 <- findThem(c("i","p","y"), string)
+res6 <- findThem(c("i","y"), string, todf=TRUE, reportnomatch=TRUE)
 
 
 test_that("findThem output formats", {
@@ -17,13 +18,13 @@ test_that("findThem output formats", {
 
 test_that("findThem output lengths", {
   expect_equal(length(res1), 1)
-  expect_equal(ncol(res2), 3)
-  expect_equal(nrow(res2), 2)
+  expect_equal(dim(res2), c(2,3))
+  expect_equal(dim(res6), c(3,3))
   expect_equal(length(res3), 2)
 })
 
 test_that("findThem output values", {
-  expect_equal(res3[[2]], 143)
+  expect_equal(res3[[2]], 8)
   expect_equal(length(unlist(res3)), 3)
 })
 

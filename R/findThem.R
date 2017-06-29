@@ -9,6 +9,9 @@
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
 #' @param todf a logical indicating whether the output object must be a dataframe.
+#' @param reportnomatch a logical. If TRUE, values without match are reported in
+#' the data frame with a NA. Only available if \code{todf} is TRUE. Default is
+#' set to FALSE.
 #' @return
 #' A list indicating matched positions for each elements of \code{what}. If \code{todf} is
 #' TRUE then a three-columns dataframe is returned includeing values and positions
@@ -19,8 +22,9 @@
 #' x <- stats::rpois(1000,10)
 #' findThem(c(10,4,100), x)
 #' findThem(c(10,4,100), x, todf=TRUE)
+#' findThem(c(10,4,100), x, todf=TRUE, reportnomatch=TRUE)
 
-findThem <- function(what, where, todf = FALSE) {
+findThem <- function(what, where, todf = FALSE, reportnomatch = FALSE) {
     what <- as.vector(what)
     where <- as.vector(where)
     # 
@@ -32,6 +36,10 @@ findThem <- function(what, where, todf = FALSE) {
         names(tmp) <- what
         if (todf) {
             sz <- unlist(lapply(tmp, length))
+            if (reportnomatch) {
+                tmp[sz == 0] <- NA
+            }
+            sz <- unlist(lapply(tmp, length))
             out <- data.frame(values = rep(names(tmp), sz), what = rep(1:length(what), 
                 sz), where = unlist(tmp))
             rownames(out) <- NULL
@@ -39,6 +47,7 @@ findThem <- function(what, where, todf = FALSE) {
             out <- tmp
         }
     } else {
+        warning("No match")
         out <- NA_integer_
     }
     return(out)

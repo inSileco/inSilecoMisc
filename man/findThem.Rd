@@ -4,7 +4,7 @@
 \alias{findThem}
 \title{Find values in a given vector.}
 \usage{
-findThem(what, where, todf = FALSE)
+findThem(what, where, todf = FALSE, reportnomatch = FALSE)
 }
 \arguments{
 \item{what}{a vector a values to be searched for.}
@@ -12,6 +12,10 @@ findThem(what, where, todf = FALSE)
 \item{where}{a vector where values will be searched on.}
 
 \item{todf}{a logical indicating whether the output object must be a dataframe.}
+
+\item{reportnomatch}{a logical. If TRUE, values without match are reported in
+the data frame with a NA. Only available if \code{todf} is TRUE. Default is
+set to FALSE.}
 }
 \value{
 A list indicating matched positions for each elements of \code{what}. If \code{todf} is
@@ -27,6 +31,7 @@ vector where the values have been searched for.
 x <- stats::rpois(1000,10)
 findThem(c(10,4,100), x)
 findThem(c(10,4,100), x, todf=TRUE)
+findThem(c(10,4,100), x, todf=TRUE, reportnomatch=TRUE)
 }
 \seealso{
 \code{\link[base]{which}}
