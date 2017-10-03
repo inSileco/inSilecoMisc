@@ -25,9 +25,9 @@
 substrBib <- function(bib, text, con, markdown = FALSE) {
     ## ----
     stopifnot(any(class(bib) %in% c("BibEntry", "bibentry")))
-    ##
+    ## 
     if (missing(text)) {
-        if (missing(file))
+        if (missing(file)) 
             stop("Either 'text' or 'con' must be specified.") else citxt <- findRef(con = con, markdown = markdown)
     } else citxt <- findRef(text = text, markdown = markdown)
     ## ----substrBib
@@ -45,6 +45,6 @@ substrBib <- function(bib, text, con, markdown = FALSE) {
         warning("No match found.")
         out <- NULL
     } else out <- bib[id]
-    ##
+    ## 
     out
 }

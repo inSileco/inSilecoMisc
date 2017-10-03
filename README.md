@@ -16,10 +16,12 @@ Function's names are written using Camel case (*e.g.* `keepWords()`).
 
 ### Current status
 
-[![Build
-status](https://ci.appveyor.com/api/projects/status/x5ngkcflyfiixr37?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc)
-[![Travis](https://travis-ci.org/letiR/letiRmisc.svg?branch=master)](https://travis-ci.org/letiR/letiRmisc)
-[![codecov](https://codecov.io/gh/letiR/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/letiR/letiRmisc)
+[![Buildstatus](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/inSileco/letiRmisc)
+
+[![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
+
+[![codecov](https://codecov.io/ghinSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
+
 ![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
 
 Installation
@@ -47,17 +49,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    #>  [1] 0.454518497 0.878437661 0.881084824 0.600785915 0.101011039
-    #>  [6] 0.183613301 0.347674815 0.422815292 0.282740258 0.721463163
-    #> [11] 0.049802457 0.998761140 0.859872960 0.683203879 0.773986386
-    #> [16] 0.320609943 0.785030537 0.526193264 0.763775519 0.733422424
-    #> [21] 0.005047699 0.106589995 0.585296307 0.806422897 0.429850624
-    #> [26] 0.995657919 0.704016290 0.083935544 0.663308737 0.649708642
-    #> [31] 0.730041666 0.912519403 0.713701260 0.847406298 0.808668708
-    #> [36] 0.290254986 0.839878588 0.837137820 0.833939192 0.372147647
+    #>  [1] 0.58547521 0.92230057 0.35841589 0.31642876 0.60768707 0.04429060
+    #>  [7] 0.59578700 0.96348705 0.51213524 0.34940805 0.35402894 0.86267078
+    #> [13] 0.16509107 0.78388963 0.88912341 0.39946345 0.93843922 0.72087014
+    #> [19] 0.10350504 0.59455667 0.01781577 0.30308574 0.76719842 0.54113135
+    #> [25] 0.74780129 0.17684553 0.86515509 0.52329887 0.49800126 0.91497168
+    #> [31] 0.82488866 0.13851180 0.35075611 0.70865078 0.13127268 0.54955067
+    #> [37] 0.29358258 0.30251166 0.80503508 0.01093691
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    #>  [1]  5  9  9  7  2  2  4  5  3  8  1 10  9  7  8  4  8  6  8  8  1  2  6
-    #> [24]  9  5 10  8  1  7  7  8 10  8  9  9  3  9  9  9  4
+    #>  [1]  6 10  4  4  7  1  6 10  6  4  4  9  2  8  9  4 10  8  2  6  1  4  8
+    #> [24]  6  8  2  9  6  5 10  9  2  4  8  2  6  3  4  9  1
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -85,11 +86,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    #>  num [1:10, 1:2] 0.194 0.449 0.469 0.838 0.208 ...
+    #>  num [1:10, 1:2] 0.676 0.277 0.223 0.711 0.815 ...
       str(df2)
     #> 'data.frame':    10 obs. of  2 variables:
-    #>  $ V1: num  0.194 0.449 0.469 0.838 0.208 ...
-    #>  $ V2: chr  "0.4383" "0.6873" "0.2981" "0.08169" ...
+    #>  $ V1: num  0.676 0.277 0.223 0.711 0.815 ...
+    #>  $ V2: chr  "0.7635" "0.5353" "0.1308" "0.8818" ...
 
 ### Assign a symbol to a p-value
 

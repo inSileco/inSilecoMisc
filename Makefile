@@ -8,11 +8,11 @@ rscr = ../pkg2date.R
 
 all: $(md)
 
-$(md): $(rdm) $(chk)
-	 Rscript --no-init-file $(rscr) 0
-
 $(chk): $(rfun) $(rtes) $(rtes) DESCRIPTION
 	Rscript --no-init-file $(rscr) 1
+
+readme:
+	Rscript --no-init-file $(rscr) 0
 
 check:
 	Rscript --no-init-file -e "devtools::check('.')"
