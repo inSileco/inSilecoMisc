@@ -1,14 +1,13 @@
 rfun := $(wildcard R/*.R)
-rman := $(wildcard man/)
 rtes := $(wildcard tests/testthat/*.R)
+rman := $(wildcard man/)
 rdm = README.Rmd
 md = README.md
-chk = record_updates.txt
 rscr = ../pkg2date.R
 
-all: $(md)
+all: $(rman)
 
-$(chk): $(rfun) $(rtes) $(rtes) DESCRIPTION
+$(rman): $(rfun) $(rtes) DESCRIPTION
 	Rscript --no-init-file $(rscr) 1
 
 readme:

@@ -23,13 +23,14 @@ devtools::load_all(".")
 
 ### Short description
 
-The *letiRmisc* package is a set of useful R functions created to ease some operations we often and therefore considered worth having dedicated functions. All functions are quite easy to code and some may already be available in other packages. For now, we do not intend to release them in a R package that are quite easy to code but if you find one of them useful and intend to use in your own package, please, help yourself!
+The *letiRmisc* package is a set of useful R functions created to ease some
+operations we often do and therefore considered worth having dedicated functions. All functions are quite easy to code and some may already be available in other packages. For now, we do not intend to release them on the CRAN. If you however find one of these function and intend to use it in your own package, please, help yourself!
 
 Function's names are written using Camel case (*e.g.* `keepWords()`).
 
 ### Current status
 
-[![Buildstatus](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc-e7i3j/history)
+[![Build status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc-e7i3j)
 [![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
 [![codecov](https://codecov.io/gh/inSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
 ![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
@@ -38,7 +39,8 @@ Function's names are written using Camel case (*e.g.* `keepWords()`).
 ## Installation
 
 To get the current development version from Github, use the
-[*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package.
+[*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package
+like so:
 
 ```{r eval=FALSE}
 if (!require("devtools")) install.packages("devtools")
@@ -67,6 +69,7 @@ devtools::install_github("letiR/letiRmisc")
   categorize(seqv, categ=seq(0.1,0.9, 0.1))
 ```
 
+
 ### Turn a matrix or a data frame into a squared matrix
 
 ```{r squaretize}
@@ -75,11 +78,13 @@ devtools::install_github("letiR/letiRmisc")
   squaretize(mat, reorder=FALSE)
 ```
 
+
 ### Adjust the size of a character string
 
 ```{r adjustString}
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
 ```
+
 
 ### Assign classes to data frames' columns
 
@@ -97,11 +102,27 @@ devtools::install_github("letiR/letiRmisc")
   sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 ```
 
+###
 
+```{r extractBiblio}
+file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
+bib <- RefManageR::ReadBib(file.name)
+txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
+tfile <- tempfile(fileext = '.bib')
+out <- substrBib(bib, txt)
+(out)
+```
 
 
 ## To do list
 
-- [ ] Each time we think a function could be useful and not related to another package, let just put it in this repo :stuck_out_tongue_winking_eye:
+- [ ] Each time we think a function could be useful and not related to another
+package, let just put it in this repo :stuck_out_tongue_winking_eye:
+
+- [ ] Add tests for `substrBib.R`
+
+- [ ] Add functions we used with our blog (the one I used to write URL)
+
+- [ ] Once done the two above done, let's prepare the first release
 
 - [ ] Add a contributing section :wrench:

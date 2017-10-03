@@ -38,9 +38,7 @@ substrBib <- function(bib, text, con, markdown = FALSE) {
     for (i in 1:sz) keys[i] <- bib[i]$key
     ## ----
     id <- which(keys %in% keystxt)
-    print(keys)
-    print(keystxt)
-    print(id)
+    ## ----
     if (!length(id)) {
         warning("No match found.")
         out <- NULL
