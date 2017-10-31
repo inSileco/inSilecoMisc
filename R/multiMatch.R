@@ -22,22 +22,21 @@
 #' eiusmod tempor incididunt ut labore et dolore magna aliqua.',' [[:alnum:]]{1,3} ')
 
 multiMatch <- function(text, pattern) {
+    ## ---
+    text <- as.character(text)
     ## ----
     mat <- regexec(pattern = pattern, text)
     ref <- regmatches(text, mat)
-    tbref <- ref[[1L]]
+    out <- ref[[1L]]
     ## ----
-    if (!length(ref)) 
-        stop("No pattern found") else {
-        k <- 1L
-        while (k) {
-            text <- sub(pattern, "", text)
-            mat <- regexec(pattern = pattern, text)
-            ref <- regmatches(text, mat)
-            if (length(ref[[1L]]) > 0L) {
-                tbref <- c(tbref, ref[[1L]])
-            } else k <- 0L
-        }
+    k <- 1L
+    while (k) {
+        text <- sub(pattern, "", text)
+        mat <- regexec(pattern = pattern, text)
+        ref <- regmatches(text, mat)
+        if (length(ref[[1L]]) > 0L) {
+            out <- c(out, ref[[1L]])
+        } else k <- 0L
     }
-    tbref
+    out
 }
