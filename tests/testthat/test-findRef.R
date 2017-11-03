@@ -3,12 +3,16 @@ context("Test substrBib")
 
 file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
 bib <- RefManageR::ReadBib(file.name)
-txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
-out <- substrBib(bib, txt)
+tfile <- tempfile(fileext='.md')
 ##
+txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
+txtmd <- 'First @Pimm2000, second @May1972, third [@May1972]'
+cat(txtmd, sep='\n', file=tfile)
+##
+out <- substrBib(bib, txt)
 res <- findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
-res2 <- findRef(text='First @Pimm2000, second @May1972, third [@May1972]', markdown=TRUE)
-
+res2 <- findRef(text=txtmd, markdown=TRUE)
+res3 <- findRef(con=tfile, markdown=TRUE)
 
 test_that("substrBib", {
   expect_error(substrBib("tmp"), 'any(class(bib) %in% c("BibEntry", "bibentry")) is not TRUE', fixed = TRUE)
@@ -26,4 +30,5 @@ test_that("findRef", {
   expect_true(all(res2$key == c("May1972", "Pimm2000")))
   expect_true(all(res$freq == c(1,1)))
   expect_true(all(res2$freq == c(2,1)))
+  expect_true(all(res2==res3))
 })
