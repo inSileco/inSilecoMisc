@@ -9,7 +9,7 @@
 #' @param text A character string to be searched within.
 #' @param con  A connection object or a character string that stand for a path,
 #' ignored if text is defined.
-#' @param markdown logical. If \code{TRUE}, citation marks of Markdown langage are sought.
+#' @param markdown logical. If \code{TRUE}, Markdown formated citation marks are sought.
 #' @export
 #' @examples
 #' file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
@@ -20,19 +20,16 @@
 #' # RefManageR::WriteBib(out, file=tempfile(fileext = '.bib'))
 
 substrBib <- function(bib, text, con, markdown = FALSE) {
-    ## ----
+    ##--
     stopifnot(any(class(bib) %in% c("BibEntry", "bibentry")))
-    ## 
+    ##--
     if (missing(text)) {
         if (missing(con)) 
             stop("Either 'text' or 'con' must be specified.") else citxt <- findRef(con = con, markdown = markdown)
     } else citxt <- findRef(text = text, markdown = markdown)
-    ## ----substrBib
+    ## find which key in bib file is actually cited
     keystxt <- as.character(citxt$key)
-    ## ----
-    keys <- unlist(bib$key)
-    ## ----
-    id <- which(keys %in% keystxt)
+    id <- which(unlist(bib$key) %in% keystxt)
     ## ----
     if (!length(id)) {
         warning("No match found.")

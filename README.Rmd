@@ -5,10 +5,10 @@ output:
 ---
 
 
-```{r echo=FALSE}
+```{r echo=FALSE, message = FALSE}
 knitr::opts_chunk$set(
   fig.path = "inst/assets/img/",
-  comment = "#>",
+  comment = "R>> ",
   collapse = TRUE,
   warning = FALSE,
   message = FALSE,
@@ -24,9 +24,14 @@ devtools::load_all(".")
 ### Short description
 
 The *letiRmisc* package is a set of useful R functions created to ease some
-operations we often do and therefore considered worth having dedicated functions. All functions are quite easy to code and some may already be available in other packages. For now, we do not intend to release them on the CRAN. If you however find one of these function and intend to use it in your own package, please, help yourself!
+operations we often do and therefore considered worth having dedicated functions.
+All functions are quite easy to code and some may already be available in other
+packages. For now, we do not intend to release them on the CRAN. If you however
+find one of these function and intend to use it in your own package, please,
+help yourself!
 
 Function's names are written using Camel case (*e.g.* `keepWords()`).
+
 
 ### Current status
 
@@ -61,6 +66,14 @@ devtools::install_github("letiR/letiRmisc")
   strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   keepWords(strex, c(1,4))
 ```
+
+### Size of a string
+
+```{r strLength}
+  strLength(strex)
+```
+
+
 
 ### Assign a category
 
@@ -102,8 +115,8 @@ devtools::install_github("letiR/letiRmisc")
   sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 ```
 
-### Find reference and extract bibliography
 
+### Find reference and extract bibliography
 
 ```{r}
 findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
@@ -112,8 +125,6 @@ findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
 ```{r}
 findRef(text='First @Pimm2000, second @May1972, third [@May1972]', markdown=TRUE)
 ```
-
-
 
 
 ```{r extractBiblio}
@@ -125,16 +136,20 @@ out <- substrBib(bib, txt)
 (out)
 ```
 
+### Add URL
+
+```{r addURL}
+addURL("https://github.com/inSileco/letiRmisc", "Github repo")
+addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
+```
+
+
 
 ## To do list
 
 - [ ] Each time we think a function could be useful and not related to another
 package, let just put it in this repo :stuck_out_tongue_winking_eye:
 
-- [ ] Add tests for `substrBib.R`
-
-- [ ] Add functions we used with our blog (the one I used to write URL)
-
-- [ ] Once done the two above done, let's prepare the first release
-
 - [ ] Add a contributing section :wrench:
+
+- [ ] Let's prepare the first release

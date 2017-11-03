@@ -14,7 +14,7 @@ substrBib(bib, text, con, markdown = FALSE)
 \item{con}{A connection object or a character string that stand for a path,
 ignored if text is defined.}
 
-\item{markdown}{logical. If \code{TRUE}, citation marks of Markdown langage are sought.}
+\item{markdown}{logical. If \code{TRUE}, Markdown formated citation marks are sought.}
 }
 \description{
 Substarct Bibtex entries that are encontered in a given text.
