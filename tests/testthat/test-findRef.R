@@ -1,0 +1,29 @@
+library(letiRmisc)
+context("Test substrBib")
+
+file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
+bib <- RefManageR::ReadBib(file.name)
+txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
+out <- substrBib(bib, txt)
+##
+res <- findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
+res2 <- findRef(text='First @Pimm2000, second @May1972, third [@May1972]', markdown=TRUE)
+
+
+test_that("substrBib", {
+  expect_error(substrBib("tmp"), 'any(class(bib) %in% c("BibEntry", "bibentry")) is not TRUE', fixed = TRUE)
+  expect_error(substrBib(bib), "Either 'text' or 'con' must be specified.")
+  expect_warning(substrBib(bib, "no ref"))
+  expect_equal(length(out), 2)
+  expect_equal(gsub(out[1L], pattern='\\D', replace=""), "12006212630")
+  expect_equal(gsub(out[2L], pattern='\\D', replace=""), "1319951437144614")
+})
+
+
+test_that("findRef", {
+  expect_error(findRef(), "Either 'text' or 'con' must be specified.", fixed = TRUE)
+  expect_true(all(res$key == c("May1972", "Pimm2000")))
+  expect_true(all(res2$key == c("May1972", "Pimm2000")))
+  expect_true(all(res$freq == c(1,1)))
+  expect_true(all(res2$freq == c(2,1)))
+})

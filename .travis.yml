@@ -3,9 +3,15 @@ warnings_are_errors: true
 sudo: required
 
 notifications:
+  slack:
+    rooms: LPZp0uARmFl51Wu3BaSd5jtV
+    on_success: always
+    on_failure: always #change or never
+    template:
+      - "%{repository} (%{commit}) : %{message} %{foo} "
+      - "Build details: %{build_url}"
   email:
     recipients:
-      - s.vissault@yahoo.fr
       - kevin.cazelles@gmail.com
 
 r_packages:

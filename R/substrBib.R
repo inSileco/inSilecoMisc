@@ -16,26 +16,22 @@
 #' bib <- RefManageR::ReadBib(file.name)
 #' # bib[[200]]
 #' txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
-#' tfile <- tempfile(fileext = '.bib')
 #' out <- substrBib(bib, txt)
-#' # RefManageR::WriteBib(out, file=tfile)
+#' # RefManageR::WriteBib(out, file=tempfile(fileext = '.bib'))
 #' unlink(tfile)
-#'
 
 substrBib <- function(bib, text, con, markdown = FALSE) {
     ## ----
     stopifnot(any(class(bib) %in% c("BibEntry", "bibentry")))
     ## 
     if (missing(text)) {
-        if (missing(file)) 
+        if (missing(con)) 
             stop("Either 'text' or 'con' must be specified.") else citxt <- findRef(con = con, markdown = markdown)
     } else citxt <- findRef(text = text, markdown = markdown)
     ## ----substrBib
-    keystxt <- as.character(citxt$Key)
+    keystxt <- as.character(citxt$key)
     ## ----
-    sz <- length(bib)
-    keys <- character(sz)
-    for (i in 1:sz) keys[i] <- bib[i]$key
+    keys <- unlist(bib$key)
     ## ----
     id <- which(keys %in% keystxt)
     ## ----

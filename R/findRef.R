@@ -36,6 +36,6 @@ findRef <- function(text, con, markdown = FALSE) {
         tbref <- sub("[\\].{0,3}[cC]ite.{0,7}\\{", "", tbref)
         tbref <- table(sub("\\}", "", tbref))
     }
-    tbref <- data.frame(Key = names(tbref), freq = as.integer(tbref))
+    tbref <- data.frame(key = names(tbref), freq = as.integer(tbref))
     tbref
 }
