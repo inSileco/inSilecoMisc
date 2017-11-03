@@ -18,7 +18,6 @@
 #' txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
 #' out <- substrBib(bib, txt)
 #' # RefManageR::WriteBib(out, file=tempfile(fileext = '.bib'))
-#' unlink(tfile)
 
 substrBib <- function(bib, text, con, markdown = FALSE) {
     ## ----
