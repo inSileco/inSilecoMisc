@@ -5,7 +5,7 @@
 #' @author
 #' Kevin Cazelles
 #'
-#' @param string character Input vector. A character vector or list from which words will be extracted.
+#' @param string Input vector. A character vector or list from which words will be extracted.
 #' @param slc Vector of integer indicating the selected positions of the words to be kept.
 #' @param punct.rm A logical indicating whether punctutation characters should be removed.
 #' @param na.rm A logical indicating whether missing values should be removed.
@@ -25,7 +25,7 @@
 keepWords <- function(string, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
     ## 
     if (punct.rm) 
-        string %<>% gsub(pattern = "[[:punct:]]", replacement = " ") %>% gsub(pattern = "  ", 
+        string %<>% gsub(pattern = "[[:punct:]]", replacement = " ") %>% gsub(pattern = " +", 
             replacement = " ")
     ## 
     out <- string %>% strsplit(split = " ") %>% lapply(FUN = function(x) x[slc])

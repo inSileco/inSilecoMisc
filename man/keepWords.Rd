@@ -8,7 +8,7 @@ keepWords(string, slc = 1, punct.rm = TRUE, na.rm = FALSE,
   collapse = NULL)
 }
 \arguments{
-\item{string}{character Input vector. A character vector or list from which words will be extracted.}
+\item{string}{Input vector. A character vector or list from which words will be extracted.}
 
 \item{slc}{Vector of integer indicating the selected positions of the words to be kept.}
 

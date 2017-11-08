@@ -49,7 +49,7 @@ like so:
 
 ```{r eval=FALSE}
 if (!require("devtools")) install.packages("devtools")
-devtools::install_github("letiR/letiRmisc")
+devtools::install_github("inSileco/letiRmisc")
 ```
 
 
@@ -148,8 +148,8 @@ addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
 ## To do list
 
 - [ ] Each time we think a function could be useful and not related to another
-package, let just put it in this repo :stuck_out_tongue_winking_eye:
+package, let just put it in this repo :stuck_out_tongue_winking_eye:;
 
-- [ ] Add a contributing section :wrench:
+- [ ] Add a contributing section :wrench:;
 
-- [ ] Let's prepare the first release
+- [ ] Let's prepare the first release;

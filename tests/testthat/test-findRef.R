@@ -1,6 +1,6 @@
 library(letiRmisc)
 context("Test substrBib")
-
+####
 file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
 bib <- RefManageR::ReadBib(file.name)
 tfile <- tempfile(fileext='.md')

@@ -1,5 +1,5 @@
 library(letiRmisc)
-context("Keeps words")
+context("Keeps and counts words")
 
 str.test1 <- "Lorem ipsum dolor sit amet,"
 str.test2 <- "consectetur adipisicing elit."
@@ -37,4 +37,14 @@ test_that("keepWords for multi strings", {
   expect_equal(length(res), 2)
   expect_equal(length(res[[1]]), 1)
   expect_equal(length(res[[2]]), 1)
+})
+
+
+
+
+##--
+
+test_that("count words", {
+  expect_equal(wordCount(str.test1), 5)
+  expect_true(all(wordCount(c(str.test1, str.test2)) == c(5,3)))
 })

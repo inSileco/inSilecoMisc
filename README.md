@@ -28,7 +28,7 @@ To get the current development version from Github, use the
 package like so:
 
     if (!require("devtools")) install.packages("devtools")
-    devtools::install_github("letiR/letiRmisc")
+    devtools::install_github("inSileco/letiRmisc")
 
 Main features
 -------------
@@ -50,16 +50,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.84499830 0.79420037 0.47378725 0.99511424 0.50788185 0.23281734
-    R>>   [7] 0.63132860 0.63051957 0.59744404 0.33668141 0.74545501 0.50954988
-    R>>  [13] 0.96036473 0.07152970 0.66116719 0.37285741 0.75668766 0.08078774
-    R>>  [19] 0.75554903 0.92742820 0.10717577 0.10943714 0.11656262 0.96908129
-    R>>  [25] 0.26507516 0.84042306 0.65149681 0.33740186 0.02886690 0.99932278
-    R>>  [31] 0.92458217 0.32965506 0.59746432 0.24602218 0.03817867 0.77711851
-    R>>  [37] 0.46494551 0.49974485 0.37171694 0.25153196
+    R>>   [1] 0.62635645 0.35656617 0.49904340 0.05896622 0.32289375 0.36890949
+    R>>   [7] 0.99979555 0.02897292 0.72512204 0.51660605 0.95745173 0.38755804
+    R>>  [13] 0.73288609 0.67566944 0.99675485 0.56817599 0.66491407 0.03150301
+    R>>  [19] 0.95420617 0.08996680 0.31107807 0.68485770 0.80916907 0.80913642
+    R>>  [25] 0.89649242 0.48691462 0.33286787 0.29483986 0.84125406 0.43858752
+    R>>  [31] 0.16906464 0.11230704 0.09090313 0.66233585 0.75266916 0.61294493
+    R>>  [37] 0.19182201 0.76282287 0.49027772 0.89227744
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1]  9  8  5 10  6  3  7  7  6  4  8  6 10  1  7  4  8  1  8 10  2  2  2
-    R>>  [24] 10  3  9  7  4  1 10 10  4  6  3  1  8  5  5  4  3
+    R>>   [1]  7  4  5  1  4  4 10  1  8  6 10  4  8  7 10  6  7  1 10  1  4  7  9
+    R>>  [24]  9  9  5  4  3  9  5  2  2  1  7  8  7  2  8  5  9
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -87,11 +87,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.6756 0.3766 0.266 0.484 0.0217 ...
+    R>>   num [1:10, 1:2] 0.9766 0.7426 0.0626 0.6225 0.9282 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.6756 0.3766 0.266 0.484 0.0217 ...
-    R>>   $ V2: chr  "0.08205" "0.6043" "0.6046" "0.3356" ...
+    R>>   $ V1: num  0.9766 0.7426 0.0626 0.6225 0.9282 ...
+    R>>   $ V2: chr  "0.2553" "0.9337" "0.2374" "0.5203" ...
 
 ### Assign a symbol to a p-value
 
@@ -138,8 +138,8 @@ To do list
 
 -   \[ \] Each time we think a function could be useful and not related
     to another package, let just put it in this repo
-    :stuck\_out\_tongue\_winking\_eye:
+    :stuck\_out\_tongue\_winking\_eye:;
 
--   \[ \] Add a contributing section :wrench:
+-   \[ \] Add a contributing section :wrench:;
 
--   \[ \] Let's prepare the first release
+-   \[ \] Let's prepare the first release;
