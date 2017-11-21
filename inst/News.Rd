@@ -4,14 +4,60 @@
 \newcommand{\ghit}{\href{https://github.com/leitiR/letiRmisc/issues/#1}{##1}}
 
 
-\section{First version of letiRmisc version 0.0.1 (Unreleased yet)}{
+\section{Changes in letiRmisc version 0.0.2 (21/11/2017 -- Unreleased)}{
   \itemize{
     \item Addition of R functions:
     \itemize{
-      \item New R functions signifSymbol to assign symbols to p-vlaues.
-      \item New R function adjustSting
-      \item New R function aggregateCol
-      \item New R function assignClass2df
+      \item New R function
+    }
+    \item Changes in existing R functions:
+    \item Changes in the package structure:
+  }
+}
+
+
+\section{Changes in letiRmisc version 0.0.2 (21/11/2017 -- Unreleased)}{
+  \itemize{
+    \item Addition of R functions:
+    \itemize{
+      \item New R function \code{addURL()}
+      \item New R function \code{findRef()}
+      \item New R function \code{keepWords()}
+      \item New R function \code{logit()}
+      \item New R function \code{multiMatch()}
+      \item New R function \code{signifSymbol()}
+      \item New R function \code{strLength()}
+      \item New R function \code{substrBib()}
+      \item New R function \code{wordCount()} that adresses \ghit{#1}
+    }
+    \item Changes in the package structure:
+    \itemize{
+      \item bugReportURL has been changed to https://github.com/inSileco/letiRmisc/issues
+    }
+  }
+}
+
+
+
+\section{First version of letiRmisc version 0.0.1 (10/10/2016 -- Unreleased)}{
+  \itemize{
+    \item Addition of R functions:
+    \itemize{
+      \item New R function \code{adjustSting()}
+      \item New R function \code{aggregateCol()}
+      \item New R function \code{assignClass2df()}
+      \item New R function \code{assignIds()}
+      \item New R function \code{categorize()}
+      \item New R function \code{duplicateRow()}
+      \item New R function \code{findThem()}
+      \item New R function \code{gaussianShape()}
+      \item New R function \code{keepWords()}
+      \item New R function \code{squaretize()}
+    }
+    \item initial package structure:
+    \itemize{
+      \item R man tests and vignettes folder added
+      \item Description LICENSE README andfiles added
     }
   }
 }

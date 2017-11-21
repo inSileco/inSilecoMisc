@@ -1,6 +1,6 @@
 Package: letiRmisc
-Title: LetiR Miscellaneous Functions
-Version: 0.0.1
+Title: inSileco miscellaneous functions
+Version: 0.0.2
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kevin.cazelles@um2.fr", role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
@@ -9,7 +9,7 @@ Authors@R: c(
   )
 Description: Contains a set of R functions we find useful.
 Depends:
-    R (>= 3.2.3)
+    R (>= 3.0)
 License: GPL-3
 LazyData: true
 Imports:
@@ -21,6 +21,6 @@ Suggests:
     rmarkdown,
     testthat,
     sp
-BugReports: https://github.com/letiR/letiRmisc/issues
+BugReports: https://github.com/inSileco/letiRmisc/issues
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
