@@ -1,6 +1,6 @@
 Package: letiRmisc
 Title: inSileco miscellaneous functions
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kevin.cazelles@um2.fr", role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),

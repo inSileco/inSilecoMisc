@@ -4,11 +4,11 @@
 \newcommand{\ghit}{\href{https://github.com/leitiR/letiRmisc/issues/#1}{##1}}
 
 
-\section{Changes in letiRmisc version 0.0.2 (21/11/2017 -- Unreleased)}{
+\section{Changes in letiRmisc version 0.0.3 (Unreleased)}{
   \itemize{
     \item Addition of R functions:
     \itemize{
-      \item New R function
+      \item New R function \code{findReplace()} and \code{grepReplace()}
     }
     \item Changes in existing R functions:
     \item Changes in the package structure:
