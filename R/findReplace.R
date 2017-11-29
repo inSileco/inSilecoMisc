@@ -17,7 +17,7 @@
 #' These functions may be useful in case where many different patterns must be
 #' replaced by the same value. Note that there are many other way to proceed.
 #'
-#' @example
+#' @examples
 #' vec <- c('fish', 'crab', 'crabs', 'bug', 'crab')
 #' findReplace(vec, 'crab', 'fish')
 #' findReplace(vec, c('crab', 'crabs'), 'fish')

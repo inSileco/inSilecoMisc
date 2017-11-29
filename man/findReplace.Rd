@@ -30,6 +30,12 @@ replaced by the same value. Note that there are many other way to proceed.
 \item \code{grepReplace}: Return a vector including the desire modifications.
 }}
 
+\examples{
+vec <- c('fish', 'crab', 'crabs', 'bug', 'crab')
+findReplace(vec, 'crab', 'fish')
+findReplace(vec, c('crab', 'crabs'), 'fish')
+grepReplace(vec, 'crab[s]?', 'fish')
+}
 \author{
 Kevin Cazelles
 }
