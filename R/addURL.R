@@ -1,6 +1,6 @@
-#' Computes the
+#' Add an URL
 #'
-#' Substarct Bibtex entries that are encontered in a given text.
+#' Add and URL in HTML or Markdown format.
 #'
 #' @author
 #' Kevin Cazelles

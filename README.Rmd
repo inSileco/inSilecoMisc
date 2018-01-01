@@ -136,12 +136,19 @@ out <- substrBib(bib, txt)
 (out)
 ```
 
-### Add URL
+### Add URL and icons
 
 ```{r addURL}
 addURL("https://github.com/inSileco/letiRmisc", "Github repo")
 addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
 ```
+
+```{r  addWebIcon}
+addWebIcon('cc')
+addWebIcon('acm', 'ai', 4)
+```
+
+
 
 
 

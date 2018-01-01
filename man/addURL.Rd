@@ -2,7 +2,7 @@
 % Please edit documentation in R/addURL.R
 \name{addURL}
 \alias{addURL}
-\title{Computes the}
+\title{Add an URL}
 \usage{
 addURL(url, text = NULL, extra = NULL, markdown = FALSE)
 }
@@ -17,7 +17,7 @@ ignored if text is defined.}
 \item{markdown}{logical. If \code{TRUE}, hyperlinks  marks of Markdown language are sought.}
 }
 \description{
-Substarct Bibtex entries that are encontered in a given text.
+Add and URL in HTML or Markdown format.
 }
 \examples{
 addURL('https://github.com/inSileco/letiRmisc', 'Github repo')
