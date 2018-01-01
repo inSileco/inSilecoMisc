@@ -34,7 +34,7 @@ addURL <- function(url, text = NULL, extra = NULL, markdown = FALSE) {
     } else {
         out <- paste0("[", text, "](", url, ")")
         if (strLength(extra)) 
-            warning("markdown is TRUE so 'extra' is ignored")
+            warning("markdown is 'TRUE' so 'extra' is ignored")
     }
     ## 
     out

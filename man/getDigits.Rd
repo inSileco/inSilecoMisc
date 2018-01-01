@@ -4,12 +4,12 @@
 \alias{getDigits}
 \title{Extract digits from a character vector.}
 \usage{
-getDigits(x, collapse = TRUE)
+getDigits(x, collapse = NULL)
 }
 \arguments{
 \item{x}{a character vector where digits are sought, or an object which can be coerced by \code{as.character} to a character vector.}
 
-\item{collapse}{super useful.}
+\item{collapse}{an optional character string to separate the results (see \link[base]{paste}).}
 }
 \value{
 A list of digits.
@@ -22,7 +22,7 @@ as a list.
 This function is very useful!
 }
 \examples{
-getDigits('cool012-99')
+getDigits('txt012-34')
 }
 \author{
 Kevin Cazelles

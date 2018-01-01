@@ -9,7 +9,7 @@
 #' Kevin Cazelles
 #'
 #' @param x a character vector where digits are sought, or an object which can be coerced by \code{as.character} to a character vector.
-#' @param collapse super useful.
+#' @param collapse an optional character string to separate the results (see \link[base]{paste}).
 #'
 #' @importFrom magrittr %>% %<>%
 #'
@@ -22,11 +22,11 @@
 #' This function is very useful!
 #'
 #' @examples
-#' getDigits('cool012-99')
+#' getDigits('txt012-34')
 
-getDigits <- function(x, collapse = TRUE) {
+getDigits <- function(x, collapse = NULL) {
     out <- strsplit(x, split = "\\D") %>% lapply(function(x) x[x != ""])
-    if (collapse)
-        out %<>% lapply(paste)
+    if (!is.null(collapse)) 
+        out <- lapply(out, paste, collapse = collapse)
     out
 }
