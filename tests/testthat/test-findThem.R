@@ -24,7 +24,7 @@ test_that("findThem output lengths", {
 })
 
 test_that("findThem output values", {
-  expect_equal(res3[[2]], 8)
+  expect_equal(res3[[2L]], 8)
   expect_equal(length(unlist(res3)), 3)
 })
 

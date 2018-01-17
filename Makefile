@@ -13,6 +13,9 @@ $(rman): $(rfun) $(rtes) DESCRIPTION
 readme:
 	Rscript --no-init-file $(rscr) 0
 
+vignettes:
+	Rscript --no-init-file $(rscr) 2
+
 check:
 	Rscript --no-init-file -e "devtools::check('.')"
 

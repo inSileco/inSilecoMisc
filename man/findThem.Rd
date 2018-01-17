@@ -18,8 +18,9 @@ the data frame with a NA. Only available if \code{todf} is TRUE. Default is
 set to FALSE.}
 }
 \value{
-A list indicating matched positions for each elements of \code{what}. If \code{todf} is
-TRUE then a three-columns dataframe is returned includeing values and positions
+A list indicating matched positions for each elements of \code{what}. If no
+match is found then \code{NA} is returned. If \code{todf} is TRUE
+then a three-columns dataframe is returned includeing values and positions
 in both \code{what} and \code{where} vectors.
 }
 \description{

@@ -11,6 +11,7 @@
       \item New R functions \code{findReplace()} and \code{grepReplace()}.
       \item New R functions \code{logistic()} and \code{logistic2()}.
       \item New R function \code{addWebIcon()}.
+      \item New R function \code{meanAlong()}, a simple moving wondow function.
     }
     \item Changes in existing R functions:
     \item Changes in the package structure:
