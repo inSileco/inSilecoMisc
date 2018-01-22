@@ -143,13 +143,16 @@ addURL("https://github.com/inSileco/letiRmisc", "Github repo")
 addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
 ```
 
-```{r  addWebIcon}
+```{r addWebIcon}
 addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 ```
 
+## meanAlong
 
-
+```{r meanAlong}
+meanAlong(1:10, 2)
+```
 
 
 ## To do list
