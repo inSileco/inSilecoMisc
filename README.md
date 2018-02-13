@@ -15,7 +15,7 @@ Function’s names are written using Camel case (*e.g.* `keepWords()`).
 ### Current status
 
 [![Build
-status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/KevCaz/letirmisc-e7i3j)
+status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/inSileco/letiRmisc)
 [![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
 [![codecov](https://codecov.io/gh/inSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
 ![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
@@ -50,17 +50,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.487451840 0.934434469 0.313241743 0.970932093 0.561223618
-    R>>   [6] 0.572109757 0.507192442 0.047345697 0.612399040 0.007618606
-    R>>  [11] 0.412667398 0.149749661 0.543906280 0.685728308 0.209506034
-    R>>  [16] 0.865720866 0.728527392 0.440934710 0.684450641 0.851832188
-    R>>  [21] 0.316687836 0.600529293 0.609378662 0.026249713 0.205235254
-    R>>  [26] 0.055378769 0.350015166 0.939304302 0.146904825 0.173896555
-    R>>  [31] 0.125987738 0.979276311 0.980875490 0.434939067 0.832327171
-    R>>  [36] 0.120765817 0.403079897 0.722391989 0.744173736 0.884754916
+    R>>   [1] 0.38059295 0.85500015 0.16050927 0.22836259 0.04921136 0.75685524
+    R>>   [7] 0.07717388 0.87781791 0.54493374 0.49605626 0.11064944 0.41607595
+    R>>  [13] 0.12257767 0.75483608 0.43669488 0.55427222 0.97110044 0.07073262
+    R>>  [19] 0.04345266 0.49260000 0.95552234 0.95154333 0.54236199 0.71687853
+    R>>  [25] 0.89040762 0.76219753 0.45419474 0.88709141 0.01800242 0.29943078
+    R>>  [31] 0.89966693 0.44177057 0.98606342 0.77758621 0.39671436 0.32835654
+    R>>  [37] 0.14127830 0.72864371 0.79564064 0.75051406
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1]  5 10  4 10  6  6  6  1  7  1  5  2  6  7  3  9  8  5  7  9  4  7  7
-    R>>  [24]  1  3  1  4 10  2  2  2 10 10  5  9  2  5  8  8  9
+    R>>   [1]  4  9  2  3  1  8  1  9  6  5  2  5  2  8  5  6 10  1  1  5 10 10  6
+    R>>  [24]  8  9  8  5  9  1  3  9  5 10  8  4  4  2  8  8  8
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -88,11 +87,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.193 0.732 0.955 0.649 0.544 ...
+    R>>   num [1:10, 1:2] 0.7236 0.0493 0.703 0.3984 0.4491 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.193 0.732 0.955 0.649 0.544 ...
-    R>>   $ V2: chr  "0.1762" "0.1053" "0.9647" "0.6828" ...
+    R>>   $ V1: num  0.7236 0.0493 0.703 0.3984 0.4491 ...
+    R>>   $ V2: chr  "0.2875" "0.2859" "0.5804" "0.1537" ...
 
 ### Assign a symbol to a p-value
 
@@ -145,13 +144,18 @@ meanAlong
     meanAlong(1:10, 2)
     R>>  [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5
 
+packagesUsed
+------------
+
+    packagesUsed(c('utils', 'methods'))
+    R>>       name version
+    R>>  1   utils   3.4.3
+    R>>  2 methods   3.4.3
+
 To do list
 ----------
 
--   \[ \] Each time we think a function could be useful and not related
-    to another package, let just put it in this repo
-    :stuck\_out\_tongue\_winking\_eye:;
-
--   \[ \] Add a contributing section :wrench:;
+-   \[ \] A short but useful function you often use, well it in this
+    repo :stuck\_out\_tongue\_winking\_eye:;
 
 -   \[ \] Let’s prepare the first release;
