@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Test meanAlong")
 ##
 res1 <- meanAlong(1:3, 2)

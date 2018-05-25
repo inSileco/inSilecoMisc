@@ -1,6 +1,4 @@
-library(letiRmisc)
 context("Makes your matrix square")
-
 
 res1 <- squaretize(matrix(1:12, 3, 4))
 res2 <- squaretize(matrix(1:12, 4, 3))

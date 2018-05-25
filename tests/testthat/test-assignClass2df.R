@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("assignClass2df")
 
 mat1 <- matrix(signif(runif(20),4), ncol=2)

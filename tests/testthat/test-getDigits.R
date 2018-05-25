@@ -1,5 +1,3 @@
-library(letiRmisc)
-
 context("getDigits")
 
 

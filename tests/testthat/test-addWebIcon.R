@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("add icon")
 
 res1 <- addWebIcon('cc')

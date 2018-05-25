@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Duplicate rows and columns")
 
 mydf <- data.frame(
@@ -6,6 +5,7 @@ mydf <- data.frame(
   var2=LETTERS[1:10],
   var3=LETTERS[1:10]
 )
+rownames(mydf) <- letters[1:nrow(mydf)]
 
 mydf$var2 <- as.factor(mydf$var2)
 mydf$var3 <- as.character(mydf$var3)
@@ -16,7 +16,8 @@ mydf1b <- duplicateCol(mydf)
 mydf2a <- duplicateRow(mydf, id.el=11)
 
 mydf3a <- duplicateRow(mydf, id.el=c(2,6), times=c(1,2))
-mydf3b <- duplicateCol(mydf, id.el=c(2,3), times=c(1,2))
+mydf3b <- duplicateRow(mydf, id.el=c("b", "f"), times=c(1,2))
+mydf3c <- duplicateCol(mydf, id.el=c(2,3), times=c(1,2))
 #
 mydf4a <- duplicateRow(mydf, append = TRUE)
 mydf4b <- duplicateCol(mydf, append = TRUE)
@@ -37,7 +38,8 @@ test_that("duplicates missings", {
 
 test_that("duplicates multi elements", {
   expect_equal(nrow(mydf3a), nrow(mydf)+3)
-  expect_equal(ncol(mydf3b), ncol(mydf)+3)
+  expect_true(identical(mydf3b, mydf3a))
+  expect_equal(ncol(mydf3c), ncol(mydf)+3)
 })
 
 test_that("duplicates and appends", {

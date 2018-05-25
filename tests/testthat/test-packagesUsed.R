@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("packageUsed")
 
 nm <-c("utils", "methods")

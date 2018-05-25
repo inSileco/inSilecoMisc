@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("assignIDs")
 
 ls1 <- list(2,'f', 'd', 'f')

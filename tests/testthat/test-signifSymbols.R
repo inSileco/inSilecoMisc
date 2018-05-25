@@ -1,6 +1,4 @@
-library(letiRmisc)
 context("signifSymbols")
-
 
 test_that("basic checks", {
   expect_error(signifSymbols(.1,.2))

@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("String length")
 
 res1 <- strLength(123)

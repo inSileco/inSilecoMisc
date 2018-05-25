@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("findReplace")
 
 vec <- c("fish", "crab", "crabs", "bug", "crab")

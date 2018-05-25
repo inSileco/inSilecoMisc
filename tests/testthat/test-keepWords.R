@@ -43,8 +43,10 @@ test_that("keepWords for multi strings", {
 
 
 ##--
-
+str.test3 <- "consectetur-adipisicing elit."
 test_that("count words", {
   expect_equal(wordCount(str.test1), 5)
   expect_true(all(wordCount(c(str.test1, str.test2)) == c(5,3)))
+  expect_equal(wordCount(str.test3), 3)
+  expect_equal(wordCount(str.test3, exclude = "[ \\.]"), 2)
 })

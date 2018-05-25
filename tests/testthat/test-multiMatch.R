@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Test multiMatch")
 
 

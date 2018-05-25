@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("add URL")
 
 res1 <- addURL("url", "text")

@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Categorize")
 
 seq1 <- 0:9

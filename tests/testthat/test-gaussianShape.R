@@ -1,6 +1,4 @@
-library(letiRmisc)
 context("GaussianShape")
-
 
 test_that("gaussianShape defaults", {
   expect_equal(gaussianShape(0), 1/sqrt(2*pi))

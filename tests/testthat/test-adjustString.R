@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Adjust your string")
 
 vec <- "Coucou"

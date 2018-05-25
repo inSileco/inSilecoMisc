@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("findThem")
 
 string <- unlist(strsplit("Lorem ipsum dolor sit amet", ""))

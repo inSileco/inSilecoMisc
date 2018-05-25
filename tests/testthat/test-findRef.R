@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Test substrBib")
 ####
 file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')

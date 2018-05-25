@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Aggregate Column")
 
 mat2 <- mat1 <- matrix(rep(1:50,2),10)
