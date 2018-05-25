@@ -14,3 +14,6 @@ meanAlong(vec, n)
 \description{
 This function is a simple moving window function.
 }
+\examples{
+meanAlong(1:10, 2)
+}

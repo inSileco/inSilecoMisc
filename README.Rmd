@@ -41,6 +41,7 @@ Function's names are written using Camel case (*e.g.* `keepWords()`).
 ![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
 
 
+
 ## Installation
 
 To get the current development version from Github, use the

@@ -5,7 +5,8 @@
 #' @param n a intger indicating the size of the window
 #'
 #' @export
-#' @example
+#'
+#' @examples
 #' meanAlong(1:10, 2)
 
 meanAlong <- function(vec, n) {

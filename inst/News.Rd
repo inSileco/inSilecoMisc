@@ -14,6 +14,9 @@
       \item New R function \code{meanAlong()}, a simple moving wondow function.
     }
     \item Changes in existing R functions:
+    \itemize{
+      \item New argument \code{exlude} in \code{wordCount()}. 
+    }
     \item Changes in the package structure:
   }
 }
