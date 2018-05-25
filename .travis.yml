@@ -10,6 +10,7 @@ notifications:
     template:
       - "%{repository} (%{commit}) : %{message} %{foo} "
       - "See on Travis: %{build_url}"
+      - "duration: %{duration}" 
   email:
     recipients:
       - kevin.cazelles@gmail.com
