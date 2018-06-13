@@ -16,7 +16,8 @@ Imports:
     magrittr,
     methods,
     utils,
-    RefManageR
+    RefManageR,
+    yaml
 Suggests:
     knitr,
     rmarkdown,

@@ -38,12 +38,12 @@ aggregateCol <- function(data, grp, names_aggreg = NULL, FUN = sum, ...) {
     id <- which(!is.na(grp))
     data <- data[, id]
     grp <- grp[id]
-    ## 
+    ##
     idz <- which(grp == 0)
     nz <- length(idz)
-    ## avoid note pertaining to the use of '.'
-    . <- "No notes"
-    ## 
+    ## avoid warnings pertaining to the use of '.'
+    . <- "No note"
+    ##
     if (ncol(data)) {
         ## keep columns for which grp==0
         tmp <- grp %>% unique %>% magrittr::extract(. != 0)
@@ -57,16 +57,16 @@ aggregateCol <- function(data, grp, names_aggreg = NULL, FUN = sum, ...) {
             k <- 0
             for (i in tmp) {
                 k <- k + 1
-                tmp_df[, nz + k] <- apply(data[, which(grp == i)], MARGIN = 1, FUN = FUN, 
+                tmp_df[, nz + k] <- apply(data[, which(grp == i)], MARGIN = 1, FUN = FUN,
                   ...)
             }
             if (!is.null(names_aggreg)) {
                 names(tmp_df)[(nz + 1):length(tmp_df)] <- names_aggreg
             }
         }
-        ## 
+        ##
         out <- tmp_df
     } else out <- data
-    ## 
+    ##
     return(out)
 }

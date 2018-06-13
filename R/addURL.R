@@ -19,23 +19,28 @@
 
 addURL <- function(url, text = NULL, extra = NULL, markdown = FALSE) {
     url %<>% as.character
-    
+
     if (!is.null(text)) {
         text %<>% as.character
     } else text <- url
-    
+
     if (!is.null(extra)) {
         extra %<>% as.character()
         extra <- paste0(" ", extra)
     } else extra <- ""
-    
+
     if (!markdown) {
         out <- paste0("<a href='", url, "'", extra, ">", text, "</a>")
     } else {
         out <- paste0("[", text, "](", url, ")")
-        if (strLength(extra)) 
+        if (strLength(extra))
             warning("markdown is 'TRUE' so 'extra' is ignored")
     }
-    ## 
+    ##
     out
+}
+
+
+addHWS <- function(n = 1){
+  paste(rep("&nbsp;", n), collapse = " ")
 }
