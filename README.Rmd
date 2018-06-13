@@ -7,38 +7,41 @@ output:
 
 ```{r echo=FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  fig.path = "inst/assets/img/",
+  fig.path = "inst/assets/fig/",
   comment = "R>> ",
   collapse = TRUE,
   warning = FALSE,
   message = FALSE,
-  fig.width=4,
-  fig.height=4
+  fig.width = 5,
+  fig.height = 5
 )
-devtools::load_all(".")
 ```
 
 
-## letiRmisc
+# letiRmisc
 
-### Short description
+[![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
+[![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
+[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
-The *letiRmisc* package is a set of useful R functions created to ease some
-operations we often do and therefore considered worth having dedicated functions.
-All functions are quite easy to code and some may already be available in other
-packages. For now, we do not intend to release them on the CRAN. If you however
+## About
+
+### Description
+
+The *inSilecoMisc* package is a set of useful R functions created to ease some
+operations we often do.
+Functions here are written to be used with base may already be available in other
+packages (especially in packages of the [tidyverse](https://www.tidyverse.org/)).
+
+So far, we do not intend to release this package on the CRAN. If you however
 find one of these function and intend to use it in your own package, please,
 help yourself!
 
-Function's names are written using Camel case (*e.g.* `keepWords()`).
+Note that functions' names are written using Camel case (*e.g.* `keepWords()`).
 
 
-### Current status
 
-[![Build status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/inSileco/letiRmisc)
-[![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
-[![codecov](https://codecov.io/gh/inSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
-![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
+
 
 
 
@@ -50,7 +53,7 @@ like so:
 
 ```{r eval=FALSE}
 if (!require("devtools")) install.packages("devtools")
-devtools::install_github("inSileco/letiRmisc")
+devtools::install_github("inSileco/inSilecoMisc")
 ```
 
 
@@ -58,7 +61,7 @@ devtools::install_github("inSileco/letiRmisc")
 ## Main features
 
 ```{r loading}
-  library(letiRmisc)
+library(inSilecoMisc)
 ```
 
 ### Keep a selection of words
@@ -155,16 +158,22 @@ addWebIcon('acm', 'ai', 4)
 meanAlong(1:10, 2)
 ```
 
-## packagesUsed
 
+## packagesUsed
 
 ```{r packagesUse}
 packagesUsed(c('utils', 'methods'))
 ```
 
 
-## To do list
+## Tout-doux list
 
-- [ ] A short but useful function you often use, well it in this repo :stuck_out_tongue_winking_eye:;
+- [ ] inSilecico member, a short but useful function you often use? Add it in this repo :stuck_out_tongue_winking_eye:;
 
-- [ ] Let's prepare the first release;
+
+<!-- pkg <- pkgdown:::section_init(".", depth = 0, override = list())
+pkg2 <- pkgdown:::as_pkgdown(".")
+format <- pkgdown:::build_rmarkdown_format(pkg2, depth = 0L, data = list(), toc = FALSE)
+pkgdown:::render_rmarkdown(pkg = pkg2, input =  pkg$dst_path, output = "index.html",
+       output_format = format, quiet = F, copy_images = FALSE)
+pkgdown::build_site() -->

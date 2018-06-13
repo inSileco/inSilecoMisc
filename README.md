@@ -1,24 +1,30 @@
 letiRmisc
----------
+=========
 
-### Short description
+About
+-----
 
-The *letiRmisc* package is a set of useful R functions created to ease
-some operations we often do and therefore considered worth having
-dedicated functions. All functions are quite easy to code and some may
-already be available in other packages. For now, we do not intend to
-release them on the CRAN. If you however find one of these function and
-intend to use it in your own package, please, help yourself!
+### Description
 
-Function’s names are written using Camel case (*e.g.* `keepWords()`).
+The *inSilecoMisc* package is a set of useful R functions created to
+ease some operations we often do. Functions here are written to be used
+with base may already be available in other packages (especially in
+packages of the [tidyverse](https://www.tidyverse.org/)).
+
+So far, we do not intend to release this package on the CRAN. If you
+however find one of these function and intend to use it in your own
+package, please, help yourself!
+
+Note that functions’ names are written using Camel case (*e.g.*
+`keepWords()`).
 
 ### Current status
 
 [![Build
-status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/inSileco/letiRmisc)
-[![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
-[![codecov](https://codecov.io/gh/inSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
-![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
+Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
+[![Build
+status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
+[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
 Installation
 ------------
@@ -28,12 +34,12 @@ To get the current development version from Github, use the
 package like so:
 
     if (!require("devtools")) install.packages("devtools")
-    devtools::install_github("inSileco/letiRmisc")
+    devtools::install_github("inSileco/inSilecoMisc")
 
 Main features
 -------------
 
-      library(letiRmisc)
+    library(inSilecoMisc)
 
 ### Keep a selection of words
 
@@ -50,16 +56,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.38059295 0.85500015 0.16050927 0.22836259 0.04921136 0.75685524
-    R>>   [7] 0.07717388 0.87781791 0.54493374 0.49605626 0.11064944 0.41607595
-    R>>  [13] 0.12257767 0.75483608 0.43669488 0.55427222 0.97110044 0.07073262
-    R>>  [19] 0.04345266 0.49260000 0.95552234 0.95154333 0.54236199 0.71687853
-    R>>  [25] 0.89040762 0.76219753 0.45419474 0.88709141 0.01800242 0.29943078
-    R>>  [31] 0.89966693 0.44177057 0.98606342 0.77758621 0.39671436 0.32835654
-    R>>  [37] 0.14127830 0.72864371 0.79564064 0.75051406
+    R>>   [1] 0.99214337 0.31171799 0.56070470 0.54466872 0.29966394 0.32109119
+    R>>   [7] 0.28128818 0.59589856 0.81216719 0.29817815 0.26570390 0.67276404
+    R>>  [13] 0.94476824 0.36332951 0.92936313 0.23618996 0.50067110 0.29241868
+    R>>  [19] 0.21714723 0.44384743 0.22142397 0.77767900 0.67439501 0.45173673
+    R>>  [25] 0.27326727 0.66848496 0.80267346 0.56277968 0.96802984 0.10215451
+    R>>  [31] 0.56928679 0.97048877 0.43552671 0.09509066 0.67638032 0.06425101
+    R>>  [37] 0.06244420 0.55870936 0.60233759 0.32699378
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1]  4  9  2  3  1  8  1  9  6  5  2  5  2  8  5  6 10  1  1  5 10 10  6
-    R>>  [24]  8  9  8  5  9  1  3  9  5 10  8  4  4  2  8  8  8
+    R>>   [1] 10  4  6  6  3  4  3  6  9  3  3  7 10  4 10  3  6  3  3  5  3  8  7
+    R>>  [24]  5  3  7  9  6 10  2  6 10  5  1  7  1  1  6  7  4
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -87,11 +93,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.7236 0.0493 0.703 0.3984 0.4491 ...
+    R>>   num [1:10, 1:2] 0.341 0.786 0.639 0.343 0.919 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.7236 0.0493 0.703 0.3984 0.4491 ...
-    R>>   $ V2: chr  "0.2875" "0.2859" "0.5804" "0.1537" ...
+    R>>   $ V1: num  0.341 0.786 0.639 0.343 0.919 ...
+    R>>   $ V2: chr  "0.03802" "0.9461" "0.6638" "0.9869" ...
 
 ### Assign a symbol to a p-value
 
@@ -149,13 +155,11 @@ packagesUsed
 
     packagesUsed(c('utils', 'methods'))
     R>>       name version
-    R>>  1   utils   3.4.3
-    R>>  2 methods   3.4.3
+    R>>  1   utils   3.4.4
+    R>>  2 methods   3.4.4
 
-To do list
-----------
+Tout-doux list
+--------------
 
--   \[ \] A short but useful function you often use, well it in this
-    repo :stuck\_out\_tongue\_winking\_eye:;
-
--   \[ \] Let’s prepare the first release;
+-   \[ \] inSilecico member, a short but useful function you often use?
+    Add it in this repo :stuck\_out\_tongue\_winking\_eye:;

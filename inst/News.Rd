@@ -1,11 +1,15 @@
 \name{NEWS}
 \title{News for Package \pkg{letiRmisc}}
-\newcommand{\ghpr}{\href{https://github.com/leitiR/letiRmisc/pull/#1}{##1}}
-\newcommand{\ghit}{\href{https://github.com/leitiR/letiRmisc/issues/#1}{##1}}
+\newcommand{\ghpr}{\href{https://github.com/inSileco/inSilecoMisc/pull/#1}{##1}}
+\newcommand{\ghit}{\href{https://github.com/inSileco/inSilecoMisc/issues/#1}{##1}}
 
 
-\section{Changes in letiRmisc version 0.0.3 (Unreleased)}{
+\section{Changes in inSileco version 0.1.1}{
   \itemize{
+    \item Changes in the package structure:
+    \itemize{
+      \item New package name: inSileco.
+    }
     \item Addition of R functions:
     \itemize{
       \item New R functions \code{findReplace()} and \code{grepReplace()}.
@@ -15,9 +19,8 @@
     }
     \item Changes in existing R functions:
     \itemize{
-      \item New argument \code{exlude} in \code{wordCount()}. 
+      \item New argument \code{exlude} in \code{wordCount()}.
     }
-    \item Changes in the package structure:
   }
 }
 

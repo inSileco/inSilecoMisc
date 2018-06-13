@@ -1,4 +1,3 @@
-library(letiRmisc)
 context("Keeps and counts words")
 
 str.test1 <- "Lorem ipsum dolor sit amet,"

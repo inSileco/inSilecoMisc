@@ -8,8 +8,8 @@
 #' @author
 #' Kevin Cazelles
 #'
-#' @param x a character vector where digits are sought, or an object which can be coerced by \code{as.character} to a character vector.
-#' @param collapse an optional character string to separate the results (see \link[base]{paste}).
+#' @param x a character vector where digits are sought, or an object which can be coerced by `as.character` to a character vector.
+#' @param collapse an optional character string to separate the results (see [paste[pkg:base]).
 #'
 #' @importFrom magrittr %>% %<>%
 #'

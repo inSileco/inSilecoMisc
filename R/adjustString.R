@@ -33,24 +33,24 @@ adjustString <- function(x, szchar, extra = 0, before = TRUE) {
     x %<>% as.character
     szchar %<>% as.numeric %>% floor %>% abs
     extra %<>% as.character %>% strsplit(split = "") %>% extract2(1)
-    ##
+    ## 
     out <- x
     id1 <- nchar(x) < szchar
-    ##
+    ## 
     . <- "No note"
-    ##
+    ## 
     if (sum(id1) > 0) {
         val <- szchar - nchar(x[id1])
-        out[id1] <- val %>% as.list %>% lapply(FUN = . %>% rep(extra, length.out = .) %>%
+        out[id1] <- val %>% as.list %>% lapply(FUN = . %>% rep(extra, length.out = .) %>% 
             paste(collapse = "")) %>% unlist
-        if (before)
+        if (before) 
             out[id1] %<>% paste0(x[id1]) else out[id1] %<>% paste0(x[id1], .)
     }
-    ##
+    ## 
     if (sum(!id1)) {
-        out[!id1] <- strsplit(x[!id1], split = "") %>% lapply(FUN = . %>% rep(length.out = szchar) %>%
+        out[!id1] <- strsplit(x[!id1], split = "") %>% lapply(FUN = . %>% rep(length.out = szchar) %>% 
             paste(collapse = "")) %>% unlist
     }
-
+    
     out
 }
