@@ -7,21 +7,23 @@ output:
 
 ```{r echo=FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  fig.path = "inst/assets/img/",
+  fig.path = "inst/assets/fig/",
   comment = "R>> ",
   collapse = TRUE,
   warning = FALSE,
   message = FALSE,
-  fig.width = 4,
-  fig.height = 4
+  fig.width = 5,
+  fig.height = 5
 )
-devtools::load_all(".")
 ```
 
 
-## letiRmisc
+# letiRmisc
 
-### Short description
+
+## About
+
+### Description
 
 The *inSilecoMisc* package is a set of useful R functions created to ease some
 operations we often do.

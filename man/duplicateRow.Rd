@@ -3,7 +3,7 @@
 \name{duplicateRow}
 \alias{duplicateRow}
 \alias{duplicateCol}
-\title{Duplicate element of a dataframe.}
+\title{Duplicates elements of a dataframe.}
 \usage{
 duplicateRow(x, id.el = 1, times = 1, append = FALSE)
 
@@ -23,9 +23,9 @@ Duplicates rows and colmns of a given a dataframe.
 }
 \section{Functions}{
 \itemize{
-\item \code{duplicateRow}: A dataframe with duplicated rows.
+\item \code{duplicateRow}: returns a dataframe with duplicated rows.
 
-\item \code{duplicateCol}: A dataframe with duplicated columns.
+\item \code{duplicateCol}: returns a dataframe with duplicated columns.
 }}
 
 \examples{
