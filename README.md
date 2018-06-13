@@ -3,14 +3,17 @@ letiRmisc
 
 ### Short description
 
-The *letiRmisc* package is a set of useful R functions created to ease
-some operations we often do and therefore considered worth having
-dedicated functions. All functions are quite easy to code and some may
-already be available in other packages. For now, we do not intend to
-release them on the CRAN. If you however find one of these function and
-intend to use it in your own package, please, help yourself!
+The *inSilecoMisc* package is a set of useful R functions created to
+ease some operations we often do. Functions here are written to be used
+with base may already be available in other packages (especially in
+packages of the [tidyverse](https://www.tidyverse.org/)).
 
-Function’s names are written using Camel case (*e.g.* `keepWords()`).
+So far, we do not intend to release this package on the CRAN. If you
+however find one of these function and intend to use it in your own
+package, please, help yourself!
+
+Note that functions’ names are written using Camel case (*e.g.*
+`keepWords()`).
 
 ### Current status
 
@@ -50,16 +53,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.38059295 0.85500015 0.16050927 0.22836259 0.04921136 0.75685524
-    R>>   [7] 0.07717388 0.87781791 0.54493374 0.49605626 0.11064944 0.41607595
-    R>>  [13] 0.12257767 0.75483608 0.43669488 0.55427222 0.97110044 0.07073262
-    R>>  [19] 0.04345266 0.49260000 0.95552234 0.95154333 0.54236199 0.71687853
-    R>>  [25] 0.89040762 0.76219753 0.45419474 0.88709141 0.01800242 0.29943078
-    R>>  [31] 0.89966693 0.44177057 0.98606342 0.77758621 0.39671436 0.32835654
-    R>>  [37] 0.14127830 0.72864371 0.79564064 0.75051406
+    R>>   [1] 0.67238483 0.05098148 0.22366055 0.39607320 0.52817612 0.17802640
+    R>>   [7] 0.83115384 0.32446055 0.53052310 0.66818290 0.82403028 0.05223067
+    R>>  [13] 0.47823114 0.06780591 0.16629247 0.06329764 0.94524151 0.33215092
+    R>>  [19] 0.44767945 0.55804911 0.55323334 0.43451248 0.52390590 0.36259152
+    R>>  [25] 0.36758282 0.76516043 0.41436147 0.41058853 0.26980389 0.84440851
+    R>>  [31] 0.43299138 0.91824088 0.79107319 0.42837189 0.08160837 0.06647240
+    R>>  [37] 0.86289064 0.22843737 0.94246882 0.15675153
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1]  4  9  2  3  1  8  1  9  6  5  2  5  2  8  5  6 10  1  1  5 10 10  6
-    R>>  [24]  8  9  8  5  9  1  3  9  5 10  8  4  4  2  8  8  8
+    R>>   [1]  7  1  3  4  6  2  9  4  6  7  9  1  5  1  2  1 10  4  5  6  6  5  6
+    R>>  [24]  4  4  8  5  5  3  9  5 10  8  5  1  1  9  3 10  2
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -87,11 +90,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.7236 0.0493 0.703 0.3984 0.4491 ...
+    R>>   num [1:10, 1:2] 0.478 0.433 0.196 0.291 0.445 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.7236 0.0493 0.703 0.3984 0.4491 ...
-    R>>   $ V2: chr  "0.2875" "0.2859" "0.5804" "0.1537" ...
+    R>>   $ V1: num  0.478 0.433 0.196 0.291 0.445 ...
+    R>>   $ V2: chr  "0.8618" "0.4178" "0.2241" "0.5513" ...
 
 ### Assign a symbol to a p-value
 
@@ -149,13 +152,11 @@ packagesUsed
 
     packagesUsed(c('utils', 'methods'))
     R>>       name version
-    R>>  1   utils   3.4.3
-    R>>  2 methods   3.4.3
+    R>>  1   utils   3.4.4
+    R>>  2 methods   3.4.4
 
-To do list
-----------
+Tout-doux list
+--------------
 
--   \[ \] A short but useful function you often use, well it in this
-    repo :stuck\_out\_tongue\_winking\_eye:;
-
--   \[ \] Let’s prepare the first release;
+-   \[ \] inSilecico member, a short but useful function you often use?
+    Add it in this repo :stuck\_out\_tongue\_winking\_eye:;

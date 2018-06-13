@@ -12,8 +12,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
   message = FALSE,
-  fig.width=4,
-  fig.height=4
+  fig.width = 4,
+  fig.height = 4
 )
 devtools::load_all(".")
 ```
@@ -23,14 +23,16 @@ devtools::load_all(".")
 
 ### Short description
 
-The *letiRmisc* package is a set of useful R functions created to ease some
-operations we often do and therefore considered worth having dedicated functions.
-All functions are quite easy to code and some may already be available in other
-packages. For now, we do not intend to release them on the CRAN. If you however
+The *inSilecoMisc* package is a set of useful R functions created to ease some
+operations we often do.
+Functions here are written to be used with base may already be available in other
+packages (especially in packages of the [tidyverse](https://www.tidyverse.org/)).
+
+So far, we do not intend to release this package on the CRAN. If you however
 find one of these function and intend to use it in your own package, please,
 help yourself!
 
-Function's names are written using Camel case (*e.g.* `keepWords()`).
+Note that functions' names are written using Camel case (*e.g.* `keepWords()`).
 
 
 ### Current status
@@ -155,16 +157,14 @@ addWebIcon('acm', 'ai', 4)
 meanAlong(1:10, 2)
 ```
 
-## packagesUsed
 
+## packagesUsed
 
 ```{r packagesUse}
 packagesUsed(c('utils', 'methods'))
 ```
 
 
-## To do list
+## Tout-doux list
 
-- [ ] A short but useful function you often use, well it in this repo :stuck_out_tongue_winking_eye:;
-
-- [ ] Let's prepare the first release;
+- [ ] inSilecico member, a short but useful function you often use? Add it in this repo :stuck_out_tongue_winking_eye:;

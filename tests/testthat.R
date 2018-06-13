@@ -1,3 +1,3 @@
 library(testthat)
-library(letiRmisc)
-test_check("letiRmisc")
+library(inSilecoMisc)
+test_check("inSilecoMisc")
