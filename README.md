@@ -18,10 +18,10 @@ Note that functions’ names are written using Camel case (*e.g.*
 ### Current status
 
 [![Build
-status](https://ci.appveyor.com/api/projects/status/h2t19erayyod64lj?svg=true)](https://ci.appveyor.com/project/inSileco/letiRmisc)
-[![Travis](https://travis-ci.org/inSileco/letiRmisc.svg?branch=master)](https://travis-ci.org/inSileco/letiRmisc)
-[![codecov](https://codecov.io/gh/inSileco/letiRmisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/letiRmisc)
-![](https://img.shields.io/badge/licence-GPLv3-8f10cb.svg)
+Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
+[![Build
+status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
+[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
 Installation
 ------------
@@ -31,12 +31,12 @@ To get the current development version from Github, use the
 package like so:
 
     if (!require("devtools")) install.packages("devtools")
-    devtools::install_github("inSileco/letiRmisc")
+    devtools::install_github("inSileco/inSilecoMisc")
 
 Main features
 -------------
 
-      library(letiRmisc)
+    library(inSilecoMisc)
 
 ### Keep a selection of words
 
@@ -53,16 +53,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.67238483 0.05098148 0.22366055 0.39607320 0.52817612 0.17802640
-    R>>   [7] 0.83115384 0.32446055 0.53052310 0.66818290 0.82403028 0.05223067
-    R>>  [13] 0.47823114 0.06780591 0.16629247 0.06329764 0.94524151 0.33215092
-    R>>  [19] 0.44767945 0.55804911 0.55323334 0.43451248 0.52390590 0.36259152
-    R>>  [25] 0.36758282 0.76516043 0.41436147 0.41058853 0.26980389 0.84440851
-    R>>  [31] 0.43299138 0.91824088 0.79107319 0.42837189 0.08160837 0.06647240
-    R>>  [37] 0.86289064 0.22843737 0.94246882 0.15675153
+    R>>   [1] 0.13780573 0.17708009 0.77330267 0.30710906 0.67434486 0.55012283
+    R>>   [7] 0.63048250 0.79462166 0.23519578 0.78091285 0.32436219 0.45307328
+    R>>  [13] 0.35748185 0.24681598 0.76751976 0.66642766 0.96600211 0.04952655
+    R>>  [19] 0.03451996 0.34324260 0.14052181 0.85171006 0.98864700 0.88616456
+    R>>  [25] 0.96326465 0.12279069 0.85347725 0.39668267 0.65347731 0.86984038
+    R>>  [31] 0.09091806 0.02286843 0.27840141 0.70495423 0.55510063 0.03851234
+    R>>  [37] 0.84837195 0.33887783 0.35538841 0.88467788
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1]  7  1  3  4  6  2  9  4  6  7  9  1  5  1  2  1 10  4  5  6  6  5  6
-    R>>  [24]  4  4  8  5  5  3  9  5 10  8  5  1  1  9  3 10  2
+    R>>   [1]  2  2  8  4  7  6  7  8  3  8  4  5  4  3  8  7 10  1  1  4  2  9 10
+    R>>  [24]  9 10  2  9  4  7  9  1  1  3  8  6  1  9  4  4  9
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -90,11 +90,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.478 0.433 0.196 0.291 0.445 ...
+    R>>   num [1:10, 1:2] 0.183 0.128 0.652 0.228 0.919 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.478 0.433 0.196 0.291 0.445 ...
-    R>>   $ V2: chr  "0.8618" "0.4178" "0.2241" "0.5513" ...
+    R>>   $ V1: num  0.183 0.128 0.652 0.228 0.919 ...
+    R>>   $ V2: chr  "0.01379" "0.09421" "0.3086" "0.4628" ...
 
 ### Assign a symbol to a p-value
 

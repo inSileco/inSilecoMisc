@@ -1,9 +1,8 @@
 # Project specific
-src/*.o
-src/*.so
 .DS_Store
 Makefile
 inst/tmp
+
 
 # History files
 .Rhistory
