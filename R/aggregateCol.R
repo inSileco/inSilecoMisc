@@ -41,8 +41,8 @@ aggregateCol <- function(data, grp, names_aggreg = NULL, FUN = sum, ...) {
     ## 
     idz <- which(grp == 0)
     nz <- length(idz)
-    ## avoid note pertaining to the use of '.'
-    . <- "No notes"
+    ## avoid warnings pertaining to the use of '.'
+    . <- "No note"
     ## 
     if (ncol(data)) {
         ## keep columns for which grp==0

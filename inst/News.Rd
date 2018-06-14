@@ -4,6 +4,27 @@
 \newcommand{\ghit}{\href{https://github.com/inSileco/inSilecoMisc/issues/#1}{##1}}
 
 
+\section{Changes in inSileco version 0.1.2}{
+  \itemize{
+    \item Changes in the package structure:
+    \itemize{
+      \item so far, not much!
+    }
+    \item Addition of R functions:
+    \itemize{
+      \item New R function \code{loremIpsum()} to get a piece of a placeholder text.
+      \item New R function \code{readYamlHeader()} to read YAML headers.
+      \item New R function \code{applyString()} to apply a function to a subset of strings.
+    }
+    \item Changes in existing R functions:
+    \itemize{
+      \item so far, not much!
+    }
+  }
+}
+
+
+
 \section{Changes in inSileco version 0.1.1}{
   \itemize{
     \item Changes in the package structure:

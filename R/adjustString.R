@@ -21,8 +21,7 @@
 #' @return
 #' A character vector of the concatenated characters.
 #'
-#' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
+#' @importFrom magrittr %>% %<>%
 #' @importFrom magrittr extract2
 #' @export
 #' @examples
@@ -38,7 +37,7 @@ adjustString <- function(x, szchar, extra = 0, before = TRUE) {
     out <- x
     id1 <- nchar(x) < szchar
     ## 
-    . <- "No notes"
+    . <- "No note"
     ## 
     if (sum(id1) > 0) {
         val <- szchar - nchar(x[id1])
@@ -52,5 +51,6 @@ adjustString <- function(x, szchar, extra = 0, before = TRUE) {
         out[!id1] <- strsplit(x[!id1], split = "") %>% lapply(FUN = . %>% rep(length.out = szchar) %>% 
             paste(collapse = "")) %>% unlist
     }
-    return(out)
+    
+    out
 }

@@ -33,5 +33,6 @@ signifSymbols <- function(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001), symbol
     } else {
         out <- notsignif
     }
-    return(out)
+    
+    out
 }

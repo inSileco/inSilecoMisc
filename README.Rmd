@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 
 # letiRmisc
 
+[![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
+[![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
+[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
 ## About
 
@@ -38,11 +41,6 @@ Note that functions' names are written using Camel case (*e.g.* `keepWords()`).
 
 
 
-### Current status
-
-[![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
-[![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
-[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
 
 
@@ -154,6 +152,13 @@ addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 ```
 
+## applyString
+
+```{r applyString}
+applyString("cool", FUN = toupper, pos = 1:2)
+applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
+```
+
 ## meanAlong
 
 ```{r meanAlong}
@@ -171,3 +176,11 @@ packagesUsed(c('utils', 'methods'))
 ## Tout-doux list
 
 - [ ] inSilecico member, a short but useful function you often use? Add it in this repo :stuck_out_tongue_winking_eye:;
+
+
+<!-- pkg <- pkgdown:::section_init(".", depth = 0, override = list())
+pkg2 <- pkgdown:::as_pkgdown(".")
+format <- pkgdown:::build_rmarkdown_format(pkg2, depth = 0L, data = list(), toc = FALSE)
+pkgdown:::render_rmarkdown(pkg = pkg2, input =  pkg$dst_path, output = "index.html",
+       output_format = format, quiet = F, copy_images = FALSE)
+pkgdown::build_site() -->

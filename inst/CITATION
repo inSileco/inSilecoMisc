@@ -1,0 +1,12 @@
+citHeader("To cite letiRisc use:")
+
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "Manual",
+         title = "{inSilecoMisc}: Miscellaneous functions on the inSileco team",
+         author = c(person("Kevin", "Cazelles"),
+                    person("inSileco", "Team")),
+         year = year,
+         note = note,
+         url = "https://github.com/inSileco/letiRmisc")

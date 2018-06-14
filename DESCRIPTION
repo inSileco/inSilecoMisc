@@ -1,6 +1,6 @@
 Package: inSilecoMisc
 Title: inSileco miscellaneous functions
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
@@ -17,7 +17,8 @@ Imports:
     methods,
     knitr,
     utils,
-    RefManageR
+    RefManageR,
+    yaml
 Suggests:
     rmarkdown,
     testthat,
