@@ -1,6 +1,12 @@
 letiRmisc
 =========
 
+[![Build
+Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
+[![Build
+status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
+[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
+
 About
 -----
 
@@ -17,14 +23,6 @@ package, please, help yourself!
 
 Note that functions’ names are written using Camel case (*e.g.*
 `keepWords()`).
-
-### Current status
-
-[![Build
-Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
-[![Build
-status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
-[![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
 
 Installation
 ------------
@@ -56,16 +54,16 @@ Main features
 ### Assign a category
 
       (seqv <- stats::runif(40))
-    R>>   [1] 0.99214337 0.31171799 0.56070470 0.54466872 0.29966394 0.32109119
-    R>>   [7] 0.28128818 0.59589856 0.81216719 0.29817815 0.26570390 0.67276404
-    R>>  [13] 0.94476824 0.36332951 0.92936313 0.23618996 0.50067110 0.29241868
-    R>>  [19] 0.21714723 0.44384743 0.22142397 0.77767900 0.67439501 0.45173673
-    R>>  [25] 0.27326727 0.66848496 0.80267346 0.56277968 0.96802984 0.10215451
-    R>>  [31] 0.56928679 0.97048877 0.43552671 0.09509066 0.67638032 0.06425101
-    R>>  [37] 0.06244420 0.55870936 0.60233759 0.32699378
+    R>>   [1] 0.74583000 0.45982127 0.62770412 0.33520836 0.54600437 0.54235708
+    R>>   [7] 0.19201931 0.61752738 0.23692015 0.93438982 0.09256918 0.51994010
+    R>>  [13] 0.23141000 0.48902149 0.71794182 0.75709344 0.78120820 0.10739735
+    R>>  [19] 0.48477491 0.98179428 0.04187389 0.95140570 0.04183031 0.20373064
+    R>>  [25] 0.65792612 0.32944390 0.72273830 0.95339114 0.85410125 0.88290747
+    R>>  [31] 0.42690014 0.66485737 0.96752513 0.17307674 0.33680796 0.53614862
+    R>>  [37] 0.16113397 0.68283502 0.39706541 0.68591929
       categorize(seqv, categ=seq(0.1,0.9, 0.1))
-    R>>   [1] 10  4  6  6  3  4  3  6  9  3  3  7 10  4 10  3  6  3  3  5  3  8  7
-    R>>  [24]  5  3  7  9  6 10  2  6 10  5  1  7  1  1  6  7  4
+    R>>   [1]  8  5  7  4  6  6  2  7  3 10  1  6  3  5  8  8  8  2  5 10  1 10  1
+    R>>  [24]  3  7  4  8 10  9  9  5  7 10  2  4  6  2  7  4  7
 
 ### Turn a matrix or a data frame into a squared matrix
 
@@ -93,11 +91,11 @@ Main features
       df1 <- matrix(signif(runif(20),4), ncol=2)
       df2 <- assignClass2df(df1, 2, 'character')
       str(df1)
-    R>>   num [1:10, 1:2] 0.341 0.786 0.639 0.343 0.919 ...
+    R>>   num [1:10, 1:2] 0.64 0.5804 0.4792 0.3625 0.0265 ...
       str(df2)
     R>>  'data.frame':  10 obs. of  2 variables:
-    R>>   $ V1: num  0.341 0.786 0.639 0.343 0.919 ...
-    R>>   $ V2: chr  "0.03802" "0.9461" "0.6638" "0.9869" ...
+    R>>   $ V1: num  0.64 0.5804 0.4792 0.3625 0.0265 ...
+    R>>   $ V2: chr  "0.8075" "0.3106" "0.7541" "0.4842" ...
 
 ### Assign a symbol to a p-value
 
@@ -144,6 +142,14 @@ Main features
     addWebIcon('acm', 'ai', 4)
     R>>  [1] "<i class=\"ai ai-acm ai-4x\"></i>"
 
+applyString
+-----------
+
+    applyString("cool", FUN = toupper, pos = 1:2)
+    R>>  [1] "COol"
+    applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
+    R>>  [1] "cOOl" "prO"
+
 meanAlong
 ---------
 
@@ -155,11 +161,18 @@ packagesUsed
 
     packagesUsed(c('utils', 'methods'))
     R>>       name version
-    R>>  1   utils   3.4.4
-    R>>  2 methods   3.4.4
+    R>>  1   utils   3.5.0
+    R>>  2 methods   3.5.0
 
 Tout-doux list
 --------------
 
 -   \[ \] inSilecico member, a short but useful function you often use?
     Add it in this repo :stuck\_out\_tongue\_winking\_eye:;
+
+<!-- pkg <- pkgdown:::section_init(".", depth = 0, override = list())
+pkg2 <- pkgdown:::as_pkgdown(".")
+format <- pkgdown:::build_rmarkdown_format(pkg2, depth = 0L, data = list(), toc = FALSE)
+pkgdown:::render_rmarkdown(pkg = pkg2, input =  pkg$dst_path, output = "index.html",
+       output_format = format, quiet = F, copy_images = FALSE)
+pkgdown::build_site() -->

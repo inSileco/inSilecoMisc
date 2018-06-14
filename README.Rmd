@@ -152,6 +152,13 @@ addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 ```
 
+## applyString
+
+```{r applyString}
+applyString("cool", FUN = toupper, pos = 1:2)
+applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
+```
+
 ## meanAlong
 
 ```{r meanAlong}

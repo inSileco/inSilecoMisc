@@ -14,6 +14,7 @@
     \itemize{
       \item New R function \code{loremIpsum()} to get a piece of a placeholder text.
       \item New R function \code{readYamlHeader()} to read YAML headers.
+      \item New R function \code{applyString()} to apply a function to a subset of strings.
     }
     \item Changes in existing R functions:
     \itemize{

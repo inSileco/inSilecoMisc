@@ -1,4 +1,4 @@
-context("Adjust your string")
+context("Adjust your character string")
 
 vec <- "Coucou"
 res0 <- adjustString(1,0)

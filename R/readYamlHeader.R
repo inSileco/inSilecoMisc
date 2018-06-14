@@ -14,8 +14,8 @@
 
 readYamlHeader <- function(con) {
     ## Read current file first line should be ---
-    if (readLines(con, 1) == "---") {
-        doc <- readLines(con)[-1]
+    if (readLines(con, 1L) == "---") {
+        doc <- readLines(con)[-1L]
         id <- which(doc == "---")
         if (length(id)) {
             out <- yaml::yaml.load(paste(doc[1:id[1]], collapse = "\n"))
