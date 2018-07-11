@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# letiRmisc
+# inSilicoMisc
 
 [![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
 [![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
@@ -176,11 +176,3 @@ packagesUsed(c('utils', 'methods'))
 ## Tout-doux list
 
 - [ ] inSilecico member, a short but useful function you often use? Add it in this repo :stuck_out_tongue_winking_eye:;
-
-
-<!-- pkg <- pkgdown:::section_init(".", depth = 0, override = list())
-pkg2 <- pkgdown:::as_pkgdown(".")
-format <- pkgdown:::build_rmarkdown_format(pkg2, depth = 0L, data = list(), toc = FALSE)
-pkgdown:::render_rmarkdown(pkg = pkg2, input =  pkg$dst_path, output = "index.html",
-       output_format = format, quiet = F, copy_images = FALSE)
-pkgdown::build_site() -->
