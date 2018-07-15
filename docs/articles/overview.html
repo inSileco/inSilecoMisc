@@ -68,7 +68,7 @@
       <h1>Overview</h1>
                         <h4 class="author">letiR group</h4>
             
-            <h4 class="date">2018-07-11</h4>
+            <h4 class="date">2018-07-15</h4>
           </div>
 
     
@@ -78,6 +78,142 @@
 <div id="introduction" class="section level1">
 <h1 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h1>
+<div id="main-features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#main-features" class="anchor"></a>Main features</h2>
+<pre><code>## Loading inSilecoMisc</code></pre>
+<div id="keep-a-selection-of-words" class="section level3">
+<h3 class="hasAnchor">
+<a href="#keep-a-selection-of-words" class="anchor"></a>Keep a selection of words</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">  strex &lt;-<span class="st"> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="kw"><a href="../reference/keepWords.html">keepWords</a></span>(strex, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>))</a></code></pre></div>
+<pre><code>## [[1]]
+## [1] "Lorem" "sit"</code></pre>
+</div>
+<div id="size-of-a-string" class="section level3">
+<h3 class="hasAnchor">
+<a href="#size-of-a-string" class="anchor"></a>Size of a string</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">  <span class="kw"><a href="../reference/strLength.html">strLength</a></span>(strex)</a></code></pre></div>
+<pre><code>## [1] 57</code></pre>
+</div>
+<div id="assign-a-category" class="section level3">
+<h3 class="hasAnchor">
+<a href="#assign-a-category" class="anchor"></a>Assign a category</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">  (seqv &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/stats/topics/Uniform">runif</a></span>(<span class="dv">40</span>))</a></code></pre></div>
+<pre><code>##  [1] 0.11591035 0.01732579 0.28699898 0.61825291 0.53712502 0.63486632
+##  [7] 0.89149164 0.92526962 0.28087578 0.03384705 0.63130334 0.19476432
+## [13] 0.15812084 0.06967299 0.60510997 0.29865800 0.05004243 0.69282819
+## [19] 0.04235642 0.58295259 0.63869483 0.27047122 0.85116606 0.01789825
+## [25] 0.83682921 0.44359124 0.97698025 0.40838415 0.93330226 0.75129080
+## [31] 0.17732000 0.16099695 0.52670340 0.09405977 0.95562849 0.58671967
+## [37] 0.44848987 0.95191241 0.71309954 0.95816383</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">  <span class="kw"><a href="../reference/categorize.html">categorize</a></span>(seqv, <span class="dt">categ=</span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>, <span class="fl">0.1</span>))</a></code></pre></div>
+<pre><code>##  [1]  2  1  3  7  6  7  9 10  3  1  7  2  2  1  7  3  1  7  1  6  7  3  9
+## [24]  1  9  5 10  5 10  8  2  2  6  1 10  6  5 10  8 10</code></pre>
+</div>
+<div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level3">
+<h3 class="hasAnchor">
+<a href="#turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="anchor"></a>Turn a matrix or a data frame into a squared matrix</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">  mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(LETTERS[<span class="dv">3</span><span class="op">:</span><span class="dv">1</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]))</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">  <span class="kw">print</span>(mat)</a></code></pre></div>
+<pre><code>##   A B C  D  E
+## C 1 4 7 10 13
+## B 2 5 8 11 14
+## A 3 6 9 12 15</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">  <span class="kw"><a href="../reference/squaretize.html">squaretize</a></span>(mat, <span class="dt">reorder=</span><span class="ot">FALSE</span>)</a></code></pre></div>
+<pre><code>##   A B C  D  E
+## C 1 4 7 10 13
+## B 2 5 8 11 14
+## A 3 6 9 12 15
+## D 0 0 0  0  0
+## E 0 0 0  0  0</code></pre>
+</div>
+<div id="adjust-the-size-of-a-character-string" class="section level3">
+<h3 class="hasAnchor">
+<a href="#adjust-the-size-of-a-character-string" class="anchor"></a>Adjust the size of a character string</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">  <span class="kw">paste0</span>(<span class="st">'myfilename'</span>, <span class="kw"><a href="../reference/adjustString.html">adjustString</a></span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">100</span>), <span class="dv">3</span>))</a></code></pre></div>
+<pre><code>## [1] "myfilename001" "myfilename002" "myfilename010" "myfilename100"</code></pre>
+</div>
+<div id="assign-classes-to-data-frames-columns" class="section level3">
+<h3 class="hasAnchor">
+<a href="#assign-classes-to-data-frames-columns" class="anchor"></a>Assign classes to data frames’ columns</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">  df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">signif</span>(<span class="kw">runif</span>(<span class="dv">20</span>),<span class="dv">4</span>), <span class="dt">ncol=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">  df2 &lt;-<span class="st"> </span><span class="kw"><a href="../reference/assignClass2df.html">assignClass2df</a></span>(df1, <span class="dv">2</span>, <span class="st">'character'</span>)</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">  <span class="kw">str</span>(df1)</a></code></pre></div>
+<pre><code>##  num [1:10, 1:2] 0.874 0.504 0.88 0.839 0.169 ...</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">  <span class="kw">str</span>(df2)</a></code></pre></div>
+<pre><code>## 'data.frame':    10 obs. of  2 variables:
+##  $ V1: num  0.874 0.504 0.88 0.839 0.169 ...
+##  $ V2: chr  "0.2478" "0.6252" "0.4262" "0.3213" ...</code></pre>
+</div>
+<div id="assign-a-symbol-to-a-p-value" class="section level3">
+<h3 class="hasAnchor">
+<a href="#assign-a-symbol-to-a-p-value" class="anchor"></a>Assign a symbol to a p-value</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">  <span class="kw">sapply</span>(<span class="kw">c</span>(.<span class="dv">2</span>, <span class="fl">.08</span>, <span class="fl">.04</span>, <span class="fl">.008</span>, <span class="fl">0.0001</span>), signifSymbols)</a></code></pre></div>
+<pre><code>## [1] "n.s." "."    "*"    "**"   "***"</code></pre>
+</div>
+<div id="find-reference-and-extract-bibliography" class="section level3">
+<h3 class="hasAnchor">
+<a href="#find-reference-and-extract-bibliography" class="anchor"></a>Find reference and extract bibliography</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw"><a href="../reference/findRef.html">findRef</a></span>(<span class="dt">text=</span><span class="st">'First </span><span class="ch">\\</span><span class="st">cite{Pimm2000}, second </span><span class="ch">\\</span><span class="st">Citep{May1972}'</span>)</a></code></pre></div>
+<pre><code>##        key freq
+## 1  May1972    1
+## 2 Pimm2000    1</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw"><a href="../reference/findRef.html">findRef</a></span>(<span class="dt">text=</span><span class="st">'First @Pimm2000, second @May1972, third [@May1972]'</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>##        key freq
+## 1  May1972    2
+## 2 Pimm2000    1</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">file.name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'Bib'</span>, <span class="st">'RJC.bib'</span>, <span class="dt">package=</span><span class="st">'RefManageR'</span>)</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">bib &lt;-<span class="st"> </span>RefManageR<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/RefManageR/topics/ReadBib">ReadBib</a></span>(file.name)</a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">txt &lt;-<span class="st"> 'First </span><span class="ch">\\</span><span class="st">cite{kim1995estimating}, second </span><span class="ch">\\</span><span class="st">Citep{fu2006statistical}'</span></a>
+<a class="sourceLine" id="cb26-4" data-line-number="4">tfile &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">'.bib'</span>)</a>
+<a class="sourceLine" id="cb26-5" data-line-number="5">out &lt;-<span class="st"> </span><span class="kw"><a href="../reference/substrBib.html">substrBib</a></span>(bib, txt)</a>
+<a class="sourceLine" id="cb26-6" data-line-number="6">(out)</a></code></pre></div>
+<pre><code>## [1] W. J. Fu, J. Hu, T. Spencer, et al. "Statistical models in
+## assessing fold change of gene expression in real-time RT-PCR
+## experiments". In: _Computational biology and chemistry_ 30.1
+## (2006), pp. 21-26.
+## 
+## [2] M. Y. Kim, B. S. Pasternack, R. J. Carroll, et al. "Estimating
+## the reliability of an exposure variable in the presence of
+## confounders". In: _Statistics in medicine_ 14.13 (1995), pp.
+## 1437-1446.</code></pre>
+</div>
+<div id="add-url-and-icons" class="section level3">
+<h3 class="hasAnchor">
+<a href="#add-url-and-icons" class="anchor"></a>Add URL and icons</h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw"><a href="../reference/addURL.html">addURL</a></span>(<span class="st">"https://github.com/inSileco/letiRmisc"</span>, <span class="st">"Github repo"</span>)</a></code></pre></div>
+<pre><code>## [1] "&lt;a href='https://github.com/inSileco/letiRmisc'&gt;Github repo&lt;/a&gt;"</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw"><a href="../reference/addURL.html">addURL</a></span>(<span class="st">"https://github.com/inSileco/letiRmisc"</span>, <span class="st">"Github repo"</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre><code>## [1] "[Github repo](https://github.com/inSileco/letiRmisc)"</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw"><a href="../reference/addWebIcon.html">addWebIcon</a></span>(<span class="st">'cc'</span>)</a></code></pre></div>
+<pre><code>## [1] "&lt;i class=\"fa fa-cc fa-2x\"&gt;&lt;/i&gt;"</code></pre>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw"><a href="../reference/addWebIcon.html">addWebIcon</a></span>(<span class="st">'acm'</span>, <span class="st">'ai'</span>, <span class="dv">4</span>)</a></code></pre></div>
+<pre><code>## [1] "&lt;i class=\"ai ai-acm ai-4x\"&gt;&lt;/i&gt;"</code></pre>
+</div>
+</div>
+<div id="applystring" class="section level2">
+<h2 class="hasAnchor">
+<a href="#applystring" class="anchor"></a>applyString</h2>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw"><a href="../reference/applyString.html">applyString</a></span>(<span class="st">"cool"</span>, <span class="dt">FUN =</span> toupper, <span class="dt">pos =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] "COol"</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="kw"><a href="../reference/applyString.html">applyString</a></span>(<span class="kw">c</span>(<span class="st">"cool"</span>, <span class="st">"pro"</span>),  <span class="dt">pattern =</span> <span class="st">"o"</span>, <span class="dt">FUN =</span> toupper)</a></code></pre></div>
+<pre><code>## [1] "cOOl" "prO"</code></pre>
+</div>
+<div id="meanalong" class="section level2">
+<h2 class="hasAnchor">
+<a href="#meanalong" class="anchor"></a>meanAlong</h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1"><span class="kw"><a href="../reference/meanAlong.html">meanAlong</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>)</a></code></pre></div>
+<pre><code>## [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5</code></pre>
+</div>
+<div id="packagesused" class="section level2">
+<h2 class="hasAnchor">
+<a href="#packagesused" class="anchor"></a>packagesUsed</h2>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw"><a href="../reference/packagesUsed.html">packagesUsed</a></span>(<span class="kw">c</span>(<span class="st">'utils'</span>, <span class="st">'methods'</span>))</a></code></pre></div>
+<pre><code>##      name version
+## 1   utils   3.5.1
+## 2 methods   3.5.1</code></pre>
+</div>
 </div>
 </div>
   </div>
@@ -87,7 +223,14 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#introduction">Introduction</a></li>
+<li>
+<a href="#introduction">Introduction</a><ul class="nav nav-pills nav-stacked">
+<li><a href="#main-features">Main features</a></li>
+      <li><a href="#applystring">applyString</a></li>
+      <li><a href="#meanalong">meanAlong</a></li>
+      <li><a href="#packagesused">packagesUsed</a></li>
+      </ul>
+</li>
       </ul>
 </div>
       </div>

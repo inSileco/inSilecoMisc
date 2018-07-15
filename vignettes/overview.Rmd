@@ -16,8 +16,8 @@ vignette: >
 
 ## Main features
 
-```{r loading}
-library(inSilecoMisc)
+```{r loading, echo = FALSE}
+devtools::load_all()
 ```
 
 ### Keep a selection of words

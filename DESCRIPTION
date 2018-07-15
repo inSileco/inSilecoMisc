@@ -1,5 +1,5 @@
 Package: inSilecoMisc
-Title: inSileco miscellaneous functions
+Title: inSileco Miscellaneous Functions
 Version: 0.1.2
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
@@ -23,7 +23,7 @@ Suggests:
     rmarkdown,
     testthat,
     sp
-BugReports: https://github.com/inSileco/letiRmisc/issues
+BugReports: https://github.com/inSileco/inSilecoMisc/issues
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
 Roxygen: list(markdown = TRUE)
