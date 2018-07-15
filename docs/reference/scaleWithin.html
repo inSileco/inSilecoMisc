@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><span class="pkg">inSileco</span> is a set of miscellaneous R functions of inSileco. — inSilecoMisc-package • inSilecoMisc</title>
+<title>Scale a set of values — scaleWithin • inSilecoMisc</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -92,48 +92,69 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1><span class="pkg">inSileco</span> is a set of miscellaneous R functions of inSileco.</h1>
+    <h1>Scale a set of values</h1>
     </div>
 
     
-    <p>Mainly the functions of the packages used the maniulation of data
-using base R, <em>i.e.</em> outside the tidyverse which may (or may not)
-has equivalent functions.</p>
+    <p>For a given set of values, returns values between 1 and a number of values
+passed as an argument.</p>
     
 
-        
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>TOBEDONE: details about different funcitons.</p>
+    <pre class="usage"><span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='kw'>nval</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fu'>min</span>(<span class='no'>x</span>), <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fu'>max</span>(<span class='no'>x</span>))</pre>
     
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>a numeric object of type <code>numeric</code> or coercible as one.</p></td>
+    </tr>
+    <tr>
+      <th>nval</th>
+      <td><p>The number of scaled values (between 1 and <code>nval</code>).</p></td>
+    </tr>
+    <tr>
+      <th>mn</th>
+      <td><p>Minimum value (<code>mn</code> and lower values are set to 1).</p></td>
+    </tr>
+    <tr>
+      <th>mx</th>
+      <td><p>Maximum value (<code>mx</code> and higher values are set to <code>nval</code>).</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Useful links:</p><ul>
-<li><p>Report bugs at <a href='https://github.com/inSileco/inSilecoMisc/issues'>https://github.com/inSileco/inSilecoMisc/issues</a></p></li>
-</ul>
+    <p>A numeric vector</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/stats/topics/Poisson'>rpois</a></span>(<span class='fl'>20</span>, <span class='fl'>20</span>)
+<span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='fl'>20</span>, <span class='fl'>10</span>, <span class='fl'>30</span>)</div><div class='output co'>#&gt;  [1] 10 13 13 12  9 12 15 14  5  9 13 15  5  9 12  9  5  6  9 13</div><div class='input'><span class='fu'>scaleWithin</span>(<span class='fu'>matrix</span>(<span class='no'>x</span>, <span class='fl'>10</span>, <span class='fl'>2</span>), <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fl'>30</span>)</div><div class='output co'>#&gt;       [,1] [,2]
+#&gt;  [1,]    1   21
+#&gt;  [2,]   21   41
+#&gt;  [3,]   21    1
+#&gt;  [4,]   11    1
+#&gt;  [5,]    1   11
+#&gt;  [6,]   11    1
+#&gt;  [7,]   41    1
+#&gt;  [8,]   31    1
+#&gt;  [9,]    1    1
+#&gt; [10,]    1   21</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-          </ul>
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
     <h2>Author</h2>
     
-<strong>Maintainer</strong>: Kevin Cazelles <a href='mailto:kcazelle@uoguelph.ca'>kcazelle@uoguelph.ca</a> (0000-0001-6619-9874)
-
-Authors:
-<ul>
-<li><p>David Beauchesne</p></li>
-<li><p>Nicolas Casajus</p></li>
-<li><p>Steve Vissault</p></li>
-</ul>
-
+Kevin Cazelles
 
   </div>
 </div>
