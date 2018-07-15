@@ -1,4 +1,4 @@
-^_pkgdown\.yml$
+^inst/_pkgdown\.yml$
 ^\.Rproj\.user$
 ^.*\.Rproj$
 ^appveyor\.yml$

@@ -11,14 +11,22 @@ vignette: >
 
 <!-- http://r-pkgs.had.co.nz/vignettes.html -->
 
+
+```{r echo=FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  comment = "R>> ",
+  collapse = TRUE
+)
+library(inSilecoMisc)
+```
+
+
 # Introduction
 
 
 ## Main features
 
-```{r loading, echo = FALSE}
-devtools::load_all()
-```
+
 
 ### Keep a selection of words
 

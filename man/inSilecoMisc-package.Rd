@@ -16,7 +16,7 @@ TOBEDONE: details about different funcitons.
 \seealso{
 Useful links:
 \itemize{
-  \item Report bugs at \url{https://github.com/inSileco/letiRmisc/issues}
+  \item Report bugs at \url{https://github.com/inSileco/inSilecoMisc/issues}
 }
 
 }
