@@ -21,21 +21,15 @@ library(inSilecoMisc)
 ```
 
 
-# Introduction
 
-
-## Main features
-
-
-
-### Keep a selection of words
+## Keep a selection of words
 
 ```{r keepWords}
   strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   keepWords(strex, c(1,4))
 ```
 
-### Size of a string
+## Size of a string
 
 ```{r strLength}
   strLength(strex)
@@ -43,7 +37,7 @@ library(inSilecoMisc)
 
 
 
-### Assign a category
+## Assign a category
 
 ```{r categorize}
   (seqv <- stats::runif(40))
@@ -51,7 +45,7 @@ library(inSilecoMisc)
 ```
 
 
-### Turn a matrix or a data frame into a squared matrix
+## Turn a matrix or a data frame into a squared matrix
 
 ```{r squaretize}
   mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
@@ -60,14 +54,14 @@ library(inSilecoMisc)
 ```
 
 
-### Adjust the size of a character string
+## Adjust the size of a character string
 
 ```{r adjustString}
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
 ```
 
 
-### Assign classes to data frames' columns
+## Assign classes to data frames' columns
 
 ```{r assignClass2df}
   df1 <- matrix(signif(runif(20),4), ncol=2)
@@ -77,7 +71,7 @@ library(inSilecoMisc)
 ```
 
 
-### Assign a symbol to a p-value
+## Assign a symbol to a p-value
 
 ```{r signifSymbols}
   sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
@@ -104,7 +98,7 @@ out <- substrBib(bib, txt)
 (out)
 ```
 
-### Add URL and icons
+## Add URL and icons
 
 ```{r addURL}
 addURL("https://github.com/inSileco/letiRmisc", "Github repo")
@@ -127,6 +121,13 @@ applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
 
 ```{r meanAlong}
 meanAlong(1:10, 2)
+```
+
+## scaleWithin
+
+```{r scaleWithin}
+val <- runif(1000, 0, 100)
+res1 <- scaleWithin(val, 20, 40, 60)
 ```
 
 

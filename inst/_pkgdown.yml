@@ -1,24 +1,43 @@
-# authors:
-#   inSileco Team:
-#     href: https://insileco.github.io/
-#
+authors:
+  inSileco Team:
+    href: https://insileco.github.io/
 
 
-# reference:
-#   - title: String manipulations
-#     desc: Make you
-#     contents:
-#     - adjustString
-#     - init_site
-#     - starts_with("build_")
-#     - preview_site
-#   - title: Templates
-#     contents:
-#     - template_navbar
-#     - render_page
-#   - title: Helpers
-#     contents:
-#     - autolink_html
-#     - clean_site
-#     - as_pkgdown
-#     - in_pkgdown
+
+reference:
+  - title: String manipulations
+    contents:
+    - adjustString
+    - applyString
+    - findRef
+    - getDigits
+    - keepWords
+    - multiMatch
+    - packagesUsed
+    - signifSymbols
+    - strLength
+    - substrBib
+    - wordCount
+  - title: Dataframe manipulations
+    contents:
+    - aggregateCol
+    - assignClass2df
+    - duplicateRow
+    - squaretize
+  - title: Web help functions
+    contents:
+    - addURL
+    - addWebIcon
+    - loremIpsum
+    - readYamlHeader
+  - title: Maths helpers
+    contents:
+    - gaussianShape
+    - logistic
+    - logit
+    - meanAlong
+  - title: Classification helpers
+    contents:
+    - categorize
+    - findReplace
+    - scaleWithin
