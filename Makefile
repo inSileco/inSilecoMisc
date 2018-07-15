@@ -16,6 +16,9 @@ readme:
 vignettes:
 	Rscript --no-init-file $(rscr) 2
 
+website:
+	Rscript --no-init-file -e "pkgdown::build_site()"
+
 check:
 	Rscript --no-init-file -e "devtools::check('.')"
 

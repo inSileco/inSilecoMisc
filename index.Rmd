@@ -1,8 +1,10 @@
-# inSilicoMisc
+# inSilecoMisc
 
 [![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
 [![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
 [![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
+
+
 
 ## About
 
@@ -18,3 +20,15 @@ find one of these function and intend to use it in your own package, please,
 help yourself!
 
 Note that functions' names are written using Camel case (*e.g.* `keepWords()`).
+
+
+## Installation
+
+To get the current development version from Github, use the
+[*devtools*](http://cran.r-project.org/web/packages/devtools/index.html) package
+like so:
+
+```{r eval=FALSE}
+if (!require("devtools")) install.packages("devtools")
+devtools::install_github("inSileco/inSilecoMisc")
+```

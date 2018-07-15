@@ -10,7 +10,7 @@ Authors@R: c(
 Description: A set of miscellaneous R functions written by our inSileco groups.
 Depends:
     R (>= 3.0)
-License: GPL-3
+License: GPL (>= 2)
 LazyData: true
 Imports:
     magrittr,

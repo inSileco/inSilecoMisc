@@ -3,5 +3,22 @@ authors:
     href: https://insileco.github.io/
 
 
-development:
-mode: unreleased
+
+reference:
+  - title: String manipulations
+    desc: Make you
+    contents:
+    - adjustString
+    - init_site
+    - starts_with("build_")
+    - preview_site
+  - title: Templates
+    contents:
+    - template_navbar
+    - render_page
+  - title: Helpers
+    contents:
+    - autolink_html
+    - clean_site
+    - as_pkgdown
+    - in_pkgdown
