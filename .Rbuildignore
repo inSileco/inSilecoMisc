@@ -12,3 +12,4 @@
 LICENSE
 record_updates.txt
 ^docs$
+^_pkgdown\.yml$

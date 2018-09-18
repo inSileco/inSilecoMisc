@@ -12,6 +12,11 @@
   - New R function \code{readYamlHeader()} to read YAML headers.
   - New R function \code{applyString()} to apply a function to a subset of strings.
 
+## Addition of new paramter:
+
+  - New parameter `ignore` in `strLength()` to ignore a specific selection of character. 
+
+
 
 # inSilecoMisc 0.1.1
 

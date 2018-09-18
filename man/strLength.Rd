@@ -4,17 +4,19 @@
 \alias{strLength}
 \title{Compute the length of a strings.}
 \usage{
-strLength(s)
+strLength(s, ignore = "")
 }
 \arguments{
 \item{s}{character vector or a object to be coered as a character vector.}
+
+\item{ignore}{a vector of characters to be ignored in the count.}
 }
 \description{
 Compute the length of a vector of strings.
 }
 \examples{
 strLength(c(123))
-strLength(c('/', 'four'))
+strLength(c('/', 'four five'), ignore = c(" ", "f"))
 }
 \author{
 Kevin Cazelles

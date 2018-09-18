@@ -9,9 +9,7 @@ getDigits(x, collapse = NULL)
 \arguments{
 \item{x}{a character vector where digits are sought, or an object which can be coerced by \code{as.character} to a character vector.}
 
-\item{collapse}{an optional character string to separate the results (see [paste[pkg:base]).
-
-[paste[pkg:base]: R:paste[pkg:base}
+\item{collapse}{an optional character string to separate the results (see [base::paste()).}
 }
 \value{
 A list of digits.

@@ -24,6 +24,7 @@ Suggests:
     testthat,
     sp
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
+Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Roxygen: list(markdown = TRUE)
