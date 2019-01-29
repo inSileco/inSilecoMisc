@@ -16,6 +16,8 @@ TOBEDONE: details about different funcitons.
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://ropensci.github.io/rcites/}
+  \item \url{https://github.com/ropensci/rcites}
   \item Report bugs at \url{https://github.com/inSileco/inSilecoMisc/issues}
 }
 

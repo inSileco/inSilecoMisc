@@ -21,26 +21,26 @@
 
 
 squaretize <- function(x, fill = 0, reorder = TRUE) {
-    ## 
+    ##
     mat <- x %>% as.matrix
     sz <- dim(mat)
-    ## 
+    ##
     . <- "No notes"
-    ## 
+    ##
     if (!is.null(rownames(mat)) & !is.null(colnames(mat))) {
         ##-- add rows
         idr <- colnames(mat) %in% rownames(mat) %>% `!` %>% which
         ra <- length(idr)
-        # 
-        if (ra) 
-            mat %<>% rbind(matrix(fill, nrow = ra, ncol = ncol(.), dimnames = list(colnames(.)[idr], 
+        #
+        if (ra)
+            mat %<>% rbind(matrix(fill, nrow = ra, ncol = ncol(.), dimnames = list(colnames(.)[idr],
                 colnames(.))))
         ##-- add colums
         idc <- rownames(mat) %in% colnames(mat) %>% `!` %>% which
         rc <- length(idc)
-        # 
-        if (rc) 
-            mat %<>% cbind(matrix(fill, nrow = nrow(.), ncol = rc, dimnames = list(rownames(.), 
+        #
+        if (rc)
+            mat %<>% cbind(matrix(fill, nrow = nrow(.), ncol = rc, dimnames = list(rownames(.),
                 rownames(.)[idc])))
         ##--
         if (reorder) {
@@ -50,19 +50,19 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
     } else {
         mis <- mat %>% dim %>% diff
         if (mis > 0) {
-            mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL, 
+            mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL,
                 colnames(.))))
-            if (!is.null(rownames(x))) 
+            if (!is.null(rownames(x)))
                 rownames(mat) <- c(rownames(x), paste0("X", nrow(x) + 1:mis))
         } else {
             if (mis < 0) {
                 mis %<>% abs
-                mat %<>% cbind(matrix(fill, nrow = nrow(.), ncol = mis, dimnames = list(rownames(.), 
+                mat %<>% cbind(matrix(fill, nrow = nrow(.), ncol = mis, dimnames = list(rownames(.),
                   NULL)))
-                if (!is.null(colnames(x))) 
+                if (!is.null(colnames(x)))
                   colnames(mat) <- c(colnames(x), paste0("X", ncol(x) + 1:mis))
             }
         }
     }
-    return(mat)
+    mat
 }

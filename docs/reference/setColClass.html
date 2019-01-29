@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Compute the mean along a vector — meanAlong • inSilecoMisc</title>
+<title>Set class of data frames columns — setColClass • inSilecoMisc</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,10 @@
 
 
 
-<meta property="og:title" content="Compute the mean along a vector — meanAlong" />
+<meta property="og:title" content="Set class of data frames columns — setColClass" />
 
-<meta property="og:description" content="This function is a simple moving window function." />
+<meta property="og:description" content="This function is designed to ease the changes of column's class
+of a given data frame." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -109,41 +110,58 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Compute the mean along a vector</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ropensci/rcites/blob/master/R/meanAlong.R'><code>R/meanAlong.R</code></a></small>
-    <div class="hidden name"><code>meanAlong.Rd</code></div>
+    <h1>Set class of data frames columns</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/rcites/blob/master/R/setColClass.R'><code>R/setColClass.R</code></a></small>
+    <div class="hidden name"><code>setColClass.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>This function is a simple moving window function.</p>
+    <p>This function is designed to ease the changes of column's class
+of a given data frame.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>meanAlong</span>(<span class='no'>vec</span>, <span class='no'>n</span>)</pre>
+    <pre class="usage"><span class='fu'>setColClass</span>(<span class='no'>x</span>, <span class='no'>colid</span>, <span class='no'>cls</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>vec</th>
-      <td><p>a vector of numeric</p></td>
+      <th>x</th>
+      <td><p>a data frame or a R object to be coerced into a data frame.</p></td>
     </tr>
     <tr>
-      <th>n</th>
-      <td><p>a intger indicating the size of the window</p></td>
+      <th>colid</th>
+      <td><p>the identity of columns for which class are to be changed.</p></td>
+    </tr>
+    <tr>
+      <th>cls</th>
+      <td><p>a character vector containing the classes' names to be used in the
+same order as colid. By default <code>cls</code> is repeated until its size equals
+<code>colid</code>'s size.</p></td>
     </tr>
     </table>
     
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A data.frame whose columns have the desired classes.</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>meanAlong</span>(<span class='fl'>1</span>:<span class='fl'>10</span>, <span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>df1</span> <span class='kw'>&lt;-</span> <span class='fu'>matrix</span>(<span class='fu'>signif</span>(<span class='fu'>runif</span>(<span class='fl'>20</span>),<span class='fl'>4</span>), <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>)
+<span class='no'>df2</span> <span class='kw'>&lt;-</span> <span class='fu'>setColClass</span>(<span class='no'>df1</span>, <span class='fl'>2</span>, <span class='st'>'character'</span>)
+<span class='fu'>str</span>(<span class='no'>df1</span>)</div><div class='output co'>#&gt;  num [1:10, 1:2] 0.72 0.542 0.393 0.4 0.275 ...</div><div class='input'><span class='fu'>str</span>(<span class='no'>df2</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  2 variables:
+#&gt;  $ V1: num  0.72 0.542 0.393 0.4 0.275 ...
+#&gt;  $ V2: chr  "0.8851" "0.7361" "0.6433" "0.3144" ...</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-            
+      
+      <li><a href="#value">Value</a></li>
+      
       <li><a href="#examples">Examples</a></li>
     </ul>
 

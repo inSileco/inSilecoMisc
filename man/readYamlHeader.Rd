@@ -13,7 +13,7 @@ readYamlHeader(con)
 A named list, see \link[yaml:yaml.load]{yaml::yaml.load} for more details.
 }
 \description{
-Reads YAML headers typically found in Markdown files.
+Reads YAML headers (typically found in Markdown filess).
 }
 \author{
 Kevin Cazelles

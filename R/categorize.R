@@ -20,18 +20,18 @@
 
 
 categorize <- function(x, categ, lower = FALSE) {
-    ## 
+    ##
     categ %<>% unique %>% sort
-    ## 
+    ##
     out <- rep(1, length(x))
-    ## 
+    ##
     if (lower) {
-        id <- which(x > categ[1])
+        id <- which(x > categ[1L])
         out[id] <- out[id] + sapply(x[id], function(z) max(which(z > categ)))
     } else {
-        id <- which(x >= categ[1])
+        id <- which(x >= categ[1L])
         out[id] <- out[id] + sapply(x[id], function(z) max(which(z >= categ)))
     }
-    ## 
-    return(out)
+    ##
+    out
 }

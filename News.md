@@ -1,4 +1,10 @@
-# inSilecoMisc 0.1.2.100
+# inSilecoMisc 0.1.2.9000
+
+## Changes in functions
+
+- `assignClass2df()` is now named `setColClass()`
+- new function `whichIs()` which looks for the values of a given vector in another one and returns the positions of matchs as a list.
+
 
 # inSilecoMisc 0.1.2
 
@@ -12,9 +18,9 @@
   - New R function \code{readYamlHeader()} to read YAML headers.
   - New R function \code{applyString()} to apply a function to a subset of strings.
 
-## Addition of new paramter:
+## Addition of new parameters:
 
-  - New parameter `ignore` in `strLength()` to ignore a specific selection of character. 
+  - New parameter `ignore` in `strLength()` to ignore a specific selection of character.
 
 
 
@@ -65,7 +71,7 @@
 
 - New R function \code{adjustSting()}
 - New R function \code{aggregateCol()}
-- New R function \code{assignClass2df()}
+- New R function \code{setColClass()}
 - New R function \code{assignIds()}
 - New R function \code{categorize()}
 - New R function \code{duplicateRow()}

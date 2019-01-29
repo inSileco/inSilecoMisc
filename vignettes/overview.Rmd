@@ -1,6 +1,6 @@
 ---
-title: "Overview"
-author: "letiR group"
+title: "inSilecoMisc, an overview"
+author: "inSileco group"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -8,8 +8,6 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
-
-<!-- http://r-pkgs.had.co.nz/vignettes.html -->
 
 
 ```{r echo=FALSE, message = FALSE}
@@ -20,38 +18,40 @@ knitr::opts_chunk$set(
 library(inSilecoMisc)
 ```
 
+This vignette is an overview of *inSilecoMisc* organized around four major themes:
 
+1. strings manipulations
+2. vector manipulations
+3. data frames manipulations
+4. Bibliography operations
+
+
+
+# String manipulations
+
+## LoremIpsum
+
+```{r loremIpsum}
+loremIpsum()
+loremIpsum(10)
+```
 
 ## Keep a selection of words
 
 ```{r keepWords}
-  strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-  keepWords(strex, c(1,4))
+  lor <- loremIpsum()
+  keepWords(lor, c(1,4))
 ```
 
 ## Size of a string
 
 ```{r strLength}
-  strLength(strex)
+  lor <- loremIpsum()
+  strLength(lor)
+  nchar(lor)
+  strLength(lor, ignore = "q")
 ```
 
-
-
-## Assign a category
-
-```{r categorize}
-  (seqv <- stats::runif(40))
-  categorize(seqv, categ=seq(0.1,0.9, 0.1))
-```
-
-
-## Turn a matrix or a data frame into a squared matrix
-
-```{r squaretize}
-  mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
-  print(mat)
-  squaretize(mat, reorder=FALSE)
-```
 
 
 ## Adjust the size of a character string
@@ -60,42 +60,10 @@ library(inSilecoMisc)
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
 ```
 
-
-## Assign classes to data frames' columns
-
-```{r assignClass2df}
-  df1 <- matrix(signif(runif(20),4), ncol=2)
-  df2 <- assignClass2df(df1, 2, 'character')
-  str(df1)
-  str(df2)
-```
-
-
 ## Assign a symbol to a p-value
 
 ```{r signifSymbols}
   sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
-```
-
-
-### Find reference and extract bibliography
-
-```{r}
-findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
-```
-
-```{r}
-findRef(text='First @Pimm2000, second @May1972, third [@May1972]', markdown=TRUE)
-```
-
-
-```{r extractBiblio}
-file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
-bib <- RefManageR::ReadBib(file.name)
-txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
-tfile <- tempfile(fileext = '.bib')
-out <- substrBib(bib, txt)
-(out)
 ```
 
 ## Add URL and icons
@@ -117,6 +85,28 @@ applyString("cool", FUN = toupper, pos = 1:2)
 applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
 ```
 
+## Extract digits from strings
+
+```{r getDigits}
+getDigits(c("a1", "032hdje2832"))
+```
+
+
+
+
+# Vectors manipulations
+
+
+## whichIs
+
+```{r whichIs}
+vec <- LETTERS[1:7]
+spl <- sample(vec)
+whichIs(vec, spl)
+id <- unlist(whichIs(vec, spl))
+spl[id]
+```
+
 ## meanAlong
 
 ```{r meanAlong}
@@ -128,6 +118,65 @@ meanAlong(1:10, 2)
 ```{r scaleWithin}
 val <- runif(1000, 0, 100)
 res1 <- scaleWithin(val, 20, 40, 60)
+```
+
+
+
+
+
+
+
+# Data frame manipulation
+
+
+## Assign a category
+
+```{r categorize}
+  (seqv <- stats::runif(40))
+  categorize(seqv, categ=seq(0.1,0.9, 0.1))
+```
+
+
+## Turn a matrix or a data frame into a squared matrix
+
+```{r squaretize}
+  mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
+  print(mat)
+  squaretize(mat, reorder=FALSE)
+```
+
+
+## Assign classes to data frames' columns
+
+```{r setColClass}
+  df1 <- matrix(signif(runif(20),4), ncol=2)
+  df2 <- setColClass(df1, 2, 'character')
+  str(df1)
+  str(df2)
+```
+
+
+
+# Bibliography operations
+
+## Find reference and extract bibliography
+
+```{r}
+findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
+```
+
+```{r}
+findRef(text='First @Pimm2000, second @May1972, third [@May1972]', markdown=TRUE)
+```
+
+
+```{r extractBiblio}
+file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
+bib <- RefManageR::ReadBib(file.name)
+txt <- 'First \\cite{kim1995estimating}, second \\Citep{fu2006statistical}'
+tfile <- tempfile(fileext = '.bib')
+out <- substrBib(bib, txt)
+(out)
 ```
 
 

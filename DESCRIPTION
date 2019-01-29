@@ -1,14 +1,14 @@
 Package: inSilecoMisc
 Title: inSileco Miscellaneous Functions
-Date: 2018-09-18
-Version: 0.1.2
+Date: 2019-01-29
+Version: 0.1.2.9000
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
   person("Nicolas", "Casajus", role = c("aut")),
   person("Steve", "Vissault", role = c("aut"))
   )
-Description: A set of miscellaneous R functions written by our inSileco groups.
+Description: A set of miscellaneous R functions written by our inSileco group.
 Depends:
     R (>= 3.0)
 License: GPL (>= 2)
@@ -24,8 +24,9 @@ Suggests:
     rmarkdown,
     testthat,
     sp
+URL: https://ropensci.github.io/rcites/, https://github.com/ropensci/rcites
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)

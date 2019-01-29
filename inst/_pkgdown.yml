@@ -21,7 +21,7 @@ reference:
   - title: Dataframe manipulations
     contents:
     - aggregateCol
-    - assignClass2df
+    - setColClass
     - duplicateRow
     - squaretize
   - title: Web help functions

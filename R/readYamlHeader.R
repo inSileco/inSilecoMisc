@@ -1,6 +1,6 @@
 #' Reads YAML headers.
 #'
-#' Reads YAML headers typically found in Markdown files.
+#' Reads YAML headers (typically found in Markdown filess).
 #'
 #' @param con connection object or a character string.
 #'
@@ -27,6 +27,5 @@ readYamlHeader <- function(con) {
         warning("no yaml header detected")
         out <- NULL
     }
-    # 
     out
 }

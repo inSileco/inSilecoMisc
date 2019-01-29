@@ -19,14 +19,12 @@
 
 
 loremIpsum <- function(n = NULL) {
-    
     out <- loremText()
     if (!is.null(n)) {
-        tmp <- strsplit(out, split = " ")[[1]][1:n]
+        tmp <- strsplit(out, split = " ")[[1L]][1:n]
         tmp <- tmp[!is.na(tmp)]
         out <- paste(tmp, collapse = " ")
     }
-    
     out
 }
 

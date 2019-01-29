@@ -10,11 +10,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="letiR group" />
+<meta name="author" content="inSileco group" />
 
-<meta name="date" content="2018-07-15" />
+<meta name="date" content="2019-01-29" />
 
-<title>Overview</title>
+<title>inSilecoMisc, an overview</title>
 
 
 
@@ -22,7 +22,7 @@
 <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
 a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; position: absolute; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -35,13 +35,11 @@ code.sourceCode { white-space: pre-wrap; }
 a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
 pre.numberSource a.sourceLine
-  { position: relative; }
-pre.numberSource a.sourceLine:empty
-  { position: absolute; }
+  { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all;
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -278,137 +276,203 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 
 
-<h1 class="title toc-ignore">Overview</h1>
-<h4 class="author"><em>letiR group</em></h4>
-<h4 class="date"><em>2018-07-15</em></h4>
+<h1 class="title toc-ignore">inSilecoMisc, an overview</h1>
+<h4 class="author"><em>inSileco group</em></h4>
+<h4 class="date"><em>2019-01-29</em></h4>
 
 
 
-<!-- http://r-pkgs.had.co.nz/vignettes.html -->
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<div id="main-features" class="section level2">
-<h2>Main features</h2>
-<pre><code>## Loading inSilecoMisc</code></pre>
-<div id="keep-a-selection-of-words" class="section level3">
-<h3>Keep a selection of words</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">  strex &lt;-<span class="st"> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="kw">keepWords</span>(strex, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>))</a></code></pre></div>
-<pre><code>## [[1]]
-## [1] &quot;Lorem&quot; &quot;sit&quot;</code></pre>
+<p>This vignette is an overview of <em>inSilecoMisc</em> organized around four major themes:</p>
+<ol style="list-style-type: decimal">
+<li>strings manipulations</li>
+<li>vector manipulations</li>
+<li>data frames manipulations</li>
+<li>Bibliography operations</li>
+</ol>
+<div id="string-manipulations" class="section level1">
+<h1>String manipulations</h1>
+<div id="loremipsum" class="section level2">
+<h2>LoremIpsum</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">loremIpsum</span>()</a>
+<a class="sourceLine" id="cb1-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span><span class="ch">\n</span><span class="st">  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span><span class="ch">\n</span><span class="st">  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</span><span class="ch">\n</span><span class="st">  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</span><span class="ch">\n</span><span class="st">  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</span><span class="ch">\n</span><span class="st">  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">loremIpsum</span>(<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&quot;</span></a></code></pre></div>
 </div>
-<div id="size-of-a-string" class="section level3">
-<h3>Size of a string</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">  <span class="kw">strLength</span>(strex)</a></code></pre></div>
-<pre><code>## [1] 57</code></pre>
+<div id="keep-a-selection-of-words" class="section level2">
+<h2>Keep a selection of words</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">  lor &lt;-<span class="st"> </span><span class="kw">loremIpsum</span>()</a>
+<a class="sourceLine" id="cb2-2" title="2">  <span class="kw">keepWords</span>(strex, <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>))</a>
+<a class="sourceLine" id="cb2-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb2-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;Lorem&quot;</span> <span class="st">&quot;sit&quot;</span></a></code></pre></div>
 </div>
-<div id="assign-a-category" class="section level3">
-<h3>Assign a category</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">  (seqv &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw">runif</span>(<span class="dv">40</span>))</a></code></pre></div>
-<pre><code>##  [1] 0.85354164 0.30605831 0.80495229 0.59746018 0.82365379 0.27182920
-##  [7] 0.26919722 0.54052041 0.33867958 0.62978731 0.08754268 0.88927060
-## [13] 0.10822730 0.40954076 0.51565164 0.80936008 0.43365724 0.42605933
-## [19] 0.27281765 0.48727579 0.37687399 0.57623318 0.13662083 0.50272848
-## [25] 0.71076613 0.95044242 0.86097419 0.84247594 0.46530991 0.22474246
-## [31] 0.09768437 0.77832006 0.30475671 0.47766634 0.76653921 0.34974197
-## [37] 0.76698151 0.25859869 0.18168719 0.18751501</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">  <span class="kw">categorize</span>(seqv, <span class="dt">categ=</span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>, <span class="fl">0.1</span>))</a></code></pre></div>
-<pre><code>##  [1]  9  4  9  6  9  3  3  6  4  7  1  9  2  5  6  9  5  5  3  5  4  6  2
-## [24]  6  8 10  9  9  5  3  1  8  4  5  8  4  8  3  2  2</code></pre>
+<div id="size-of-a-string" class="section level2">
+<h2>Size of a string</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">  lor &lt;-<span class="st"> </span><span class="kw">loremIpsum</span>()</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="kw">strLength</span>(lor)</a>
+<a class="sourceLine" id="cb3-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">455</span></a>
+<a class="sourceLine" id="cb3-4" title="4">  <span class="kw">nchar</span>(lor)</a>
+<a class="sourceLine" id="cb3-5" title="5">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">455</span></a>
+<a class="sourceLine" id="cb3-6" title="6">  <span class="kw">strLength</span>(lor, <span class="dt">ignore =</span> <span class="st">&quot;q&quot;</span>)</a>
+<a class="sourceLine" id="cb3-7" title="7">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">450</span></a></code></pre></div>
 </div>
-<div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level3">
-<h3>Turn a matrix or a data frame into a squared matrix</h3>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">  mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(LETTERS[<span class="dv">3</span><span class="op">:</span><span class="dv">1</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]))</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">  <span class="kw">print</span>(mat)</a></code></pre></div>
-<pre><code>##   A B C  D  E
-## C 1 4 7 10 13
-## B 2 5 8 11 14
-## A 3 6 9 12 15</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">  <span class="kw">squaretize</span>(mat, <span class="dt">reorder=</span><span class="ot">FALSE</span>)</a></code></pre></div>
-<pre><code>##   A B C  D  E
-## C 1 4 7 10 13
-## B 2 5 8 11 14
-## A 3 6 9 12 15
-## D 0 0 0  0  0
-## E 0 0 0  0  0</code></pre>
+<div id="adjust-the-size-of-a-character-string" class="section level2">
+<h2>Adjust the size of a character string</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">  <span class="kw">paste0</span>(<span class="st">'myfilename'</span>, <span class="kw">adjustString</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">100</span>), <span class="dv">3</span>))</a>
+<a class="sourceLine" id="cb4-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;myfilename001&quot;</span> <span class="st">&quot;myfilename002&quot;</span> <span class="st">&quot;myfilename010&quot;</span> <span class="st">&quot;myfilename100&quot;</span></a></code></pre></div>
 </div>
-<div id="adjust-the-size-of-a-character-string" class="section level3">
-<h3>Adjust the size of a character string</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">  <span class="kw">paste0</span>(<span class="st">'myfilename'</span>, <span class="kw">adjustString</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">10</span>,<span class="dv">100</span>), <span class="dv">3</span>))</a></code></pre></div>
-<pre><code>## [1] &quot;myfilename001&quot; &quot;myfilename002&quot; &quot;myfilename010&quot; &quot;myfilename100&quot;</code></pre>
+<div id="assign-a-symbol-to-a-p-value" class="section level2">
+<h2>Assign a symbol to a p-value</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">  <span class="kw">sapply</span>(<span class="kw">c</span>(.<span class="dv">2</span>, <span class="fl">.08</span>, <span class="fl">.04</span>, <span class="fl">.008</span>, <span class="fl">0.0001</span>), signifSymbols)</a>
+<a class="sourceLine" id="cb5-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;n.s.&quot;</span> <span class="st">&quot;.&quot;</span>    <span class="st">&quot;*&quot;</span>    <span class="st">&quot;**&quot;</span>   <span class="st">&quot;***&quot;</span></a></code></pre></div>
 </div>
-<div id="assign-classes-to-data-frames-columns" class="section level3">
-<h3>Assign classes to data frames’ columns</h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">  df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">signif</span>(<span class="kw">runif</span>(<span class="dv">20</span>),<span class="dv">4</span>), <span class="dt">ncol=</span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb16-2" data-line-number="2">  df2 &lt;-<span class="st"> </span><span class="kw">assignClass2df</span>(df1, <span class="dv">2</span>, <span class="st">'character'</span>)</a>
-<a class="sourceLine" id="cb16-3" data-line-number="3">  <span class="kw">str</span>(df1)</a></code></pre></div>
-<pre><code>##  num [1:10, 1:2] 0.934 0.49 0.325 0.981 0.5 ...</code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">  <span class="kw">str</span>(df2)</a></code></pre></div>
-<pre><code>## 'data.frame':    10 obs. of  2 variables:
-##  $ V1: num  0.934 0.49 0.325 0.981 0.5 ...
-##  $ V2: chr  &quot;0.9895&quot; &quot;0.00666&quot; &quot;0.07135&quot; &quot;0.5346&quot; ...</code></pre>
-</div>
-<div id="assign-a-symbol-to-a-p-value" class="section level3">
-<h3>Assign a symbol to a p-value</h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">  <span class="kw">sapply</span>(<span class="kw">c</span>(.<span class="dv">2</span>, <span class="fl">.08</span>, <span class="fl">.04</span>, <span class="fl">.008</span>, <span class="fl">0.0001</span>), signifSymbols)</a></code></pre></div>
-<pre><code>## [1] &quot;n.s.&quot; &quot;.&quot;    &quot;*&quot;    &quot;**&quot;   &quot;***&quot;</code></pre>
-</div>
-<div id="find-reference-and-extract-bibliography" class="section level3">
-<h3>Find reference and extract bibliography</h3>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">findRef</span>(<span class="dt">text=</span><span class="st">'First </span><span class="ch">\\</span><span class="st">cite{Pimm2000}, second </span><span class="ch">\\</span><span class="st">Citep{May1972}'</span>)</a></code></pre></div>
-<pre><code>##        key freq
-## 1  May1972    1
-## 2 Pimm2000    1</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">findRef</span>(<span class="dt">text=</span><span class="st">'First @Pimm2000, second @May1972, third [@May1972]'</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<pre><code>##        key freq
-## 1  May1972    2
-## 2 Pimm2000    1</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">file.name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'Bib'</span>, <span class="st">'RJC.bib'</span>, <span class="dt">package=</span><span class="st">'RefManageR'</span>)</a>
-<a class="sourceLine" id="cb26-2" data-line-number="2">bib &lt;-<span class="st"> </span>RefManageR<span class="op">::</span><span class="kw">ReadBib</span>(file.name)</a>
-<a class="sourceLine" id="cb26-3" data-line-number="3">txt &lt;-<span class="st"> 'First </span><span class="ch">\\</span><span class="st">cite{kim1995estimating}, second </span><span class="ch">\\</span><span class="st">Citep{fu2006statistical}'</span></a>
-<a class="sourceLine" id="cb26-4" data-line-number="4">tfile &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">'.bib'</span>)</a>
-<a class="sourceLine" id="cb26-5" data-line-number="5">out &lt;-<span class="st"> </span><span class="kw">substrBib</span>(bib, txt)</a>
-<a class="sourceLine" id="cb26-6" data-line-number="6">(out)</a></code></pre></div>
-<pre><code>## [1] W. J. Fu, J. Hu, T. Spencer, et al. &quot;Statistical models in
-## assessing fold change of gene expression in real-time RT-PCR
-## experiments&quot;. In: _Computational biology and chemistry_ 30.1
-## (2006), pp. 21-26.
-## 
-## [2] M. Y. Kim, B. S. Pasternack, R. J. Carroll, et al. &quot;Estimating
-## the reliability of an exposure variable in the presence of
-## confounders&quot;. In: _Statistics in medicine_ 14.13 (1995), pp.
-## 1437-1446.</code></pre>
-</div>
-<div id="add-url-and-icons" class="section level3">
-<h3>Add URL and icons</h3>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">addURL</span>(<span class="st">&quot;https://github.com/inSileco/letiRmisc&quot;</span>, <span class="st">&quot;Github repo&quot;</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;&lt;a href='https://github.com/inSileco/letiRmisc'&gt;Github repo&lt;/a&gt;&quot;</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">addURL</span>(<span class="st">&quot;https://github.com/inSileco/letiRmisc&quot;</span>, <span class="st">&quot;Github repo&quot;</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;[Github repo](https://github.com/inSileco/letiRmisc)&quot;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">addWebIcon</span>(<span class="st">'cc'</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;&lt;i class=\&quot;fa fa-cc fa-2x\&quot;&gt;&lt;/i&gt;&quot;</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw">addWebIcon</span>(<span class="st">'acm'</span>, <span class="st">'ai'</span>, <span class="dv">4</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;&lt;i class=\&quot;ai ai-acm ai-4x\&quot;&gt;&lt;/i&gt;&quot;</code></pre>
-</div>
+<div id="add-url-and-icons" class="section level2">
+<h2>Add URL and icons</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">addURL</span>(<span class="st">&quot;https://github.com/inSileco/letiRmisc&quot;</span>, <span class="st">&quot;Github repo&quot;</span>)</a>
+<a class="sourceLine" id="cb6-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;&lt;a href='https://github.com/inSileco/letiRmisc'&gt;Github repo&lt;/a&gt;&quot;</span></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="kw">addURL</span>(<span class="st">&quot;https://github.com/inSileco/letiRmisc&quot;</span>, <span class="st">&quot;Github repo&quot;</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb6-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;[Github repo](https://github.com/inSileco/letiRmisc)&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">addWebIcon</span>(<span class="st">'cc'</span>)</a>
+<a class="sourceLine" id="cb7-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;&lt;i class=</span><span class="ch">\&quot;</span><span class="st">fa fa-cc fa-2x</span><span class="ch">\&quot;</span><span class="st">&gt;&lt;/i&gt;&quot;</span></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="kw">addWebIcon</span>(<span class="st">'acm'</span>, <span class="st">'ai'</span>, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb7-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;&lt;i class=</span><span class="ch">\&quot;</span><span class="st">ai ai-acm ai-4x</span><span class="ch">\&quot;</span><span class="st">&gt;&lt;/i&gt;&quot;</span></a></code></pre></div>
 </div>
 <div id="applystring" class="section level2">
 <h2>applyString</h2>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw">applyString</span>(<span class="st">&quot;cool&quot;</span>, <span class="dt">FUN =</span> toupper, <span class="dt">pos =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)</a></code></pre></div>
-<pre><code>## [1] &quot;COol&quot;</code></pre>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="kw">applyString</span>(<span class="kw">c</span>(<span class="st">&quot;cool&quot;</span>, <span class="st">&quot;pro&quot;</span>),  <span class="dt">pattern =</span> <span class="st">&quot;o&quot;</span>, <span class="dt">FUN =</span> toupper)</a></code></pre></div>
-<pre><code>## [1] &quot;cOOl&quot; &quot;prO&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">applyString</span>(<span class="st">&quot;cool&quot;</span>, <span class="dt">FUN =</span> toupper, <span class="dt">pos =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb8-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;COol&quot;</span></a>
+<a class="sourceLine" id="cb8-3" title="3"><span class="kw">applyString</span>(<span class="kw">c</span>(<span class="st">&quot;cool&quot;</span>, <span class="st">&quot;pro&quot;</span>),  <span class="dt">pattern =</span> <span class="st">&quot;o&quot;</span>, <span class="dt">FUN =</span> toupper)</a>
+<a class="sourceLine" id="cb8-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;cOOl&quot;</span> <span class="st">&quot;prO&quot;</span></a></code></pre></div>
+</div>
+<div id="extract-digits-from-strings" class="section level2">
+<h2>Extract digits from strings</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">getDigits</span>(<span class="kw">c</span>(<span class="st">&quot;a1&quot;</span>, <span class="st">&quot;032hdje2832&quot;</span>))</a>
+<a class="sourceLine" id="cb9-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb9-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;1&quot;</span></a>
+<a class="sourceLine" id="cb9-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb9-5" title="5">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb9-6" title="6">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;032&quot;</span>  <span class="st">&quot;2832&quot;</span></a></code></pre></div>
+</div>
+</div>
+<div id="vectors-manipulations" class="section level1">
+<h1>Vectors manipulations</h1>
+<div id="whichis" class="section level2">
+<h2>whichIs</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">vec &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>]</a>
+<a class="sourceLine" id="cb10-2" title="2">spl &lt;-<span class="st"> </span><span class="kw">sample</span>(vec)</a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="kw">whichIs</span>(vec, spl)</a>
+<a class="sourceLine" id="cb10-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb10-5" title="5">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">1</span></a>
+<a class="sourceLine" id="cb10-6" title="6">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-7" title="7">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb10-8" title="8">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">2</span></a>
+<a class="sourceLine" id="cb10-9" title="9">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-10" title="10">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">3</span>]]</a>
+<a class="sourceLine" id="cb10-11" title="11">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">5</span></a>
+<a class="sourceLine" id="cb10-12" title="12">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-13" title="13">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">4</span>]]</a>
+<a class="sourceLine" id="cb10-14" title="14">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">6</span></a>
+<a class="sourceLine" id="cb10-15" title="15">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-16" title="16">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">5</span>]]</a>
+<a class="sourceLine" id="cb10-17" title="17">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">4</span></a>
+<a class="sourceLine" id="cb10-18" title="18">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-19" title="19">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">6</span>]]</a>
+<a class="sourceLine" id="cb10-20" title="20">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">3</span></a>
+<a class="sourceLine" id="cb10-21" title="21">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb10-22" title="22">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[[<span class="dv">7</span>]]</a>
+<a class="sourceLine" id="cb10-23" title="23">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">7</span></a>
+<a class="sourceLine" id="cb10-24" title="24">id &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">whichIs</span>(vec, spl))</a>
+<a class="sourceLine" id="cb10-25" title="25">spl[id]</a>
+<a class="sourceLine" id="cb10-26" title="26">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">&quot;A&quot;</span> <span class="st">&quot;B&quot;</span> <span class="st">&quot;C&quot;</span> <span class="st">&quot;D&quot;</span> <span class="st">&quot;E&quot;</span> <span class="st">&quot;F&quot;</span> <span class="st">&quot;G&quot;</span></a></code></pre></div>
 </div>
 <div id="meanalong" class="section level2">
 <h2>meanAlong</h2>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1"><span class="kw">meanAlong</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>)</a></code></pre></div>
-<pre><code>## [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">meanAlong</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb11-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">1.5</span> <span class="fl">2.5</span> <span class="fl">3.5</span> <span class="fl">4.5</span> <span class="fl">5.5</span> <span class="fl">6.5</span> <span class="fl">7.5</span> <span class="fl">8.5</span> <span class="fl">9.5</span></a></code></pre></div>
+</div>
+<div id="scalewithin" class="section level2">
+<h2>scaleWithin</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">val &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1000</span>, <span class="dv">0</span>, <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb12-2" title="2">res1 &lt;-<span class="st"> </span><span class="kw">scaleWithin</span>(val, <span class="dv">20</span>, <span class="dv">40</span>, <span class="dv">60</span>)</a></code></pre></div>
+</div>
+</div>
+<div id="data-frame-manipulation" class="section level1">
+<h1>Data frame manipulation</h1>
+<div id="assign-a-category" class="section level2">
+<h2>Assign a category</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">  (seqv &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw">runif</span>(<span class="dv">40</span>))</a>
+<a class="sourceLine" id="cb13-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span>[<span class="dv">1</span>] <span class="fl">0.24016678</span> <span class="fl">0.71458951</span> <span class="fl">0.93802467</span> <span class="fl">0.60583641</span> <span class="fl">0.05124155</span> <span class="fl">0.09540372</span></a>
+<a class="sourceLine" id="cb13-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span>[<span class="dv">7</span>] <span class="fl">0.75273920</span> <span class="fl">0.96509319</span> <span class="fl">0.80741689</span> <span class="fl">0.14132740</span> <span class="fl">0.03382981</span> <span class="fl">0.47732933</span></a>
+<a class="sourceLine" id="cb13-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">13</span>] <span class="fl">0.33497501</span> <span class="fl">0.60657802</span> <span class="fl">0.58658497</span> <span class="fl">0.95110144</span> <span class="fl">0.24739127</span> <span class="fl">0.36755148</span></a>
+<a class="sourceLine" id="cb13-5" title="5">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">19</span>] <span class="fl">0.62129472</span> <span class="fl">0.24821683</span> <span class="fl">0.57585231</span> <span class="fl">0.31779762</span> <span class="fl">0.66970093</span> <span class="fl">0.50535334</span></a>
+<a class="sourceLine" id="cb13-6" title="6">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">25</span>] <span class="fl">0.98632526</span> <span class="fl">0.17941911</span> <span class="fl">0.32875393</span> <span class="fl">0.61837313</span> <span class="fl">0.80085852</span> <span class="fl">0.63496134</span></a>
+<a class="sourceLine" id="cb13-7" title="7">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">31</span>] <span class="fl">0.02401132</span> <span class="fl">0.20827485</span> <span class="fl">0.67453180</span> <span class="fl">0.43658447</span> <span class="fl">0.52387440</span> <span class="fl">0.41607821</span></a>
+<a class="sourceLine" id="cb13-8" title="8">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">37</span>] <span class="fl">0.65493288</span> <span class="fl">0.73225662</span> <span class="fl">0.28086957</span> <span class="fl">0.79753794</span></a>
+<a class="sourceLine" id="cb13-9" title="9">  <span class="kw">categorize</span>(seqv, <span class="dt">categ=</span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>, <span class="fl">0.1</span>))</a>
+<a class="sourceLine" id="cb13-10" title="10">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span>[<span class="dv">1</span>]  <span class="dv">3</span>  <span class="dv">8</span> <span class="dv">10</span>  <span class="dv">7</span>  <span class="dv">1</span>  <span class="dv">1</span>  <span class="dv">8</span> <span class="dv">10</span>  <span class="dv">9</span>  <span class="dv">2</span>  <span class="dv">1</span>  <span class="dv">5</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">6</span> <span class="dv">10</span>  <span class="dv">3</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">3</span>  <span class="dv">6</span>  <span class="dv">4</span>  <span class="dv">7</span></a>
+<a class="sourceLine" id="cb13-11" title="11">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">24</span>]  <span class="dv">6</span> <span class="dv">10</span>  <span class="dv">2</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">9</span>  <span class="dv">7</span>  <span class="dv">1</span>  <span class="dv">3</span>  <span class="dv">7</span>  <span class="dv">5</span>  <span class="dv">6</span>  <span class="dv">5</span>  <span class="dv">7</span>  <span class="dv">8</span>  <span class="dv">3</span>  <span class="dv">8</span></a></code></pre></div>
+</div>
+<div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level2">
+<h2>Turn a matrix or a data frame into a squared matrix</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">  mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dt">dimnames=</span><span class="kw">list</span>(LETTERS[<span class="dv">3</span><span class="op">:</span><span class="dv">1</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]))</a>
+<a class="sourceLine" id="cb14-2" title="2">  <span class="kw">print</span>(mat)</a>
+<a class="sourceLine" id="cb14-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">    </span>A B C  D  E</a>
+<a class="sourceLine" id="cb14-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></a>
+<a class="sourceLine" id="cb14-5" title="5">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></a>
+<a class="sourceLine" id="cb14-6" title="6">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></a>
+<a class="sourceLine" id="cb14-7" title="7">  <span class="kw">squaretize</span>(mat, <span class="dt">reorder=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb14-8" title="8">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">    </span>A B C  D  E</a>
+<a class="sourceLine" id="cb14-9" title="9">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></a>
+<a class="sourceLine" id="cb14-10" title="10">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></a>
+<a class="sourceLine" id="cb14-11" title="11">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></a>
+<a class="sourceLine" id="cb14-12" title="12">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>D <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></a>
+<a class="sourceLine" id="cb14-13" title="13">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>E <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></a></code></pre></div>
+</div>
+<div id="assign-classes-to-data-frames-columns" class="section level2">
+<h2>Assign classes to data frames’ columns</h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">  df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">signif</span>(<span class="kw">runif</span>(<span class="dv">20</span>),<span class="dv">4</span>), <span class="dt">ncol=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb15-2" title="2">  df2 &lt;-<span class="st"> </span><span class="kw">setColClass</span>(df1, <span class="dv">2</span>, <span class="st">'character'</span>)</a>
+<a class="sourceLine" id="cb15-3" title="3">  <span class="kw">str</span>(df1)</a>
+<a class="sourceLine" id="cb15-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span>num [<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>] <span class="fl">0.2855</span> <span class="fl">0.4469</span> <span class="fl">0.703</span> <span class="fl">0.5936</span> <span class="fl">0.00189</span> ...</a>
+<a class="sourceLine" id="cb15-5" title="5">  <span class="kw">str</span>(df2)</a>
+<a class="sourceLine" id="cb15-6" title="6">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  'data.frame'</span><span class="op">:</span><span class="st">  </span><span class="dv">10</span> obs. of  <span class="dv">2</span> variables<span class="op">:</span></a>
+<a class="sourceLine" id="cb15-7" title="7">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V1<span class="op">:</span><span class="st"> </span>num  <span class="fl">0.2855</span> <span class="fl">0.4469</span> <span class="fl">0.703</span> <span class="fl">0.5936</span> <span class="fl">0.00189</span> ...</a>
+<a class="sourceLine" id="cb15-8" title="8">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V2<span class="op">:</span><span class="st"> </span>chr  <span class="st">&quot;0.4484&quot;</span> <span class="st">&quot;0.7651&quot;</span> <span class="st">&quot;0.1732&quot;</span> <span class="st">&quot;0.2051&quot;</span> ...</a></code></pre></div>
+</div>
+</div>
+<div id="bibliography-operations" class="section level1">
+<h1>Bibliography operations</h1>
+<div id="find-reference-and-extract-bibliography" class="section level2">
+<h2>Find reference and extract bibliography</h2>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">findRef</span>(<span class="dt">text=</span><span class="st">'First </span><span class="ch">\\</span><span class="st">cite{Pimm2000}, second </span><span class="ch">\\</span><span class="st">Citep{May1972}'</span>)</a>
+<a class="sourceLine" id="cb16-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">         </span>key freq</a>
+<a class="sourceLine" id="cb16-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">1</span>  May1972    <span class="dv">1</span></a>
+<a class="sourceLine" id="cb16-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">2</span> Pimm2000    <span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="kw">findRef</span>(<span class="dt">text=</span><span class="st">'First @Pimm2000, second @May1972, third [@May1972]'</span>, <span class="dt">markdown=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb17-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">         </span>key freq</a>
+<a class="sourceLine" id="cb17-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">1</span>  May1972    <span class="dv">2</span></a>
+<a class="sourceLine" id="cb17-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">2</span> Pimm2000    <span class="dv">1</span></a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1">file.name &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">'Bib'</span>, <span class="st">'RJC.bib'</span>, <span class="dt">package=</span><span class="st">'RefManageR'</span>)</a>
+<a class="sourceLine" id="cb18-2" title="2">bib &lt;-<span class="st"> </span>RefManageR<span class="op">::</span><span class="kw">ReadBib</span>(file.name)</a>
+<a class="sourceLine" id="cb18-3" title="3">txt &lt;-<span class="st"> 'First </span><span class="ch">\\</span><span class="st">cite{kim1995estimating}, second </span><span class="ch">\\</span><span class="st">Citep{fu2006statistical}'</span></a>
+<a class="sourceLine" id="cb18-4" title="4">tfile &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">'.bib'</span>)</a>
+<a class="sourceLine" id="cb18-5" title="5">out &lt;-<span class="st"> </span><span class="kw">substrBib</span>(bib, txt)</a>
+<a class="sourceLine" id="cb18-6" title="6">(out)</a>
+<a class="sourceLine" id="cb18-7" title="7">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] W. J. Fu, J. Hu, T. Spencer, et al. <span class="st">&quot;Statistical models in</span></a>
+<a class="sourceLine" id="cb18-8" title="8"><span class="st">R&gt;&gt;  assessing fold change of gene expression in real-time RT-PCR</span></a>
+<a class="sourceLine" id="cb18-9" title="9"><span class="st">R&gt;&gt;  experiments&quot;</span>. In<span class="op">:</span><span class="st"> </span>_Computational biology and chemistry_ <span class="fl">30.1</span></a>
+<a class="sourceLine" id="cb18-10" title="10">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>(<span class="dv">2006</span>), pp. <span class="dv">21</span><span class="fl">-26.</span></a>
+<a class="sourceLine" id="cb18-11" title="11">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb18-12" title="12">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span>[<span class="dv">2</span>] M. Y. Kim, B. S. Pasternack, R. J. Carroll, et al. <span class="st">&quot;Estimating</span></a>
+<a class="sourceLine" id="cb18-13" title="13"><span class="st">R&gt;&gt;  the reliability of an exposure variable in the presence of</span></a>
+<a class="sourceLine" id="cb18-14" title="14"><span class="st">R&gt;&gt;  confounders&quot;</span>. In<span class="op">:</span><span class="st"> </span>_Statistics <span class="cf">in</span> medicine_ <span class="fl">14.13</span> (<span class="dv">1995</span>), pp.</a>
+<a class="sourceLine" id="cb18-15" title="15">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">1437</span><span class="fl">-1446.</span></a></code></pre></div>
 </div>
 <div id="packagesused" class="section level2">
 <h2>packagesUsed</h2>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw">packagesUsed</span>(<span class="kw">c</span>(<span class="st">'utils'</span>, <span class="st">'methods'</span>))</a></code></pre></div>
-<pre><code>##      name version
-## 1   utils   3.5.1
-## 2 methods   3.5.1</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="kw">packagesUsed</span>(<span class="kw">c</span>(<span class="st">'utils'</span>, <span class="st">'methods'</span>))</a>
+<a class="sourceLine" id="cb19-2" title="2">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">       </span>name version</a>
+<a class="sourceLine" id="cb19-3" title="3">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">1</span>   utils   <span class="dv">3</span>.<span class="fl">5.2</span></a>
+<a class="sourceLine" id="cb19-4" title="4">R<span class="op">&gt;</span><span class="er">&gt;</span><span class="st">  </span><span class="dv">2</span> methods   <span class="dv">3</span>.<span class="fl">5.2</span></a></code></pre></div>
 </div>
 </div>
 

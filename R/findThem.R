@@ -28,9 +28,9 @@
 findThem <- function(what, where, todf = FALSE, reportnomatch = FALSE) {
     what <- as.vector(what)
     where <- as.vector(where)
-    # 
+    #
     out <- as.list(rep(NA, length(what)))
-    # 
+    #
     id <- which(what %in% where)
     if (length(id)) {
         tmp <- lapply(what, function(x) which(where == x))
@@ -41,7 +41,7 @@ findThem <- function(what, where, todf = FALSE, reportnomatch = FALSE) {
                 tmp[sz == 0] <- NA
             }
             sz <- unlist(lapply(tmp, length))
-            out <- data.frame(values = rep(names(tmp), sz), what = rep(1:length(what), 
+            out <- data.frame(values = rep(names(tmp), sz), what = rep(1:length(what),
                 sz), where = unlist(tmp))
             rownames(out) <- NULL
         } else {
@@ -50,5 +50,5 @@ findThem <- function(what, where, todf = FALSE, reportnomatch = FALSE) {
     } else {
         out <- NA_integer_
     }
-    return(out)
+    out
 }

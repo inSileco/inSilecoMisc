@@ -18,9 +18,6 @@ A list of digits.
 This function extracts all digits found in character vector and returns them
 as a list.
 }
-\details{
-This function is very useful!
-}
 \examples{
 getDigits('txt012-34')
 }

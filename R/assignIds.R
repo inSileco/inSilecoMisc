@@ -17,9 +17,9 @@
 
 assignIds <- function(x, alphabetical = FALSE) {
     tmp <- x %>% as.character %>% unique
-    if (alphabetical) 
+    if (alphabetical)
         tmp %<>% sort
     out <- tmp %>% length %>% integer
     for (i in 1:length(tmp)) out[x == tmp[i]] <- i
-    return(out)
+    out
 }

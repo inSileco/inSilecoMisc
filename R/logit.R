@@ -19,6 +19,7 @@
 
 logit <- function(x, inv = FALSE) {
     x %<>% as.numeric
-    if (inv) 
-        return(exp(x)/(1 + exp(x))) else return(log(x/(1 - x)))
+    if (inv)
+        out <- exp(x)/(1 + exp(x)) else out <- log(x/(1 - x))
+    out
 }

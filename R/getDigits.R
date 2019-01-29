@@ -12,14 +12,11 @@
 #' @param collapse an optional character string to separate the results (see [base::paste()).
 #'
 #' @importFrom magrittr %>% %<>%
-#'
 #' @export
 #'
 #' @return
 #' A list of digits.
 #'
-#' @details
-#' This function is very useful!
 #'
 #' @examples
 #' getDigits('txt012-34')

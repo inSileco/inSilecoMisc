@@ -20,5 +20,5 @@
 
 gaussianShape <- function(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1, pow = 2) {
     stopifnot(width != 0)
-    return(opty * exp(-abs((x - optx)/width)^pow))
+    opty * exp(-abs((x - optx)/width)^pow)
 }

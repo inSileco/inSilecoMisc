@@ -36,7 +36,7 @@ logistic <- function(x, yneg = -1, ypos = 1, lambda = 1, pow = 1) {
 }
 
 
-#' @describeIn logistic a slighlty different logistic function..
+#' @describeIn logistic a slighlty different logistic function.
 #' @export
 
 logistic2 <- function(x, yneg = -1, ypos = 1, lambda = 1, pow = 1, yzer = 0) {
