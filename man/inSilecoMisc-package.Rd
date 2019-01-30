@@ -13,8 +13,8 @@ has equivalent functions.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://ropensci.github.io/rcites/}
-  \item \url{https://github.com/ropensci/rcites}
+  \item \url{https://github.com/inSileco/inSilecoMisc}
+  \item \url{http://insileco.github.io/inSilecoMisc}
   \item Report bugs at \url{https://github.com/inSileco/inSilecoMisc/issues}
 }
 

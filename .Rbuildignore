@@ -6,7 +6,6 @@
 ^\.gitignore
 ^Makefile
 ^README\.md
-^index\.Rmd
 ^News\.md
 LICENSE
 record_updates.txt

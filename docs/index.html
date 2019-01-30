@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-article">
+    <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">inSilecoMisc</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.2.9000</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
       </span>
     </div>
 
@@ -59,7 +59,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/ropensci/rcites">
+  <a href="https://github.com/inSileco/inSilecoMisc">
     <span class="fa fa-github fa-lg"></span>
      
   </a>
@@ -74,41 +74,42 @@
 
       
       </header><div class="row">
-  <div class="col-md-9 contents">
-    
-
-    
-    
-<div id="insilecomisc" class="section level1">
+  <div class="contents col-md-9">
+    <div id="insilecomisc-our-set-of-miscellaneous-r-functions" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#insilecomisc" class="anchor"></a>inSilecoMisc</h1></div>
+<a href="#insilecomisc-our-set-of-miscellaneous-r-functions" class="anchor"></a>inSilecoMisc: our set of miscellaneous R functions</h1></div>
 
-<div id="about" class="section level2">
+<div id="description" class="section level2">
 <h2 class="hasAnchor">
-<a href="#about" class="anchor"></a>About</h2>
-<div id="description" class="section level3">
-<h3 class="hasAnchor">
-<a href="#description" class="anchor"></a>Description</h3>
-<p>The <em>inSilecoMisc</em> package is a set of useful R functions created to ease some operations we often do. Functions here are written to be used with base may already be available in other packages (especially in packages of the <a href="https://www.tidyverse.org/">tidyverse</a>).</p>
-<p>So far, we do not intend to release this package on the CRAN. If you however find one of these function and intend to use it in your own package, please, help yourself!</p>
-<p>Note that functions’ names are written using Camel case (<em>e.g.</em> <code><a href="reference/keepWords.html">keepWords()</a></code>).</p>
-</div>
+<a href="#description" class="anchor"></a>Description</h2>
+<p>The <em>inSilecoMisc</em> package is a set of useful R functions created to ease some operations we often do. Note that there may be similar functions available in other packages (especially in packages of the <a href="https://www.tidyverse.org/">tidyverse</a>). Functions names are written using Camel case (<em>e.g.</em> <code><a href="reference/keepWords.html">keepWords()</a></code>).</p>
+<p>So far, we do not intend to release this package on the CRAN. If you however find one of our helper functions useful and intend to use it in your own package, please do!</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>To get the current development version from Github, use the <a href="http://cran.r-project.org/web/packages/devtools/index.html"><em>devtools</em></a> package like so:</p>
+<p>To get the current development version from GitHub, use the <a href="http://cran.r-project.org/web/packages/devtools/index.html"><em>devtools</em></a> package like so:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">if</span> (<span class="op">!</span><span class="kw">require</span>(<span class="st">"devtools"</span>)) <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)</a>
 <a class="sourceLine" id="cb1-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"inSileco/inSilecoMisc"</span>)</a></code></pre></div>
+</div>
+<div id="documentation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#documentation" class="anchor"></a>Documentation</h2>
+<p>See the package website built with <a href="https://github.com/r-lib/pkgdown">pkgdown</a> <a href="http://insileco.github.io/inSilecoMisc/index.html" class="uri">http://insileco.github.io/inSilecoMisc/index.html</a>, it includes <a href="http://insileco.github.io/inSilecoMisc/articles/overview.html">a tour of the package as a vignette</a></p>
+</div>
+<div id="tout-doux-list" class="section level2">
+<h2 class="hasAnchor">
+<a href="#tout-doux-list" class="anchor"></a>Tout-doux list</h2>
+<p>Dear inSileco member, if there is a short but useful function you often use? Add it in this repo 😜;</p>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3" id="sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/ropensci/rcites">https://​github.com/​ropensci/​rcites</a>
+<li>Browse source code at <br><a href="https://github.com/inSileco/inSilecoMisc">https://​github.com/​inSileco/​inSilecoMisc</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/inSileco/inSilecoMisc/issues">https://​github.com/​inSileco/​inSilecoMisc/​issues</a>
 </li>
@@ -136,7 +137,7 @@
 </ul>
 </div>
 
-      <div class="dev-status">
+  <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/inSileco/inSilecoMisc"><img src="https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master" alt="Build Status"></a></li>
@@ -145,7 +146,6 @@
 </ul>
 </div>
 </div>
-
 </div>
 
 

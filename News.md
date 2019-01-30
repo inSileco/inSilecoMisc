@@ -1,10 +1,9 @@
-# inSilecoMisc 0.1.2.9000
-
+# inSilecoMisc 0.1.3
 
 ## Changes in the package structure
 
-- `README.Rmd` has been removed and most of its content is in the vignette *inSilecoMisc, an overview*
-
+- `README.Rmd` has been removed and most of its content is in the vignette
+*inSilecoMisc, an overview*
 
 
 ## Changes in functions

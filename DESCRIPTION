@@ -1,7 +1,7 @@
 Package: inSilecoMisc
 Title: inSileco Miscellaneous Functions
 Date: 2019-01-30
-Version: 0.1.2.9000
+Version: 0.1.3
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
@@ -24,7 +24,7 @@ Suggests:
     rmarkdown,
     testthat,
     sp
-URL: https://ropensci.github.io/rcites/, https://github.com/ropensci/rcites
+URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilecoMisc
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
