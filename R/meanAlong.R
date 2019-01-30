@@ -2,7 +2,7 @@
 #' @description This function is a simple moving window function.
 #'
 #' @param vec a vector of numeric
-#' @param n a intger indicating the size of the window
+#' @param n an integer indicating the size of the window
 #'
 #' @export
 #'

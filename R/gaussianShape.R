@@ -1,6 +1,6 @@
 #' Flexible bell-shaped function.
 #'
-#' The \code{gaussianShape} function computes a gaussian function readily customizable.
+#' The \code{gaussianShape} function computes a personalizable Gaussian function.
 #' Default values are the same as in \code{\link[stats]{dnorm}}.
 #' @author
 #' Kevin Cazelles
@@ -10,7 +10,7 @@
 #' @param width the width of the bell.
 #' @param pow a real number.
 #' @return
-#' a vector countaining values standing for categories into which elements of x have fallen.
+#' A vector containing values standing for categories into which elements of x have fallen.
 #' @seealso \code{\link[stats]{dnorm}}
 #' @export
 #' @examples

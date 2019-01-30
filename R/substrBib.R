@@ -1,6 +1,6 @@
 #' Substract Bibtex entries.
 #'
-#' Substarct Bibtex entries that are encontered in a given text.
+#' Substarct Bibtex entries that are encountered in a given text.
 #'
 #' @author
 #' Kevin Cazelles
@@ -9,7 +9,7 @@
 #' @param text A character string to be searched within.
 #' @param con  A connection object or a character string that stand for a path,
 #' ignored if text is defined.
-#' @param markdown logical. If \code{TRUE}, Markdown formated citation marks are sought.
+#' @param markdown logical. If \code{TRUE}, Markdown formatted citation marks are sought.
 #' @export
 #' @examples
 #' file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')
@@ -24,7 +24,7 @@ substrBib <- function(bib, text, con, markdown = FALSE) {
     stopifnot(any(class(bib) %in% c("BibEntry", "bibentry")))
     ##--
     if (missing(text)) {
-        if (missing(con)) 
+        if (missing(con))
             stop("Either 'text' or 'con' must be specified.") else citxt <- findRef(con = con, markdown = markdown)
     } else citxt <- findRef(text = text, markdown = markdown)
     ## find which key in bib file is actually cited
@@ -35,6 +35,6 @@ substrBib <- function(bib, text, con, markdown = FALSE) {
         warning("No match found.")
         out <- NULL
     } else out <- bib[id]
-    ## 
+    ##
     out
 }

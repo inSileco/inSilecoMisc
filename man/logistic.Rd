@@ -37,7 +37,7 @@ The classic logistic equation is:
 \deqn{f(x) = \frac{ypos-yneg}{1+e^{-\lambda x^{pow}}}}{%
       f(x) = (ypos-yneg)/(1+exp(-\lambda x^pow))}
 
-A slighly different version is:
+A slightly different version is:
 
 \deqn{f(x) = yneg + \frac{1}{\frac{1}{ypos-yneg}+(\frac{1}{yzer-yneg}-\frac{1}{ypos-yneg})e^{-\lambda x^{pow}}}}{%
       f(x) = yneg + 1/(1/(ypos-yneg)+(1/(yzer-yneg)-1/ypos-yneg)exp(-\lambda x^pow))}

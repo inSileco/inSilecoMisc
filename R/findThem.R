@@ -1,21 +1,21 @@
 #' Find values in a given vector.
 #'
-#' Given a set of values and a vetor where the values must be found, the
-#' \code{findThem} function records the matched values and the posiiton in the
+#' Given a set of values and a vector where the values must be found, the
+#' \code{findThem} function records the matched values and the position in the
 #' vector where the values have been searched for.
 #'
 #' @author
 #' Kevin Cazelles
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
-#' @param todf a logical indicating whether the output object must be a dataframe.
+#' @param todf a logical indicating whether the output object must be a data frame.
 #' @param reportnomatch a logical. If TRUE, values without match are reported in
 #' the data frame with a NA. Only available if \code{todf} is TRUE. Default is
 #' set to FALSE.
 #' @return
 #' A list indicating matched positions for each elements of \code{what}. If no
 #' match is found then \code{NA} is returned. If \code{todf} is TRUE
-#' then a three-columns dataframe is returned includeing values and positions
+#' then a three-columns data frame is returned including values and positions
 #' in both \code{what} and \code{where} vectors.
 #' @seealso \code{\link[base]{which}}
 #' @export

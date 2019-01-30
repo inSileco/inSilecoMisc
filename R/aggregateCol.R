@@ -1,28 +1,34 @@
-#' Aggregate columns given an integer vector.
+#' Aggregate columns
 #'
-#' The \code{aggregateCol} makes the computation of a given function on
-#' subsets of columns easy. An integer vector, whose length is the number of
-#' column of the input dataframe, is used to assign a group to each column
-#' that explicits the subsetting. Furthermore columns can be either kept as is
-#' using \code{0} or discarded by using \code{NA}.
+#' The \code{aggregateCol} function eases the computation of a given function on
+#' a specific subset of columns.
 #'
 #' @author
 #' Kevin Cazelles
 #'
-#' @param data a dataframe.
-#' @param grp an integer vector assigning a group to each column of \code{data}
+#' @param data a data frame.
+#' @param grp an integer vector assigning a group to every column of `data`
 #' used to compute operations on a subset of columns. Any integer is a valid group,
-#' \code{0} indicates that the column must be unchanged, \code{NA} is used to remove a
-#' column.
+#' `0` indicates that the column must be unchanged, `NA` is used to remove
+#' columns.
 #' @param FUN a function to be applied to all group of columns.
 #' @param names_aggreg column names for aggregated columns.
 #' @param ... further arguments to be passed to \code{FUN}.
+#'
+#' @details
+#' An integer vector, whose length is the number of
+#' columns of the input data frame, is used to assign a group to each column
+#' that explicits the subsetting. Furthermore columns can be either kept as is
+#' using \code{0} or discarded by using \code{NA}.
+#'
+#' @seealso [stats::aggregate()]
+#'
 #' @return
-#' A dataframe with the grouped columns.
-#' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
-#' @seealso \code{\link[stats]{aggregate}}
+#' A data frame with the grouped columns.
+#'
+#' @importFrom magrittr %>% %<>%
 #' @export
+#'
 #' @examples
 #' mat1 <- matrix(1:70,10)
 #' grp1 <- c(NA,0,rep(1,5))

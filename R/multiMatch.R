@@ -15,7 +15,7 @@
 #' ease their usage.
 #'
 #' @return
-#' A vector of character strings matching \code{pattern} argumemt.
+#' A vector of character strings matching \code{pattern} argument.
 #' @export
 #' @examples
 #' multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

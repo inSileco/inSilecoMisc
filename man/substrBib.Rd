@@ -14,10 +14,10 @@ substrBib(bib, text, con, markdown = FALSE)
 \item{con}{A connection object or a character string that stand for a path,
 ignored if text is defined.}
 
-\item{markdown}{logical. If \code{TRUE}, Markdown formated citation marks are sought.}
+\item{markdown}{logical. If \code{TRUE}, Markdown formatted citation marks are sought.}
 }
 \description{
-Substarct Bibtex entries that are encontered in a given text.
+Substarct Bibtex entries that are encountered in a given text.
 }
 \examples{
 file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')

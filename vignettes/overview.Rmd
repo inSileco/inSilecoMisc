@@ -18,13 +18,13 @@ knitr::opts_chunk$set(
 library(inSilecoMisc)
 ```
 
-This vignette is an overview of *inSilecoMisc* organized around four major themes:
+This vignette is an overview of *inSilecoMisc* organized around five major themes:
 
 1. strings manipulations
 2. vector manipulations
 3. data frames manipulations
 4. Bibliography operations
-
+5. Mathematical functions
 
 
 # String manipulations
@@ -45,11 +45,11 @@ loremIpsum(10)
 
 ## Size of a string
 
-```{r strLength}
+```{r stLength}
   lor <- loremIpsum()
-  strLength(lor)
+  stLength(lor)
   nchar(lor)
-  strLength(lor, ignore = "q")
+  stLength(lor, ignore = "q")
 ```
 
 
@@ -78,11 +78,11 @@ addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 ```
 
-## applyString
+## stApply
 
-```{r applyString}
-applyString("cool", FUN = toupper, pos = 1:2)
-applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
+```{r stApply}
+stApply("cool", FUN = toupper, pos = 1:2)
+stApply(c("cool", "pro"),  pattern = "o", FUN = toupper)
 ```
 
 ## Extract digits from strings
@@ -155,6 +155,23 @@ res1 <- scaleWithin(val, 20, 40, 60)
   str(df2)
 ```
 
+## Create data frame from scratch or from other data frame
+
+```{r dfTemplate}
+dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+dfB <- data.frame(col1 = 2, col4 = "cool")
+
+dfTemplate(2, 2)
+dfTemplate(2, 2, fill = 0)
+dfTemplate(c("value", "name"), 2, col_classes = c("numeric", "character"))
+
+dfTemplateMatch(dfA, c("col4"))
+dfTemplateMatch(dfA, dfB)
+dfTemplateMatch(dfA, c("col1", "col4"), yonly = TRUE)
+dfTemplateMatch(dfA, c("col1", "col2"), yonly = TRUE, col_classes = "numeric", fill = 0)
+```
+
+
 
 
 # Bibliography operations
@@ -184,4 +201,30 @@ out <- substrBib(bib, txt)
 
 ```{r packagesUse}
 packagesUsed(c('utils', 'methods'))
+```
+
+
+
+
+
+
+# Mathematical functions
+
+
+## Logistic functions
+
+```{r logistic}
+seqx <- seq(-5, 5, 0.1)
+par(mfrow = c(1, 2))
+plot(seqx, logistic(seqx))
+plot(seqx, logistic2(seqx))
+```
+
+## Logit
+
+```{r logit}
+seqx <- seq(-5, 5, 0.1)
+par(mfrow = c(1, 2))
+plot(seqx, logit(seqx))
+plot(seqx, logit(seqx, inv=TRUE))
 ```

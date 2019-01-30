@@ -13,7 +13,7 @@ loremIpsum(n = NULL)
 A character string with the desired piece of lorem ipsum.
 }
 \description{
-Returns a common form of the Lorem ipsum text an optionnaly a subset of it.
+Returns a common form of the Lorem ipsum text an optionally a subset of it.
 }
 \examples{
 loremIpsum(5)

@@ -3,7 +3,7 @@
 \name{duplicateRow}
 \alias{duplicateRow}
 \alias{duplicateCol}
-\title{Duplicates elements of a dataframe.}
+\title{Duplicates elements of a data frame.}
 \usage{
 duplicateRow(x, id.el = 1, times = 1, append = FALSE)
 
@@ -19,7 +19,7 @@ duplicateCol(x, id.el = 1, times = 1, append = FALSE)
 \item{append}{A logical. If \code{TRUE}, duplicated elements will be appended to the dataframe otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce \code{NA}.}
 }
 \description{
-Duplicates rows and colmns of a given a dataframe.
+Duplicates rows and columns of a given a data frame.
 }
 \section{Functions}{
 \itemize{

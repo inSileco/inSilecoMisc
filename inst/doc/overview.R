@@ -11,13 +11,13 @@ loremIpsum(10)
 
 ## ----keepWords-----------------------------------------------------------
   lor <- loremIpsum()
-  keepWords(strex, c(1,4))
+  keepWords(lor, c(1,4))
 
-## ----strLength-----------------------------------------------------------
+## ----stLength------------------------------------------------------------
   lor <- loremIpsum()
-  strLength(lor)
+  stLength(lor)
   nchar(lor)
-  strLength(lor, ignore = "q")
+  stLength(lor, ignore = "q")
 
 ## ----adjustString--------------------------------------------------------
   paste0('myfilename', adjustString(c(1:2,10,100), 3))
@@ -33,9 +33,9 @@ addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
 addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 
-## ----applyString---------------------------------------------------------
-applyString("cool", FUN = toupper, pos = 1:2)
-applyString(c("cool", "pro"),  pattern = "o", FUN = toupper)
+## ----stApply-------------------------------------------------------------
+stApply("cool", FUN = toupper, pos = 1:2)
+stApply(c("cool", "pro"),  pattern = "o", FUN = toupper)
 
 ## ----getDigits-----------------------------------------------------------
 getDigits(c("a1", "032hdje2832"))
@@ -69,6 +69,19 @@ res1 <- scaleWithin(val, 20, 40, 60)
   str(df1)
   str(df2)
 
+## ----dfTemplate----------------------------------------------------------
+dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+dfB <- data.frame(col1 = 2, col4 = "cool")
+
+dfTemplate(2, 2)
+dfTemplate(2, 2, fill = 0)
+dfTemplate(c("value", "name"), 2, col_classes = c("numeric", "character"))
+
+dfTemplateMatch(dfA, c("col4"))
+dfTemplateMatch(dfA, dfB)
+dfTemplateMatch(dfA, c("col1", "col4"), yonly = TRUE)
+dfTemplateMatch(dfA, c("col1", "col2"), yonly = TRUE, col_classes = "numeric", fill = 0)
+
 ## ------------------------------------------------------------------------
 findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')
 
@@ -85,4 +98,16 @@ out <- substrBib(bib, txt)
 
 ## ----packagesUse---------------------------------------------------------
 packagesUsed(c('utils', 'methods'))
+
+## ----logistic------------------------------------------------------------
+seqx <- seq(-5, 5, 0.1)
+par(mfrow = c(1, 2))
+plot(seqx, logistic(seqx))
+plot(seqx, logistic2(seqx))
+
+## ----logit---------------------------------------------------------------
+seqx <- seq(-5, 5, 0.1)
+par(mfrow = c(1, 2))
+plot(seqx, logit(seqx))
+plot(seqx, logit(seqx, inv=TRUE))
 

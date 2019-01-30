@@ -2,7 +2,7 @@
 % Please edit documentation in R/wordCount.R
 \name{wordCount}
 \alias{wordCount}
-\title{Count the words in your chracter strings.}
+\title{Count the words in your character strings.}
 \usage{
 wordCount(string, exclude = "[[:punct:]]")
 }

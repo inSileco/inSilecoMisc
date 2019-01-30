@@ -1,8 +1,8 @@
 context("String length")
 
-res1 <- strLength(123)
-res2 <- strLength(c("/", "four"))
-res3 <- strLength(c('/', 'four five'), ignore = c(" ", "f"))
+res1 <- stLength(123)
+res2 <- stLength(c("/", "four"))
+res3 <- stLength(c('/', 'four five'), ignore = c(" ", "f"))
 
 test_that("String length", {
   expect_equal(res1, 3)

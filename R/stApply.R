@@ -20,11 +20,11 @@
 #' @importFrom magrittr %>% %<>%
 #' @export
 #' @examples
-#' applyString('cool',  pos = 1:2, FUN = toupper)
-#' applyString(c('cool', 'pro'),  pattern = 'o', FUN = toupper)
+#' stApply('cool',  pos = 1:2, FUN = toupper)
+#' stApply(c('cool', 'pro'),  pattern = 'o', FUN = toupper)
 
 
-applyString <- function(x, FUN, pos = NULL, pattern = NULL) {
+stApply <- function(x, FUN, pos = NULL, pattern = NULL) {
     
     if (!is.character(x)) 
         x <- as.character(x)

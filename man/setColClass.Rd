@@ -12,11 +12,11 @@ setColClass(x, colid, cls)
 \item{colid}{the identity of columns for which class are to be changed.}
 
 \item{cls}{a character vector containing the classes' names to be used in the
-same order as colid. By default \code{cls} is repeated until its size equals
+same order as \code{colid}. By default \code{cls} is repeated until its size equals
 \code{colid}'s size.}
 }
 \value{
-A data.frame whose columns have the desired classes.
+A data frame whose columns have the desired classes.
 }
 \description{
 This function is designed to ease the changes of column's class

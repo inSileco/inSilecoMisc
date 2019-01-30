@@ -1,6 +1,6 @@
 #' Lorem ipsum.
 #'
-#' Returns a common form of the Lorem ipsum text an optionnaly a subset of it.
+#' Returns a common form of the Lorem ipsum text an optionally a subset of it.
 #'
 #' @param n the number of words to be kept.
 #'

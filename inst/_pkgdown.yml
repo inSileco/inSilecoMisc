@@ -8,14 +8,14 @@ reference:
   - title: String manipulations
     contents:
     - adjustString
-    - applyString
+    - stApply
     - findRef
     - getDigits
     - keepWords
     - multiMatch
     - packagesUsed
     - signifSymbols
-    - strLength
+    - stLength
     - substrBib
     - wordCount
   - title: Dataframe manipulations

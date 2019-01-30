@@ -7,11 +7,11 @@
 #'
 #' @param string Input vector. A character vector or list from which words will be extracted.
 #' @param slc Vector of integer indicating the selected positions of the words to be kept.
-#' @param punct.rm A logical indicating whether punctutation characters should be removed.
+#' @param punct.rm A logical indicating whether punctuation characters should be removed.
 #' @param na.rm A logical indicating whether missing values should be removed.
 #' @param collapse An optional character string used to separate selected words. Not \code{NA_character_}.
 #'
-#' @return A vector of the selected words concatened for each string.
+#' @return A vector of the selected words concatenated for each string.
 #' @importFrom magrittr %>%
 #' @importFrom magrittr %<>%
 #' @export

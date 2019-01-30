@@ -6,12 +6,9 @@
 \alias{inSilecoMisc-package}
 \title{\pkg{inSileco} is a set of miscellaneous R functions of inSileco.}
 \description{
-Mainly the functions of the packages used the maniulation of data
+Mainly the functions of the packages used the manipulation of data
 using base R, \emph{i.e.} outside the tidyverse which may (or may not)
 has equivalent functions.
-}
-\details{
-TOBEDONE: details about different funcitons.
 }
 \seealso{
 Useful links:

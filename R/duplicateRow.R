@@ -1,6 +1,6 @@
-#' Duplicates elements of a dataframe.
+#' Duplicates elements of a data frame.
 #'
-#' Duplicates rows and colmns of a given a dataframe.
+#' Duplicates rows and columns of a given a data frame.
 #'
 #' @author
 #' Kevin Cazelles
@@ -21,11 +21,11 @@
 #' @describeIn duplicateRow returns a dataframe with duplicated rows.
 duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
-    if (class(pos) == "character") 
+    if (class(pos) == "character")
         ord <- c(rownames(x), pos) else ord <- c(1:nrow(x), pos)
-    if (!append) 
+    if (!append)
         ord %<>% sort
-    
+
     x[ord, ]
 }
 
@@ -34,10 +34,10 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
 
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- rep(id.el, times) %>% sort
-    if (class(pos) == "character") 
+    if (class(pos) == "character")
         ord <- c(colnames(x), pos) else ord <- c(1:ncol(x), pos)
-    if (!append) 
+    if (!append)
         ord %<>% sort
-    
+
     x[, ord]
 }

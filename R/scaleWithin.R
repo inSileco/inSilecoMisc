@@ -5,6 +5,7 @@
 #'
 #' @author
 #' Kevin Cazelles
+#'
 #' @param x a numeric object of type `numeric` or coercible as one.
 #' @param nval The number of scaled values (between 1 and `nval`).
 #' @param mn Minimum value (`mn` and lower values are set to 1).
@@ -23,7 +24,7 @@
 scaleWithin <- function(x, nval = 100, mn = min(x), mx = max(x)) {
     stopifnot(mn < mx)
     stopifnot(nval > 1)
-    ## 
+    ##
     out <- 1 + floor(nval * (x - mn)/(mx - mn))
     out[out < 1] <- 1
     out[out > nval] <- nval

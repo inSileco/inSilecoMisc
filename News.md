@@ -1,26 +1,40 @@
 # inSilecoMisc 0.1.2.9000
 
+
+## Changes in the package structure
+
+- `README.Rmd` has been removed and most of its content is in the vignette *inSilecoMisc, an overview*
+
+
+
 ## Changes in functions
 
-- `assignClass2df()` is now named `setColClass()`
-- new function `whichIs()` which looks for the values of a given vector in another one and returns the positions of matchs as a list.
+- Changes in function names
+  - `assignClass2df()` => `setColClass()`
+  - `strLength()` => `stLength()`
+  - `applyString()` => `stApply()`
+
+- New functions
+  - `whichIs()` which looks for the values of a given vector in another one and returns the positions of matchs as a list;
+  - `dfTemplate()` and `dfTemplateMatch()` to create data frames from scratch or based on one or two data frames.
+
 
 
 # inSilecoMisc 0.1.2
 
-## Changes in the package structure:
+## Changes in the package structure
 
-  - add website built with [pkgdown](https://github.com/r-lib/pkgdown).
+- add website built with [pkgdown](https://github.com/r-lib/pkgdown).
 
-## Addition of R functions:
+## Addition of R functions
 
-  - New R function \code{loremIpsum()} to get a piece of a placeholder text.
-  - New R function \code{readYamlHeader()} to read YAML headers.
-  - New R function \code{applyString()} to apply a function to a subset of strings.
+- New R function \code{loremIpsum()} to get a piece of a placeholder text.
+- New R function \code{readYamlHeader()} to read YAML headers.
+- New R function \code{stApply()} to apply a function to a subset of strings.
 
-## Addition of new parameters:
+## Addition of new parameters
 
-  - New parameter `ignore` in `strLength()` to ignore a specific selection of character.
+- New parameter `ignore` in `stLength()` to ignore a specific selection of character.
 
 
 
@@ -56,7 +70,7 @@
   - New R function \code{logit()}
   - New R function \code{multiMatch()}
   - New R function \code{signifSymbol()}
-  - New R function \code{strLength()}
+  - New R function \code{stLength()}
   - New R function \code{substrBib()}
   - New R function \code{wordCount()} that adresses #1 (@KevCaz)
 

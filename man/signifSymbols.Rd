@@ -8,7 +8,7 @@ signifSymbols(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001),
   symbols = c(".", "*", "**", "***"), notsignif = "n.s.")
 }
 \arguments{
-\item{pvalue}{a pvalue for which a symbol is requested.}
+\item{pvalue}{a p-value for which a symbol is requested.}
 
 \item{thresholds}{the threshold values that define category to which symbols are assigned.}
 
@@ -17,8 +17,9 @@ signifSymbols(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001),
 \item{notsignif}{symbols for non significant p-value.}
 }
 \description{
-\code{signifSymbols} take one p-value and associated to symbols. The default
-values used the most common symbols.
+The \code{signifSymbols} function takes one vector of p-values and returns
+a vector of symbols that correspond to thresholds that can be set. Default
+thresholds values and symbols are the most common symbols.
 }
 \examples{
 signifSymbols(.012)

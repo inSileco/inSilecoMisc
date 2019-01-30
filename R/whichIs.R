@@ -8,7 +8,7 @@
 #' @param ... further arguments to be passed to [which()].
 #'
 #' @return
-#' A list of positions. Eeach element corresponds to the matches for a specific x value.
+#' A list of positions. Each element corresponds to the matches for a specific x value.
 #'
 #' @importFrom magrittr %<>%
 #' @export

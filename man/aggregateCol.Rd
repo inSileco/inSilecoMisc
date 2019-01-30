@@ -2,17 +2,17 @@
 % Please edit documentation in R/aggregateCol.R
 \name{aggregateCol}
 \alias{aggregateCol}
-\title{Aggregate columns given an integer vector.}
+\title{Aggregate columns}
 \usage{
 aggregateCol(data, grp, names_aggreg = NULL, FUN = sum, ...)
 }
 \arguments{
-\item{data}{a dataframe.}
+\item{data}{a data frame.}
 
-\item{grp}{an integer vector assigning a group to each column of \code{data}
+\item{grp}{an integer vector assigning a group to every column of \code{data}
 used to compute operations on a subset of columns. Any integer is a valid group,
-\code{0} indicates that the column must be unchanged, \code{NA} is used to remove a
-column.}
+\code{0} indicates that the column must be unchanged, \code{NA} is used to remove
+columns.}
 
 \item{names_aggreg}{column names for aggregated columns.}
 
@@ -21,12 +21,15 @@ column.}
 \item{...}{further arguments to be passed to \code{FUN}.}
 }
 \value{
-A dataframe with the grouped columns.
+A data frame with the grouped columns.
 }
 \description{
-The \code{aggregateCol} makes the computation of a given function on
-subsets of columns easy. An integer vector, whose length is the number of
-column of the input dataframe, is used to assign a group to each column
+The \code{aggregateCol} function eases the computation of a given function on
+a specific subset of columns.
+}
+\details{
+An integer vector, whose length is the number of
+columns of the input data frame, is used to assign a group to each column
 that explicits the subsetting. Furthermore columns can be either kept as is
 using \code{0} or discarded by using \code{NA}.
 }
@@ -36,7 +39,7 @@ grp1 <- c(NA,0,rep(1,5))
 aggregateCol(mat1, grp1, FUN = mean)
 }
 \seealso{
-\code{\link[stats]{aggregate}}
+\code{\link[stats:aggregate]{stats::aggregate()}}
 }
 \author{
 Kevin Cazelles

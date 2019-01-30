@@ -2,14 +2,14 @@
 % Please edit documentation in R/squaretize.R
 \name{squaretize}
 \alias{squaretize}
-\title{Makes a dataframe or a matrix square.}
+\title{Makes a data frame or a matrix square.}
 \usage{
 squaretize(x, fill = 0, reorder = TRUE)
 }
 \arguments{
 \item{x}{an R object to be coerced into matrix.}
 
-\item{fill}{element used to fill the additionnal rows and/or columns.}
+\item{fill}{element used to fill the additional rows and/or columns.}
 
 \item{reorder}{a logical indicating whether the names must be used to order rows and columns.}
 }
@@ -17,7 +17,7 @@ squaretize(x, fill = 0, reorder = TRUE)
 A square matrix.
 }
 \description{
-Add missing rows or columns based on names and Duplicates rows and colmns of a given a dataframe.
+Add missing rows or columns based on names and Duplicates rows and columns of a given a data frame.
 }
 \examples{
 mat <- matrix(1:12, 3, 4)

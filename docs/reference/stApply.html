@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mutiple match. — multiMatch • inSilecoMisc</title>
+<title>Apply a function on elements of a character string — stApply • inSilecoMisc</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Mutiple match. — multiMatch" />
+<meta property="og:title" content="Apply a function on elements of a character string — stApply" />
 
-<meta property="og:description" content="Seek all elements that match a given pattern within a character strings." />
+<meta property="og:description" content="Apply a function on a given set of elements of a character string." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -109,47 +109,55 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Mutiple match.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ropensci/rcites/blob/master/R/multiMatch.R'><code>R/multiMatch.R</code></a></small>
-    <div class="hidden name"><code>multiMatch.Rd</code></div>
+    <h1>Apply a function on elements of a character string</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ropensci/rcites/blob/master/R/stApply.R'><code>R/stApply.R</code></a></small>
+    <div class="hidden name"><code>stApply.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Seek all elements that match a given pattern within a character strings.</p>
+    <p>Apply a function on a given set of elements of a character string.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>multiMatch</span>(<span class='no'>text</span>, <span class='no'>pattern</span>)</pre>
+    <pre class="usage"><span class='fu'>stApply</span>(<span class='no'>x</span>, <span class='no'>FUN</span>, <span class='kw'>pos</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>text</th>
-      <td><p>a character vector where matches are sought, or an object which
-can be coerced by as.character to a character vector, see <code>regexec</code>.</p></td>
+      <th>x</th>
+      <td><p>a character vector, or a vector to be coerced to a character vector.</p></td>
+    </tr>
+    <tr>
+      <th>FUN</th>
+      <td><p>the function to be applied, see <a href='http://www.rdocumentation.org/packages/base/topics/lapply'>base::lapply</a>.</p></td>
+    </tr>
+    <tr>
+      <th>pos</th>
+      <td><p>a vector indicating the elements position.</p></td>
     </tr>
     <tr>
       <th>pattern</th>
-      <td><p>character string containing a regular expression to be
-matched in the given character vector, see <code>regexec</code>.</p></td>
+      <td><p>a see <a href='http://www.rdocumentation.org/packages/base/topics/grep'>base::gregexpr</a>.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>argument to be passed to <code>gregexpr</code>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A vector of character strings matching <code>pattern</code> argument.</p>
+    <p>A character vector.</p>
     
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p><code>multiMatch</code> is essentially a wrapper around some regex functions that
-ease their usage.</p>
+    <p>In case both <code>pos</code> or <code>pattern</code>, the latter is ignored.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>multiMatch</span>(<span class='st'>'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua.'</span>,<span class='st'>' [[:alnum:]]{1,3} '</span>)</div><div class='output co'>#&gt; [1] " sit " " sed " " ut "  " et " </div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>stApply</span>(<span class='st'>'cool'</span>,  <span class='kw'>pos</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>2</span>, <span class='kw'>FUN</span> <span class='kw'>=</span> <span class='no'>toupper</span>)</div><div class='output co'>#&gt; [1] "COol"</div><div class='input'><span class='fu'>stApply</span>(<span class='fu'>c</span>(<span class='st'>'cool'</span>, <span class='st'>'pro'</span>),  <span class='kw'>pattern</span> <span class='kw'>=</span> <span class='st'>'o'</span>, <span class='kw'>FUN</span> <span class='kw'>=</span> <span class='no'>toupper</span>)</div><div class='output co'>#&gt; [1] "cOOl" "prO" </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -158,7 +166,7 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua.'</span>,<span class=
       
       <li><a href="#value">Value</a></li>
 
-      <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

@@ -12,14 +12,14 @@ keepWords(string, slc = 1, punct.rm = TRUE, na.rm = FALSE,
 
 \item{slc}{Vector of integer indicating the selected positions of the words to be kept.}
 
-\item{punct.rm}{A logical indicating whether punctutation characters should be removed.}
+\item{punct.rm}{A logical indicating whether punctuation characters should be removed.}
 
 \item{na.rm}{A logical indicating whether missing values should be removed.}
 
 \item{collapse}{An optional character string used to separate selected words. Not \code{NA_character_}.}
 }
 \value{
-A vector of the selected words concatened for each string.
+A vector of the selected words concatenated for each string.
 }
 \description{
 Extract words based on their position in a character string, vectorised over \code{string}.

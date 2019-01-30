@@ -11,7 +11,7 @@ findThem(what, where, todf = FALSE, reportnomatch = FALSE)
 
 \item{where}{a vector where values will be searched on.}
 
-\item{todf}{a logical indicating whether the output object must be a dataframe.}
+\item{todf}{a logical indicating whether the output object must be a data frame.}
 
 \item{reportnomatch}{a logical. If TRUE, values without match are reported in
 the data frame with a NA. Only available if \code{todf} is TRUE. Default is
@@ -20,12 +20,12 @@ set to FALSE.}
 \value{
 A list indicating matched positions for each elements of \code{what}. If no
 match is found then \code{NA} is returned. If \code{todf} is TRUE
-then a three-columns dataframe is returned includeing values and positions
+then a three-columns data frame is returned including values and positions
 in both \code{what} and \code{where} vectors.
 }
 \description{
-Given a set of values and a vetor where the values must be found, the
-\code{findThem} function records the matched values and the posiiton in the
+Given a set of values and a vector where the values must be found, the
+\code{findThem} function records the matched values and the position in the
 vector where the values have been searched for.
 }
 \examples{

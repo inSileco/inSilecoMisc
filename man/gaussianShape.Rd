@@ -19,10 +19,10 @@ gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1,
 \item{pow}{a real number.}
 }
 \value{
-a vector countaining values standing for categories into which elements of x have fallen.
+A vector containing values standing for categories into which elements of x have fallen.
 }
 \description{
-The \code{gaussianShape} function computes a gaussian function readily customizable.
+The \code{gaussianShape} function computes a personalizable Gaussian function.
 Default values are the same as in \code{\link[stats]{dnorm}}.
 }
 \examples{

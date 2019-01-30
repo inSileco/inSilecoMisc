@@ -6,7 +6,6 @@
 ^\.gitignore
 ^Makefile
 ^README\.md
-^README\.Rmd
 ^index\.Rmd
 ^News\.md
 LICENSE

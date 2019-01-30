@@ -1,11 +1,11 @@
-#' Makes a dataframe or a matrix square.
+#' Makes a data frame or a matrix square.
 #'
-#' Add missing rows or columns based on names and Duplicates rows and colmns of a given a dataframe.
+#' Add missing rows or columns based on names and Duplicates rows and columns of a given a data frame.
 #'
 #' @author
 #' Kevin Cazelles
 #' @param x an R object to be coerced into matrix.
-#' @param fill element used to fill the additionnal rows and/or columns.
+#' @param fill element used to fill the additional rows and/or columns.
 #' @param reorder a logical indicating whether the names must be used to order rows and columns.
 #' @importFrom magrittr %>%
 #' @importFrom magrittr %<>%

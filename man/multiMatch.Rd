@@ -14,7 +14,7 @@ can be coerced by as.character to a character vector, see \code{regexec}.}
 matched in the given character vector, see \code{regexec}.}
 }
 \value{
-A vector of character strings matching \code{pattern} argumemt.
+A vector of character strings matching \code{pattern} argument.
 }
 \description{
 Seek all elements that match a given pattern within a character strings.

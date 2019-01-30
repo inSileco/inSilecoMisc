@@ -6,11 +6,11 @@
 #' @param x a data frame or a R object to be coerced into a data frame.
 #' @param colid the identity of columns for which class are to be changed.
 #' @param cls a character vector containing the classes' names to be used in the
-#' same order as colid. By default \code{cls} is repeated until its size equals
-#' \code{colid}'s size.
+#' same order as `colid`. By default `cls` is repeated until its size equals
+#' `colid`'s size.
 #'
 #' @return
-#' A data.frame whose columns have the desired classes.
+#' A data frame whose columns have the desired classes.
 #'
 #' @importFrom magrittr %<>%
 #' @export

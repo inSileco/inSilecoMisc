@@ -1,6 +1,6 @@
 #' Reads YAML headers.
 #'
-#' Reads YAML headers (typically found in Markdown filess).
+#' Reads YAML headers (typically found in Markdown files).
 #'
 #' @param con connection object or a character string.
 #'
