@@ -1,3 +1,11 @@
+# inSilecoMisc 0.1.3.9000
+
+## Changes in functions
+
+- In `dfTemplate()` the values of argument `col_classes` are now checked a test has been added.
+- In `dfTemplate()`, `col_classes` is now repeated so the number of elements equals the number of columns. 
+
+
 # inSilecoMisc 0.1.3
 
 ## Changes in the package structure

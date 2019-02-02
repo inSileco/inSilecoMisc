@@ -19,6 +19,7 @@ test_that("dfTemplate", {
   expect_identical(df1, data.frame(Var1 = NA_character_, Var2 = NA_character_))
   expect_identical(df2, data.frame(Var1 = rn0, Var2 = rn0))
   expect_identical(df3, data.frame(value = as.numeric(rna), name = rna))
+  expect_error(dfTemplate(2, col_classes = c("numeric", "list")))
 })
 
 test_that("dfTemplateMatch", {

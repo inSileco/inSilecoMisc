@@ -31,7 +31,10 @@
 
 dfTemplate <- function(cols, nrows = 1, col_classes = "character", fill = NA) {
 
-  stopifnot(class(cols) %in% c("numeric", "character"))
+  stopifnot(class(cols) %in% c("character", "numeric"))
+  stopifnot(
+    all(col_classes %in% c("character", "factor", "logical", "numeric"))
+  )
 
   if (is.numeric(cols)) {
     nc <- cols
@@ -44,7 +47,7 @@ dfTemplate <- function(cols, nrows = 1, col_classes = "character", fill = NA) {
   lsr <-  mapply(
     function(x, y) methods::as(x, y),
     rep(list(rep(fill, nrows)), nc),
-    col_classes,
+    rep_len(col_classes, nc),
     SIMPLIFY = FALSE
   )
 
