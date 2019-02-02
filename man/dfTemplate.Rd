@@ -5,7 +5,7 @@
 \alias{dfTemplateMatch}
 \title{Create a data frame from scratch or based on one or two data frames.}
 \usage{
-dfTemplate(cols, nrows = 1, col_classes = "character", fill = NA)
+dfTemplate(cols, nrows = 1, col_classes = NULL, fill = NA)
 
 dfTemplateMatch(x, y, yonly = FALSE, ...)
 }
@@ -16,7 +16,7 @@ columns names of the data frame to be returned.}
 \item{nrows}{row number.}
 
 \item{col_classes}{vector of column classes for the desired data frame.
-By default, "character" is used for all columns.}
+By default, the class is determined by \code{fill}.}
 
 \item{fill}{character or number used to fill out the columns. Default is \code{NA}.}
 
@@ -45,7 +45,8 @@ among data frame by creating data frames with the same columns.
 }}
 
 \examples{
-assignIds(list(2,'f', 'd', 'f'))
+dfTemplate(5, 2)
+dfTemplate(5, 2, col_classes = "character")
 }
 \author{
 Kevin Cazelles

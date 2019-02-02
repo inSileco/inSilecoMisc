@@ -11,7 +11,7 @@
 #' columns names of the data frame to be returned.
 #' @param nrows row number.
 #' @param col_classes vector of column classes for the desired data frame.
-#' By default, "character" is used for all columns.
+#' By default, the class is determined by `fill`.
 #' @param fill character or number used to fill out the columns. Default is `NA`.
 #' @param x a data frame.
 #' @param y data frame or a vector of strings that includes part of or all of
@@ -26,15 +26,18 @@
 #'
 #' @export
 #' @examples
-#' assignIds(list(2,'f', 'd', 'f'))
+#' dfTemplate(5, 2)
+#' dfTemplate(5, 2, col_classes = "character")
 
 
-dfTemplate <- function(cols, nrows = 1, col_classes = "character", fill = NA) {
+dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
 
   stopifnot(class(cols) %in% c("character", "numeric"))
-  stopifnot(
-    all(col_classes %in% c("character", "factor", "logical", "numeric"))
-  )
+  if (!is.null(col_classes)) {
+    stopifnot(
+      all(col_classes %in% c("character", "factor", "logical", "numeric"))
+    )
+  }
 
   if (is.numeric(cols)) {
     nc <- cols
@@ -44,12 +47,17 @@ dfTemplate <- function(cols, nrows = 1, col_classes = "character", fill = NA) {
     nm <- cols
   }
 
-  lsr <-  mapply(
-    function(x, y) methods::as(x, y),
-    rep(list(rep(fill, nrows)), nc),
-    rep_len(col_classes, nc),
-    SIMPLIFY = FALSE
-  )
+  if (!is.null(col_classes)) {
+    lsr <- mapply(
+      function(x, y) methods::as(x, y),
+      rep(list(rep(fill, nrows)), nc),
+      rep_len(col_classes, nc),
+      SIMPLIFY = FALSE
+    )
+  } else {
+    lsr <- rep(list(rep(fill, nrows)), nc)
+  }
+
 
   names(lsr) <- nm
   as.data.frame(lsr)

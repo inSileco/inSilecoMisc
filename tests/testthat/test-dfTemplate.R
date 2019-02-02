@@ -12,13 +12,13 @@ df5 <- dfTemplateMatch(dfA, dfB)
 df6 <- dfTemplateMatch(dfA, c("col1", "col4"), yonly = TRUE)
 df7 <- dfTemplateMatch(dfA, c("col2", "col1"), yonly = TRUE, col_classes = "numeric", fill = 0)
 
-rna <- rep(NA_character_, 2)
+rna <- rep(NA, 2)
 rn0 <- rep(0, 2)
 
 test_that("dfTemplate", {
-  expect_identical(df1, data.frame(Var1 = NA_character_, Var2 = NA_character_))
+  expect_identical(df1, data.frame(Var1 = NA, Var2 = NA))
   expect_identical(df2, data.frame(Var1 = rn0, Var2 = rn0))
-  expect_identical(df3, data.frame(value = as.numeric(rna), name = rna))
+  expect_identical(df3, data.frame(value = as.numeric(rna), name = as.character(rna)))
   expect_error(dfTemplate(2, col_classes = c("numeric", "list")))
 })
 
