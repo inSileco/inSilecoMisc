@@ -41,7 +41,7 @@ among data frame by creating data frames with the same columns.
 }
 \section{Functions}{
 \itemize{
-\item \code{dfTemplateMatch}: Returns a data frame.
+\item \code{dfTemplateMatch}: Returns a data frame that matches names in \code{y}.
 }}
 
 \examples{

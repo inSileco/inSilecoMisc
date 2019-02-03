@@ -47,23 +47,23 @@ dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
     nm <- cols
   }
 
+  lsfill <- lapply(rep_len(fill, nc), rep_len, nrows)
+
   if (!is.null(col_classes)) {
-    lsr <- mapply(
+    lsfill <- mapply(
       function(x, y) methods::as(x, y),
-      rep(list(rep(fill, nrows)), nc),
+      lsfill,
       rep_len(col_classes, nc),
       SIMPLIFY = FALSE
     )
-  } else {
-    lsr <- rep(list(rep(fill, nrows)), nc)
   }
 
-
-  names(lsr) <- nm
-  as.data.frame(lsr)
+  names(lsfill) <- nm
+  as.data.frame(lsfill)
 }
 
-#' @describeIn dfTemplate Returns a data frame.
+
+#' @describeIn dfTemplate Returns a data frame that matches names in `y`.
 #' @export
 dfTemplateMatch <- function(x, y, yonly = FALSE, ...) {
 

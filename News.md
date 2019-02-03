@@ -2,9 +2,10 @@
 
 ## Changes in functions
 
-- In `dfTemplate()` the values of argument `col_classes` are now checked a test has been added.
-- In `dfTemplate()`, `col_classes` is now repeated so the number of elements equals the number of columns.
-- In `dfTemplate`, `fill` now determines the classes of the columns when `col_classes` if `NULL` which is the new default value.
+- In `dfTemplate()` the values of argument `col_classes` are now checked, a test has been added.
+- In `dfTemplate()` `fill` is now a vector whose values are replicated so its length equals the number of columns.
+- In `dfTemplate()`, `col_classes` values are replicated so its length equals the number of columns.
+- In `dfTemplate()`, `fill` now determines the classes of the columns when `col_classes` if `NULL` which is the new default value.
 
 
 # inSilecoMisc 0.1.3

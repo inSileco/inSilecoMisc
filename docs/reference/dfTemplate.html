@@ -63,7 +63,7 @@ among data frame by creating data frames with the same columns." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.3.9000</span>
       </span>
     </div>
 
@@ -124,7 +124,7 @@ among data frame by creating data frames with the same columns.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>dfTemplate</span>(<span class='no'>cols</span>, <span class='kw'>nrows</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>col_classes</span> <span class='kw'>=</span> <span class='st'>"character"</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='fl'>NA</span>)
+    <pre class="usage"><span class='fu'>dfTemplate</span>(<span class='no'>cols</span>, <span class='kw'>nrows</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>col_classes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='fl'>NA</span>)
 
 <span class='fu'>dfTemplateMatch</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>yonly</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
     
@@ -143,7 +143,7 @@ columns names of the data frame to be returned.</p></td>
     <tr>
       <th>col_classes</th>
       <td><p>vector of column classes for the desired data frame.
-By default, "character" is used for all columns.</p></td>
+By default, the class is determined by <code>fill</code>.</p></td>
     </tr>
     <tr>
       <th>fill</th>
@@ -177,12 +177,16 @@ names of <code>x</code> and the names of <code>y</code> are used.</p></td>
     <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
 
     <ul>
-<li><p><code>dfTemplateMatch</code>: Returns a data frame.</p></li>
+<li><p><code>dfTemplateMatch</code>: Returns a data frame that matches names in <code>y</code>.</p></li>
 </ul>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='assignIds.html'>assignIds</a></span>(<span class='fu'>list</span>(<span class='fl'>2</span>,<span class='st'>'f'</span>, <span class='st'>'d'</span>, <span class='st'>'f'</span>))</div><div class='output co'>#&gt; [1] 1 2 3 2</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>dfTemplate</span>(<span class='fl'>5</span>, <span class='fl'>2</span>)</div><div class='output co'>#&gt;   Var1 Var2 Var3 Var4 Var5
+#&gt; 1   NA   NA   NA   NA   NA
+#&gt; 2   NA   NA   NA   NA   NA</div><div class='input'><span class='fu'>dfTemplate</span>(<span class='fl'>5</span>, <span class='fl'>2</span>, <span class='kw'>col_classes</span> <span class='kw'>=</span> <span class='st'>"character"</span>)</div><div class='output co'>#&gt;   Var1 Var2 Var3 Var4 Var5
+#&gt; 1 &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+#&gt; 2 &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
