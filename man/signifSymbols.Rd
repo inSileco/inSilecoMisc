@@ -24,7 +24,7 @@ thresholds values and symbols are the most common symbols.
 \examples{
 signifSymbols(.012)
 signifSymbols(.008)
-sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
+lapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 }
 \author{
 Kevin Cazelles

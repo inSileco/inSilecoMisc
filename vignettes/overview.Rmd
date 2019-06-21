@@ -31,6 +31,11 @@ This vignette is an overview of *inSilecoMisc* organized around five major theme
 
 ## LoremIpsum
 
+It is sometime useful to have a piece of random text to play with,
+`loremIpsum()` display a piece of the commonly used placeholder text
+[Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) with the option of
+having a specific number of words.
+
 ```{r loremIpsum}
 loremIpsum()
 loremIpsum(10)
@@ -48,13 +53,13 @@ loremIpsum(10)
 ## Adjust the size of a character string
 
 ```{r adjustString}
-  paste0('myfilename', adjustString(c(1:2,10,100), 3))
+paste0('myfilename', adjustString(c(1:2, 10, 100), 3))
 ```
 
 ## Assign a symbol to a p-value
 
 ```{r signifSymbols}
-  sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
+sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 ```
 
 ## Add URL and icons
@@ -69,11 +74,11 @@ addWebIcon('cc')
 addWebIcon('acm', 'ai', 4)
 ```
 
-## stApply
+## applyString
 
 ```{r stApply}
-stApply("cool", FUN = toupper, pos = 1:2)
-stApply(c("cool", "pro"),  pattern = "o", FUN = toupper)
+applyString("cool", FUN = toupper, pos = 1:2)
+applyString(c("cool", "pro"), pattern = "o", FUN = toupper)
 ```
 
 ## Extract digits from strings

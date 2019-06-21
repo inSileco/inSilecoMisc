@@ -17,7 +17,7 @@
 #' @examples
 #' signifSymbols(.012)
 #' signifSymbols(.008)
-#' sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
+#' lapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 
 signifSymbols <- function(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001),
   symbols = c(".", "*", "**", "***"), notsignif = "n.s.") {

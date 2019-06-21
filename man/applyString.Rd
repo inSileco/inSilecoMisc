@@ -9,13 +9,13 @@ applyString(x, FUN, pos = NULL, pattern = NULL)
 \arguments{
 \item{x}{a character vector, or a vector to be coerced to a character vector.}
 
-\item{FUN}{the function to be applied, see \link[base:lapply]{base::lapply}.}
+\item{FUN}{the function to be applied, see \code{\link[base:lapply]{base::lapply()}}.}
 
 \item{pos}{a vector indicating the elements position.}
 
-\item{pattern}{a see \link[base:gregexpr]{base::gregexpr}.}
+\item{pattern}{a pattern see \code{\link[base:gregexpr]{base::gregexpr()}}.}
 
-\item{...}{argument to be passed to \code{gregexpr}.}
+\item{...}{argument to be passed to \code{\link[base:gregexpr]{base::gregexpr()}}.}
 }
 \value{
 A character vector.
