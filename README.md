@@ -28,9 +28,3 @@ The current development is on GitHub and easy to install with the
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("inSileco/inSilecoMisc")
 ```
-
-
-
-## Tout-doux list
-
-- [ ] [inSileco](https://insileco.github.io/) members, a short but useful function you often use? Well, you can add it to this repo :stuck_out_tongue_winking_eye:;

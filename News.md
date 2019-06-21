@@ -1,8 +1,9 @@
-# inSilecoMisc 0.1.3.9000
+# inSilecoMisc 0.2.0
 
 ## Changes in documentation :pencil:
 
 - README simplified
+- Major cleaning up
 
 
 ## Changes in functions :gear:
