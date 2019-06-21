@@ -11,13 +11,15 @@ categorize(x, categ, lower = FALSE)
 
 \item{categ}{A set of threshold that are used to assign categories.}
 
-\item{lower}{A logical, if TRUE elements equal to a given threshold values are included in the lower category, default is FALSE.}
+\item{lower}{A logical, if \code{TRUE} then \code{categ} are considered elements equal to a given threshold values are included in the lower category, default is FALSE.}
 }
 \value{
-A vector countaining values standing for categories into which elements of x have fallen.
+A vector of categories assinged.
 }
 \description{
-Assigns a category to each element of a vector for a given set of threshold values. Note that category are always sorted.
+Assigns a category to each element of a vector for a given set of threshold
+values. Note that categories are always sorted. By defaults trheshold values
+are regarded as upper boiundaries.
 }
 \examples{
 categorize(stats::runif(40), categ=c(0.5,0.75))

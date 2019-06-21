@@ -21,12 +21,11 @@ package, please do!
 
 ## Installation
 
-To get the current development version from GitHub, use the
-[*devtools*](http://cran.r-project.org/web/packages/remotes) package
-like so:
+The current development is on GitHub and easy to install with the
+[remotes](http://cran.r-project.org/web/packages/remotes) :package::
 
 ```r
-if (!require("remotes")) install.packages("remotess")
+if (!require("remotes")) install.packages("remotes")
 remotes::install_github("inSileco/inSilecoMisc")
 ```
 
@@ -34,4 +33,4 @@ remotes::install_github("inSileco/inSilecoMisc")
 
 ## Tout-doux list
 
-- [ ] [inSileco](https://insileco.github.io/) members, a short but useful function you often use? Add it to this repo :stuck_out_tongue_winking_eye:;
+- [ ] [inSileco](https://insileco.github.io/) members, a short but useful function you often use? Well, you can add it to this repo :stuck_out_tongue_winking_eye:;

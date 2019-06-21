@@ -43,15 +43,6 @@ loremIpsum(10)
   keepWords(lor, c(1,4))
 ```
 
-## Size of a string
-
-```{r stLength}
-  lor <- loremIpsum()
-  stLength(lor)
-  nchar(lor)
-  stLength(lor, ignore = "q")
-```
-
 
 
 ## Adjust the size of a character string
