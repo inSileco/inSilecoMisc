@@ -2,12 +2,12 @@
 % Please edit documentation in R/addURL.R
 \name{addURL}
 \alias{addURL}
-\title{Add an URL}
+\title{Add a URL}
 \usage{
 addURL(url, text = NULL, extra = NULL, markdown = FALSE)
 }
 \arguments{
-\item{url}{An URL.}
+\item{url}{A URL.}
 
 \item{text}{A character string to be searched within.}
 
@@ -17,12 +17,9 @@ ignored if text is defined.}
 \item{markdown}{logical. If \code{TRUE}, hyperlinks  marks of Markdown language are sought.}
 }
 \description{
-Add and URL in HTML or Markdown format.
+Add a URL in HTML or Markdown format.
 }
 \examples{
 addURL('https://github.com/inSileco/letiRmisc', 'Github repo')
 addURL('https://github.com/inSileco/letiRmisc', 'Github repo', markdown=TRUE)
-}
-\author{
-Kevin Cazelles
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/wordCount.R
 \name{wordCount}
 \alias{wordCount}
-\title{Count the words in your character strings.}
+\title{Count words}
 \usage{
 wordCount(string, exclude = "[[:punct:]]")
 }
@@ -20,7 +20,7 @@ Function that counts the number of word in a character string.
 \examples{
 strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 wordCount(strex)
-wordCount(c(strex,'A second chacter string.'))
+wordCount(c(strex,'A second character string.'))
 }
 \author{
 Kevin Cazelles

@@ -10,13 +10,13 @@
 #' to be created.
 #' @param extra character vector, or a vector to be coerced to a character
 #' vector that will be (partially) added to produced a string of
-#' @param before logical. If TRUE, then the extra characters are added before
+#' @param before logical. If `TRUE`, then the extra characters are added before
 #' \code{x}
 #'
 #' @details
 #' This function was originally created to help getting a fixed number of digits
-#' when naming files. The current version is more general but it remains extremely
-#' usefull to name files.
+#' when naming files. The current version is more general but it remains
+#' extremely useful to name files.
 #'
 #' @return
 #' A character vector of the concatenated characters.

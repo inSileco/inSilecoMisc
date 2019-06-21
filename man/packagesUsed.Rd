@@ -13,7 +13,7 @@ packagesUsed(vc_pkg)
 A data frame of two columns. First is the name of the package; second the version installed.
 }
 \description{
-Return a table of packages and their version.,
+Returns a table of packages and their version.
 }
 \examples{
 packagesUsed(c('utils', 'methods'))

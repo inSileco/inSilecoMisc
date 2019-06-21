@@ -9,22 +9,23 @@ categorize(x, categ, lower = FALSE)
 \arguments{
 \item{x}{A numeric, complex, character or logical vector.}
 
-\item{categ}{A set of threshold that are used to assign categories.}
+\item{categ}{A set of threshold values used to assign categories.}
 
-\item{lower}{A logical, if \code{TRUE} then \code{categ} are considered elements equal to a given threshold values are included in the lower category, default is FALSE.}
+\item{lower}{A logical, if \code{TRUE} threshold values (i.e. values within
+\code{categ}) belongs the the lower category rather than the upper (default
+behaviour).}
 }
 \value{
-A vector of categories assinged.
+A vector of categories assigned.
 }
 \description{
 Assigns a category to each element of a vector for a given set of threshold
-values. Note that categories are always sorted. By defaults trheshold values
-are regarded as upper boiundaries.
+values..
 }
 \examples{
 categorize(stats::runif(40), categ=c(0.5,0.75))
 categorize(LETTERS[1:5], categ='C')
-categorize(LETTERS[1:5], categ='C', lower=TRUE)
+categorize(LETTERS[1:5], categ='C',  lower=TRUE)
 categorize(LETTERS[floor(5*stats::runif(20))+1], categ=LETTERS[1:5], lower=TRUE)
 }
 \author{

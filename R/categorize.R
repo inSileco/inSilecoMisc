@@ -1,35 +1,28 @@
 #' Assign categories to a vector of values.
 #'
 #' Assigns a category to each element of a vector for a given set of threshold
-#' values. Note that categories are always sorted. By defaults trheshold values
-#' are regarded as upper boiundaries.
+#' values..
 #'
 #' @author
 #' Kevin Cazelles
 #' @param x A numeric, complex, character or logical vector.
-#' @param categ A set of threshold that are used to assign categories.
-#' @param lower A logical, if `TRUE` then `categ` are considered elements equal to a given threshold values are included in the lower category, default is FALSE.
+#' @param categ A set of threshold values used to assign categories.
+#' @param lower A logical, if `TRUE` threshold values (i.e. values within
+#' `categ`) belongs the the lower category rather than the upper (default
+#' behaviour).
 #' @return
-#' A vector of categories assinged.
+#' A vector of categories assigned.
 #' @export
 #' @examples
 #' categorize(stats::runif(40), categ=c(0.5,0.75))
 #' categorize(LETTERS[1:5], categ='C')
-#' categorize(LETTERS[1:5], categ='C', lower=TRUE)
+#' categorize(LETTERS[1:5], categ='C',  lower=TRUE)
 #' categorize(LETTERS[floor(5*stats::runif(20))+1], categ=LETTERS[1:5], lower=TRUE)
 
 
 categorize <- function(x, categ, lower = FALSE) {
-    categ <- sort(unique(categ))
-    out <- rep(1, length(x))
-    ##
+    categ <- unique(categ)
     if (lower) {
-        id <- which(x > categ[1L])
-        out[id] <- out[id] + sapply(x[id], function(z) max(which(z > categ)))
-    } else {
-        id <- which(x >= categ[1L])
-        out[id] <- out[id] + sapply(x[id], function(z) max(which(z >= categ)))
-    }
-    ##
-    out
+      unlist(lapply(x, function(y) sum(y > categ) + 1))
+    } else unlist(lapply(x, function(y) sum(y >= categ) + 1))
 }

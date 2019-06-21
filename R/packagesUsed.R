@@ -2,7 +2,7 @@
 #' Get a data frame of package and their installed version.
 #'
 #' @description
-#' Return a table of packages and their version.,
+#' Returns a table of packages and their version.
 #'
 #' @author
 #' Kevin Cazelles

@@ -15,7 +15,7 @@ to be created.}
 \item{extra}{character vector, or a vector to be coerced to a character
 vector that will be (partially) added to produced a string of}
 
-\item{before}{logical. If TRUE, then the extra characters are added before
+\item{before}{logical. If \code{TRUE}, then the extra characters are added before
 \code{x}}
 }
 \value{
@@ -27,8 +27,8 @@ by truncating it or adding specified extra characters.
 }
 \details{
 This function was originally created to help getting a fixed number of digits
-when naming files. The current version is more general but it remains extremely
-usefull to name files.
+when naming files. The current version is more general but it remains
+extremely useful to name files.
 }
 \examples{
 paste0('myfilename', adjustString(c(1:2,10,100), 3))

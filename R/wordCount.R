@@ -1,4 +1,4 @@
-#' Count the words in your character strings.
+#' Count words
 #'
 #' Function that counts the number of word in a character string.
 #'
@@ -10,19 +10,19 @@
 #'
 #' @return A vector of the number of word in each element of \code{sting}.
 #' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 #' wordCount(strex)
-#' wordCount(c(strex,'A second chacter string.'))
+#' wordCount(c(strex,'A second character string.'))
 
 
 wordCount <- function(string, exclude = "[[:punct:]]") {
     ##
-    string %<>% as.character
-    string %<>% gsub(pattern = exclude, replacement = " ") %>% gsub(pattern = " +",
-        replacement = " ")
-    ##
-    string %>% strsplit(split = " ") %>% lapply(length) %>% unlist
+    string %>% as.character %>%
+      gsub(pattern = exclude, replacement = " ") %>%
+      gsub(pattern = " +", replacement = " ") %>%
+      strsplit(split = " ") %>%
+      lapply(length) %>%
+      unlist
 }

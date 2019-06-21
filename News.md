@@ -4,9 +4,12 @@
 
 - README simplified
 
+
 ## Changes in functions :gear:
 
-- remove (see #8)
+- categorize has been rewritten (see #7)
+- remove `stLength()` (see #9)
+- remove `logit()` (see #8)
 - In `dfTemplate()` the values of argument `col_classes` are now checked, a test has been added.
 - In `dfTemplate()` `fill` is now a vector whose values are replicated so its length equals the number of columns.
 - In `dfTemplate()`, `col_classes` values are replicated so its length equals the number of columns.

@@ -16,8 +16,6 @@
 #'
 #' @return
 #' A character vector.
-#'
-#' @importFrom magrittr %>% %<>%
 #' @export
 #' @examples
 #' stApply('cool',  pos = 1:2, FUN = toupper)
@@ -25,17 +23,17 @@
 
 
 stApply <- function(x, FUN, pos = NULL, pattern = NULL) {
-    
-    if (!is.character(x)) 
+
+    if (!is.character(x))
         x <- as.character(x)
-    
+
     if (!is.null(pos)) {
         tmp <- strsplit(x, split = "")
         tmp_fun <- function(x) {
-            x[pos] %<>% FUN
+            x[pos] <- FUN(x[pos])
             paste(x, collapse = "")
         }
-        out <- lapply(tmp, tmp_fun) %>% unlist
+        out <- unlist(lapply(tmp, tmp_fun))
     } else {
         if (is.null(pattern)) {
             warning("neither pos nor pattern is defined", call. = FALSE)
@@ -50,7 +48,7 @@ stApply <- function(x, FUN, pos = NULL, pattern = NULL) {
             out <- apply(cbind(tmp_mth, tmp_inv), 1, FUN = reassemble, f = FUN)
         }
     }
-    
+
     out
 }
 
@@ -61,7 +59,7 @@ reassemble <- function(x, f) {
     sz <- length(char1) + length(char2)
     out <- rep("", sz)
     out[seq(1, sz, 2)] <- char2
-    if (sz > 1) 
+    if (sz > 1)
         out[seq(2, sz - 1, 2)] <- f(x[1L][[1L]])
     paste(out, collapse = "")
 }
