@@ -22,5 +22,5 @@
 whichIs <- function(x, y, isPattern = FALSE,  ...) {
     if (isPattern) {
       our <- lapply(x, function(x) which(grepl(pattern = x, y), ...))
-    } else  lapply(x, function(x) which(y == x, ...))
+    } else lapply(x, function(x) which(y == x, ...))
 }

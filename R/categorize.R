@@ -9,8 +9,6 @@
 #' @param lower A logical, if TRUE elements equal to a given threshold values are included in the lower category, default is FALSE.
 #' @return
 #' A vector countaining values standing for categories into which elements of x have fallen.
-#' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' categorize(stats::runif(40), categ=c(0.5,0.75))
@@ -21,7 +19,7 @@
 
 categorize <- function(x, categ, lower = FALSE) {
     ##
-    categ %<>% unique %>% sort
+    categ <- sort(unique(categ))
     ##
     out <- rep(1, length(x))
     ##

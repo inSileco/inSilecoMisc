@@ -11,3 +11,6 @@ LICENSE
 record_updates.txt
 ^docs$
 ^_pkgdown\.yml$
+^doc$
+^Meta$
+^index.Rmd

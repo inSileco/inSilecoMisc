@@ -206,8 +206,6 @@ packagesUsed(c('utils', 'methods'))
 
 
 
-
-
 # Mathematical functions
 
 
@@ -218,13 +216,4 @@ seqx <- seq(-5, 5, 0.1)
 par(mfrow = c(1, 2))
 plot(seqx, logistic(seqx))
 plot(seqx, logistic2(seqx))
-```
-
-## Logit
-
-```{r logit}
-seqx <- seq(-5, 5, 0.1)
-par(mfrow = c(1, 2))
-plot(seqx, logit(seqx))
-plot(seqx, logit(seqx, inv=TRUE))
 ```
