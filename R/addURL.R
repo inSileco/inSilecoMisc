@@ -4,9 +4,9 @@
 #'
 #' @param url A URL.
 #' @param text A character string to be searched within.
-#' @param extra Extra A connection object or a character string that stand for a path,
-#' ignored if text is defined.
-#' @param markdown logical. If \code{TRUE}, hyperlinks  marks of Markdown language are sought.
+#' @param extra Extra A connection object or a character string that stand for
+#' a path, ignored if text is defined.
+#' @param markdown logical. If `TRUE`, hyperlinks marks of Markdown language are sought.
 #'
 #' @export
 #'

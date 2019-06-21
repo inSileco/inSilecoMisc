@@ -9,15 +9,16 @@ assignIds(x, alphabetical = FALSE)
 \arguments{
 \item{x}{an R object to be coerced into character type.}
 
-\item{alphabetical}{a logical indicating whether an alphabetical sorting must be applied.}
+\item{alphabetical}{a logical indicating whether an alphabetical sorting
+must be applied.}
 }
 \value{
 A vector of Ids.
 }
 \description{
-This function is done mainly to assign an id to factor or similar character
-strings. Regarding factors, \code{as.integer} does such task
-but the order obtained could be different.
+This function aims to assign an id to factor or similar character
+strings. Regarding factors, \code{\link[=as.integer]{as.integer()}} does such task but the order
+obtained may differ
 }
 \examples{
 assignIds(list(2,'f', 'd', 'f'))

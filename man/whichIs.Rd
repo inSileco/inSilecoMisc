@@ -13,7 +13,7 @@ whichIs(x, y, isPattern = FALSE, ...)
 
 \item{isPattern}{should x be considered as a vector of patterns?}
 
-\item{...}{further arguments to be passed to \code{\link[=which]{which()}}.}
+\item{...}{further arguments to be passed to \code{\link[base:which]{base::which()}}.}
 }
 \value{
 A list of positions. Each element corresponds to the matches for a specific x value.

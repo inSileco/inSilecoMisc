@@ -13,13 +13,12 @@ findThem(what, where, todf = FALSE, reportnomatch = FALSE)
 
 \item{todf}{a logical indicating whether the output object must be a data frame.}
 
-\item{reportnomatch}{a logical. If TRUE, values without match are reported in
-the data frame with a NA. Only available if \code{todf} is TRUE. Default is
-set to FALSE.}
+\item{reportnomatch}{a logical. If \code{TRUE}, values without match are reported #' in the data frame with a NA. Only available if \code{todf} is \code{TRUE}. Default is
+set to \code{FALSE}.}
 }
 \value{
 A list indicating matched positions for each elements of \code{what}. If no
-match is found then \code{NA} is returned. If \code{todf} is TRUE
+match is found then \code{NA} is returned. If \code{todf} is \code{TRUE}
 then a three-columns data frame is returned including values and positions
 in both \code{what} and \code{where} vectors.
 }

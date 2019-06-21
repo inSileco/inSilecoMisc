@@ -145,16 +145,15 @@ vector where the values have been searched for.</p>
     </tr>
     <tr>
       <th>reportnomatch</th>
-      <td><p>a logical. If TRUE, values without match are reported in
-the data frame with a NA. Only available if <code>todf</code> is TRUE. Default is
-set to FALSE.</p></td>
+      <td><p>a logical. If <code>TRUE</code>, values without match are reported #' in the data frame with a NA. Only available if <code>todf</code> is <code>TRUE</code>. Default is
+set to <code>FALSE</code>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A list indicating matched positions for each elements of <code>what</code>. If no
-match is found then <code>NA</code> is returned. If <code>todf</code> is TRUE
+match is found then <code>NA</code> is returned. If <code>todf</code> is <code>TRUE</code>
 then a three-columns data frame is returned including values and positions
 in both <code>what</code> and <code>where</code> vectors.</p>
     

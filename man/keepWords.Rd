@@ -8,21 +8,23 @@ keepWords(string, slc = 1, punct.rm = TRUE, na.rm = FALSE,
   collapse = NULL)
 }
 \arguments{
-\item{string}{Input vector. A character vector or list from which words will be extracted.}
+\item{string}{An input character vector or a list from which words will be
+extracted.}
 
 \item{slc}{Vector of integer indicating the selected positions of the words to be kept.}
 
-\item{punct.rm}{A logical indicating whether punctuation characters should be removed.}
+\item{punct.rm}{A logical Should punctuation characters be removed?}
 
-\item{na.rm}{A logical indicating whether missing values should be removed.}
+\item{na.rm}{A logical. Should missing values be removed?}
 
-\item{collapse}{An optional character string used to separate selected words. Not \code{NA_character_}.}
+\item{collapse}{An optional character string used to separate selected words.}
 }
 \value{
 A vector of the selected words concatenated for each string.
 }
 \description{
-Extract words based on their position in a character string, vectorised over \code{string}.
+Extract words based on their position in a character string, vectorised over
+\code{string}.
 }
 \examples{
 strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'

@@ -10,7 +10,7 @@ findReplace(vec, vec_pat, y)
 grepReplace(vec, vec_pat, y)
 }
 \arguments{
-\item{vec}{a vector where to search for patterns.}
+\item{vec}{a vector to be searched.}
 
 \item{vec_pat}{vector providing the patterns to be searched for.}
 

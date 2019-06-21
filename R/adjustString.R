@@ -11,7 +11,7 @@
 #' @param extra character vector, or a vector to be coerced to a character
 #' vector that will be (partially) added to produced a string of
 #' @param before logical. If `TRUE`, then the extra characters are added before
-#' \code{x}
+#' `x`
 #'
 #' @details
 #' This function was originally created to help getting a fixed number of digits
@@ -30,7 +30,7 @@
 
 
 adjustString <- function(x, szchar, extra = 0, before = TRUE) {
-    x %<>% as.character
+    x <- as.character(x)
     szchar %<>% as.numeric %>% floor %>% abs
     extra %<>% as.character %>% strsplit(split = "") %>% extract2(1)
     ##
@@ -39,7 +39,7 @@ adjustString <- function(x, szchar, extra = 0, before = TRUE) {
     ##
     . <- "No note"
     ##
-    if (sum(id1) > 0) {
+    if (sum(id1)) {
         val <- szchar - nchar(x[id1])
         out[id1] <- val %>% as.list %>% lapply(FUN = . %>% rep(extra, length.out = .) %>%
             paste(collapse = "")) %>% unlist

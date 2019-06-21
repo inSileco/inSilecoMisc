@@ -1,25 +1,23 @@
 #' Aggregate columns
 #'
-#' The \code{aggregateCol} function eases the computation of a given function on
-#' a specific subset of columns.
+#' `aggregateCol()` perform summary statistics on a specific subset of columns.
 #'
 #' @author
 #' Kevin Cazelles
 #'
 #' @param data a data frame.
 #' @param grp an integer vector assigning a group to every column of `data`
-#' used to compute operations on a subset of columns. Any integer is a valid group,
-#' `0` indicates that the column must be unchanged, `NA` is used to remove
-#' columns.
+#' used to compute operations on a subset of columns. Any integer is a valid
+#" group, `0` indicates that the column must be unchanged, `NA` removes columns.
 #' @param FUN a function to be applied to all group of columns.
 #' @param names_aggreg column names for aggregated columns.
-#' @param ... further arguments to be passed to \code{FUN}.
+#' @param ... further arguments to be passed to `FUN`.
 #'
 #' @details
 #' An integer vector, whose length is the number of
 #' columns of the input data frame, is used to assign a group to each column
-#' that explicits the subsetting. Furthermore columns can be either kept as is
-#' using \code{0} or discarded by using \code{NA}.
+#' that explicit the subsetting. Furthermore columns can be either kept as is
+#' using `0` or discarded by using `NA`.
 #'
 #' @seealso [stats::aggregate()]
 #'

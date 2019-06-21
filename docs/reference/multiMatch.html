@@ -32,7 +32,7 @@
 
 <meta property="og:title" content="Mutiple match. — multiMatch" />
 
-<meta property="og:description" content="Seek all elements that match a given pattern within a character strings." />
+<meta property="og:description" content="Seek all elements matching a given pattern in a character strings." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -118,7 +118,7 @@
 
     <div class="ref-description">
     
-    <p>Seek all elements that match a given pattern within a character strings.</p>
+    <p>Seek all elements matching a given pattern in a character strings.</p>
     
     </div>
 
@@ -145,8 +145,8 @@ matched in the given character vector, see <code>regexec</code>.</p></td>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p><code>multiMatch</code> is essentially a wrapper around some regex functions that
-ease their usage.</p>
+    <p><code>multiMatch</code> is essentially a wrapper around <code><a href='https://www.rdocumentation.org/packages/base/topics/grep'>base::regexec()</a></code> and
+<code><a href='https://www.rdocumentation.org/packages/base/topics/regmatches'>base::regmatches()</a></code> to find more than one match.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

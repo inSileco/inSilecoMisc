@@ -1,15 +1,17 @@
 #' Keep these words.
 #'
-#' Extract words based on their position in a character string, vectorised over \code{string}.
+#' Extract words based on their position in a character string, vectorised over
+#' `string`.
 #'
 #' @author
 #' Kevin Cazelles
 #'
-#' @param string Input vector. A character vector or list from which words will be extracted.
+#' @param string An input character vector or a list from which words will be
+#' extracted.
 #' @param slc Vector of integer indicating the selected positions of the words to be kept.
-#' @param punct.rm A logical indicating whether punctuation characters should be removed.
-#' @param na.rm A logical indicating whether missing values should be removed.
-#' @param collapse An optional character string used to separate selected words. Not \code{NA_character_}.
+#' @param punct.rm A logical Should punctuation characters be removed?
+#' @param na.rm A logical. Should missing values be removed?
+#' @param collapse An optional character string used to separate selected words.
 #'
 #' @return A vector of the selected words concatenated for each string.
 #' @importFrom magrittr %>%

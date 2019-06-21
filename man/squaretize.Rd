@@ -17,7 +17,8 @@ squaretize(x, fill = 0, reorder = TRUE)
 A square matrix.
 }
 \description{
-Add missing rows or columns based on names and Duplicates rows and columns of a given a data frame.
+Add missing rows or columns based on names and Duplicates rows and columns
+of a given a data frame.
 }
 \examples{
 mat <- matrix(1:12, 3, 4)

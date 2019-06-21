@@ -2,7 +2,7 @@
 % Please edit documentation in R/gaussianShape.R
 \name{gaussianShape}
 \alias{gaussianShape}
-\title{Flexible bell-shaped function.}
+\title{Flexible bell-shaped function}
 \usage{
 gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1,
   pow = 2)
@@ -14,7 +14,7 @@ gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1,
 
 \item{opty}{extremum value.}
 
-\item{width}{the width of the bell.}
+\item{width}{width of the bell.}
 
 \item{pow}{a real number.}
 }
@@ -22,8 +22,8 @@ gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1,
 A vector containing values standing for categories into which elements of x have fallen.
 }
 \description{
-The \code{gaussianShape} function computes a personalizable Gaussian function.
-Default values are the same as in \code{\link[stats]{dnorm}}.
+The \code{gaussianShape()} function computes a personnalisable Gaussian function.
+Default values are the same as in \code{\link[stats:dnorm]{stats::dnorm()}}.
 }
 \examples{
 gaussianShape(0)

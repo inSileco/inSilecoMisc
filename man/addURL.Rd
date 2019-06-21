@@ -11,10 +11,10 @@ addURL(url, text = NULL, extra = NULL, markdown = FALSE)
 
 \item{text}{A character string to be searched within.}
 
-\item{extra}{Extra A connection object or a character string that stand for a path,
-ignored if text is defined.}
+\item{extra}{Extra A connection object or a character string that stand for
+a path, ignored if text is defined.}
 
-\item{markdown}{logical. If \code{TRUE}, hyperlinks  marks of Markdown language are sought.}
+\item{markdown}{logical. If \code{TRUE}, hyperlinks marks of Markdown language are sought.}
 }
 \description{
 Add a URL in HTML or Markdown format.

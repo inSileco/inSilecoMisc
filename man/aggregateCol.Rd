@@ -10,9 +10,7 @@ aggregateCol(data, grp, names_aggreg = NULL, FUN = sum, ...)
 \item{data}{a data frame.}
 
 \item{grp}{an integer vector assigning a group to every column of \code{data}
-used to compute operations on a subset of columns. Any integer is a valid group,
-\code{0} indicates that the column must be unchanged, \code{NA} is used to remove
-columns.}
+used to compute operations on a subset of columns. Any integer is a valid}
 
 \item{names_aggreg}{column names for aggregated columns.}
 
@@ -24,13 +22,12 @@ columns.}
 A data frame with the grouped columns.
 }
 \description{
-The \code{aggregateCol} function eases the computation of a given function on
-a specific subset of columns.
+\code{aggregateCol()} perform summary statistics on a specific subset of columns.
 }
 \details{
 An integer vector, whose length is the number of
 columns of the input data frame, is used to assign a group to each column
-that explicits the subsetting. Furthermore columns can be either kept as is
+that explicit the subsetting. Furthermore columns can be either kept as is
 using \code{0} or discarded by using \code{NA}.
 }
 \examples{

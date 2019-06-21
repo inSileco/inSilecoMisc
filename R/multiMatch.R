@@ -1,21 +1,21 @@
 #' Mutiple match.
 #'
-#' Seek all elements that match a given pattern within a character strings.
+#' Seek all elements matching a given pattern in a character strings.
 #'
 #' @param text a character vector where matches are sought, or an object which
-#' can be coerced by as.character to a character vector, see \code{regexec}.
+#' can be coerced by as.character to a character vector, see `regexec`.
 #' @param pattern character string containing a regular expression to be
-#' matched in the given character vector, see \code{regexec}.
+#' matched in the given character vector, see `regexec`.
 #'
 #' @author
 #' Kevin Cazelles
 #'
 #' @details
-#' \code{multiMatch} is essentially a wrapper around some regex functions that
-#' ease their usage.
+#' `multiMatch` is essentially a wrapper around [base::regexec()] and
+#' [base::regmatches()] to find more than one match.
 #'
 #' @return
-#' A vector of character strings matching \code{pattern} argument.
+#' A vector of character strings matching `pattern` argument.
 #' @export
 #' @examples
 #' multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

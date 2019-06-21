@@ -1,13 +1,13 @@
-#' Flexible bell-shaped function.
+#' Flexible bell-shaped function
 #'
-#' The \code{gaussianShape} function computes a personalizable Gaussian function.
-#' Default values are the same as in \code{\link[stats]{dnorm}}.
+#' The `gaussianShape()` function computes a personnalisable Gaussian function.
+#' Default values are the same as in [stats::dnorm()].
 #' @author
 #' Kevin Cazelles
 #' @param x a numeric vector.
 #' @param optx x-values at which the maximum is reached.
 #' @param opty extremum value.
-#' @param width the width of the bell.
+#' @param width width of the bell.
 #' @param pow a real number.
 #' @return
 #' A vector containing values standing for categories into which elements of x have fallen.

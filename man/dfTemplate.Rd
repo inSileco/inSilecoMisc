@@ -35,9 +35,10 @@ names of \code{x} and the names of \code{y} are used.}
 Returns a data frame with the desired characteristics.
 }
 \description{
-This function handles the creation of data frames based on intuitive parameters.
-It was originally designed to make row binding easier when columns differs
-among data frame by creating data frames with the same columns.
+This function handles the creation of data frames based on intuitive
+parameters. It was originally designed to make row binding easier when
+columns differs among data frame by creating data frames with the same
+columns.
 }
 \section{Functions}{
 \itemize{
@@ -47,7 +48,4 @@ among data frame by creating data frames with the same columns.
 \examples{
 dfTemplate(5, 2)
 dfTemplate(5, 2, col_classes = "character")
-}
-\author{
-Kevin Cazelles
 }

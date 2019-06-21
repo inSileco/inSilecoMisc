@@ -7,7 +7,8 @@
 #' @author
 #' Kevin Cazelles
 #'
-#' @param vc_pkg a vector of string characters including the names of the package to be added.
+#' @param vc_pkg a vector of string characters including package names to be
+#' added.
 #'
 #' @export
 #'
@@ -20,6 +21,5 @@
 
 packagesUsed <- function(vc_pkg) {
     ls_ver <- lapply(vc_pkg, function(x) as.character(utils::packageVersion(x)))
-    df_pkg <- data.frame(name = vc_pkg, version = unlist(ls_ver))
-    df_pkg
+    data.frame(name = vc_pkg, version = unlist(ls_ver))
 }

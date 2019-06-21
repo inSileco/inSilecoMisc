@@ -28,6 +28,3 @@ categorize(LETTERS[1:5], categ='C')
 categorize(LETTERS[1:5], categ='C',  lower=TRUE)
 categorize(LETTERS[floor(5*stats::runif(20))+1], categ=LETTERS[1:5], lower=TRUE)
 }
-\author{
-Kevin Cazelles
-}

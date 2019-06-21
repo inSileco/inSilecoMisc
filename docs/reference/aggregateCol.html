@@ -32,8 +32,7 @@
 
 <meta property="og:title" content="Aggregate columns — aggregateCol" />
 
-<meta property="og:description" content="The aggregateCol function eases the computation of a given function on
-a specific subset of columns." />
+<meta property="og:description" content="aggregateCol() perform summary statistics on a specific subset of columns." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -119,8 +118,7 @@ a specific subset of columns." />
 
     <div class="ref-description">
     
-    <p>The <code>aggregateCol</code> function eases the computation of a given function on
-a specific subset of columns.</p>
+    <p><code>aggregateCol()</code> perform summary statistics on a specific subset of columns.</p>
     
     </div>
 
@@ -136,9 +134,7 @@ a specific subset of columns.</p>
     <tr>
       <th>grp</th>
       <td><p>an integer vector assigning a group to every column of <code>data</code>
-used to compute operations on a subset of columns. Any integer is a valid group,
-<code>0</code> indicates that the column must be unchanged, <code>NA</code> is used to remove
-columns.</p></td>
+used to compute operations on a subset of columns. Any integer is a valid</p></td>
     </tr>
     <tr>
       <th>names_aggreg</th>
@@ -162,7 +158,7 @@ columns.</p></td>
 
     <p>An integer vector, whose length is the number of
 columns of the input data frame, is used to assign a group to each column
-that explicits the subsetting. Furthermore columns can be either kept as is
+that explicit the subsetting. Furthermore columns can be either kept as is
 using <code>0</code> or discarded by using <code>NA</code>.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>

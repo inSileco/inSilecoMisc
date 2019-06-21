@@ -17,11 +17,11 @@ matched in the given character vector, see \code{regexec}.}
 A vector of character strings matching \code{pattern} argument.
 }
 \description{
-Seek all elements that match a given pattern within a character strings.
+Seek all elements matching a given pattern in a character strings.
 }
 \details{
-\code{multiMatch} is essentially a wrapper around some regex functions that
-ease their usage.
+\code{multiMatch} is essentially a wrapper around \code{\link[base:regexec]{base::regexec()}} and
+\code{\link[base:regmatches]{base::regmatches()}} to find more than one match.
 }
 \examples{
 multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do

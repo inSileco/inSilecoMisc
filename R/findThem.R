@@ -1,7 +1,7 @@
 #' Find values in a given vector.
 #'
 #' Given a set of values and a vector where the values must be found, the
-#' \code{findThem} function records the matched values and the position in the
+#' `findThem` function records the matched values and the position in the
 #' vector where the values have been searched for.
 #'
 #' @author
@@ -9,14 +9,13 @@
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
 #' @param todf a logical indicating whether the output object must be a data frame.
-#' @param reportnomatch a logical. If TRUE, values without match are reported in
-#' the data frame with a NA. Only available if \code{todf} is TRUE. Default is
-#' set to FALSE.
+#' @param reportnomatch a logical. If `TRUE`, values without match are reported #' in the data frame with a NA. Only available if `todf` is `TRUE`. Default is
+#' set to `FALSE`.
 #' @return
-#' A list indicating matched positions for each elements of \code{what}. If no
-#' match is found then \code{NA} is returned. If \code{todf} is TRUE
+#' A list indicating matched positions for each elements of `what`. If no
+#' match is found then `NA` is returned. If `todf` is `TRUE`
 #' then a three-columns data frame is returned including values and positions
-#' in both \code{what} and \code{where} vectors.
+#' in both `what` and `where` vectors.
 #' @seealso \code{\link[base]{which}}
 #' @export
 #' @examples
@@ -44,11 +43,7 @@ findThem <- function(what, where, todf = FALSE, reportnomatch = FALSE) {
             out <- data.frame(values = rep(names(tmp), sz), what = rep(1:length(what),
                 sz), where = unlist(tmp))
             rownames(out) <- NULL
-        } else {
-            out <- tmp
-        }
-    } else {
-        out <- NA_integer_
-    }
+        } else out <- tmp
+    } else out <- NA_integer_
     out
 }

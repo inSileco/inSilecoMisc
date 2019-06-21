@@ -2,14 +2,14 @@
 #' @title Logistic functions
 #'
 #' @description
-#' The \code{logisic} function describe the classical logistic function,
+#' The `logisic` function describe the classical logistic function,
 #'
 #' @param x a numerical vector.
 #' @param yneg assympotic values when x tends to \code{-Inf}.
-#' @param ypos assympotic values when x tends to \code{-Inf}.
+#' @param ypos assympotic values when y tends to \code{-Inf}.
 #' @param lambda scalar coefficient.
 #' @param pow x exponent.
-#' @param yzer values (for \code{logistic2} only).
+#' @param yzer values (for `logistic2` only).
 #'
 #' @details
 #' The classic logistic equation is:
@@ -36,7 +36,7 @@ logistic <- function(x, yneg = -1, ypos = 1, lambda = 1, pow = 1) {
 }
 
 
-#' @describeIn logistic a slighlty different logistic function.
+#' @describeIn logistic A slightly different logistic function.
 #' @export
 
 logistic2 <- function(x, yneg = -1, ypos = 1, lambda = 1, pow = 1, yzer = 0) {

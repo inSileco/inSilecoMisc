@@ -17,7 +17,7 @@ logistic2(x, yneg = -1, ypos = 1, lambda = 1, pow = 1, yzer = 0)
 
 \item{yneg}{assympotic values when x tends to \code{-Inf}.}
 
-\item{ypos}{assympotic values when x tends to \code{-Inf}.}
+\item{ypos}{assympotic values when y tends to \code{-Inf}.}
 
 \item{lambda}{scalar coefficient.}
 
@@ -44,6 +44,6 @@ A slightly different version is:
 }
 \section{Functions}{
 \itemize{
-\item \code{logistic2}: a slighlty different logistic function.
+\item \code{logistic2}: A slightly different logistic function.
 }}
 

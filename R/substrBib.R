@@ -5,11 +5,11 @@
 #' @author
 #' Kevin Cazelles
 #'
-#' @param bib An object of class \code{BibEntry} or \code{bibentry}.
+#' @param bib An object of class `BibEntry` or `bibentry`.
 #' @param text A character string to be searched within.
 #' @param con  A connection object or a character string that stand for a path,
 #' ignored if text is defined.
-#' @param markdown logical. If \code{TRUE}, Markdown formatted citation marks are sought.
+#' @param markdown logical. If `TRUE`, Markdown formatted citation marks are sought.
 #' @export
 #' @examples
 #' file.name <- system.file('Bib', 'RJC.bib', package='RefManageR')

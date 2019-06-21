@@ -1,11 +1,9 @@
 #' Create a data frame from scratch or based on one or two data frames.
 #'
-#' This function handles the creation of data frames based on intuitive parameters.
-#' It was originally designed to make row binding easier when columns differs
-#' among data frame by creating data frames with the same columns.
-#'
-#' @author
-#' Kevin Cazelles
+#' This function handles the creation of data frames based on intuitive
+#' parameters. It was originally designed to make row binding easier when
+#' columns differs among data frame by creating data frames with the same
+#' columns.
 #'
 #' @param cols either a number of column or a vector of character used as
 #' columns names of the data frame to be returned.

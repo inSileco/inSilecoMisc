@@ -6,7 +6,7 @@
 #' @author
 #' Kevin Cazelles
 #'
-#' @param vec a vector where to search for patterns.
+#' @param vec a vector to be searched.
 #' @param vec_pat vector providing the patterns to be searched for.
 #' @param y values to replace matching values.
 #'
@@ -26,7 +26,7 @@
 
 findReplace <- function(vec, vec_pat, y) {
     vec[vec %in% vec_pat] <- y
-    return(vec)
+    vec
 }
 
 
@@ -36,5 +36,5 @@ grepReplace <- function(vec, vec_pat, y) {
     res <- lapply(vec_pat, function(x) grepl(vec, pattern = x))
     res2 <- do.call(cbind, res) %>% apply(1L, sum)
     vec[res2 > 0] <- y
-    return(vec)
+    vec
 }

@@ -7,7 +7,8 @@
 packagesUsed(vc_pkg)
 }
 \arguments{
-\item{vc_pkg}{a vector of string characters including the names of the package to be added.}
+\item{vc_pkg}{a vector of string characters including package names to be
+added.}
 }
 \value{
 A data frame of two columns. First is the name of the package; second the version installed.

@@ -19,6 +19,3 @@ Generates a HTML tag to include an icon from an iconic framework.
 \examples{
 addWebIcon('cc')
 }
-\author{
-Kevin Cazelles
-}

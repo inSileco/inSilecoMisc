@@ -2,7 +2,7 @@
 % Please edit documentation in R/assignClass2df.R
 \name{assignClass2df}
 \alias{assignClass2df}
-\title{Assign a class to a set of column of a data frame}
+\title{Assign a class to columns}
 \usage{
 assignClass2df(x, colid, cls)
 }
@@ -12,15 +12,15 @@ assignClass2df(x, colid, cls)
 \item{colid}{the identity of columns for which class are ti be changed.}
 
 \item{cls}{a character vector containing the classes' names to be used in the
-same order as colid. By default \code{cls} is repeated until its size equals
+same order as \code{colid}. By default \code{cls} is repeated until its size equals
 \code{colid}'s size.}
 }
 \value{
 A data.frame for which columns have the required classes.
 }
 \description{
-This function is designed to ease the changes of column's class
-of a given data frame.
+Assign a class to a set of column of a data frame. This function is designed
+to ease the changes of column's class of a given data frame.
 }
 \examples{
 df1 <- matrix(signif(runif(20),4), ncol=2)
