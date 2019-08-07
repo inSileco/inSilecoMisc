@@ -40,7 +40,6 @@ test_that("keepWords for multi strings", {
 
 
 
-
 ##--
 str.test3 <- "consectetur-adipisicing elit."
 test_that("count words", {
@@ -48,4 +47,17 @@ test_that("count words", {
   expect_true(all(wordCount(c(str.test1, str.test2)) == c(5,3)))
   expect_equal(wordCount(str.test3), 3)
   expect_equal(wordCount(str.test3, exclude = "[ \\.]"), 2)
+})
+
+
+context("Keeps letters")
+strex <- c('Lorem ipsum', 'dolor sit', ' amet')
+res2a <- unlist(keepLetters(strex, c(1,4)))
+res2b <- unlist(keepLetters(strex, c(1,4), punct.rm = TRUE))
+
+
+test_that("keep letters", {
+  expect_true(all(res2a == c("Le", "do", " e")))
+  expect_true(all(res2b == c("Le", "do", "at")))
+  expect_warning(keepLetters(strex, c(1,6)))
 })

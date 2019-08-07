@@ -41,11 +41,14 @@ loremIpsum()
 loremIpsum(10)
 ```
 
-## Keep a selection of words
+## Keep a selection of words or letters
 
 ```{r keepWords}
   lor <- loremIpsum()
   keepWords(lor, c(1,4))
+  vlor <- lapply(c(2, 3), loremIpsum)
+  vlor
+  keepLetters(vlor, c(1:2, 15))
 ```
 
 

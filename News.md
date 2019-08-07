@@ -1,10 +1,14 @@
+# inSilecoMisc 0.2.0.9000
+
+* add `keepLetters()` and `rmPunct()` :sparkles:
+
+
 # inSilecoMisc 0.2.0
 
 ## Changes in documentation :pencil:
 
 - README simplified
 - Major cleaning up
-
 
 ## Changes in functions :gear:
 

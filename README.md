@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/inSileco/inSilecoMisc.svg?branch=master)](https://travis-ci.org/inSileco/inSilecoMisc)
 [![Build status](https://ci.appveyor.com/api/projects/status/rskiyadk6urmsrox/branch/master?svg=true)](https://ci.appveyor.com/project/KevCaz/insilecomisc/branch/master)
 [![codecov](https://codecov.io/gh/inSileco/inSilecoMisc/branch/master/graph/badge.svg)](https://codecov.io/gh/inSileco/inSilecoMisc)
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+
 
 ## About
 
@@ -16,7 +18,6 @@ Functions' names are written using Camel case (*e.g.* `keepWords()`).
 So far, we do not intend to release this package on the CRAN. If you however
 find one of our helper functions useful and intend to use it in your own
 package, please do!
-
 
 
 ## Installation

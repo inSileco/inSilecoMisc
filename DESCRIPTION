@@ -1,7 +1,7 @@
 Package: inSilecoMisc
 Title: inSileco Miscellaneous Functions
-Date: 2019-06-21
-Version: 0.2.0
+Date: 2019-08-07
+Version: 0.2.0.9000
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
@@ -12,7 +12,6 @@ Description: A set of miscellaneous R functions written by our inSileco group.
 Depends:
     R (>= 3.0)
 License: GPL (>= 2)
-LazyData: true
 Imports:
     magrittr,
     methods,

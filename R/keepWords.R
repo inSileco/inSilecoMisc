@@ -1,19 +1,22 @@
-#' Keep these words.
+#' Keep words and letters.
 #'
-#' Extract words based on their position in a character string, vectorised over
-#' `string`.
+#' Extract words and letters based on their position in character strings, vectorised over
+#' `df`.
+#'
+#' @name keepWords
 #'
 #' @author
 #' Kevin Cazelles
 #'
-#' @param string An input character vector or a list from which words will be
+#' @param str An input character vector or a list from which words will be
 #' extracted.
 #' @param slc Vector of integer indicating the selected positions of the words to be kept.
-#' @param punct.rm A logical Should punctuation characters be removed?
+#' @param punct.rm A logical Should punctuation characters be removed? Note that this affects the order of character in a string.
 #' @param na.rm A logical. Should missing values be removed?
 #' @param collapse An optional character string used to separate selected words.
+#' @param replacement a replacement for matched pattern in [base::gsub()].
 #'
-#' @return A vector of the selected words concatenated for each string.
+#' @return A vector of the selected words.
 #' @importFrom magrittr %>%
 #' @importFrom magrittr %<>%
 #' @export
@@ -24,13 +27,11 @@
 #' keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
 
 
-keepWords <- function(string, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
+keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
     ##
-    if (punct.rm)
-        string %<>% gsub(pattern = "[[:punct:]]", replacement = " ") %>% gsub(pattern = " +",
-            replacement = " ")
+    if (punct.rm) str <- rmPunct(str, " ")
     ##
-    out <- string %>% strsplit(split = " ") %>% lapply(FUN = function(x) x[slc])
+    out <- str %>% strsplit(split = " ") %>% lapply(FUN = function(x) x[slc])
     ##
     if (na.rm)
         out %<>% lapply(function(x) x[!is.na(x)])
@@ -39,4 +40,27 @@ keepWords <- function(string, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse 
         out %<>% lapply(paste, collapse = collapse)
     ##
     out
+}
+
+#' @describeIn keepWords A vector containing the selection of letters.
+#' @export
+#' @examples
+#' strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
+#' keepLetters(strex, c(1,4))
+
+keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
+    str <- as.character(str)
+    if (punct.rm) str <- rmPunct(str)
+    tmp <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
+    ##
+    if (any(unlist(lapply(tmp, function(x) is.na(x))))) {
+      warning("Empty selection")
+      tmp <- lapply(tmp, function(x) x[!is.na(x)])
+    }
+    lapply(tmp, paste, collapse = "")
+}
+
+#' @describeIn keepWords remove punctuation
+rmPunct <- function(str, replacement = "") {
+  gsub("[[:punct:] ]+", replacement, str)
 }

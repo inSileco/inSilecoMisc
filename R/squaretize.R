@@ -23,7 +23,7 @@
 
 squaretize <- function(x, fill = 0, reorder = TRUE) {
     ##
-    mat <- x %>% as.matrix
+    mat <- as.matrix(x)
     sz <- dim(mat)
     ##
     . <- "No notes"
