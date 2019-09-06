@@ -1,6 +1,6 @@
 Package: inSilecoMisc
 Title: inSileco Miscellaneous Functions
-Date: 2019-08-07
+Date: 2019-09-06
 Version: 0.2.0.9000
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kcazelle@uoguelph.ca", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),

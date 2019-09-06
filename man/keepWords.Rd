@@ -7,9 +7,9 @@
 \title{Keep words and letters.}
 \usage{
 keepWords(str, slc = 1, punct.rm = TRUE, na.rm = FALSE,
-  collapse = NULL)
+  collapse = NULL, unlist = FALSE)
 
-keepLetters(str, slc = 1, punct.rm = FALSE)
+keepLetters(str, slc = 1, punct.rm = FALSE, unlist = TRUE)
 
 rmPunct(str, replacement = "")
 }
@@ -25,14 +25,15 @@ extracted.}
 
 \item{collapse}{An optional character string used to separate selected words.}
 
+\item{unlist}{A logical. Should the results be unlisted?}
+
 \item{replacement}{a replacement for matched pattern in \code{\link[base:gsub]{base::gsub()}}.}
 }
 \value{
 A vector of the selected words.
 }
 \description{
-Extract words and letters based on their position in character strings, vectorised over
-\code{df}.
+Extract words and letters based on their position in character strings, vectorised over the input character string vector.
 }
 \section{Functions}{
 \itemize{

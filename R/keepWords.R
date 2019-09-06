@@ -1,7 +1,6 @@
 #' Keep words and letters.
 #'
-#' Extract words and letters based on their position in character strings, vectorised over
-#' `df`.
+#' Extract words and letters based on their position in character strings, vectorised over the input character string vector.
 #'
 #' @name keepWords
 #'
@@ -15,6 +14,7 @@
 #' @param na.rm A logical. Should missing values be removed?
 #' @param collapse An optional character string used to separate selected words.
 #' @param replacement a replacement for matched pattern in [base::gsub()].
+#' @param unlist A logical. Should the results be unlisted?
 #'
 #' @return A vector of the selected words.
 #' @importFrom magrittr %>%
@@ -27,7 +27,7 @@
 #' keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
 
 
-keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
+keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL, unlist = FALSE) {
     ##
     if (punct.rm) str <- rmPunct(str, " ")
     ##
@@ -39,7 +39,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
     if (!is.null(collapse))
         out %<>% lapply(paste, collapse = collapse)
     ##
-    out
+    if (unlist) unlist(out) else out
 }
 
 #' @describeIn keepWords A vector containing the selection of letters.
@@ -48,7 +48,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
 #' strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 #' keepLetters(strex, c(1,4))
 
-keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
+keepLetters <- function(str, slc = 1, punct.rm = FALSE, unlist = TRUE) {
     str <- as.character(str)
     if (punct.rm) str <- rmPunct(str)
     tmp <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
@@ -57,7 +57,8 @@ keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
       warning("Empty selection")
       tmp <- lapply(tmp, function(x) x[!is.na(x)])
     }
-    lapply(tmp, paste, collapse = "")
+    out <- lapply(tmp, paste, collapse = "")
+    if (unlist) unlist(out) else out
 }
 
 #' @describeIn keepWords remove punctuation
