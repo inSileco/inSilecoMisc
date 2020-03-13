@@ -3,8 +3,6 @@
 #' Add missing rows or columns based on names and Duplicates rows and columns
 #' of a given a data frame.
 #'
-#' @author
-#' Kevin Cazelles
 #' @param x an R object to be coerced into matrix.
 #' @param fill element used to fill the additional rows and/or columns.
 #' @param reorder a logical indicating whether the names must be used to order rows and columns.
@@ -53,14 +51,16 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
             mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL,
                 colnames(.))))
             if (!is.null(rownames(x)))
-                rownames(mat) <- c(rownames(x), paste0("X", nrow(x) + 1:mis))
+                rownames(mat) <- c(rownames(x),
+                    paste0("X", nrow(x) + seq_len(mis)))
         } else {
             if (mis < 0) {
                 mis %<>% abs
                 mat %<>% cbind(matrix(fill, nrow = nrow(.), ncol = mis, dimnames = list(rownames(.),
                   NULL)))
                 if (!is.null(colnames(x)))
-                  colnames(mat) <- c(colnames(x), paste0("X", ncol(x) + 1:mis))
+                  colnames(mat) <- c(colnames(x),
+                    paste0("X", ncol(x) + seq_len(mis)))
             }
         }
     }

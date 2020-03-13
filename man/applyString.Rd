@@ -28,6 +28,3 @@ In case both \code{pos} or \code{pattern}, the latter is ignored.
 applyString('cool',  pos = 1:2, FUN = toupper)
 applyString(c('cool', 'pro'),  pattern = 'o', FUN = toupper)
 }
-\author{
-Kevin Cazelles
-}

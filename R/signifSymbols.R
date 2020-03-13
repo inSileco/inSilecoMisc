@@ -4,9 +4,6 @@
 #' a vector of symbols that correspond to thresholds that can be set. Default
 #' thresholds values and symbols are the most common symbols.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param pvalue a p-value for which a symbol is requested.
 #' @param thresholds the threshold values that define category to which symbols are assigned.
 #' @param symbols list of symbols.
@@ -28,7 +25,6 @@ signifSymbols <- function(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001),
     ##
     id <- which(pvalue <= thresholds)
     if (length(id)) {
-        out <- symbols[max(id)]
-    } else out <- notsignif
-    out
+        symbols[max(id)]
+    } else notsignif
 }

@@ -12,8 +12,8 @@
 meanAlong <- function(vec, n) {
     stopifnot(length(vec) >= n)
     out <- numeric(length(vec) - n + 1)
-    tmp <- (1:n) - 1
-    for (i in 1:length(out)) {
+    tmp <- (seq_len(n) - 1)
+    for (i in seq_along(out)) {
         out[i] <- mean(vec[i + tmp])
     }
     out

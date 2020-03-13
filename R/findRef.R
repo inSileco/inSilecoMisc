@@ -7,9 +7,6 @@
 #' ignored if `text` is used.
 #' @param markdown logical. If `TRUE`, citation tags of Markdown langage are sought.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @return
 #' A data.frame with the citation keys and their frequency.
 #' @export

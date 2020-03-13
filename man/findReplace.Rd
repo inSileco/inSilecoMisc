@@ -36,6 +36,3 @@ findReplace(vec, 'crab', 'fish')
 findReplace(vec, c('crab', 'crabs'), 'fish')
 grepReplace(vec, 'crab[s]?', 'fish')
 }
-\author{
-Kevin Cazelles
-}

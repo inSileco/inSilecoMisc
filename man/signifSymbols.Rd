@@ -30,6 +30,3 @@ signifSymbols(.012)
 signifSymbols(.008)
 lapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 }
-\author{
-Kevin Cazelles
-}

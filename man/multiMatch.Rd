@@ -27,6 +27,3 @@ Seek all elements matching a given pattern in a character strings.
 multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua.',' [[:alnum:]]{1,3} ')
 }
-\author{
-Kevin Cazelles
-}

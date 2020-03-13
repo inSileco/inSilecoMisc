@@ -5,7 +5,8 @@
 #' has equivalent functions.
 #'
 #'
-#' @importFrom magrittr %>% %<>%
+#' @importFrom magrittr %>% %<>% extract2
+#' @importFrom yaml yaml.load
 #'
 #' @keywords internal
 "_PACKAGE"

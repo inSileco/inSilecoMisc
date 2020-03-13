@@ -4,9 +4,6 @@
 #'
 #' @name keepWords
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param str An input character vector or a list from which words will be
 #' extracted.
 #' @param slc Vector of integer indicating the selected positions of the words to be kept.

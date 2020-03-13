@@ -34,6 +34,3 @@ extremely useful to name files.
 paste0('myfilename', adjustString(c(1:2,10,100), 3))
 adjustString('# Comment', 20, '#', before=FALSE)
 }
-\author{
-Kevin Cazelles
-}

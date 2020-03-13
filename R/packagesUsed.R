@@ -4,9 +4,6 @@
 #' @description
 #' Returns a table of packages and their version.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param vc_pkg a vector of string characters including package names to be
 #' added.
 #'

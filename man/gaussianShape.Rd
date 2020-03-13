@@ -31,6 +31,3 @@ plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 \seealso{
 \code{\link[stats:dnorm]{stats::dnorm()}}
 }
-\author{
-Kevin Cazelles
-}

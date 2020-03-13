@@ -36,6 +36,3 @@ findThem(c(10,4,100), x, todf=TRUE, reportnomatch=TRUE)
 \seealso{
 \code{\link[base]{which}}
 }
-\author{
-Kevin Cazelles
-}

@@ -7,9 +7,6 @@
 #' @param pattern character string containing a regular expression to be
 #' matched in the given character vector, see `regexec`.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @details
 #' `multiMatch` is essentially a wrapper around [base::regexec()] and
 #' [base::regmatches()] to find more than one match.

@@ -27,6 +27,3 @@ x <- stats::rpois(20, 20)
 scaleWithin(x, 20, 10, 30)
 scaleWithin(matrix(x, 10, 2), mn = 20, mx = 30)
 }
-\author{
-Kevin Cazelles
-}

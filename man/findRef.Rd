@@ -23,6 +23,3 @@ Finds Markdown and Latex citation tags in a given character stings or a file.
 \examples{
 test <- findRef(text='First \\\\cite{Pimm2000}, second \\\\Citep{May1972}')
 }
-\author{
-Kevin Cazelles
-}

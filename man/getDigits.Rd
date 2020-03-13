@@ -21,6 +21,3 @@ as a list.
 \examples{
 getDigits('txt012-34')
 }
-\author{
-Kevin Cazelles
-}

@@ -4,9 +4,6 @@
 #'
 #' @param n the number of words to be kept.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @return
 #' A character string with the desired piece of lorem ipsum.
 #'

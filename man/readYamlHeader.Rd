@@ -10,11 +10,8 @@ readYamlHeader(con)
 \item{con}{connection object or a character string.}
 }
 \value{
-A named list, see \link[yaml:yaml.load]{yaml::yaml.load} for more details.
+A named list, see \code{\link[yaml:yaml.load]{yaml::yaml.load()}} for more details.
 }
 \description{
 Reads YAML headers (typically found in Markdown files).
-}
-\author{
-Kevin Cazelles
 }

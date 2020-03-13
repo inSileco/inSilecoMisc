@@ -20,7 +20,7 @@ A vector of categories assigned.
 }
 \description{
 Assigns a category to each element of a vector for a given set of threshold
-values..
+values.
 }
 \examples{
 categorize(stats::runif(40), categ=c(0.5,0.75))

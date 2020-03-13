@@ -1,6 +1,8 @@
 # inSilecoMisc 0.2.0.9000
 
 * add `keepLetters()` and `rmPunct()` :sparkles: see [#10]
+* drop @author
+* add @importFrom have been moved to `inSilecoMisc.R`
 * pkgdown website now deployed on gh-pages by Travis so `docs/` is now ignored.
 
 # inSilecoMisc 0.2.0

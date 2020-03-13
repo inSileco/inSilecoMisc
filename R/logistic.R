@@ -30,7 +30,6 @@
 #'
 #' @export
 
-
 logistic <- function(x, yneg = -1, ypos = 1, lambda = 1, pow = 1) {
     yneg + (ypos - yneg)/(1 + exp(-lambda * x^pow))
 }

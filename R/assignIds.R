@@ -18,6 +18,6 @@ assignIds <- function(x, alphabetical = FALSE) {
     if (alphabetical)
         tmp <- sort(tmp)
     out <- tmp %>% length %>% integer
-    for (i in 1:length(tmp)) out[x == tmp[i]] <- i
+    for (i in seq_along(tmp)) out[x == tmp[i]] <- i
     out
 }

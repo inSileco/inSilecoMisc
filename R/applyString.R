@@ -2,9 +2,6 @@
 #'
 #' Apply a function on a given set of elements of a character string.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param x a character vector, or a vector to be coerced to a character vector.
 #' @param FUN the function to be applied, see [base::lapply()].
 #' @param pos a vector indicating the elements position.
@@ -16,7 +13,6 @@
 #' @return
 #' A character vector.
 #'
-#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' applyString('cool',  pos = 1:2, FUN = toupper)

@@ -2,9 +2,6 @@
 #'
 #' `aggregateCol()` perform summary statistics on a specific subset of columns.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param data a data frame.
 #' @param grp an integer vector assigning a group to every column of `data`
 #' used to compute operations on a subset of columns. Any integer is a valid
@@ -14,10 +11,10 @@
 #' @param ... further arguments to be passed to `FUN`.
 #'
 #' @details
-#' An integer vector, whose length is the number of
-#' columns of the input data frame, is used to assign a group to each column
-#' that explicit the subsetting. Furthermore columns can be either kept as is
-#' using `0` or discarded by using `NA`.
+#' An integer vector, whose length is the number of columns of the input data
+#' frame, is used to assign a group to each column that explicit the
+#' sub-setting. Furthermore columns can be either kept as is using `0` or
+#' discarded by using `NA`.
 #'
 #' @seealso [stats::aggregate()]
 #'
@@ -52,16 +49,16 @@ aggregateCol <- function(data, grp, names_aggreg = NULL, FUN = sum, ...) {
         tmp <- grp %>% unique %>% magrittr::extract(. != 0)
         tmp_df <- data.frame(matrix(nrow = nrow(data), ncol = length(tmp) + nz))
         if (nz) {
-            tmp_df[, 1:nz] <- data[, idz]
-            names(tmp_df)[1:nz] <- names(data)[idz]
+            tmp_df[, seq_len(nz)] <- data[, idz]
+            names(tmp_df)[seq_len(nz)] <- names(data)[idz]
         }
         ## aggregate column by grp using FUN
         if (length(tmp)) {
             k <- 0
             for (i in tmp) {
                 k <- k + 1
-                tmp_df[, nz + k] <- apply(data[, which(grp == i)], MARGIN = 1, FUN = FUN,
-                  ...)
+                tmp_df[, nz + k] <- apply(data[, which(grp == i)], MARGIN = 1,
+                    FUN = FUN, ...)
             }
             if (!is.null(names_aggreg)) {
                 names(tmp_df)[(nz + 1):length(tmp_df)] <- names_aggreg

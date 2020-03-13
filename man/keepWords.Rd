@@ -56,6 +56,3 @@ keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse=
 strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 keepLetters(strex, c(1,4))
 }
-\author{
-Kevin Cazelles
-}

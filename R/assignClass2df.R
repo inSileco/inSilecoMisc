@@ -23,12 +23,13 @@
 assignClass2df <- function(x, colid, cls) {
     ##
     x <- as.data.frame(x)
-    stopifnot(colid %in% 1:ncol(x))
+    stopifnot(colid %in% seq_len(ncol(x)))
     out <- x
     sz <- length(colid)
     cl <- rep(cls, length.out = sz)
     ##
-    for (i in 1:sz) out[, colid[i]] <- methods::as(x[, colid[i]], cl[i])
+    for (i in seq_len(sz))
+        out[, colid[i]] <- methods::as(x[, colid[i]], cl[i])
     ##
     out
 }

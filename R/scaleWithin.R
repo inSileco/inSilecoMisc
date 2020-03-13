@@ -3,9 +3,6 @@
 #' For a given set of values, returns values between 1 and a number of values
 #' passed as an argument.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param x a numeric object of type `numeric` or coercible as one.
 #' @param nval The number of scaled values (between 1 and `nval`).
 #' @param mn Minimum value (`mn` and lower values are set to 1).

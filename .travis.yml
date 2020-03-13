@@ -29,6 +29,9 @@ jobs:
     - stage: deploy
       os: linux
       dist: xenial
+      r: release
+      env: NOT_CRAN=true
+      r_packages: pkgdown
       provider: script
       script: Rscript -e 'pkgdown::deploy_site_github()'
       skip_cleanup: true

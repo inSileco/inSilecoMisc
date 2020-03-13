@@ -2,16 +2,17 @@
 #'
 #' The `gaussianShape()` function computes a personnalisable Gaussian function.
 #' Default values are the same as in [stats::dnorm()].
-#' @author
-#' Kevin Cazelles
+#'
 #' @param x a numeric vector.
 #' @param optx x-values at which the maximum is reached.
 #' @param opty extremum value.
 #' @param width width of the bell.
 #' @param pow a real number.
+#'
 #' @return
 #' A vector containing values standing for categories into which elements of x have fallen.
 #' @seealso [stats::dnorm()]
+#'
 #' @export
 #' @examples
 #' gaussianShape(0)

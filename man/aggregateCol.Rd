@@ -25,10 +25,10 @@ A data frame with the grouped columns.
 \code{aggregateCol()} perform summary statistics on a specific subset of columns.
 }
 \details{
-An integer vector, whose length is the number of
-columns of the input data frame, is used to assign a group to each column
-that explicit the subsetting. Furthermore columns can be either kept as is
-using \code{0} or discarded by using \code{NA}.
+An integer vector, whose length is the number of columns of the input data
+frame, is used to assign a group to each column that explicit the
+sub-setting. Furthermore columns can be either kept as is using \code{0} or
+discarded by using \code{NA}.
 }
 \examples{
 mat1 <- matrix(1:70,10)
@@ -37,7 +37,4 @@ aggregateCol(mat1, grp1, FUN = mean)
 }
 \seealso{
 \code{\link[stats:aggregate]{stats::aggregate()}}
-}
-\author{
-Kevin Cazelles
 }

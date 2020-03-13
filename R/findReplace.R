@@ -3,9 +3,6 @@
 #' @description
 #' Functions to locate certain pattern and replace them.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @param vec a vector to be searched.
 #' @param vec_pat vector providing the patterns to be searched for.
 #' @param y values to replace matching values.

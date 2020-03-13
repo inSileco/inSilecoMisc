@@ -27,6 +27,3 @@ matb <- matrix(1:12, 4, 3)
 colnames(matb) <- LETTERS[1:3]
 mat2b <- squaretize(matb)
 }
-\author{
-Kevin Cazelles
-}

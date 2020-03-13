@@ -19,6 +19,3 @@ Returns a table of packages and their version.
 \examples{
 packagesUsed(c('utils', 'methods'))
 }
-\author{
-Kevin Cazelles
-}

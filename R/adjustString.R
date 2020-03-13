@@ -3,8 +3,6 @@
 #' Adjust the size of a character string to a given number of characters
 #' by truncating it or adding specified extra characters.
 #'
-#' @author
-#' Kevin Cazelles
 #' @param x a character vector, or a vector to be coerced to a character vector.
 #' @param szchar an integer indicating the size of the character string
 #' to be created.
@@ -21,8 +19,6 @@
 #' @return
 #' A character vector of the concatenated characters.
 #'
-#' @importFrom magrittr %>% %<>%
-#' @importFrom magrittr extract2
 #' @export
 #' @examples
 #' paste0('myfilename', adjustString(c(1:2,10,100), 3))

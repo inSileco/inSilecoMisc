@@ -1,7 +1,7 @@
 #' Assign categories to a vector of values.
 #'
 #' Assigns a category to each element of a vector for a given set of threshold
-#' values..
+#' values.
 #'
 #' @param x A numeric, complex, character or logical vector.
 #' @param categ A set of threshold values used to assign categories.
@@ -16,7 +16,6 @@
 #' categorize(LETTERS[1:5], categ='C')
 #' categorize(LETTERS[1:5], categ='C',  lower=TRUE)
 #' categorize(LETTERS[floor(5*stats::runif(20))+1], categ=LETTERS[1:5], lower=TRUE)
-
 
 categorize <- function(x, categ, lower = FALSE) {
     categ <- unique(categ)

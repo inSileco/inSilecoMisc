@@ -22,6 +22,3 @@ strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 wordCount(strex)
 wordCount(c(strex,'A second character string.'))
 }
-\author{
-Kevin Cazelles
-}

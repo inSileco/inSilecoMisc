@@ -21,6 +21,3 @@ loremIpsum(5)
 \references{
 https://en.wikipedia.org/wiki/Lorem_ipsum
 }
-\author{
-Kevin Cazelles
-}

@@ -4,11 +4,8 @@
 #'
 #' @param con connection object or a character string.
 #'
-#' @author
-#' Kevin Cazelles
-#'
 #' @return
-#' A named list, see [yaml::yaml.load] for more details.
+#' A named list, see [yaml::yaml.load()] for more details.
 #'
 #' @export
 
@@ -18,7 +15,7 @@ readYamlHeader <- function(con) {
         doc <- readLines(con)[-1L]
         id <- which(doc == "---")
         if (length(id)) {
-            out <- yaml::yaml.load(paste(doc[1:id[1]], collapse = "\n"))
+            out <- yaml.load(paste(doc[seq_along(id[1])], collapse = "\n"))
         } else {
             warning("something wrong with the yaml header detected")
             out <- NULL
