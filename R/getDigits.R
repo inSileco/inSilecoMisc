@@ -8,11 +8,10 @@
 #' @param x a character vector where digits are sought, or an object which can be coerced by `as.character` to a character vector.
 #' @param collapse an optional character string to separate the results (see [base::paste()).
 #'
-#' @export
-#'
 #' @return
 #' A list of digits.
 #'
+#' @export
 #' @examples
 #' getDigits('txt012-34')
 

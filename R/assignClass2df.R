@@ -10,7 +10,7 @@
 #' `colid`'s size.
 #'
 #' @return
-#' A data.frame for which columns have the required classes.
+#' A data frame for which columns have the required classes.
 #'
 #' @export
 #' @examples

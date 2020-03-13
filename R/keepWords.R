@@ -26,7 +26,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
     ##
     if (punct.rm) str <- rmPunct(str, " ")
     ##
-    out <- str %>% strsplit(split = " ") %>% lapply(FUN = function(x) x[slc])
+    out <- strsplit(str, split = " ") %>% lapply(FUN = function(x) x[slc])
     ##
     if (na.rm)
         out %<>% lapply(function(x) x[!is.na(x)])
