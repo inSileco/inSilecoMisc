@@ -2,6 +2,7 @@
 .DS_Store
 Makefile
 inst/tmp
+docs/
 
 
 # History files

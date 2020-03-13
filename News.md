@@ -1,7 +1,7 @@
 # inSilecoMisc 0.2.0.9000
 
 * add `keepLetters()` and `rmPunct()` :sparkles: see [#10]
-
+* pkgdown website now deployed on gh-pages by Travis so `docs/` is now ignored.
 
 # inSilecoMisc 0.2.0
 
@@ -19,8 +19,6 @@
 - In `dfTemplate()` `fill` is now a vector whose values are replicated so its length equals the number of columns.
 - In `dfTemplate()`, `col_classes` values are replicated so its length equals the number of columns.
 - In `dfTemplate()`, `fill` now determines the classes of the columns when `col_classes` if `NULL` which is the new default value.
-
-
 
 
 
