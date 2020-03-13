@@ -8,8 +8,7 @@
 #' @param x a data.frame.
 #' @param id.el identity of the elements to be duplicated.
 #' @param times number of times elements are duplicated. Could be a vector of the same length as id.el.
-#' @param append A logical. If `TRUE`, duplicated elements will be appended to the dataframe otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce `NA`.
-#' @importFrom magrittr %>%
+#' @param append A logical. If `TRUE`, duplicated elements will be appended to the data frame otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce `NA`.
 #' @export
 #' @examples
 #' data(iris, package='datasets')
@@ -19,7 +18,7 @@
 
 #' @describeIn duplicateRow returns a dataframe with duplicated rows.
 duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
-    pos <- rep(id.el, times) %>% sort
+    pos <- sort(rep(id.el, times))
     if (class(pos) == "character")
         ord <- c(rownames(x), pos) else ord <- c(1:nrow(x), pos)
     if (!append)
@@ -28,11 +27,11 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     x[ord, ]
 }
 
-#' @describeIn duplicateRow returns a dataframe with duplicated columns.
+#' @describeIn duplicateRow returns a data frame with duplicated columns.
 #' @export
 
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
-    pos <- rep(id.el, times) %>% sort
+    pos <- sort(rep(id.el, times))
     if (class(pos) == "character")
         ord <- c(colnames(x), pos) else ord <- c(1:ncol(x), pos)
     if (!append)

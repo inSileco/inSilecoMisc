@@ -15,7 +15,7 @@ ignored if \code{text} is used.}
 \item{markdown}{logical. If \code{TRUE}, citation tags of Markdown langage are sought.}
 }
 \value{
-A data.frame with the citation keys and their frequence.
+A data.frame with the citation keys and their frequency.
 }
 \description{
 Finds Markdown and Latex citation tags in a given character stings or a file.

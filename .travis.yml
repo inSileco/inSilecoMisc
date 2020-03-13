@@ -1,6 +1,38 @@
 language: r
 warnings_are_errors: true
 sudo: required
+cache: packages
+
+jobs:
+  include:
+    - stage: unit tests
+      os: linux
+      dist: trusty
+      r: oldrel
+      env: NOT_CRAN=false
+    - stage: unit tests
+      os: linux
+      dist: xenial
+      r: release
+      env: NOT_CRAN=true
+      r_packages: covr
+      after_success: Rscript -e 'covr::codecov()'
+    - stage: unit tests
+      os: osx
+      r: release
+      env: NOT_CRAN=true
+    - stage: unit tests
+      os: linux
+      dist: bionic
+      r: devel
+      env: NOT_CRAN=false
+    - stage: deploy
+      os: linux
+      dist: xenial
+      provider: script
+      script: Rscript -e 'pkgdown::deploy_site_github()'
+      skip_cleanup: true
+
 
 notifications:
   slack:
@@ -14,15 +46,3 @@ notifications:
   email:
     recipients:
       - kevin.cazelles@gmail.com
-
-r_packages:
-  - covr
-
-after_success:
-  - Rscript -e 'covr::codecov()'
-
-before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
-deploy:
-  provider: script
-  script: Rscript -e 'pkgdown::deploy_site_github()'
-  skip_cleanup: true

@@ -4,8 +4,7 @@
 \alias{gaussianShape}
 \title{Flexible bell-shaped function}
 \usage{
-gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1,
-  pow = 2)
+gaussianShape(x, optx = 0, opty = 1/sqrt(2 * pi), width = 1, pow = 2)
 }
 \arguments{
 \item{x}{a numeric vector.}
@@ -30,7 +29,7 @@ gaussianShape(0)
 plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 }
 \seealso{
-\code{\link[stats]{dnorm}}
+\code{\link[stats:dnorm]{stats::dnorm()}}
 }
 \author{
 Kevin Cazelles

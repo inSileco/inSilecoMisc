@@ -11,8 +11,6 @@
 #'
 #' @return
 #' A data frame whose columns have the desired classes.
-#'
-#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' df1 <- matrix(signif(runif(20),4), ncol=2)

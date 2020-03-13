@@ -10,7 +10,6 @@
 #' @param vec_pat vector providing the patterns to be searched for.
 #' @param y values to replace matching values.
 #'
-#' @importFrom magrittr %>%
 #' @export
 #'
 #' @details

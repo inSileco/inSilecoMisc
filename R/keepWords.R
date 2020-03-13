@@ -17,8 +17,6 @@
 #' @param unlist A logical. Should the results be unlisted?
 #'
 #' @return A vector of the selected words.
-#' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
 #' @export
 #' @examples
 #' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'

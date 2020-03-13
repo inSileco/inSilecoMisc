@@ -9,7 +9,6 @@
 #' @param FUN the function to be applied, see [base::lapply()].
 #' @param pos a vector indicating the elements position.
 #' @param pattern a pattern see [base::gregexpr()].
-#' @param ... argument to be passed to [base::gregexpr()].
 #'
 #' @note
 #' In case both `pos` or `pattern`, the latter is ignored.
@@ -35,7 +34,7 @@ applyString <- function(x, FUN, pos = NULL, pattern = NULL) {
             x[pos] <- FUN(x[pos])
             paste(x, collapse = "")
         }
-        out <- lapply(tmp, tmp_fun) %>% unlist
+        out <- unlist(lapply(tmp, tmp_fun))
     } else {
         if (is.null(pattern)) {
             warning("neither pos nor pattern is defined", call. = FALSE)

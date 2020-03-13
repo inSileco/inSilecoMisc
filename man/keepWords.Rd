@@ -6,8 +6,14 @@
 \alias{rmPunct}
 \title{Keep words and letters.}
 \usage{
-keepWords(str, slc = 1, punct.rm = TRUE, na.rm = FALSE,
-  collapse = NULL, unlist = FALSE)
+keepWords(
+  str,
+  slc = 1,
+  punct.rm = TRUE,
+  na.rm = FALSE,
+  collapse = NULL,
+  unlist = FALSE
+)
 
 keepLetters(str, slc = 1, punct.rm = FALSE, unlist = TRUE)
 

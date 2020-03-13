@@ -5,5 +5,7 @@
 #' has equivalent functions.
 #'
 #'
+#' @importFrom magrittr %>% %<>%
+#'
 #' @keywords internal
 "_PACKAGE"

@@ -9,7 +9,6 @@
 #' must be applied.
 #' @return
 #' A vector of Ids.
-#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' assignIds(list(2,'f', 'd', 'f'))

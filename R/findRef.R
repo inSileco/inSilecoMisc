@@ -11,7 +11,7 @@
 #' Kevin Cazelles
 #'
 #' @return
-#' A data.frame with the citation keys and their frequence.
+#' A data.frame with the citation keys and their frequency.
 #' @export
 #' @examples
 #' test <- findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')

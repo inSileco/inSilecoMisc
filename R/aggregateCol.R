@@ -24,7 +24,6 @@
 #' @return
 #' A data frame with the grouped columns.
 #'
-#' @importFrom magrittr %>% %<>%
 #' @export
 #'
 #' @examples

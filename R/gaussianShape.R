@@ -11,7 +11,7 @@
 #' @param pow a real number.
 #' @return
 #' A vector containing values standing for categories into which elements of x have fallen.
-#' @seealso \code{\link[stats]{dnorm}}
+#' @seealso [stats::dnorm()]
 #' @export
 #' @examples
 #' gaussianShape(0)

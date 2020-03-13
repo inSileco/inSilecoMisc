@@ -8,8 +8,7 @@
 #' @param x an R object to be coerced into matrix.
 #' @param fill element used to fill the additional rows and/or columns.
 #' @param reorder a logical indicating whether the names must be used to order rows and columns.
-#' @importFrom magrittr %>%
-#' @importFrom magrittr %<>%
+#'
 #' @export
 #' @return
 #' A square matrix.

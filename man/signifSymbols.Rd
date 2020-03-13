@@ -4,8 +4,12 @@
 \alias{signifSymbols}
 \title{A simple function to associated p-values with symbols.}
 \usage{
-signifSymbols(pvalue, thresholds = c(0.1, 0.05, 0.01, 0.001),
-  symbols = c(".", "*", "**", "***"), notsignif = "n.s.")
+signifSymbols(
+  pvalue,
+  thresholds = c(0.1, 0.05, 0.01, 0.001),
+  symbols = c(".", "*", "**", "***"),
+  notsignif = "n.s."
+)
 }
 \arguments{
 \item{pvalue}{a p-value for which a symbol is requested.}

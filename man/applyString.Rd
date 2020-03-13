@@ -14,8 +14,6 @@ applyString(x, FUN, pos = NULL, pattern = NULL)
 \item{pos}{a vector indicating the elements position.}
 
 \item{pattern}{a pattern see \code{\link[base:gregexpr]{base::gregexpr()}}.}
-
-\item{...}{argument to be passed to \code{\link[base:gregexpr]{base::gregexpr()}}.}
 }
 \value{
 A character vector.
