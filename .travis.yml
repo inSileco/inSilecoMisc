@@ -5,11 +5,10 @@ cache: packages
 jobs:
   include:
     - stage: unit tests
-      os: linux
-      dist: trusty
-      r: oldrel
-      env: NOT_CRAN=false
-    - stage: unit tests and deploy
+      r: 3.2
+    - stage: unit tests
+      r: 3.3
+    - stage: unit tests, code coverage and deploy phgdown website
       os: linux
       dist: xenial
       r: release
@@ -20,6 +19,7 @@ jobs:
         - NOT_CRAN=true
         - R_CODECOV=true
       deploy:
+        skip_cleanup: true
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
         local_dir: dev

@@ -22,6 +22,17 @@ A numeric vector
 This function maps a set of values to a range of integers (from 1
 to a positive integer passed as an argument).
 }
+\details{
+This function was originally created to ease the creation of custom color
+scales. In such context, it is common practice to define a minium and a
+maximum for the set of values to be displayed values as well as a number of
+color to be used in the color scale (\code{nval}). This is exactly what
+\code{scaleWithin()} does: minimum and maximum are by default the ones of the set
+of values \code{x} but can also be set using \code{mn} and \code{mx} in which case values
+below \code{mn} will be set to \code{mn} (and thus to 1 in the output) and values
+above \code{mx} will be set to \code{mx} (and thus to 1 in the output). Finally, the
+number of colors to be used used in is given by \code{nval}.
+}
 \examples{
 x <- stats::rpois(20, 20)
 scaleWithin(x, 20, 10, 30)
