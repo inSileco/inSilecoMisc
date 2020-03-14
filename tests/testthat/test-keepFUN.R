@@ -54,13 +54,10 @@ context("Keeps letters")
 strex <- c('Lorem ipsum', 'dolor sit', ' amet')
 res2a <- keepLetters(strex, c(1,4))
 res2b <- keepLetters(strex, c(1,4), punct.rm = TRUE)
-res2c <- keepLetters(strex, c(1,4), unlist = FALSE)
 
 
 test_that("keep letters", {
   expect_true(all(res2a == c("Le", "do", " e")))
   expect_true(all(res2b == c("Le", "do", "at")))
-  expect_equal(class(res2c), "list")
-  expect_equal(unlist(res2c), res2a)
   expect_warning(keepLetters(strex, c(1,6)))
 })

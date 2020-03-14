@@ -6,16 +6,9 @@
 \alias{rmPunct}
 \title{Keep words and letters.}
 \usage{
-keepWords(
-  str,
-  slc = 1,
-  punct.rm = TRUE,
-  na.rm = FALSE,
-  collapse = NULL,
-  unlist = FALSE
-)
+keepWords(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL)
 
-keepLetters(str, slc = 1, punct.rm = FALSE, unlist = TRUE)
+keepLetters(str, slc = 1, punct.rm = FALSE)
 
 rmPunct(str, replacement = "")
 }
@@ -30,8 +23,6 @@ extracted.}
 \item{na.rm}{A logical. Should missing values be removed?}
 
 \item{collapse}{An optional character string used to separate selected words.}
-
-\item{unlist}{A logical. Should the results be unlisted?}
 
 \item{replacement}{a replacement for matched pattern in \code{\link[base:gsub]{base::gsub()}}.}
 }

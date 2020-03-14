@@ -11,7 +11,6 @@
 #' @param na.rm A logical. Should missing values be removed?
 #' @param collapse An optional character string used to separate selected words.
 #' @param replacement a replacement for matched pattern in [base::gsub()].
-#' @param unlist A logical. Should the results be unlisted?
 #'
 #' @return A vector of the selected words.
 #' @export
@@ -22,7 +21,7 @@
 #' keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
 
 
-keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL, unlist = FALSE) {
+keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
     ##
     if (punct.rm) str <- rmPunct(str, " ")
     ##
@@ -34,7 +33,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
     if (!is.null(collapse))
         out %<>% lapply(paste, collapse = collapse)
     ##
-    if (unlist) unlist(out) else out
+    out
 }
 
 #' @describeIn keepWords A vector containing the selection of letters.
@@ -43,7 +42,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
 #' strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 #' keepLetters(strex, c(1,4))
 
-keepLetters <- function(str, slc = 1, punct.rm = FALSE, unlist = TRUE) {
+keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
     str <- as.character(str)
     if (punct.rm) str <- rmPunct(str)
     tmp <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
@@ -52,8 +51,7 @@ keepLetters <- function(str, slc = 1, punct.rm = FALSE, unlist = TRUE) {
       warning("Empty selection")
       tmp <- lapply(tmp, function(x) x[!is.na(x)])
     }
-    out <- lapply(tmp, paste, collapse = "")
-    if (unlist) unlist(out) else out
+    lapply(tmp, paste, collapse = "")
 }
 
 #' @describeIn keepWords remove punctuation

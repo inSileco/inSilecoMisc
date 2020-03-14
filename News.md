@@ -1,9 +1,12 @@
 # inSilecoMisc 0.2.0.9000
 
-* add `keepLetters()` and `rmPunct()` :sparkles: see [#10]
-* drop @author
-* add @importFrom have been moved to `inSilecoMisc.R`
-* pkgdown website now deployed on gh-pages by Travis so `docs/` is now ignored.
+* `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
+* Review scaleWithin() documentation.
+* Add `keepLetters()` and `rmPunct()` :sparkles: see [#10].
+* Drop @author (to be used for contributors).
+* Add @importFrom have been moved to `inSilecoMisc.R`.
+* The pkgdown website is now deployed on gh-pages by Travis so `docs/` is now ignored.
+
 
 # inSilecoMisc 0.2.0
 
@@ -14,14 +17,13 @@
 
 ## Changes in functions :gear:
 
-- categorize has been rewritten (see #7)
-- remove `stLength()` (see #9)
-- remove `logit()` (see #8)
+- Categorize has been rewritten (see #7).
+- `stLength()` has been removed (see #9).
+- `logit()` has been removed (see #8).
 - In `dfTemplate()` the values of argument `col_classes` are now checked, a test has been added.
 - In `dfTemplate()` `fill` is now a vector whose values are replicated so its length equals the number of columns.
 - In `dfTemplate()`, `col_classes` values are replicated so its length equals the number of columns.
 - In `dfTemplate()`, `fill` now determines the classes of the columns when `col_classes` if `NULL` which is the new default value.
-
 
 
 # inSilecoMisc 0.1.3
@@ -53,9 +55,9 @@
 
 ## Addition of R functions
 
-- New R function \code{loremIpsum()} to get a piece of a placeholder text.
-- New R function \code{readYamlHeader()} to read YAML headers.
-- New R function \code{stApply()} to apply a function to a subset of strings.
+- New function \code{loremIpsum()} to get a piece of a placeholder text.
+- New function \code{readYamlHeader()} to read YAML headers.
+- New function \code{stApply()} to apply a function to a subset of strings.
 
 ## Addition of new parameters
 
@@ -71,10 +73,10 @@
 
 ## Addition of R functions:
 
-  - New R functions \code{findReplace()} and \code{grepReplace()}.
-  - New R functions \code{logistic()} and \code{logistic2()}.
-  - New R function \code{addWebIcon()}.
-  - New R function \code{meanAlong()}, a simple moving window function.
+  - New functions \code{findReplace()} and \code{grepReplace()}.
+  - New functions \code{logistic()} and \code{logistic2()}.
+  - New function \code{addWebIcon()}.
+  - New function \code{meanAlong()}, a simple moving window function.
 
 ## Changes in existing R functions:
 
@@ -89,15 +91,15 @@
 
 ### Addition of R functions:
 
-  - New R function \code{addURL()}
-  - New R function \code{findRef()}
-  - New R function \code{keepWords()}
-  - New R function \code{logit()}
-  - New R function \code{multiMatch()}
-  - New R function \code{signifSymbol()}
-  - New R function \code{stLength()}
-  - New R function \code{substrBib()}
-  - New R function \code{wordCount()} that adresses #1 (@KevCaz)
+  - New function \code{addURL()}
+  - New function \code{findRef()}
+  - New function \code{keepWords()}
+  - New function \code{logit()}
+  - New function \code{multiMatch()}
+  - New function \code{signifSymbol()}
+  - New function \code{stLength()}
+  - New function \code{substrBib()}
+  - New function \code{wordCount()} that adresses #1 (@KevCaz)
 
 ### Changes in the package structure:
 
@@ -108,13 +110,13 @@
 
 ### Initial functions:
 
-- New R function \code{adjustSting()}
-- New R function \code{aggregateCol()}
-- New R function \code{setColClass()}
-- New R function \code{assignIds()}
-- New R function \code{categorize()}
-- New R function \code{duplicateRow()}
-- New R function \code{findThem()}
-- New R function \code{gaussianShape()}
-- New R function \code{keepWords()}
-- New R function \code{squaretize()}
+- New function \code{adjustSting()}
+- New function \code{aggregateCol()}
+- New function \code{setColClass()}
+- New function \code{assignIds()}
+- New function \code{categorize()}
+- New function \code{duplicateRow()}
+- New function \code{findThem()}
+- New function \code{gaussianShape()}
+- New function \code{keepWords()}
+- New function \code{squaretize()}
