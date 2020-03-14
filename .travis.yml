@@ -1,6 +1,5 @@
 language: r
 warnings_are_errors: true
-sudo: required
 cache: packages
 
 jobs:
@@ -23,7 +22,7 @@ jobs:
       deploy:
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
-        skip_cleanup: true
+        local_dir: dev
     - stage: unit tests
       os: osx
       r: release
@@ -36,14 +35,6 @@ jobs:
 
 
 notifications:
-  slack:
-    rooms: insileco:3OxNTMMQsOZubgPEXCrXEwx7
-    on_success: always
-    on_failure: always #change or never
-    template:
-      - "%{repository} (%{commit}) : %{message} %{foo} "
-      - "See on Travis: %{build_url}"
-      - "duration: %{duration}"
   email:
     recipients:
       - kevin.cazelles@gmail.com
