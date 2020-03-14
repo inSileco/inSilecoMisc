@@ -17,8 +17,8 @@
 #' @examples
 #' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 #' keepWords(strex)
-#' keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE)
-#' keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
+#' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE)
+#' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE, collapse='/')
 
 
 keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {

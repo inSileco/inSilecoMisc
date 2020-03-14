@@ -42,8 +42,8 @@ Extract words and letters based on their position in character strings, vectoris
 \examples{
 strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
 keepWords(strex)
-keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE)
-keepWords(c(strex,'A second chacter string.'), slc=c(1,8), na.rm=TRUE, collapse='/')
+keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE)
+keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE, collapse='/')
 strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 keepLetters(strex, c(1,4))
 }

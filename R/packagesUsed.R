@@ -1,6 +1,5 @@
 #' Get a data frame of package and their installed version.
 #'
-#'
 #' @param vc_pkg a vector of string characters including package names to be
 #' added.
 #'

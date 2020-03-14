@@ -15,23 +15,21 @@ jobs:
       r_packages:
         - covr
         - pkgdown
-      env:
-        - NOT_CRAN=true
-        - R_CODECOV=true
+      after_success: Rscript -e 'covr::codecov()'
       deploy:
-        skip_cleanup: true
+        cleanup: false
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
-        local_dir: dev
+        on:
+          all_branches: true
+          condition: '"$TRAVIS_BRANCH" == "pkgdown-travis" || -n "$TRAVIS_TAG"'
     - stage: unit tests
       os: osx
       r: release
-      env: NOT_CRAN=true
     - stage: unit tests
       os: linux
       dist: bionic
       r: devel
-      env: NOT_CRAN=false
 
 
 notifications:

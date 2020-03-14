@@ -1,4 +1,4 @@
-#' Assign categories to a vector of values.
+#' Assign categories
 #'
 #' Assigns a category to each element of a vector for a given set of threshold
 #' values.
@@ -6,10 +6,12 @@
 #' @param x a numeric, complex, character or logical vector.
 #' @param categ a set of threshold values used to assign categories.
 #' @param lower a logical. If `TRUE` threshold values (i.e. values within
-#' `categ`) belongs the the lower category rather than the upper (default
-#' behaviour).
+#' `categ`) belongs to the lower category rather than the upper (default
+#' behavior).
+#'
 #' @return
 #' A vector of categories assigned.
+#'
 #' @export
 #' @examples
 #' categorize(stats::runif(40), categ=c(0.5,0.75))

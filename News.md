@@ -1,5 +1,6 @@
 # inSilecoMisc 0.2.0.9000
 
+* `findRef()` and `substrBib()` has been removed.
 * `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
 * Review scaleWithin() documentation.
 * Add `keepLetters()` and `rmPunct()` :sparkles: see [#10].

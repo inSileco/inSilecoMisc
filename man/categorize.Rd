@@ -2,7 +2,7 @@
 % Please edit documentation in R/categorize.R
 \name{categorize}
 \alias{categorize}
-\title{Assign categories to a vector of values.}
+\title{Assign categories}
 \usage{
 categorize(x, categ, lower = FALSE)
 }
@@ -12,8 +12,8 @@ categorize(x, categ, lower = FALSE)
 \item{categ}{a set of threshold values used to assign categories.}
 
 \item{lower}{a logical. If \code{TRUE} threshold values (i.e. values within
-\code{categ}) belongs the the lower category rather than the upper (default
-behaviour).}
+\code{categ}) belongs to the lower category rather than the upper (default
+behavior).}
 }
 \value{
 A vector of categories assigned.
