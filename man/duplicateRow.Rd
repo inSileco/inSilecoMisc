@@ -10,7 +10,7 @@ duplicateRow(x, id.el = 1, times = 1, append = FALSE)
 duplicateCol(x, id.el = 1, times = 1, append = FALSE)
 }
 \arguments{
-\item{x}{a data.frame.}
+\item{x}{a data frame.}
 
 \item{id.el}{identity of the elements to be duplicated.}
 

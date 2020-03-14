@@ -7,9 +7,9 @@
 meanAlong(vec, n)
 }
 \arguments{
-\item{vec}{a vector of numeric}
+\item{vec}{a vector of numeric.}
 
-\item{n}{an integer indicating the size of the window}
+\item{n}{an integer indicating the size of the window.}
 }
 \description{
 This function is a simple moving window function.

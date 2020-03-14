@@ -1,12 +1,14 @@
 #' Scale a set of values
 #'
-#' For a given set of values, returns values between 1 and a number of values
-#' passed as an argument.
+#' This function maps a set of values to a range of integers (from 1
+#' to a positive integer passed as an argument).
 #'
 #' @param x a numeric object of type `numeric` or coercible as one.
-#' @param nval The number of scaled values (between 1 and `nval`).
-#' @param mn Minimum value (`mn` and lower values are set to 1).
-#' @param mx Maximum value (`mx` and higher values are set to `nval`).
+#' @param nval an integer designing The number of scaled values (between 1 and `nval`).
+#' @param mn minimum value (`mn` and lower values are set to 1).
+#' @param mx maximum value (`mx` and higher values are set to `nval`).
+#'
+#'
 #'
 #' @return
 #' A numeric vector

@@ -2,13 +2,14 @@
 #'
 #' Finds Markdown and Latex citation tags in a given character stings or a file.
 #'
-#' @param text A character string to be searched within.
-#' @param con A connection object or a character string that stand for a path,
+#' @param text a character string to be searched within.
+#' @param con a connection object or a character string that stand for a path,
 #' ignored if `text` is used.
-#' @param markdown logical. If `TRUE`, citation tags of Markdown langage are sought.
+#' @param markdown a logical. If `TRUE`,  Markdown's citation tags are sought.
 #'
 #' @return
-#' A data.frame with the citation keys and their frequency.
+#' A data frame with the citation keys and their frequency.
+#'
 #' @export
 #' @examples
 #' test <- findRef(text='First \\cite{Pimm2000}, second \\Citep{May1972}')

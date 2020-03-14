@@ -7,11 +7,11 @@
 categorize(x, categ, lower = FALSE)
 }
 \arguments{
-\item{x}{A numeric, complex, character or logical vector.}
+\item{x}{a numeric, complex, character or logical vector.}
 
-\item{categ}{A set of threshold values used to assign categories.}
+\item{categ}{a set of threshold values used to assign categories.}
 
-\item{lower}{A logical, if \code{TRUE} threshold values (i.e. values within
+\item{lower}{a logical. If \code{TRUE} threshold values (i.e. values within
 \code{categ}) belongs the the lower category rather than the upper (default
 behaviour).}
 }

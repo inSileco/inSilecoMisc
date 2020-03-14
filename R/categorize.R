@@ -3,9 +3,9 @@
 #' Assigns a category to each element of a vector for a given set of threshold
 #' values.
 #'
-#' @param x A numeric, complex, character or logical vector.
-#' @param categ A set of threshold values used to assign categories.
-#' @param lower A logical, if `TRUE` threshold values (i.e. values within
+#' @param x a numeric, complex, character or logical vector.
+#' @param categ a set of threshold values used to assign categories.
+#' @param lower a logical. If `TRUE` threshold values (i.e. values within
 #' `categ`) belongs the the lower category rather than the upper (default
 #' behaviour).
 #' @return

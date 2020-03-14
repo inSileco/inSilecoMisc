@@ -9,18 +9,18 @@ scaleWithin(x, nval = 100, mn = min(x), mx = max(x))
 \arguments{
 \item{x}{a numeric object of type \code{numeric} or coercible as one.}
 
-\item{nval}{The number of scaled values (between 1 and \code{nval}).}
+\item{nval}{an integer designing The number of scaled values (between 1 and \code{nval}).}
 
-\item{mn}{Minimum value (\code{mn} and lower values are set to 1).}
+\item{mn}{minimum value (\code{mn} and lower values are set to 1).}
 
-\item{mx}{Maximum value (\code{mx} and higher values are set to \code{nval}).}
+\item{mx}{maximum value (\code{mx} and higher values are set to \code{nval}).}
 }
 \value{
 A numeric vector
 }
 \description{
-For a given set of values, returns values between 1 and a number of values
-passed as an argument.
+This function maps a set of values to a range of integers (from 1
+to a positive integer passed as an argument).
 }
 \examples{
 x <- stats::rpois(20, 20)

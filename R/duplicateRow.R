@@ -2,7 +2,7 @@
 #'
 #' Duplicates rows and columns of a given a data frame.
 #'
-#' @param x a data.frame.
+#' @param x a data frame.
 #' @param id.el identity of the elements to be duplicated.
 #' @param times number of times elements are duplicated. Could be a vector of the same length as `id.el`.
 #' @param append A logical. If `TRUE`, duplicated elements will be appended to the data frame otherwise duplicated elements remain next to their parent. Non-existing columns cannot be duplicated while non-existing rows can and produce `NA`.

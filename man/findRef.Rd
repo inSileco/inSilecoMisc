@@ -7,15 +7,15 @@
 findRef(text, con, markdown = FALSE)
 }
 \arguments{
-\item{text}{A character string to be searched within.}
+\item{text}{a character string to be searched within.}
 
-\item{con}{A connection object or a character string that stand for a path,
+\item{con}{a connection object or a character string that stand for a path,
 ignored if \code{text} is used.}
 
-\item{markdown}{logical. If \code{TRUE}, citation tags of Markdown langage are sought.}
+\item{markdown}{a logical. If \code{TRUE},  Markdown's citation tags are sought.}
 }
 \value{
-A data.frame with the citation keys and their frequency.
+A data frame with the citation keys and their frequency.
 }
 \description{
 Finds Markdown and Latex citation tags in a given character stings or a file.

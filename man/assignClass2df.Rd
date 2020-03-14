@@ -16,7 +16,7 @@ same order as \code{colid}. By default \code{cls} is repeated until its size equ
 \code{colid}'s size.}
 }
 \value{
-A data.frame for which columns have the required classes.
+A data frame for which columns have the required classes.
 }
 \description{
 Assign a class to a set of column of a data frame. This function is designed

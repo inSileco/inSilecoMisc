@@ -3,7 +3,7 @@
 #' Given a set of values and a vector where the values must be found, the
 #' `findThem` function records the matched values and the position in the
 #' vector where the values have been searched for.
-#' 
+#'
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
 #' @param todf a logical indicating whether the output object must be a data frame.
@@ -14,7 +14,7 @@
 #' match is found then `NA` is returned. If `todf` is `TRUE`
 #' then a three-columns data frame is returned including values and positions
 #' in both `what` and `where` vectors.
-#' @seealso \code{\link[base]{which}}
+#' @seealso [which()]
 #' @export
 #' @examples
 #' x <- stats::rpois(1000,10)

@@ -34,5 +34,5 @@ findThem(c(10,4,100), x, todf=TRUE)
 findThem(c(10,4,100), x, todf=TRUE, reportnomatch=TRUE)
 }
 \seealso{
-\code{\link[base]{which}}
+\code{\link[=which]{which()}}
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/multiMatch.R
 \name{multiMatch}
 \alias{multiMatch}
-\title{Mutiple match.}
+\title{Multiple match.}
 \usage{
 multiMatch(text, pattern)
 }

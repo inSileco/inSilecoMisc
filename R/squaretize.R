@@ -7,9 +7,10 @@
 #' @param fill element used to fill the additional rows and/or columns.
 #' @param reorder a logical indicating whether the names must be used to order rows and columns.
 #'
-#' @export
 #' @return
 #' A square matrix.
+#'
+#' @export
 #' @examples
 #' mat <- matrix(1:12, 3, 4)
 #' mat2 <- squaretize(mat)

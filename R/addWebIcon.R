@@ -5,8 +5,8 @@
 #' @param name name of the icon to be added.
 #' @param framework a character use to default is `fa` (which stands for Font-Awesome).
 #' @param size default sets to `2`,
-#' @export
 #'
+#' @export
 #' @examples
 #' addWebIcon('cc')
 

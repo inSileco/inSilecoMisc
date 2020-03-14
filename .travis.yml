@@ -14,15 +14,16 @@ jobs:
       os: linux
       dist: xenial
       r: release
-      env: NOT_CRAN=true
       r_packages:
         - covr
         - pkgdown
+      env:
+        - NOT_CRAN=true
+        - R_CODECOV=true
       deploy:
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
         skip_cleanup: true
-      after_success: Rscript -e 'covr::codecov()'
     - stage: unit tests
       os: osx
       r: release
@@ -32,7 +33,6 @@ jobs:
       dist: bionic
       r: devel
       env: NOT_CRAN=false
-
 
 
 notifications:

@@ -1,8 +1,9 @@
-#' @title Compute the mean along a vector
-#' @description This function is a simple moving window function.
+#' Compute the mean along a vector
 #'
-#' @param vec a vector of numeric
-#' @param n an integer indicating the size of the window
+#' This function is a simple moving window function.
+#'
+#' @param vec a vector of numeric.
+#' @param n an integer indicating the size of the window.
 #'
 #' @export
 #'

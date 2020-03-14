@@ -1,4 +1,4 @@
-#' Mutiple match.
+#' Multiple match.
 #'
 #' Seek all elements matching a given pattern in a character strings.
 #'

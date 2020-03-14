@@ -14,7 +14,7 @@ added.}
 A data frame of two columns. First is the name of the package; second the version installed.
 }
 \description{
-Returns a table of packages and their version.
+Get a data frame of package and their installed version.
 }
 \examples{
 packagesUsed(c('utils', 'methods'))
