@@ -35,6 +35,10 @@ tblDown <- function(x, output_file = "./tables.docx", section = NULL,
 
     stopifnot(is.list(x) | is.data.frame(x))
     fl <- tempfile(fileext = ".md")
+    # title
+    if (!is.null(title)) {
+        cat(glue("---\ntitle: {title}\n---\n\n"), file = fl)
+    } else file.create(fl)
     #
     if (is.data.frame(x)) {
         n <- 1
@@ -43,10 +47,6 @@ tblDown <- function(x, output_file = "./tables.docx", section = NULL,
     } else {
         stopifnot(all(unlist(lapply(x, is.data.frame))))
         n <- length(x)
-        # title
-        if (!is.null(title)) {
-            cat(glue("---\ntitle: {title}\n---\n\n"), file = fl)
-        }
         # sections
         if (!is.null(section) & length(section) != n) {
             message("`section` and `x` have different lengths")
