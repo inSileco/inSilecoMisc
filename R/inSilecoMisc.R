@@ -4,8 +4,10 @@
 #' using base R, *i.e.* outside the tidyverse which may (or may not)
 #' has equivalent functions.
 #'
+#' @importFrom glue glue
 #' @importFrom magrittr %>% %<>% extract2
 #' @importFrom yaml yaml.load
+#' @importFrom knitr kable
 #'
 #' @keywords internal
 "_PACKAGE"

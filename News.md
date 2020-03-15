@@ -1,5 +1,6 @@
 # inSilecoMisc 0.2.0.9000
 
+* add `tblDown()` to quickly export a list of data frames.
 * `findRef()` and `substrBib()` has been removed, see #11.
 * `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
 * Review scaleWithin() documentation.
@@ -13,8 +14,8 @@
 
 ## Changes in documentation :pencil:
 
-- README simplified
-- Major cleaning up
+* README simplified
+* Major cleaning up
 
 ## Changes in functions :gear:
 

@@ -13,16 +13,15 @@ Depends:
     R (>= 3.0)
 License: GPL (>= 2)
 Imports:
+    glue,
     magrittr,
     methods,
     knitr,
+    rmarkdown,
     utils,
-    RefManageR,
     yaml
 Suggests:
-    rmarkdown,
-    testthat,
-    sp
+    testthat
 URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilecoMisc
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
 Encoding: UTF-8
