@@ -1,4 +1,4 @@
-#' Apply a function on elements of a character string
+#' Apply a function on character strings
 #'
 #' Apply a function on a given set of elements of a character string.
 #'
@@ -17,7 +17,6 @@
 #' @examples
 #' applyString('cool',  pos = 1:2, FUN = toupper)
 #' applyString(c('cool', 'pro'),  pattern = 'o', FUN = toupper)
-
 
 applyString <- function(x, FUN, pos = NULL, pattern = NULL) {
 
@@ -39,7 +38,7 @@ applyString <- function(x, FUN, pos = NULL, pattern = NULL) {
             mat <- gregexpr(pattern = pattern, text = x)
             tmp_mth <- regmatches(x, mat)
             # NB: regmatches(x, mat, invert = TRUE) returns '' if first or last elements
-            # match the pattern. Therefore there is alwasy 2*n - 1 number of elements in the
+            # match the pattern. Therefore there is always 2*n - 1 number of elements in the
             # vector to be created (n being the size of tmp_inv elements).
             tmp_inv <- regmatches(x, mat, invert = TRUE)
             out <- apply(cbind(tmp_mth, tmp_inv), 1, FUN = reassemble, f = FUN)

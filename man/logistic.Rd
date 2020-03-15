@@ -5,7 +5,7 @@
 \alias{logistic2}
 \title{Logistic functions}
 \source{
-\href{https://en.wikipedia.org/wiki/Logistic_function}{wikipedia.org/wiki/Logistic_function}
+\url{https://en.wikipedia.org/wiki/Logistic_function}{wikipedia.org/wiki/Logistic_function}
 }
 \usage{
 logistic(x, yneg = -1, ypos = 1, lambda = 1, pow = 1)
@@ -15,9 +15,9 @@ logistic2(x, yneg = -1, ypos = 1, lambda = 1, pow = 1, yzer = 0)
 \arguments{
 \item{x}{a numerical vector.}
 
-\item{yneg}{assympotic values when x tends to \code{-Inf}.}
+\item{yneg}{asymptotic values when x tends to \code{-Inf}.}
 
-\item{ypos}{assympotic values when y tends to \code{-Inf}.}
+\item{ypos}{asymptotic values when y tends to \code{-Inf}.}
 
 \item{lambda}{scalar coefficient.}
 

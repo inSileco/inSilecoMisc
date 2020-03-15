@@ -2,7 +2,7 @@
 % Please edit documentation in R/applyString.R
 \name{applyString}
 \alias{applyString}
-\title{Apply a function on elements of a character string}
+\title{Apply a function on character strings}
 \usage{
 applyString(x, FUN, pos = NULL, pattern = NULL)
 }

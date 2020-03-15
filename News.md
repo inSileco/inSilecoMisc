@@ -1,9 +1,9 @@
 # inSilecoMisc 0.2.0.9000
 
-* `findRef()` and `substrBib()` has been removed.
+* `findRef()` and `substrBib()` has been removed, see #11.
 * `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
 * Review scaleWithin() documentation.
-* Add `keepLetters()` and `rmPunct()` :sparkles: see [#10].
+* Add `keepLetters()` and `rmPunct()` :sparkles: see #10.
 * Drop @author (to be used for contributors).
 * Add @importFrom have been moved to `inSilecoMisc.R`.
 * The pkgdown website is now deployed on gh-pages by Travis so `docs/` is now ignored.

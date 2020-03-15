@@ -2,7 +2,7 @@
 % Please edit documentation in R/multiMatch.R
 \name{multiMatch}
 \alias{multiMatch}
-\title{Multiple match.}
+\title{Multiple match}
 \usage{
 multiMatch(text, pattern)
 }
@@ -24,6 +24,5 @@ Seek all elements matching a given pattern in a character strings.
 \code{\link[base:regmatches]{base::regmatches()}} to find more than one match.
 }
 \examples{
-multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua.',' [[:alnum:]]{1,3} ')
+multiMatch(loremIpsum(), " [[:alnum:]]{3} ")
 }

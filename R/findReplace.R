@@ -1,4 +1,4 @@
-#' @title Find and replace
+#' Find and replace
 #'
 #' @description
 #' Functions to locate certain pattern and replace them.

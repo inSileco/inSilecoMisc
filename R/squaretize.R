@@ -47,7 +47,7 @@ squaretize <- function(x, fill = 0, reorder = TRUE) {
             mat %<>% magrittr::extract(, order(colnames(.)))
         }
     } else {
-        mis <- mat %>% dim %>% diff
+        mis <- diff(dim(mat))
         if (mis > 0) {
             mat %<>% rbind(matrix(fill, nrow = mis, ncol = ncol(.), dimnames = list(NULL,
                 colnames(.))))

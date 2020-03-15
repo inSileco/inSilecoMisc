@@ -1,4 +1,4 @@
-#' Multiple match.
+#' Multiple match
 #'
 #' Seek all elements matching a given pattern in a character strings.
 #'
@@ -15,8 +15,7 @@
 #' A vector of character strings matching `pattern` argument.
 #' @export
 #' @examples
-#' multiMatch('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-#' eiusmod tempor incididunt ut labore et dolore magna aliqua.',' [[:alnum:]]{1,3} ')
+#' multiMatch(loremIpsum(), " [[:alnum:]]{3} ")
 
 multiMatch <- function(text, pattern) {
     ## ---

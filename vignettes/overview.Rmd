@@ -9,22 +9,20 @@ vignette: >
 ---
 
 
-
-```{r echo=FALSE, message = FALSE}
+```{r echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  comment = "R>> ",
+  comment = "R> ",
   collapse = TRUE
 )
 library(inSilecoMisc)
 ```
 
-This vignette is an overview of *inSilecoMisc* organized around five major themes:
+This vignette is a short overview of *inSilecoMisc* organized around the following themes:
 
 1. strings manipulations
 2. vector manipulations
 3. data frames manipulations
-4. Bibliography operations
-5. Mathematical functions
+4. Mathematical functions
 
 
 # String manipulations
@@ -44,11 +42,11 @@ loremIpsum(10)
 ## Keep a selection of words or letters
 
 ```{r keepWords}
-  lor <- loremIpsum()
-  keepWords(lor, c(1,4))
-  vlor <- lapply(c(2, 3), loremIpsum)
-  vlor
-  keepLetters(vlor, c(1:2, 15))
+lor <- loremIpsum()
+keepWords(lor, c(1,4))
+vlor <- lapply(c(2, 3), loremIpsum)
+vlor
+keepLetters(vlor, c(1:2, 15))
 ```
 
 
@@ -131,27 +129,27 @@ res1 <- scaleWithin(val, 20, 40, 60)
 ## Assign a category
 
 ```{r categorize}
-  (seqv <- stats::runif(40))
-  categorize(seqv, categ=seq(0.1,0.9, 0.1))
+(seqv <- stats::runif(40))
+categorize(seqv, categ=seq(0.1,0.9, 0.1))
 ```
 
 
 ## Turn a matrix or a data frame into a squared matrix
 
 ```{r squaretize}
-  mat <- matrix(1:15, 3, 5, dimnames=list(LETTERS[3:1], LETTERS[1:5]))
-  print(mat)
-  squaretize(mat, reorder=FALSE)
+mat <- matrix(1:15, 3, 5, dimnames = list(LETTERS[3:1], LETTERS[1:5]))
+print(mat)
+squaretize(mat, reorder = FALSE)
 ```
 
 
 ## Assign classes to data frames' columns
 
 ```{r setColClass}
-  df1 <- matrix(signif(runif(20),4), ncol=2)
-  df2 <- setColClass(df1, 2, 'character')
-  str(df1)
-  str(df2)
+df1 <- matrix(signif(runif(20),4), ncol = 2)
+df2 <- setColClass(df1, 2, 'character')
+str(df1)
+str(df2)
 ```
 
 ## Create data frame from scratch or from other data frame
@@ -170,8 +168,6 @@ dfTemplateMatch(dfA, c("col1", "col4"), yonly = TRUE)
 dfTemplateMatch(dfA, c("col1", "col2"), yonly = TRUE, col_classes = "numeric", fill = 0)
 ```
 
-
-
 ## packagesUsed
 
 ```{r packagesUse}
@@ -182,7 +178,6 @@ packagesUsed(c('utils', 'methods'))
 
 
 # Mathematical functions
-
 
 ## Logistic functions
 

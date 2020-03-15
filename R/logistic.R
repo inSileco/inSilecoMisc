@@ -5,8 +5,8 @@
 #' The `logisic` function describe the classical logistic function,
 #'
 #' @param x a numerical vector.
-#' @param yneg assympotic values when x tends to \code{-Inf}.
-#' @param ypos assympotic values when y tends to \code{-Inf}.
+#' @param yneg asymptotic values when x tends to `-Inf`.
+#' @param ypos asymptotic values when y tends to `-Inf`.
 #' @param lambda scalar coefficient.
 #' @param pow x exponent.
 #' @param yzer values (for `logistic2` only).
@@ -23,7 +23,7 @@
 #'       f(x) = yneg + 1/(1/(ypos-yneg)+(1/(yzer-yneg)-1/ypos-yneg)exp(-\lambda x^pow))}
 #'
 #' @source
-#' \href{https://en.wikipedia.org/wiki/Logistic_function}{wikipedia.org/wiki/Logistic_function}
+#' <https://en.wikipedia.org/wiki/Logistic_function}{wikipedia.org/wiki/Logistic_function>
 #'
 #' @return
 #' A numeric vector.
