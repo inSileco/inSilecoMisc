@@ -24,7 +24,7 @@ pandoc to correctly render the final document in the write format.}
 
 \item{caption}{a vector of character strings used as captions (optional).}
 
-\item{title}{a character string use title of the document (optional).}
+\item{title}{a character string used as a title for the document (optional).}
 
 \item{row.names}{a logical. Should row names be added? See \code{\link[knitr:kable]{knitr::kable()}}.}
 

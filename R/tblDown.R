@@ -63,7 +63,7 @@ tblDown <- function(x, output_file = "./tables.docx", section = NULL,
         }
     }
     #
-    system(paste0(rmarkdown::pandoc_exec(), " ", fl, " -o ", output_file))
+    system2(command = "pandoc", args = paste(fl, "-o", output_file))
     unlink(fl)
     invisible(NULL)
 }
