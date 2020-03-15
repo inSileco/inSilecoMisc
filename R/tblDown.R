@@ -1,15 +1,45 @@
-# tblDown(list(CO2[1:2, ], CO2[3:6,]), "co2")
+#' Export a data frame or a list of data frames.
+#'
+#' Export a data frame or a list of data frames using pandoc.
+#'
+#' @param x a data frame or a list of data frames.
+#' @param output_file path to the output file. Its extension will be used by
+#' pandoc to correctly render the final document in the write format.
+#' @param section a vector of character strings used as section titles (optional).
+#' @param caption a vector of character strings used as captions (optional).
+#' @param title a character string used as a title for the document (optional).
+#' @param row.names a logical. Should row names be added? See [knitr::kable()].
+#' @param ... further arguments passed to [knitr::kable()].
+#'
+#' @details
+#' This function calls [base::cat()] and [knitr::kable()] to write a Markdown
+#' document containing all a list of tables that is then converted into the
+#' desired format.
+#'
+#' @return
+#' A data frame whose columns have the desired classes.
+#'
+#' @references
+#' <https://pandoc.org/MANUAL.html#tables>
+#'
+#' @export
+#' @examples
+#' \dontrun{
+#'  data(CO2)
+#' tblDown(list(CO2[1:2, ], CO2[3:6,]))
+#' tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.pdf")
+#' }
 
-
-tblDown <- function(x, section = NULL, title = NULL, out = "./out.docx",
-    caption = NULL, row.names = FALSE, ...) {
+tblDown <- function(x, output_file = "./tables.docx", section = NULL,
+    caption = NULL, title = NULL, row.names = FALSE, ...) {
 
     stopifnot(is.list(x) | is.data.frame(x))
     fl <- tempfile(fileext = ".md")
     #
     if (is.data.frame(x)) {
         n <- 1
-        tbl2md(x, section[1L], caption[1L], fl)
+        tbl2md(x, section = section[1L], caption = caption[1L],
+            row.names = row.names, file = fl, ...)
     } else {
         stopifnot(all(unlist(lapply(x, is.data.frame))))
         n <- length(x)
@@ -19,40 +49,39 @@ tblDown <- function(x, section = NULL, title = NULL, out = "./out.docx",
         }
         # sections
         if (!is.null(section) & length(section) != n) {
-            warning("section and x have different lengths")
+            message("`section` and `x` have different lengths")
             section <- expand_vec(section, n)
         }
         # section
         if (!is.null(caption) & length(caption) != n) {
-            warning("caption and x have different lengths")
+            message("`caption` and `x` have different lengths")
             caption <- expand_vec(caption, n)
-        }
-        #
+        }        #
         for (i in seq_along(x)) {
             tbl2md(x[[i]], section = section[i], caption = caption[i],
                 file = fl, row.names = row.names, ...)
         }
     }
     #
-    system(paste0(rmarkdown::pandoc_exec(), " ", fl, " -o ", out))
+    system(paste0(rmarkdown::pandoc_exec(), " ", fl, " -o ", output_file))
     unlink(fl)
     invisible(NULL)
 }
 
 tbl2md <- function(x, section = NULL, caption = NULL,
-    row.names = row.names, file, ...) {
+    row.names = FALSE, file, ...) {
     if (!is.null(section)) {
         cat("# ", section, "\n", file = file, append = TRUE)
     }
+    cat(kable(x, row.names = row.names, ...), sep = "\n", file = file, append = TRUE)
     if (!is.null(caption)) {
-        cat(kable(x, caption = caption, row.names = row.names, ...),
-            sep = "\n", file = file, append = TRUE)
-    } else cat(kable(x, ...), sep = "\n", file = file, append = TRUE)
+        cat("Table: ", caption, file = file, append = TRUE)
+    }
     cat("\n\n", file = file, append = TRUE)
     invisible(NULL)
 }
 
 # makes x of length n
 expand_vec <- function(x, n) {
-    paste0(x, rep(seq_len(n), each = length(x)))[seq_len(n)]
+    paste(x, rep(seq_len(n), each = length(x)))[seq_len(n)]
 }

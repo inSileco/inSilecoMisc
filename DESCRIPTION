@@ -21,6 +21,7 @@ Imports:
     utils,
     yaml
 Suggests:
+    datasets,
     testthat
 URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilecoMisc
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
