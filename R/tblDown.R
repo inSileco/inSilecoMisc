@@ -1,6 +1,6 @@
-#' Export a data frame or a list of data frames.
+#' Write data frames in a document
 #'
-#' Export a data frame or a list of data frames using pandoc.
+#' Export a data frame or a list of data frames in a document using pandoc.
 #'
 #' @param x a data frame or a list of data frames.
 #' @param output_file path to the output file. Its extension will be used by
@@ -13,8 +13,9 @@
 #'
 #' @details
 #' This function calls [base::cat()] and [knitr::kable()] to write a Markdown
-#' document containing all a list of tables that is then converted into the
-#' desired format.
+#' document containing a list of tables that is then converted into the
+#' desired format. For `section` and `caption` if the length differ then
+#' will be cut off or expanded.
 #'
 #' @return
 #' A data frame whose columns have the desired classes.
@@ -25,7 +26,7 @@
 #' @export
 #' @examples
 #' \dontrun{
-#'  data(CO2)
+#' data(CO2)
 #' tblDown(list(CO2[1:2, ], CO2[3:6,]))
 #' tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.pdf")
 #' }
@@ -63,7 +64,8 @@ tblDown <- function(x, output_file = "./tables.docx", section = NULL,
         }
     }
     #
-    system2(command = "pandoc", args = paste(fl, "-o", output_file))
+    out <- system2(command = rmarkdown::pandoc_exec(),
+        args = paste(fl, "-o", output_file))
     unlink(fl)
     invisible(NULL)
 }
@@ -73,7 +75,8 @@ tbl2md <- function(x, section = NULL, caption = NULL,
     if (!is.null(section)) {
         cat("# ", section, "\n", file = file, append = TRUE)
     }
-    cat(kable(x, row.names = row.names, ...), sep = "\n", file = file, append = TRUE)
+    cat(kable(x, row.names = row.names, ...), sep = "\n", file = file,
+        append = TRUE)
     if (!is.null(caption)) {
         cat("Table: ", caption, file = file, append = TRUE)
     }
@@ -83,5 +86,7 @@ tbl2md <- function(x, section = NULL, caption = NULL,
 
 # makes x of length n
 expand_vec <- function(x, n) {
-    paste(x, rep(seq_len(n), each = length(x)))[seq_len(n)]
+    if (length(x) > n) {
+        x[seq_len(n)]
+    } else paste(x, rep(seq_len(n), each = length(x)))[seq_len(n)]
 }

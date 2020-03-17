@@ -2,7 +2,7 @@
 % Please edit documentation in R/tblDown.R
 \name{tblDown}
 \alias{tblDown}
-\title{Export a data frame or a list of data frames.}
+\title{Write data frames in a document}
 \usage{
 tblDown(
   x,
@@ -34,16 +34,17 @@ pandoc to correctly render the final document in the write format.}
 A data frame whose columns have the desired classes.
 }
 \description{
-Export a data frame or a list of data frames using pandoc.
+Export a data frame or a list of data frames in a document using pandoc.
 }
 \details{
 This function calls \code{\link[base:cat]{base::cat()}} and \code{\link[knitr:kable]{knitr::kable()}} to write a Markdown
-document containing all a list of tables that is then converted into the
-desired format.
+document containing a list of tables that is then converted into the
+desired format. For \code{section} and \code{caption} if the length differ then
+will be cut off or expanded.
 }
 \examples{
 \dontrun{
- data(CO2)
+data(CO2)
 tblDown(list(CO2[1:2, ], CO2[3:6,]))
 tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.pdf")
 }
