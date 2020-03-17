@@ -32,7 +32,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
     ##
     if (!is.null(collapse))
         out %<>% lapply(paste, collapse = collapse)
-    ##
+    
     out
 }
 

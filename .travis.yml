@@ -15,12 +15,12 @@ jobs:
         - pkgdown
       after_success: Rscript -e 'covr::codecov()'
       deploy:
-        cleanup: false
+        skip_cleanup: true
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
         on:
           all_branches: true
-          condition: '"$TRAVIS_BRANCH" == "pkgdown-travis" || -n "$TRAVIS_TAG"'
+          condition: '"$TRAVIS_BRANCH" == "master" || -n "$TRAVIS_TAG"'
     - stage: unit tests
       os: osx
       r: release

@@ -75,11 +75,9 @@ dfTemplateMatch <- function(x, y, yonly = FALSE, ...) {
     nm <- nmy else nm <- unique(c(nmy, names(x)))
 
   if (sum(!nm %in% names(x))) {
-    out <- cbind(
+    cbind(
       x[names(x)[names(x) %in% nm]],
       dfTemplate(nm[!nm %in% names(x)], nrow(x), ...)
     )
-  } else out <- x[names(x)[names(x) %in% nm]]
-
-  out
+  } else x[names(x)[names(x) %in% nm]]
 }
