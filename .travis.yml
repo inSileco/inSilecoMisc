@@ -5,9 +5,7 @@ cache: packages
 jobs:
   include:
     - stage: unit tests
-      r: 3.2
-    - stage: unit tests
-      r: 3.3
+      r: oldrel
     - stage: unit tests, code coverage and deploy pkgdown website
       os: linux
       dist: xenial

@@ -16,13 +16,14 @@ Imports:
     glue,
     magrittr,
     methods,
-    knitr,
+    knitr (>= 1.22),
     rmarkdown,
     utils,
     yaml
 Suggests:
     datasets,
     testthat
+SystemRequirements: pandoc (>= 1.12.3) - http://pandoc.org
 URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilecoMisc
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
 Encoding: UTF-8
