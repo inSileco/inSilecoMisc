@@ -1,3 +1,6 @@
+# inSilecoMisc (development version)
+
+
 # inSilecoMisc 0.3.0
 
 * add `tblDown()` to quickly export a list of data frames as a document.
