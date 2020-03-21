@@ -25,14 +25,14 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
     ##
     if (punct.rm) str <- rmPunct(str, " ")
     ##
-    out <- strsplit(str, split = " ") %>% lapply(FUN = function(x) x[slc])
+    out <- lapply(strsplit(str, split = " "), FUN = function(x) x[slc])
     ##
     if (na.rm)
-        out %<>% lapply(function(x) x[!is.na(x)])
+        out <- lapply(out, function(x) x[!is.na(x)])
     ##
     if (!is.null(collapse))
-        out %<>% lapply(paste, collapse = collapse)
-    
+        out <- lapply(out, paste, collapse = collapse)
+
     out
 }
 

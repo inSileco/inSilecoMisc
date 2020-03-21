@@ -9,12 +9,14 @@ aggregateCol(data, grp, names_aggreg = NULL, FUN = sum, ...)
 \arguments{
 \item{data}{a data frame.}
 
-\item{grp}{an integer vector assigning a group to every column of \code{data}
-used to compute operations on a subset of columns. Any integer is a valid}
+\item{grp}{an integer vector, one value per \code{data} column. Integers are used
+to group \code{data} columns, column with the same integer will be pooled
+together.  Any integer is a valid group, \code{0} indicates that the column must
+be unchanged, \code{NA} removes columns.}
 
 \item{names_aggreg}{column names for aggregated columns.}
 
-\item{FUN}{a function to be applied to all group of columns.}
+\item{FUN}{a function to be applied to all groups of columns.}
 
 \item{...}{further arguments to be passed to \code{FUN}.}
 }
@@ -22,19 +24,19 @@ used to compute operations on a subset of columns. Any integer is a valid}
 A data frame with the grouped columns.
 }
 \description{
-\code{aggregateCol()} perform summary statistics on a specific subset of columns.
+\code{aggregateCol()} performs summary statistics on a specific subset of columns.
 }
 \details{
-An integer vector, whose length is the number of columns of the input data
-frame, is used to assign a group to each column that explicit the
+\code{grp} is an integer vector, whose length is the number of columns of the
+input data frame, is used to assign a group to each column that explicit the
 sub-setting. Furthermore columns can be either kept as is using \code{0} or
-discarded by using \code{NA}.
+discarded using \code{NA}.
 }
 \examples{
 mat1 <- matrix(1:70,10)
-grp1 <- c(NA,0,rep(1,5))
+grp1 <- c(NA,0, 1, 1, 2, 2, 2)
 aggregateCol(mat1, grp1, FUN = mean)
 }
 \seealso{
-\code{\link[stats:aggregate]{stats::aggregate()}}
+\code{\link[stats:aggregate]{stats::aggregate()}} \link[base:split]{base::split}
 }

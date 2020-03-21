@@ -16,7 +16,7 @@
 #' getDigits('txt012-34')
 
 getDigits <- function(x, collapse = NULL) {
-    out <- strsplit(x, split = "\\D") %>% lapply(function(x) x[x != ""])
+    out <- lapply(strsplit(x, split = "\\D"), function(x) x[x != ""])
     if (!is.null(collapse))
         out <- lapply(out, paste, collapse = collapse)
     out
