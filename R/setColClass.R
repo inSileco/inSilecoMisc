@@ -21,7 +21,7 @@
 
 setColClass <- function(x, colid, cls) {
     ##
-    x %<>% as.data.frame
+    x <- as.data.frame(x)
     stopifnot(colid %in% seq_len(ncol(x)))
     out <- x
     sz <- length(colid)

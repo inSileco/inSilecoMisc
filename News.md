@@ -1,10 +1,11 @@
 # inSilecoMisc (development version)
 
-* Remove `addURL()` and `addWebIcon()`, see #16. 
+* Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
+* Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.
-* `adjustString()` has been renamed `adjustStrings()` has it now allow accept a
-vector of string. Moreover, it has been entirely re-written and it no longer
-accepts negative real or strings as `nzchar`, which now is named `n`.
+* `adjustString()` has been renamed `adjustStrings()` as it now accepts
+vectors of character strings. Moreover, it has been entirely re-written and it
+no longer accepts negative real or strings as `nzchar`, which now is named `n`.
 
 # inSilecoMisc 0.3.0
 
