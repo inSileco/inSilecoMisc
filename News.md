@@ -1,6 +1,7 @@
 # inSilecoMisc (development version)
 
-* Remove `findReplace()` and `grepReplace()` see #15.
+* Remove `addURL()` and `addWebIcon()`, see #16. 
+* Remove `findReplace()` and `grepReplace()`m see #15.
 * `adjustString()` has been renamed `adjustStrings()` has it now allow accept a
 vector of string. Moreover, it has been entirely re-written and it no longer
 accepts negative real or strings as `nzchar`, which now is named `n`.

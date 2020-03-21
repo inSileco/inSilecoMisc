@@ -63,18 +63,6 @@ paste0('myfilename', adjustStrings(c(1:2, 10, 100), 3))
 sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 ```
 
-## Add URL and icons
-
-```{r addURL}
-addURL("https://github.com/inSileco/letiRmisc", "Github repo")
-addURL("https://github.com/inSileco/letiRmisc", "Github repo", markdown=TRUE)
-```
-
-```{r addWebIcon}
-addWebIcon('cc')
-addWebIcon('acm', 'ai', 4)
-```
-
 ## applyString
 
 ```{r stApply}
@@ -194,4 +182,4 @@ plot(seqx, logistic(seqx))
 plot(seqx, logistic2(seqx))
 ```
 
-## Gaussian shape 
+## Gaussian shape

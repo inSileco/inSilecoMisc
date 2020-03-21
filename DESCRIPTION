@@ -14,8 +14,8 @@ Depends:
 License: GPL (>= 2)
 Imports:
     glue,
-    magrittr,
     methods,
+    magrittr,
     knitr (>= 1.22),
     rmarkdown,
     utils,
