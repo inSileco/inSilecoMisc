@@ -18,7 +18,7 @@ A vector of Ids.
 \description{
 This function aims to assign an id to factor or similar character
 strings. Regarding factors, \code{\link[=as.integer]{as.integer()}} does such task but the order
-obtained may differ
+obtained may differ.
 }
 \examples{
 assignIds(list(2,'f', 'd', 'f'))

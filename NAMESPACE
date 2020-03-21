@@ -2,7 +2,7 @@
 
 export(addURL)
 export(addWebIcon)
-export(adjustString)
+export(adjustStrings)
 export(aggregateCol)
 export(applyString)
 export(assignClass2df)

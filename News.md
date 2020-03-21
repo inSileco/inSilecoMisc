@@ -1,9 +1,13 @@
 # inSilecoMisc (development version)
 
+* Remove `findReplace()` and `grepReplace()` see #15.
+* `adjustString()` has been renamed `adjustStrings()` has it now allow accept a
+vector of string. Moreover, it has been entirely re-written and it no longer
+accepts negative real or strings as `nzchar`, which now is named `n`.
 
 # inSilecoMisc 0.3.0
 
-* add `tblDown()` to quickly export a list of data frames as a document.
+* Add `tblDown()` to quickly export a list of data frames as a document.
 * `findRef()` and `substrBib()` has been removed, see #11.
 * `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
 * Review scaleWithin() documentation.

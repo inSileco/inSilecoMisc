@@ -7,7 +7,7 @@ authors:
 reference:
   - title: String manipulations
     contents:
-    - adjustString
+    - adjustStrings
     - stApply
     - findRef
     - getDigits

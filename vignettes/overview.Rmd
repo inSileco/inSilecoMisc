@@ -53,8 +53,8 @@ keepLetters(vlor, c(1:2, 15))
 
 ## Adjust the size of a character string
 
-```{r adjustString}
-paste0('myfilename', adjustString(c(1:2, 10, 100), 3))
+```{r adjustStrings}
+paste0('myfilename', adjustStrings(c(1:2, 10, 100), 3))
 ```
 
 ## Assign a symbol to a p-value
