@@ -178,8 +178,17 @@ tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.docx",
 ```{r logistic}
 seqx <- seq(-5, 5, 0.1)
 par(mfrow = c(1, 2))
-plot(seqx, logistic(seqx))
-plot(seqx, logistic2(seqx))
+plot(seqx, logistic(seqx), type = "l")
+abline(v = 0, h = 0, lty = 2)
+plot(seqx, logistic2(seqx, yzer = .5), type = "l")
+abline(v = 0, h = 0, lty = 2)
 ```
 
 ## Gaussian shape
+
+```{r gaussian}
+plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
+lines(gaussianShape(1:1000, 500, 2, 250, pow=2), lty = 2)
+lines(gaussianShape(1:1000, 500, 2, 250, pow=1), lty = 3)
+legend("topleft", paste("pow = ", c(5, 2, 1)), lty = 1:3)
+```
