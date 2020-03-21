@@ -20,7 +20,6 @@
 #' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE)
 #' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE, collapse='/')
 
-
 keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
     ##
     if (punct.rm) str <- rmPunct(str, " ")
@@ -42,7 +41,7 @@ keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = N
 #' strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 #' keepLetters(strex, c(1,4))
 
-keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
+keepLetters <- function(str, slc = 1, punct.rm = FALSE, collapse = "") {
     str <- as.character(str)
     if (punct.rm) str <- rmPunct(str)
     tmp <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
@@ -51,7 +50,7 @@ keepLetters <- function(str, slc = 1, punct.rm = FALSE) {
       warning("Empty selection")
       tmp <- lapply(tmp, function(x) x[!is.na(x)])
     }
-    lapply(tmp, paste, collapse = "")
+    lapply(tmp, paste, collapse = collapse)
 }
 
 #' @describeIn keepWords remove punctuation

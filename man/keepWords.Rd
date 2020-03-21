@@ -8,7 +8,7 @@
 \usage{
 keepWords(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL)
 
-keepLetters(str, slc = 1, punct.rm = FALSE)
+keepLetters(str, slc = 1, punct.rm = FALSE, collapse = "")
 
 rmPunct(str, replacement = "")
 }

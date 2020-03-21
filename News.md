@@ -1,5 +1,6 @@
 # inSilecoMisc (development version)
 
+* `keepLetters()` gains an argument `collapse`.
 * Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
 * Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.

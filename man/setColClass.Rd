@@ -7,12 +7,12 @@
 setColClass(x, colid, cls)
 }
 \arguments{
-\item{x}{a data frame or a R object to be coerced into a data frame.}
+\item{x}{a data frame or an R object to be coerced into a data frame.}
 
 \item{colid}{the identity of columns for which class are to be changed.}
 
 \item{cls}{a character vector containing the classes' names to be used in the
-same order as \code{colid}. By default \code{cls} is repeated until its size equals
+same order as \code{colid}. By default, \code{cls} is repeated until its size equals
 \code{colid}'s size.}
 }
 \value{

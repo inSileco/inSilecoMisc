@@ -3,10 +3,10 @@
 #' This function is designed to ease the changes of column's class
 #' of a given data frame.
 #'
-#' @param x a data frame or a R object to be coerced into a data frame.
+#' @param x a data frame or an R object to be coerced into a data frame.
 #' @param colid the identity of columns for which class are to be changed.
 #' @param cls a character vector containing the classes' names to be used in the
-#' same order as `colid`. By default `cls` is repeated until its size equals
+#' same order as `colid`. By default, `cls` is repeated until its size equals
 #' `colid`'s size.
 #'
 #' @return
