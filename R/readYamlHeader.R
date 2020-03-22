@@ -1,4 +1,4 @@
-#' Reads YAML headers.
+#' Reads YAML headers
 #'
 #' Reads YAML headers (typically found in Markdown files).
 #'

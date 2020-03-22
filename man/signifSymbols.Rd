@@ -2,7 +2,7 @@
 % Please edit documentation in R/signifSymbols.R
 \name{signifSymbols}
 \alias{signifSymbols}
-\title{A simple function to associated p-values with symbols.}
+\title{A simple function to associated p-values with symbols}
 \usage{
 signifSymbols(
   pvalue,
@@ -23,7 +23,7 @@ signifSymbols(
 \description{
 The \code{signifSymbols} function takes one vector of p-values and returns
 a vector of symbols that correspond to thresholds that can be set. Default
-thresholds values and symbols are the most common symbols.
+thresholds values and symbols are the most common ones.
 }
 \examples{
 signifSymbols(.012)

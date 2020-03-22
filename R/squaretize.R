@@ -1,4 +1,4 @@
-#' Makes a data frame or a matrix square.
+#' Makes a data frame or a matrix square
 #'
 #' Add missing rows or columns based on names and Duplicates rows and columns
 #' of a given a data frame.

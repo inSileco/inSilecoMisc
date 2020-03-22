@@ -1,19 +1,21 @@
-#' Find values in a given vector.
+#' Find values in a given vector
 #'
-#' Given a set of values and a vector where the values must be found, the
-#' `findThem` function records the matched values and the position in the
-#' vector where the values have been searched for.
+#' Given a set of values and a vector where the values must be found,
+#' `findThem` records the matched values and the position in the vector
+#' where the values have been searched for.
 #'
 #' @param what a vector a values to be searched for.
 #' @param where a vector where values will be searched on.
-#' @param todf a logical indicating whether the output object must be a data frame.
-#' @param reportnomatch a logical. If `TRUE`, values without match are reported #' in the data frame with a NA. Only available if `todf` is `TRUE`. Default is
-#' set to `FALSE`.
+#' @param todf a logical. Should the output object must be a data frame?
+#' @param reportnomatch a logical. If `TRUE`, values without match are reported #' in the data frame with a NA. Only available if `todf` is `TRUE` (default is
+#' `FALSE`).
+#'
 #' @return
-#' A list indicating matched positions for each elements of `what`. If no
-#' match is found then `NA` is returned. If `todf` is `TRUE`
-#' then a three-columns data frame is returned including values and positions
-#' in both `what` and `where` vectors.
+#' A list indicating matched positions for each elements of `what`. If no match
+#' is found then `NA` is returned. If `todf` is `TRUE` then a three-columns data
+#' frame is returned including values and positions in both `what` and `where`
+#' vectors.
+#'
 #' @seealso [which()]
 #' @export
 #' @examples

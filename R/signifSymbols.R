@@ -1,8 +1,8 @@
-#' A simple function to associated p-values with symbols.
+#' A simple function to associated p-values with symbols
 #'
 #' The `signifSymbols` function takes one vector of p-values and returns
 #' a vector of symbols that correspond to thresholds that can be set. Default
-#' thresholds values and symbols are the most common symbols.
+#' thresholds values and symbols are the most common ones.
 #'
 #' @param pvalue a p-value for which a symbol is requested.
 #' @param thresholds the threshold values that define category to which symbols are assigned.

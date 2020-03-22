@@ -3,7 +3,7 @@
 \name{duplicateRow}
 \alias{duplicateRow}
 \alias{duplicateCol}
-\title{Duplicates elements of a data frame.}
+\title{Duplicates elements of a data frame}
 \usage{
 duplicateRow(x, id.el = 1, times = 1, append = FALSE)
 

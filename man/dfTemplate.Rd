@@ -3,7 +3,7 @@
 \name{dfTemplate}
 \alias{dfTemplate}
 \alias{dfTemplateMatch}
-\title{Create a data frame from scratch or based on one or two data frames.}
+\title{Create a data frame from scratch or based on one or two data frames}
 \usage{
 dfTemplate(cols, nrows = 1, col_classes = NULL, fill = NA)
 

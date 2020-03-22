@@ -2,7 +2,7 @@
 % Please edit documentation in R/squaretize.R
 \name{squaretize}
 \alias{squaretize}
-\title{Makes a data frame or a matrix square.}
+\title{Makes a data frame or a matrix square}
 \usage{
 squaretize(x, fill = 0, reorder = TRUE)
 }

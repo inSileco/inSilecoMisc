@@ -2,7 +2,7 @@
 % Please edit documentation in R/readYamlHeader.R
 \name{readYamlHeader}
 \alias{readYamlHeader}
-\title{Reads YAML headers.}
+\title{Reads YAML headers}
 \usage{
 readYamlHeader(con)
 }

@@ -1,4 +1,4 @@
-#' Duplicates elements of a data frame.
+#' Duplicates elements of a data frame
 #'
 #' Duplicates rows and columns of a given a data frame.
 #'

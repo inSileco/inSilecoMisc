@@ -2,7 +2,7 @@
 % Please edit documentation in R/findThem.R
 \name{findThem}
 \alias{findThem}
-\title{Find values in a given vector.}
+\title{Find values in a given vector}
 \usage{
 findThem(what, where, todf = FALSE, reportnomatch = FALSE)
 }
@@ -11,21 +11,21 @@ findThem(what, where, todf = FALSE, reportnomatch = FALSE)
 
 \item{where}{a vector where values will be searched on.}
 
-\item{todf}{a logical indicating whether the output object must be a data frame.}
+\item{todf}{a logical. Should the output object must be a data frame?}
 
-\item{reportnomatch}{a logical. If \code{TRUE}, values without match are reported #' in the data frame with a NA. Only available if \code{todf} is \code{TRUE}. Default is
-set to \code{FALSE}.}
+\item{reportnomatch}{a logical. If \code{TRUE}, values without match are reported #' in the data frame with a NA. Only available if \code{todf} is \code{TRUE} (default is
+\code{FALSE}).}
 }
 \value{
-A list indicating matched positions for each elements of \code{what}. If no
-match is found then \code{NA} is returned. If \code{todf} is \code{TRUE}
-then a three-columns data frame is returned including values and positions
-in both \code{what} and \code{where} vectors.
+A list indicating matched positions for each elements of \code{what}. If no match
+is found then \code{NA} is returned. If \code{todf} is \code{TRUE} then a three-columns data
+frame is returned including values and positions in both \code{what} and \code{where}
+vectors.
 }
 \description{
-Given a set of values and a vector where the values must be found, the
-\code{findThem} function records the matched values and the position in the
-vector where the values have been searched for.
+Given a set of values and a vector where the values must be found,
+\code{findThem} records the matched values and the position in the vector
+where the values have been searched for.
 }
 \examples{
 x <- stats::rpois(1000,10)
