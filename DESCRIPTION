@@ -24,6 +24,7 @@ Imports:
 Suggests:
     datasets,
     graphics,
+    stringi,
     testthat
 SystemRequirements: pandoc (>= 1.12.3) - http://pandoc.org
 URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilecoMisc
