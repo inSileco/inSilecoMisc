@@ -3,47 +3,76 @@
 \name{keepWords}
 \alias{keepWords}
 \alias{keepLetters}
-\alias{rmPunct}
-\title{Keep words and letters.}
+\alias{keepInitials}
+\alias{wordCount}
+\title{Keep a selection of words or letters}
 \usage{
-keepWords(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL)
+keepWords(
+  str,
+  slc = 1,
+  collapse = " ",
+  na.rm = FALSE,
+  split_words = "[\\n\\t\\r[:punct:] ]+"
+)
 
-keepLetters(str, slc = 1, punct.rm = FALSE, collapse = "")
+keepLetters(
+  str,
+  slc = 1,
+  collapse = "",
+  na.rm = FALSE,
+  rm_punct = "[\\n\\t\\r[:punct:] ]+"
+)
 
-rmPunct(str, replacement = "")
+keepInitials(str, split_words = "[\\n\\t\\r[:punct:] ]+", collapse = "")
+
+wordCount(str, split_words = "[\\n\\t\\r[:punct:] ]+")
 }
 \arguments{
-\item{str}{An input character vector or a list from which words will be
+\item{str}{an input character vector (or a list) from which words will be
 extracted.}
 
-\item{slc}{Vector of integer indicating the selected positions of the words to be kept.}
+\item{slc}{a vector of integer indicating the selected positions of the
+words (or letters) to be kept.}
 
-\item{punct.rm}{A logical Should punctuation characters be removed? Note that this affects the order of character in a string.}
+\item{collapse}{character string used to separate selected words (or
+letters), if \code{NULL}, then selection is not collapsed and a list is returned.}
 
-\item{na.rm}{A logical. Should missing values be removed?}
+\item{na.rm}{a logical. Should missing values be removed?}
 
-\item{collapse}{An optional character string used to separate selected words.}
+\item{split_words}{a character string containing a regular expression used
+to split words.}
 
-\item{replacement}{a replacement for matched pattern in \code{\link[base:gsub]{base::gsub()}}.}
+\item{rm_punct}{a character string containing a regular expression used to
+remove punctuation characters.}
 }
 \value{
-A vector of the selected words.
+A vector (or a list) of the selected words.
 }
 \description{
-Extract words and letters based on their position in character strings, vectorised over the input character string vector.
+Select words or letters based on their position in character strings.
 }
 \section{Functions}{
 \itemize{
-\item \code{keepLetters}: A vector containing the selection of letters.
+\item \code{keepLetters}: A vector (or a list) of the selected letters.
 
-\item \code{rmPunct}: remove punctuation
+\item \code{keepInitials}: A vector (or a list) of initials.
+
+\item \code{wordCount}: A vector of the number of words for every character
+strings passed as an input.
 }}
 
 \examples{
-strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-keepWords(strex)
-keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE)
-keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE, collapse='/')
+keepWords(loremIpsum(), 1:3)
+keepWords(c(loremIpsum(),'Another character string!'), slc = c(1,4))
+keepWords(c(loremIpsum(),'A second character string.'), slc = c(1,4),
+ na.rm = TRUE, collapse = '/')
 strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 keepLetters(strex, c(1,4))
+keepLetters(strex, c(1,4), collapse = "")
+keepInitials("National Basketball Association")
+wordCount(c("two words!", "... and three words"))
+wordCount(loremIpsum())
+}
+\seealso{
+\code{\link[=strsplit]{strsplit()}}
 }

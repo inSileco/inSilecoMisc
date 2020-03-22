@@ -1,59 +1,87 @@
-#' Keep words and letters.
+#' Keep a selection of words or letters
 #'
-#' Extract words and letters based on their position in character strings, vectorised over the input character string vector.
+#' Select words or letters based on their position in character strings.
 #'
 #' @name keepWords
 #'
-#' @param str An input character vector or a list from which words will be
+#' @param str an input character vector (or a list) from which words will be
 #' extracted.
-#' @param slc Vector of integer indicating the selected positions of the words to be kept.
-#' @param punct.rm A logical Should punctuation characters be removed? Note that this affects the order of character in a string.
-#' @param na.rm A logical. Should missing values be removed?
-#' @param collapse An optional character string used to separate selected words.
-#' @param replacement a replacement for matched pattern in [base::gsub()].
+#' @param slc a vector of integer indicating the selected positions of the
+#' words (or letters) to be kept.
+#' @param collapse character string used to separate selected words (or
+#' letters), if `NULL`, then selection is not collapsed and a list is returned.
+#' @param na.rm a logical. Should missing values be removed?
+#' @param split_words a character string containing a regular expression used
+#' to split words.
+#' @param rm_punct a character string containing a regular expression used to
+#' remove punctuation characters.
 #'
-#' @return A vector of the selected words.
+#' @return A vector (or a list) of the selected words.
+#'
+#' @seealso [strsplit()]
+#'
 #' @export
 #' @examples
-#' strex <- 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-#' keepWords(strex)
-#' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE)
-#' keepWords(c(strex,'A second character string.'), slc=c(1,8), na.rm = TRUE, collapse='/')
+#' keepWords(loremIpsum(), 1:3)
+#' keepWords(c(loremIpsum(),'Another character string!'), slc = c(1,4))
+#' keepWords(c(loremIpsum(),'A second character string.'), slc = c(1,4),
+#'  na.rm = TRUE, collapse = '/')
 
-keepWords <- function(str, slc = 1, punct.rm = TRUE, na.rm = FALSE, collapse = NULL) {
+keepWords <- function(str, slc = 1, collapse = " ", na.rm = FALSE,
+    split_words = "[\n\t\r[:punct:] ]+") {
     ##
-    if (punct.rm) str <- rmPunct(str, " ")
-    ##
-    out <- lapply(strsplit(str, split = " "), FUN = function(x) x[slc])
+    strsplit(str, split = split_words)
+    out <- lapply(strsplit(str, split = split_words), `[`, slc)
     ##
     if (na.rm)
         out <- lapply(out, function(x) x[!is.na(x)])
-    ##
-    if (!is.null(collapse))
-        out <- lapply(out, paste, collapse = collapse)
 
-    out
+    outWithCollapse(out, collapse)
 }
 
-#' @describeIn keepWords A vector containing the selection of letters.
+#' @describeIn keepWords A vector (or a list) of the selected letters.
 #' @export
 #' @examples
 #' strex <- c('Lorem ipsum', 'dolor sit', ' amet;')
 #' keepLetters(strex, c(1,4))
+#' keepLetters(strex, c(1,4), collapse = "")
 
-keepLetters <- function(str, slc = 1, punct.rm = FALSE, collapse = "") {
-    str <- as.character(str)
-    if (punct.rm) str <- rmPunct(str)
-    tmp <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
-    ##
-    if (any(unlist(lapply(tmp, function(x) is.na(x))))) {
-      warning("Empty selection")
-      tmp <- lapply(tmp, function(x) x[!is.na(x)])
-    }
-    lapply(tmp, paste, collapse = collapse)
+keepLetters <- function(str, slc = 1, collapse = "", na.rm = FALSE,
+    rm_punct = "[\n\t\r[:punct:] ]+") {
+    str <- gsub(rm_punct, "", as.character(str))
+    out <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
+    if (na.rm)
+        out <- lapply(out, function(x) x[!is.na(x)])
+    outWithCollapse(out, collapse)
 }
 
-#' @describeIn keepWords remove punctuation
-rmPunct <- function(str, replacement = "") {
-  gsub("[[:punct:] ]+", replacement, str)
+#' @describeIn keepWords A vector (or a list) of initials.
+#' @export
+#' @examples
+#' keepInitials("National Basketball Association")
+keepInitials <- function(str, split_words = "[\n\t\r[:punct:] ]+",
+    collapse = "") {
+    out <- lapply(strsplit(str, split_words), keepLetters, collapse = "")
+    outWithCollapse(out, collapse)
+}
+
+#' @describeIn keepWords A vector of the number of words for every character
+#' strings passed as an input.
+#' @export
+#' @examples
+#' wordCount(c("two words!", "... and three words"))
+#' wordCount(loremIpsum())
+
+wordCount <- function(str, split_words = "[\n\t\r[:punct:] ]+") {
+      tmp <- strsplit(as.character(str), split_words)
+      lengths(lapply(tmp, function(x) x[x!=""]))
+}
+
+
+outWithCollapse <- function(out, collapse) {
+    if (is.null(collapse)) {
+        out
+    } else {
+        unlist(lapply(out, paste, collapse = collapse))
+    }
 }

@@ -1,6 +1,8 @@
 # inSilecoMisc (development version)
 
-* `keepLetters()` gains an argument `collapse`.
+* New function `keepInitials()` to keep the initials of character strings.
+* `keepWords()`, `keepLetters()` and `wordCount()` have been re-written.
+* `LoremIpsum()` now includes 2 paragraph and any number of words can be requeseted.
 * Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
 * Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.

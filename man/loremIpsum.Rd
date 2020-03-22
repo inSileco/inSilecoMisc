@@ -19,5 +19,5 @@ Returns a common form of the Lorem ipsum text an optionally a subset of it.
 loremIpsum(5)
 }
 \references{
-https://en.wikipedia.org/wiki/Lorem_ipsum
+\url{https://en.wikipedia.org/wiki/Lorem_ipsum}
 }
