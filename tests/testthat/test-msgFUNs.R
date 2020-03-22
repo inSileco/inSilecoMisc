@@ -7,14 +7,9 @@ msg4 <- msgWarning("be careful")
 msg5 <- msgInfo("computing", "again")
 
 test_that("msgFUNs", {
-  expect_equal(stringi::stri_enc_toascii(msg1),
-    stringi::stri_enc_toascii("ℹ computing"))
-  expect_equal(stringi::stri_enc_toascii(msg2),
-    stringi::stri_enc_toascii("✔ done"))
-  expect_equal(stringi::stri_enc_toascii(msg3),
-    stringi::stri_enc_toascii("✖ you got it wrong"))
-  expect_equal(stringi::stri_enc_toascii(msg4),
-    stringi::stri_enc_toascii("⚠ be careful"))
-  expect_equal(stringi::stri_enc_toascii(msg5),
-    stringi::stri_enc_toascii("ℹ computing again"))
+  expect_equal(msg1, paste(cli::symbol$info, "computing"))
+  expect_equal(msg2, paste(cli::symbol$tick, "done"))
+  expect_equal(msg3, paste(cli::symbol$cross, "you got it wrong"))
+  expect_equal(msg4, paste(cli::symbol$warning, "be careful"))
+  expect_equal(msg5, paste(cli::symbol$info, "computing again"))
 })
