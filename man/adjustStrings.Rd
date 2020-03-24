@@ -2,28 +2,39 @@
 % Please edit documentation in R/adjustStrings.R
 \name{adjustStrings}
 \alias{adjustStrings}
-\title{Adjust the size of a vector of character strings}
+\title{Adjust the size of character strings}
 \usage{
-adjustStrings(x, n, extra = 0, before = TRUE)
+adjustStrings(
+  x,
+  n,
+  extra = 0,
+  align = c("right", "left", "center"),
+  add = FALSE
+)
 }
 \arguments{
 \item{x}{a character vector, or a vector to be coerced to a character vector.}
 
-\item{n}{a positive integer integer indicating the size of the
-character string to be created.}
+\item{n}{a positive integer indicating the size of character strings to be created or added.}
 
 \item{extra}{a character vector, or a vector to be coerced to a character
 vector that will be (partially) added to produced a string of a specific length.}
 
-\item{before}{a logical. If \code{TRUE}, then the extra characters are added
-before \code{x}.}
+\item{align}{either "right", "left" or "center". If "right", then strings
+will be right-aligned and so \code{extra}'s characters will be added to the left.
+"right" is the opposite of "left" and if \code{align = "center"}, then extra
+characters will be split in half and added on both sides.}
+
+\item{add}{a logical should \code{extra} be added, in which case \code{n} characters
+will be added to input strings.}
 }
 \value{
 A character vector of the concatenated characters.
 }
 \description{
-Adjust the size of a vector of character strings to a given number of
-characters by truncating it or adding specified extra characters.
+Adjust the size of character strings by adding extra characters. It allows
+to constraint the size of the string or to add a specific number of extra
+characters.
 }
 \details{
 This function was originally created to help getting a fixed number of digits
@@ -33,7 +44,7 @@ is longer than expected, it will be adequately cut off.
 }
 \examples{
 paste0('myfilename', adjustStrings(c(1:2,10,100), 3))
-adjustStrings('# Comment', 20, '#', before=FALSE)
+adjustStrings('# Comment ', 20, '#', align = "left")
 }
 \seealso{
 \code{\link[base:sprintf]{base::sprintf()}}

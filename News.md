@@ -1,15 +1,18 @@
 # inSilecoMisc (development version)
 
-* New functions `msgInfo()`, `msgError()`, `msgSuccess()` `msgWarning()` to send notices to user while a function is being executed. 
+* New functions `msgInfo()`, `msgError()`, `msgSuccess()` `msgWarning()` to send notices to user while a function is being executed.
 * New function `keepInitials()` to keep the initials of character strings.
 * `keepWords()`, `keepLetters()` and `wordCount()` have been re-written.
 * `LoremIpsum()` now includes 2 paragraphs and any number of words can be requeseted.
 * Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
 * Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.
-* `adjustString()` has been renamed `adjustStrings()` as it now accepts
-vectors of character strings. Moreover, it has been entirely re-written and it
-no longer accepts negative real or strings as `nzchar`, which now is named `n`.
+* `adjustString()` has been entirely re-written and has been renamed
+  `adjustStrings()` as it now accepts vectors of character strings. Argument
+  `nzchar` no longer accepts negative real or strings and has been renamed `n`.
+  Also `before` becomes `align` and can takes "right", "left" or "center". Last,
+  it gains the  argument `add` that allows the user to add make `n` a number of
+  character to be added.
 
 # inSilecoMisc 0.3.0
 
