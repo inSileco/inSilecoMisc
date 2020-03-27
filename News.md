@@ -3,7 +3,7 @@
 * New functions `msgInfo()`, `msgError()`, `msgSuccess()` `msgWarning()` to send notices to user while a function is being executed.
 * New function `keepInitials()` to keep the initials of character strings.
 * `keepWords()`, `keepLetters()` and `wordCount()` have been re-written.
-* `LoremIpsum()` now includes 2 paragraphs and any number of words can be requeseted.
+* `LoremIpsum()` now includes 2 paragraphs and any number of words can be requested.
 * Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
 * Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.
