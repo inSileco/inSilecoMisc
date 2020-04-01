@@ -33,7 +33,8 @@
 #' adjustStrings('# Comment ', 20, '#', align = "left")
 
 
-adjustStrings <- function(x, n, extra = 0, align = c("right", "left", "center"), add = FALSE) {
+adjustStrings <- function(x, n, extra = 0, align = c("right", "left",
+    "center"), add = FALSE) {
     x <- strsplit(as.character(x), "")
     n <- floor(n)
     extra <- unlist(strsplit(as.character(extra[1L]), split = ""))
