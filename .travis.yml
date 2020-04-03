@@ -16,6 +16,7 @@ jobs:
       after_success: Rscript -e 'covr::codecov()'
       deploy:
         skip_cleanup: true
+        github_token: $GITHUB_TOKEN
         provider: script
         script: Rscript -e 'pkgdown::deploy_site_github()'
         on:
