@@ -19,8 +19,8 @@ jobs:
       deploy:
         provider: pages
         skip_cleanup: true
+        keep_history: true
         github_token: $GITHUB_TOKEN
-        script: Rscript -e 'pkgdown::build_site()'
         on:
           all_branches: master
         local_dir: docs
