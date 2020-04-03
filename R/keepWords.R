@@ -28,7 +28,7 @@
 #'  na.rm = TRUE, collapse = '/')
 
 keepWords <- function(str, slc = 1, collapse = " ", na.rm = FALSE,
-    split_words = "[\n\t\r[:punct:] ]+") {
+    split_words = "[[:punct:][:space:]]+") {
     ##
     strsplit(str, split = split_words)
     out <- lapply(strsplit(str, split = split_words), `[`, slc)
@@ -47,7 +47,7 @@ keepWords <- function(str, slc = 1, collapse = " ", na.rm = FALSE,
 #' keepLetters(strex, c(1,4), collapse = "")
 
 keepLetters <- function(str, slc = 1, collapse = "", na.rm = FALSE,
-    rm_punct = "[\n\t\r[:punct:] ]+") {
+    rm_punct = "[[:punct:][:space:]]+") {
     str <- gsub(rm_punct, "", as.character(str))
     out <- lapply(strsplit(str, split = ""), FUN = function(x) x[slc])
     if (na.rm)
@@ -59,7 +59,7 @@ keepLetters <- function(str, slc = 1, collapse = "", na.rm = FALSE,
 #' @export
 #' @examples
 #' keepInitials("National Basketball Association")
-keepInitials <- function(str, split_words = "[\n\t\r[:punct:] ]+",
+keepInitials <- function(str, split_words = "[\n\t\r\f\b[:punct:] ]+",
     collapse = "") {
     out <- lapply(strsplit(str, split_words), keepLetters, collapse = "")
     outWithCollapse(out, collapse)
@@ -72,7 +72,7 @@ keepInitials <- function(str, split_words = "[\n\t\r[:punct:] ]+",
 #' wordCount(c("two words!", "... and three words"))
 #' wordCount(loremIpsum())
 
-wordCount <- function(str, split_words = "[\n\t\r[:punct:] ]+") {
+wordCount <- function(str, split_words = "[[:punct:][:space:]]+") {
       tmp <- strsplit(as.character(str), split_words)
       lengths(lapply(tmp, function(x) x[x!=""]))
 }

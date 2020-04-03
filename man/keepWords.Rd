@@ -12,7 +12,7 @@ keepWords(
   slc = 1,
   collapse = " ",
   na.rm = FALSE,
-  split_words = "[\\n\\t\\r[:punct:] ]+"
+  split_words = "[[:punct:][:space:]]+"
 )
 
 keepLetters(
@@ -20,12 +20,12 @@ keepLetters(
   slc = 1,
   collapse = "",
   na.rm = FALSE,
-  rm_punct = "[\\n\\t\\r[:punct:] ]+"
+  rm_punct = "[[:punct:][:space:]]+"
 )
 
-keepInitials(str, split_words = "[\\n\\t\\r[:punct:] ]+", collapse = "")
+keepInitials(str, split_words = "[\\n\\t\\r\\f\\b[:punct:] ]+", collapse = "")
 
-wordCount(str, split_words = "[\\n\\t\\r[:punct:] ]+")
+wordCount(str, split_words = "[[:punct:][:space:]]+")
 }
 \arguments{
 \item{str}{an input character vector (or a list) from which words will be
