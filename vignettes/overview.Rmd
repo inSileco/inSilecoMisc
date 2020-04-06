@@ -27,6 +27,7 @@ This vignette is a short overview of *inSilecoMisc* organized around the followi
 
 # String manipulations
 
+
 ## LoremIpsum
 
 It is sometime useful to have a piece of random text to play with,
@@ -39,20 +40,145 @@ loremIpsum()
 loremIpsum(10)
 ```
 
+
+
 ## Keep a selection of words or letters
 
-```{r keepWords}
-lor <- loremIpsum()
-keepWords(lor, c(1,4))
+Assuming I I need the second word, all I have to do is:
+
+
+```{R}
+keepWords(c(loremIpsum(18), "be or not to be"), 2)
+```
+
+and if I want a specific selection of words I cas use a sequence:
+
+```{R}
+keepWords(c(loremIpsum(18), "be or not to be"), c(1:4, 12:16))
+```
+
+As you may have notted, `NA`s are added when the position selected does not exist, this is useful but also annoying! Fortunately, a agument allow to
+remove na
+
+
+```{R}
+keepWords(c(loremIpsum(18), "be or not to be"), c(1:4, 12:16), na.rm = TRUE)
+```
+
+Also `collapse = "-"` allows the user to change the character used to separate words:
+
+
+```{R}
+keepWords(loremIpsum(18), c(1:6, 14:18), collapse = "-")
+```
+
+and if `collapse=NULL` then list will be returned including a vector of the selected words per input string:
+
+```{R}
+keepWords(c(loremIpsum(18), "be or not to be"), c(2:3), collapse = NULL)
+```
+
+Not that all punctuation signs will be removed (this can be changed with argument `split_words `)!
+
+
+There are two other functions that work similarly: `keepLetters()` and `keepInitials()`. The former allows the used to select letters
+
+
+```{R}
+keepLetters(loremIpsum(18), c(1:6, 14:18))
+keepLetters(loremIpsum(18), c(1:6, 14:18), collapse = "-")
+keepLetters(loremIpsum(18), c(1:6, 14:18), collapse = NULL)
+```
+
+while the latter extracts initials
+
+```{R}
+keepInitials("National Basketball Association")
+keepInitials("National Basketball Association", "-")
+```
+
+Note that is you have a mixture of lower and upper case, so will the output
+
+```{R}
+keepInitials("National basketball association")
+```
+
+if this annoys you, base functions `upper()` and `lower()` come in handy!
+
+```{R}
+keepInitials(tolower("National basketball association"))
+keepInitials(toupper("National basketball association"))
 ```
 
 
 
 ## Adjust the size of a character string
 
-```{r adjustStrings}
-paste0('myfilename', adjustStrings(c(1:2, 10, 100), 3))
+`adjustStrings()` have 5 arguments to adjust strings of a character vector is a very flexible fashion:
+
+1. `x`: the input character vector to be adjusted;
+2. `n`: the number of characters to be added or used to constrain on the length of the  output strings;
+3. `extra`: the character(s) to be added (`0` is the default value);
+4. `align`: the string alignment ("right", "left" or "center");
+5. `add`: whether `n` should be the constraint or a number of characters to be added (a constraint by default).
+
+
+By default, `adjustStrings()` uses `n` as a constrain for the length of the output strings. so if use `n = 4` instead of `n = 2` in the first example, all
+elements of the output vector will have 4 characters:
+
+```{R n}
+adjustStrings(1:10, n = 4)
 ```
+
+Add I change the value of `extra` to specify the replacement character(s) to be used :
+
+```{R extra}
+adjustStrings(1:10, n = 4, extra = 1)
+adjustStrings(1:10, n = 4, extra = "a")
+adjustStrings(1:10, n = 4, extra = "-")
+adjustStrings(1:10, n = 4, extra = "ab")
+```
+
+With `align`, I can choose where extra characters are added:
+
+
+```{R align}
+adjustStrings(1:10, n = 4, extra = "-", align = "right") # default
+adjustStrings(1:10, n = 4, extra = "-", align = "left")
+adjustStrings(1:10, n = 4, extra = "-", align = "center")
+```
+
+And if I want to add exactly `n` extra characters, `add = TRUE`, then exactly `n` extra characters are added to strings ():
+
+```{R add}
+adjustStrings(1:10, n = 4, extra = "-", align = "right", add = TRUE)
+adjustStrings(1:10, n = 4, extra = "-", align = "left", add = TRUE)
+adjustStrings(1:10, n = 4, extra = "-", align = "center", add = TRUE)
+```
+
+Note that in this case, lengths of out strings differ!
+One last remark about how `adjustStrings()` works when `add = FALSE`: for a given string, there are 3 scenarios :
+
+1. the string to be adjusted has more characters than `n`; in this case, the string is simply cut off:
+
+```{R}
+adjustStrings("ABCD", n = 2, extra = "efgh")
+```
+
+2. the string has more character but the number of character for the adjustment is smaller than the number of `extra`'s character; in this case, `extra` is cut off:
+
+```{R}
+adjustStrings("ABCD", n = 6, extra = "efgh")
+```
+
+3. finally, when `extra` is too short to adjust the string according to `n`, `extra` is repeated:
+
+ ```{R}
+ adjustStrings("ABCD", n = 14, extra = "efgh")
+ ```
+
+
+
 
 ## Assign a symbol to a p-value
 
@@ -60,12 +186,14 @@ paste0('myfilename', adjustStrings(c(1:2, 10, 100), 3))
 sapply(c(.2, .08, .04, .008, 0.0001), signifSymbols)
 ```
 
+
 ## applyString
 
 ```{r stApply}
 applyString("cool", FUN = toupper, pos = 1:2)
 applyString(c("cool", "pro"), pattern = "o", FUN = toupper)
 ```
+
 
 ## Extract digits from strings
 
@@ -139,6 +267,8 @@ str(df2)
 
 ## Create data frame from scratch or from other data frame
 
+See also this [blog post on inSileco](https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/).
+
 ```{r dfTemplate}
 dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
 dfB <- data.frame(col1 = 2, col4 = "cool")
@@ -159,13 +289,17 @@ dfTemplateMatch(dfA, c("col1", "col2"), yonly = TRUE, col_classes = "numeric", f
 packagesUsed(c('utils', 'methods'))
 ```
 
-## export a data frame or a list of data frames
+## Export a data frame or a list of data frames
 
 ```R
 tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.docx",
   section = "section", caption = "CO2", title = "Tables")
 ```
 
+
+# Messages
+
+It is somewhat convenient to have standardized messages when u
 
 
 # Mathematical functions

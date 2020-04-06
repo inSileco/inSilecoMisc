@@ -1,7 +1,5 @@
-#' @title
-#' Extract digits from a character vector.
+#' Extract digits from a character vector
 #'
-#' @description
 #' This function extracts all digits found in character vector and returns them
 #' as a list.
 #'

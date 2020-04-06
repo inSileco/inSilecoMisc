@@ -28,3 +28,9 @@ The current development is on GitHub and can be install with the
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("inSileco/inSilecoMisc")
 ```
+
+## Documentation
+
+On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html), see 
+
+1. https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/

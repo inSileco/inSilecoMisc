@@ -2,7 +2,7 @@
 % Please edit documentation in R/getDigits.R
 \name{getDigits}
 \alias{getDigits}
-\title{Extract digits from a character vector.}
+\title{Extract digits from a character vector}
 \usage{
 getDigits(x, collapse = NULL)
 }
