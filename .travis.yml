@@ -23,10 +23,11 @@ jobs:
         - Rscript -e 'pkgdown::build_site()'
       deploy:
         provider: pages
+        skip_cleanup: true
         keep_history: true
         github_token: $GITHUB_TOKEN
         on:
-          all_branches: master
+          branch: master
         local_dir: docs
     # - stage: unit tests
     #   os: osx
@@ -35,10 +36,6 @@ jobs:
       os: linux
       dist: bionic
       r: devel
-
-/Library/TeX/texbin/tlmgr: unexpected return value from verify_checksum: -5
-
-2.55s$ sudo tlmgr install inconsolata upquote courier courier-scaled helvetic
 
 notifications:
   email:

@@ -27,7 +27,7 @@
 #' @examples
 #' \dontrun{
 #' data(CO2)
-#' tblDown(list(CO2[1:2, ], CO2[3:6,]))
+#' tblDown(list(CO2[1:2, ], CO2[3:6,]), section = "section")
 #' tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.pdf")
 #' }
 
@@ -78,7 +78,7 @@ tbl2md <- function(x, section = NULL, caption = NULL,
     cat(kable(x, row.names = row.names, ...), sep = "\n", file = file,
         append = TRUE)
     if (!is.null(caption)) {
-        cat("Table: ", caption, file = file, append = TRUE)
+        cat("\nTable: ", caption, file = file, append = TRUE)
     }
     cat("\n\n", file = file, append = TRUE)
     invisible(NULL)
