@@ -134,7 +134,7 @@ to a positive integer passed as an argument)." />
 to a positive integer passed as an argument).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='kw'>nval</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>x</span>), <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>x</span>))</pre>
+    <pre class="usage"><span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>x</span>), <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>x</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -144,8 +144,8 @@ to a positive integer passed as an argument).</p>
       <td><p>a numeric object of type <code>numeric</code> or coercible as one.</p></td>
     </tr>
     <tr>
-      <th>nval</th>
-      <td><p>an integer designing The number of scaled values (between 1 and <code>nval</code>).</p></td>
+      <th>n</th>
+      <td><p>an integer designing The number of scaled values (between 1 and <code>n</code>).</p></td>
     </tr>
     <tr>
       <th>mn</th>
@@ -153,7 +153,7 @@ to a positive integer passed as an argument).</p>
     </tr>
     <tr>
       <th>mx</th>
-      <td><p>maximum value (<code>mx</code> and higher values are set to <code>nval</code>).</p></td>
+      <td><p>maximum value (<code>mx</code> and higher values are set to <code>n</code>).</p></td>
     </tr>
     </table>
 
@@ -165,12 +165,12 @@ to a positive integer passed as an argument).</p>
     <p>This function was originally created to ease the creation of custom color
 scales. In such context, it is common practice to define a minium and a
 maximum for the set of values to be displayed values as well as a number of
-color to be used in the color scale (<code>nval</code>). This is exactly what
+color to be used in the color scale (<code>n</code>). This is exactly what
 <code>scaleWithin()</code> does: minimum and maximum are by default the ones of the set
 of values <code>x</code> but can also be set using <code>mn</code> and <code>mx</code> in which case values
 below <code>mn</code> will be set to <code>mn</code> (and thus to 1 in the output) and values
 above <code>mx</code> will be set to <code>mx</code> (and thus to 1 in the output). Finally, the
-number of colors to be used used in is given by <code>nval</code>.</p>
+number of colors to be used used in is given by <code>n</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>20</span>, <span class='fl'>20</span>)
@@ -200,7 +200,7 @@ number of colors to be used used in is given by <code>nval</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

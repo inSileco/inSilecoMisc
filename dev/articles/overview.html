@@ -86,7 +86,7 @@
       <h1 data-toc-skip>inSilecoMisc, an overview</h1>
                         <h4 class="author">inSileco group</h4>
             
-            <h4 class="date">2020-04-07</h4>
+            <h4 class="date">2020-04-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/inSileco/inSilecoMisc/blob/master/vignettes/overview.Rmd"><code>vignettes/overview.Rmd</code></a></small>
       <div class="hidden name"><code>overview.Rmd</code></div>
@@ -254,27 +254,32 @@ R&gt;  [1] "032"  "2832"</pre></body></html></div>
 <div id="whichis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#whichis" class="anchor"></a>whichIs</h2>
-<div class="sourceCode" id="cb21"><html><body><pre class="r">vec   [[1]]
-R&gt;  [1] 6
+<div class="sourceCode" id="cb21"><html><body><pre class="r">vec &lt;- LETTERS[1:7]
+spl &lt;- sample(vec)
+whichIs(vec, spl)
+R&gt;  [[1]]
+R&gt;  [1] 4
 R&gt;  
 R&gt;  [[2]]
-R&gt;  [1] 1
+R&gt;  [1] 6
 R&gt;  
 R&gt;  [[3]]
-R&gt;  [1] 5
+R&gt;  [1] 7
 R&gt;  
 R&gt;  [[4]]
-R&gt;  [1] 3
+R&gt;  [1] 1
 R&gt;  
 R&gt;  [[5]]
 R&gt;  [1] 2
 R&gt;  
 R&gt;  [[6]]
-R&gt;  [1] 7
+R&gt;  [1] 3
 R&gt;  
 R&gt;  [[7]]
-R&gt;  [1] 4
-id   [1] "A" "B" "C" "D" "E" "F" "G"</pre></body></html></div>
+R&gt;  [1] 5
+id &lt;- unlist(whichIs(vec, spl))
+spl[id]
+R&gt;  [1] "A" "B" "C" "D" "E" "F" "G"</pre></body></html></div>
 </div>
 <div id="meanalong" class="section level2">
 <h2 class="hasAnchor">
@@ -295,21 +300,24 @@ R&gt;  [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5</pre></body></html></div>
 <div id="assign-a-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#assign-a-category" class="anchor"></a>Assign a category</h2>
-<div class="sourceCode" id="cb24"><html><body><pre class="r">(seqv    [1] 0.39429380 0.48087346 0.14840620 0.73802203 0.21794433 0.16796928
-R&gt;   [7] 0.36963521 0.04505630 0.48502822 0.59553742 0.34838961 0.17736058
-R&gt;  [13] 0.72346424 0.30244309 0.21756538 0.12421622 0.26725731 0.89824454
-R&gt;  [19] 0.23364870 0.51797681 0.04624530 0.16081117 0.41196919 0.26442195
-R&gt;  [25] 0.30941383 0.71775645 0.27386620 0.78697639 0.91619420 0.01526126
-R&gt;  [31] 0.09267932 0.93962498 0.48278777 0.33260287 0.64375891 0.69665797
-R&gt;  [37] 0.54406298 0.53477750 0.78239755 0.95628578
+<div class="sourceCode" id="cb24"><html><body><pre class="r">(seqv &lt;- stats::runif(40))
+R&gt;   [1] 0.38477799 0.14412760 0.15415355 0.78343610 0.67499056 0.85299180
+R&gt;   [7] 0.18718484 0.98581609 0.02737157 0.88694016 0.44054750 0.27494455
+R&gt;  [13] 0.87774540 0.93737971 0.98161160 0.47064121 0.11994310 0.94737301
+R&gt;  [19] 0.79658391 0.72594070 0.07600704 0.39405130 0.81569743 0.50205249
+R&gt;  [25] 0.36218391 0.80941363 0.34891249 0.44612198 0.07973175 0.53576931
+R&gt;  [31] 0.28487434 0.99496643 0.55714353 0.98042725 0.26539232 0.63054106
+R&gt;  [37] 0.95309484 0.77539181 0.99666494 0.58844565
 categorize(seqv, categ=seq(0.1,0.9, 0.1))
-R&gt;   [1]  4  5  2  8  3  2  4  1  5  6  4  2  8  4  3  2  3  9  3  6  1  2  5  3  4
-R&gt;  [26]  8  3  8 10  1  1 10  5  4  7  7  6  6  8 10</pre></body></html></div>
+R&gt;   [1]  4  2  2  8  7  9  2 10  1  9  5  3  9 10 10  5  2 10  8  8  1  4  9  6  4
+R&gt;  [26]  9  4  5  1  6  3 10  6 10  3  7 10  8 10  6</pre></body></html></div>
 </div>
 <div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level2">
 <h2 class="hasAnchor">
 <a href="#turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="anchor"></a>Turn a matrix or a data frame into a squared matrix</h2>
-<div class="sourceCode" id="cb25"><html><body><pre class="r">mat     A B C  D  E
+<div class="sourceCode" id="cb25"><html><body><pre class="r">mat &lt;- matrix(1:15, 3, 5, dimnames = list(LETTERS[3:1], LETTERS[1:5]))
+print(mat)
+R&gt;    A B C  D  E
 R&gt;  C 1 4 7 10 13
 R&gt;  B 2 5 8 11 14
 R&gt;  A 3 6 9 12 15
@@ -324,17 +332,24 @@ R&gt;  E 0 0 0  0  0</pre></body></html></div>
 <div id="assign-classes-to-data-frames-columns" class="section level2">
 <h2 class="hasAnchor">
 <a href="#assign-classes-to-data-frames-columns" class="anchor"></a>Assign classes to data frames’ columns</h2>
-<div class="sourceCode" id="cb26"><html><body><pre class="r">df1    num [1:10, 1:2] 0.632 0.41 0.122 0.348 0.943 ...
+<div class="sourceCode" id="cb26"><html><body><pre class="r">df1 &lt;- matrix(signif(runif(20),4), ncol = 2)
+df2 &lt;- setColClass(df1, 2, 'character')
+str(df1)
+R&gt;   num [1:10, 1:2] 0.2361 0.891 0.0482 0.312 0.8607 ...
 str(df2)
 R&gt;  'data.frame':   10 obs. of  2 variables:
-R&gt;   $ V1: num  0.632 0.41 0.122 0.348 0.943 ...
-R&gt;   $ V2: chr  "0.49" "0.5588" "0.41" "0.4836" ...</pre></body></html></div>
+R&gt;   $ V1: num  0.2361 0.891 0.0482 0.312 0.8607 ...
+R&gt;   $ V2: chr  "0.5966" "0.08642" "0.5491" "0.2335" ...</pre></body></html></div>
 </div>
 <div id="create-data-frame-from-scratch-or-from-other-data-frame" class="section level2">
 <h2 class="hasAnchor">
 <a href="#create-data-frame-from-scratch-or-from-other-data-frame" class="anchor"></a>Create data frame from scratch or from other data frame</h2>
 <p>See also this <a href="https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/">blog post on inSileco</a>.</p>
-<div class="sourceCode" id="cb27"><html><body><pre class="r">dfA     Var1 Var2
+<div class="sourceCode" id="cb27"><html><body><pre class="r">dfA &lt;- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+dfB &lt;- data.frame(col1 = 2, col4 = "cool")
+
+dfTemplate(2, 2)
+R&gt;    Var1 Var2
 R&gt;  1   NA   NA
 R&gt;  2   NA   NA
 dfTemplate(2, 2, fill = 0)
@@ -343,8 +358,8 @@ R&gt;  1    0    0
 R&gt;  2    0    0
 dfTemplate(c("value", "name"), 2, col_classes = c("numeric", "character"))
 R&gt;    value name
-R&gt;  1    NA <na>
-R&gt;  2    NA <na>
+R&gt;  1    NA &lt;NA&gt;
+R&gt;  2    NA &lt;NA&gt;
 
 dfTemplateMatch(dfA, c("col4"))
 R&gt;    col1 col2 col4
@@ -361,7 +376,7 @@ R&gt;  2    2   NA
 dfTemplateMatch(dfA, c("col1", "col2"), yonly = TRUE, col_classes = "numeric", fill = 0)
 R&gt;    col1 col2
 R&gt;  1    1    A
-R&gt;  2    2    B</na></na></pre></body></html></div>
+R&gt;  2    2    B</pre></body></html></div>
 </div>
 <div id="packagesused" class="section level2">
 <h2 class="hasAnchor">
@@ -381,7 +396,51 @@ R&gt;  2 methods   3.6.2</pre></body></html></div>
 <div id="messages" class="section level1">
 <h1 class="hasAnchor">
 <a href="#messages" class="anchor"></a>Messages</h1>
-<p>It is somewhat convenient to have standardized messages when u</p>
+<p><code>inSilecoMisc</code> includes four simple message functions to standardize messages in scripts:</p>
+<div class="sourceCode" id="cb30"><html><body><pre class="r"># 1. msgInfo() indicates what the upcoming computation
+msgInfo("this is what's gonna happen next")
+R&gt;  ℹ this is what's gonna happen next</pre></body></html></div>
+<div class="sourceCode" id="cb31"><html><body><pre class="r"># 2. msgWarning() reminds me something important that should not affect the run
+msgWarning("Got to be careful")
+R&gt;  ⚠ Got to be careful</pre></body></html></div>
+<div class="sourceCode" id="cb32"><html><body><pre class="r"># 3. msgError() when something went wrong (and I anticipated that it could happen)
+msgError("Something wrong")
+R&gt;  ✖ Something wrong</pre></body></html></div>
+<div class="sourceCode" id="cb33"><html><body><pre class="r"># 4. msgSuccess() when a step/ a computation has been successfully completed
+msgSuccess("All good")
+R&gt;  ✔ All good</pre></body></html></div>
+<p>They are meant to help structuring scripts, here is a somewhat contrived example:</p>
+<div class="sourceCode" id="cb34"><html><body><pre class="r">scr_min &lt;- function() {
+  # msgInfo() lets me know where I am in the script
+  msgInfo("Average random values")
+  set.seed(111)
+  out &lt;- mean(runif(100))
+  msgSuccess("Done!")
+  # msgSuccess() indicates the successful completion of this part
+  out
+}
+scr_min()
+R&gt;  ℹ Average random values
+R&gt;  ✔ Done!
+R&gt;  [1] 0.4895239</pre></body></html></div>
+<p>As these functions are based on <code><a href="https://rdrr.io/r/base/message.html">message()</a></code>, one can execute the script quietly by calling <code><a href="https://rdrr.io/r/base/message.html">suppressMessages()</a></code> beforehand:</p>
+<div class="sourceCode" id="cb35"><html><body><pre class="r"># quiet run
+suppressMessages(scr_min())
+R&gt;  [1] 0.4895239</pre></body></html></div>
+</div>
+<div id="writing-tables-in-document" class="section level1">
+<h1 class="hasAnchor">
+<a href="#writing-tables-in-document" class="anchor"></a>Writing tables in document</h1>
+<p><code>tblDown()</code> writes a data frame (and list of data frame) in a document in various formats (<code>.docx</code> by default)</p>
+<div class="sourceCode" id="cb36"><html><body><pre class="r"><span class="co"># NB tblDown(head(CO2)) creates table.docx by default</span>
+<span class="fu">tblDown</span>(<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">CO2</span>), <span class="kw">output_file</span> <span class="kw">=</span> <span class="st">"table.odt"</span>)</pre></body></html></div>
+<p><img src="table_odt.png"></p>
+<p><code>tblDown()</code> handles lists of data frames and the user can also pass a set of captions for every table and even separate them with section headers:</p>
+<div class="sourceCode" id="cb37"><html><body><pre class="r"><span class="fu">tblDown</span>(<span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">CO2</span>), <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span>(<span class="no">CO2</span>)), <span class="kw">output_file</span> <span class="kw">=</span> <span class="st">"tables.pdf"</span>,
+  <span class="kw">caption</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"This is the head of CO2"</span>, <span class="st">"This is the tail of CO2"</span>),
+  <span class="kw">section</span> <span class="kw">=</span> <span class="st">"Table"</span>)</pre></body></html></div>
+<p><img src="tables_pdf.png"></p>
+<p>Note that if there are less captions or sections titles than data frames, vectors of captions (and/or sections) are repeated and an index is appended.</p>
 </div>
 <div id="mathematical-functions" class="section level1">
 <h1 class="hasAnchor">
@@ -389,7 +448,7 @@ R&gt;  2 methods   3.6.2</pre></body></html></div>
 <div id="logistic-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#logistic-functions" class="anchor"></a>Logistic functions</h2>
-<div class="sourceCode" id="cb30"><html><body><pre class="r"><span class="no">seqx</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(-<span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">0.1</span>)
+<div class="sourceCode" id="cb38"><html><body><pre class="r"><span class="no">seqx</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(-<span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">0.1</span>)
 <span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span>(<span class="kw">mfrow</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">1</span>, <span class="fl">2</span>))
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="no">seqx</span>, <span class="fu">logistic</span>(<span class="no">seqx</span>), <span class="kw">type</span> <span class="kw">=</span> <span class="st">"l"</span>)
 <span class="fu"><a href="https://rdrr.io/r/graphics/abline.html">abline</a></span>(<span class="kw">v</span> <span class="kw">=</span> <span class="fl">0</span>, <span class="kw">h</span> <span class="kw">=</span> <span class="fl">0</span>, <span class="kw">lty</span> <span class="kw">=</span> <span class="fl">2</span>)
@@ -400,7 +459,7 @@ R&gt;  2 methods   3.6.2</pre></body></html></div>
 <div id="gaussian-shape" class="section level2">
 <h2 class="hasAnchor">
 <a href="#gaussian-shape" class="anchor"></a>Gaussian shape</h2>
-<div class="sourceCode" id="cb31"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="fu">gaussianShape</span>(<span class="fl">1</span>:<span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, <span class="kw">pow</span><span class="kw">=</span><span class="fl">5</span>), <span class="kw">type</span><span class="kw">=</span><span class="st">'l'</span>)
+<div class="sourceCode" id="cb39"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.html">plot</a></span>(<span class="fu">gaussianShape</span>(<span class="fl">1</span>:<span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, <span class="kw">pow</span><span class="kw">=</span><span class="fl">5</span>), <span class="kw">type</span><span class="kw">=</span><span class="st">'l'</span>)
 <span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span>(<span class="fu">gaussianShape</span>(<span class="fl">1</span>:<span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, <span class="kw">pow</span><span class="kw">=</span><span class="fl">2</span>), <span class="kw">lty</span> <span class="kw">=</span> <span class="fl">2</span>)
 <span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span>(<span class="fu">gaussianShape</span>(<span class="fl">1</span>:<span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, <span class="kw">pow</span><span class="kw">=</span><span class="fl">1</span>), <span class="kw">lty</span> <span class="kw">=</span> <span class="fl">3</span>)
 <span class="fu"><a href="https://rdrr.io/r/graphics/legend.html">legend</a></span>(<span class="st">"topleft"</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="st">"pow = "</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">5</span>, <span class="fl">2</span>, <span class="fl">1</span>)), <span class="kw">lty</span> <span class="kw">=</span> <span class="fl">1</span>:<span class="fl">3</span>)</pre></body></html></div>
@@ -424,7 +483,7 @@ R&gt;  2 methods   3.6.2</pre></body></html></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>
