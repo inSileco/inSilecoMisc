@@ -5,6 +5,7 @@
 * `keepWords()`, `keepLetters()` and `wordCount()` have been re-written.
 * `LoremIpsum()` now includes 2 paragraphs and any number of words can be requested.
 * Remove `magrittr` from the list of dependencies and thus all pipes, see #14.
+* in `scaleWithin()`, `nval` is now `n`.
 * Remove `addURL()` and `addWebIcon()`, see #16.
 * Remove `findReplace()` and `grepReplace()`m see #15.
 * `adjustString()` has been entirely re-written and has been renamed
@@ -19,7 +20,7 @@
 * Add `tblDown()` to quickly export a list of data frames as a document.
 * `findRef()` and `substrBib()` has been removed, see #11.
 * `unlist` is no longer an argument of `keepWords()` and `keepLetters()`.
-* Review scaleWithin() documentation.
+* Review `scaleWithin()` documentation.
 * Add `keepLetters()` and `rmPunct()` :sparkles: see #10.
 * Drop @author (to be used for contributors).
 * Add @importFrom have been moved to `inSilecoMisc.R`.

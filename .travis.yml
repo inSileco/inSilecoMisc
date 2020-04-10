@@ -29,9 +29,9 @@ jobs:
         on:
           branch: master
         local_dir: docs
-    # - stage: unit tests
-    #   os: osx
-    #   r: release
+    - stage: unit tests
+      os: osx
+      r: release
     - stage: unit tests
       os: linux
       dist: bionic

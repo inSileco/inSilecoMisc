@@ -4,16 +4,16 @@
 \alias{scaleWithin}
 \title{Scale a set of values}
 \usage{
-scaleWithin(x, nval = 100, mn = min(x), mx = max(x))
+scaleWithin(x, n = 100, mn = min(x), mx = max(x))
 }
 \arguments{
 \item{x}{a numeric object of type \code{numeric} or coercible as one.}
 
-\item{nval}{an integer designing The number of scaled values (between 1 and \code{nval}).}
+\item{n}{an integer designing The number of scaled values (between 1 and \code{n}).}
 
 \item{mn}{minimum value (\code{mn} and lower values are set to 1).}
 
-\item{mx}{maximum value (\code{mx} and higher values are set to \code{nval}).}
+\item{mx}{maximum value (\code{mx} and higher values are set to \code{n}).}
 }
 \value{
 A numeric vector
@@ -26,12 +26,12 @@ to a positive integer passed as an argument).
 This function was originally created to ease the creation of custom color
 scales. In such context, it is common practice to define a minium and a
 maximum for the set of values to be displayed values as well as a number of
-color to be used in the color scale (\code{nval}). This is exactly what
+color to be used in the color scale (\code{n}). This is exactly what
 \code{scaleWithin()} does: minimum and maximum are by default the ones of the set
 of values \code{x} but can also be set using \code{mn} and \code{mx} in which case values
 below \code{mn} will be set to \code{mn} (and thus to 1 in the output) and values
 above \code{mx} will be set to \code{mx} (and thus to 1 in the output). Finally, the
-number of colors to be used used in is given by \code{nval}.
+number of colors to be used used in is given by \code{n}.
 }
 \examples{
 x <- stats::rpois(20, 20)
