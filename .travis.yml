@@ -4,9 +4,9 @@ cache: packages
 
 jobs:
   include:
-    - stage: unit tests
+    - stage: Check package
       r: oldrel
-    - stage: unit tests, code coverage and deploy pkgdown website
+    - stage: Check package, code coverage and deploy pkgdown website
       os: linux
       dist: xenial
       r: release
@@ -15,19 +15,23 @@ jobs:
         - pkgdown
       after_success:
         - Rscript -e 'covr::codecov()'
+        - mkdir docs
+        - git fetch origin gh-pages:gh-pages
+        - git --work-tree=docs checkout gh-pages -- .
         - Rscript -e 'pkgdown::build_site()'
       deploy:
         provider: pages
+        name: TraviSteve
         skip_cleanup: true
         keep_history: true
         github_token: $GITHUB_TOKEN
         on:
           branch: master
         local_dir: docs
-    # - stage: unit tests
+    # - stage: Check package
     #   os: osx
     #   r: release
-    - stage: unit tests
+    - stage: Check package
       os: linux
       dist: bionic
       r: devel
