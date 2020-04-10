@@ -299,7 +299,76 @@ tblDown(list(CO2[1:2, ], CO2[3:6,]), "./tables.docx",
 
 # Messages
 
-It is somewhat convenient to have standardized messages when u
+`inSilecoMisc` includes four simple message functions to standardize messages in scripts:
+
+```{R}
+# 1. msgInfo() indicates what the upcoming computation
+msgInfo("this is what's gonna happen next")
+```
+
+```{R}
+# 2. msgWarning() reminds me something important that should not affect the run
+msgWarning("Got to be careful")
+```
+
+```{R}
+# 3. msgError() when something went wrong (and I anticipated that it could happen)
+msgError("Something wrong")
+```
+
+```{R}
+# 4. msgSuccess() when a step/ a computation has been successfully completed
+msgSuccess("All good")
+```
+
+They are meant to help structuring scripts, here is a somewhat contrived example:
+
+```{R}
+scr_min <- function() {
+  # msgInfo() lets me know where I am in the script
+  msgInfo("Average random values")
+  set.seed(111)
+  out <- mean(runif(100))
+  msgSuccess("Done!")
+  # msgSuccess() indicates the successful completion of this part
+  out
+}
+scr_min()
+```
+
+As these functions are based on `message()`, one can execute the script quietly by calling `suppressMessages()` beforehand:
+
+```{R}
+# quiet run
+suppressMessages(scr_min())
+```
+
+
+# Writing tables in document
+
+`tblDown()` writes a data frame (and list of data frame) in a document in various formats (`.docx` by default)
+
+```{R, eval = FALSE}
+# NB tblDown(head(CO2)) creates table.docx by default
+tblDown(head(CO2), output_file = "table.odt")
+```
+
+![](table_odt.png)
+
+`tblDown()` handles lists of data frames and the user can also pass a set of captions for every table and even separate them with section headers:
+
+```{R, eval = FALSE}
+tblDown(list(head(CO2), tail(CO2)), output_file = "tables.pdf",
+  caption = c("This is the head of CO2", "This is the tail of CO2"),
+  section = "Table")
+```
+
+![](tables_pdf.png)
+
+Note that if there are less captions or sections titles than data frames,
+vectors of captions (and/or sections) are repeated and an index is appended.
+
+
 
 
 # Mathematical functions

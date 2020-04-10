@@ -3,6 +3,7 @@
 Makefile
 inst/tmp
 docs/
+*.odt
 
 
 # History files

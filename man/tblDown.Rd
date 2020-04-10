@@ -34,7 +34,7 @@ pandoc to correctly render the final document in the write format.}
 A data frame whose columns have the desired classes.
 }
 \description{
-Export a data frame or a list of data frames in a document using pandoc.
+Write a data frame or a list of data frames in a markdown document converted #' in various format using pandoc.
 }
 \details{
 This function calls \code{\link[base:cat]{base::cat()}} and \code{\link[knitr:kable]{knitr::kable()}} to write a Markdown

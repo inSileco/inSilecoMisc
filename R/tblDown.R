@@ -1,6 +1,6 @@
 #' Write data frames in a document
 #'
-#' Export a data frame or a list of data frames in a document using pandoc.
+#' Write a data frame or a list of data frames in a markdown document converted #' in various format using pandoc.
 #'
 #' @param x a data frame or a list of data frames.
 #' @param output_file path to the output file. Its extension will be used by
