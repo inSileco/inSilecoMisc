@@ -2,11 +2,6 @@ language: r
 warnings_are_errors: true
 cache: packages
 
-addons:
-  homebrew:
-      packages:
-        - mactex
-
 jobs:
   include:
     - stage: unit tests

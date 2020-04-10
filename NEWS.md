@@ -1,4 +1,4 @@
-# inSilecoMisc (development version)
+# inSilecoMisc 0.4.0
 
 * New functions `msgInfo()`, `msgError()`, `msgSuccess()` `msgWarning()` to send notices to user while a function is being executed.
 * New function `keepInitials()` to keep the initials of character strings.
