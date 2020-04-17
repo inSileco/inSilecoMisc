@@ -1,3 +1,7 @@
+# inSilecoMisc 0.4.0 (devel)
+
+* add `seqRg` that generates a regular sequence based on the range of a vector.
+
 # inSilecoMisc 0.4.0
 
 * New functions `msgInfo()`, `msgError()`, `msgSuccess()` `msgWarning()` to send notices to user while a function is being executed.
