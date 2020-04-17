@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search values or patterns in a vector — whichIs • inSilecoMisc</title>
+<title>Generate a regular sequence using the range of a vector — seqRg • inSilecoMisc</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Search values or patterns in a vector — whichIs" />
-<meta property="og:description" content="Search values or patterns in a vector." />
+<meta property="og:title" content="Generate a regular sequence using the range of a vector — seqRg" />
+<meta property="og:description" content="Generate a regular sequence using the range of a vector" />
 
 
 <meta name="robots" content="noindex">
@@ -123,47 +123,42 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Search values or patterns in a vector</h1>
-    <small class="dont-index">Source: <a href='https://github.com/inSileco/inSilecoMisc/blob/master/R/whichIS.R'><code>R/whichIS.R</code></a></small>
-    <div class="hidden name"><code>whichIs.Rd</code></div>
+    <h1>Generate a regular sequence using the range of a vector</h1>
+    <small class="dont-index">Source: <a href='https://github.com/inSileco/inSilecoMisc/blob/master/R/seqRg.R'><code>R/seqRg.R</code></a></small>
+    <div class="hidden name"><code>seqRg.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Search values or patterns in a vector.</p>
+    <p>Generate a regular sequence using the range of a vector</p>
     </div>
 
-    <pre class="usage"><span class='fu'>whichIs</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='kw'>isPattern</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>seqRg</span>(<span class='no'>x</span>, <span class='no'>n</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>prop</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>a vector of values or patterns to be searched for.</p></td>
+      <td><p>a vector.</p></td>
     </tr>
     <tr>
-      <th>y</th>
-      <td><p>a vector where x values are searched for.</p></td>
+      <th>n</th>
+      <td><p>the number of values in the output sequence.</p></td>
     </tr>
     <tr>
-      <th>isPattern</th>
-      <td><p>should x be considered as a vector of patterns?</p></td>
+      <th>offset</th>
+      <td><p>extend or reduce the range .</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>further arguments to be passed to <code><a href='https://rdrr.io/r/base/which.html'>base::which()</a></code>.</p></td>
+      <th>prop</th>
+      <td><p>a logical. If <code>TRUE</code>, then <code>offset</code> is a proportion of the range, otherwise <code>offset</code> is used as is.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A list of positions. Each element corresponds to the matches for a specific x value.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>vec</span> <span class='kw'>&lt;-</span> <span class='no'>LETTERS</span>[<span class='fl'>1</span>:<span class='fl'>10</span>]
-<span class='no'>spl</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='no'>vec</span>)
-<span class='no'>id</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/unlist.html'>unlist</a></span>(<span class='fu'>whichIs</span>(<span class='no'>vec</span>, <span class='no'>spl</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/identical.html'>identical</a></span>(<span class='no'>vec</span>, <span class='no'>spl</span>[<span class='no'>id</span>])</div><div class='output co'>#&gt; [1] TRUE</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>seqRg</span>(<span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span>(<span class='fl'>10</span>), <span class='fl'>10</span>)</div><div class='output co'>#&gt;  [1] 0.1644105 0.2444884 0.3245662 0.4046441 0.4847219 0.5647998 0.6448776
+#&gt;  [8] 0.7249555 0.8050333 0.8851111</div><div class='input'><span class='fu'>seqRg</span>(<span class='fl'>1</span>:<span class='fl'>10</span>, <span class='fl'>10</span>, <span class='fl'>.5</span>)</div><div class='output co'>#&gt;  [1] -3.5 -1.5  0.5  2.5  4.5  6.5  8.5 10.5 12.5 14.5</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

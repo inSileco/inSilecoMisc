@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.3.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -86,7 +86,7 @@
       <h1 data-toc-skip>inSilecoMisc, an overview</h1>
                         <h4 class="author">inSileco group</h4>
             
-            <h4 class="date">2020-04-10</h4>
+            <h4 class="date">2020-04-17</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/inSileco/inSilecoMisc/blob/master/vignettes/overview.Rmd"><code>vignettes/overview.Rmd</code></a></small>
       <div class="hidden name"><code>overview.Rmd</code></div>
@@ -258,25 +258,25 @@ R&gt;  [1] "032"  "2832"</pre></body></html></div>
 spl &lt;- sample(vec)
 whichIs(vec, spl)
 R&gt;  [[1]]
-R&gt;  [1] 1
+R&gt;  [1] 5
 R&gt;  
 R&gt;  [[2]]
-R&gt;  [1] 7
+R&gt;  [1] 4
 R&gt;  
 R&gt;  [[3]]
-R&gt;  [1] 6
+R&gt;  [1] 1
 R&gt;  
 R&gt;  [[4]]
 R&gt;  [1] 2
 R&gt;  
 R&gt;  [[5]]
-R&gt;  [1] 4
+R&gt;  [1] 7
 R&gt;  
 R&gt;  [[6]]
 R&gt;  [1] 3
 R&gt;  
 R&gt;  [[7]]
-R&gt;  [1] 5
+R&gt;  [1] 6
 id &lt;- unlist(whichIs(vec, spl))
 spl[id]
 R&gt;  [1] "A" "B" "C" "D" "E" "F" "G"</pre></body></html></div>
@@ -301,16 +301,16 @@ R&gt;  [1] 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5</pre></body></html></div>
 <h2 class="hasAnchor">
 <a href="#assign-a-category" class="anchor"></a>Assign a category</h2>
 <div class="sourceCode" id="cb24"><html><body><pre class="r">(seqv &lt;- stats::runif(40))
-R&gt;   [1] 0.27678235 0.71686342 0.76926200 0.97515130 0.09371046 0.72785750
-R&gt;   [7] 0.09468425 0.45021187 0.20223919 0.19201611 0.02627027 0.24876060
-R&gt;  [13] 0.54513284 0.89040701 0.88508233 0.99697663 0.37949013 0.34692913
-R&gt;  [19] 0.79378044 0.20336349 0.84136431 0.55545267 0.89261320 0.04294075
-R&gt;  [25] 0.45663066 0.24774531 0.04861970 0.53409399 0.38082277 0.08401008
-R&gt;  [31] 0.88666395 0.22505261 0.97766885 0.56110496 0.81858676 0.10292994
-R&gt;  [37] 0.40694628 0.08517595 0.60252260 0.54712629
+R&gt;   [1] 0.54236361 0.79693587 0.63545648 0.12864230 0.17004952 0.54295062
+R&gt;   [7] 0.96346507 0.53880232 0.68701064 0.56491403 0.69005292 0.36595663
+R&gt;  [13] 0.44838760 0.62038884 0.84561294 0.01018596 0.05385942 0.37148983
+R&gt;  [19] 0.22704045 0.83710721 0.77974542 0.57024866 0.94944531 0.81071339
+R&gt;  [25] 0.60229070 0.30038089 0.28393893 0.98728314 0.82074749 0.53828683
+R&gt;  [31] 0.95659905 0.67024672 0.38804112 0.19064622 0.36887800 0.14756102
+R&gt;  [37] 0.52556437 0.12563634 0.49084071 0.22846644
 categorize(seqv, categ=seq(0.1,0.9, 0.1))
-R&gt;   [1]  3  8  8 10  1  8  1  5  3  2  1  3  6  9  9 10  4  4  8  3  9  6  9  1  5
-R&gt;  [26]  3  1  6  4  1  9  3 10  6  9  2  5  1  7  6</pre></body></html></div>
+R&gt;   [1]  6  8  7  2  2  6 10  6  7  6  7  4  5  7  9  1  1  4  3  9  8  6 10  9  7
+R&gt;  [26]  4  3 10  9  6 10  7  4  2  4  2  6  2  5  3</pre></body></html></div>
 </div>
 <div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level2">
 <h2 class="hasAnchor">
@@ -335,11 +335,11 @@ R&gt;  E 0 0 0  0  0</pre></body></html></div>
 <div class="sourceCode" id="cb26"><html><body><pre class="r">df1 &lt;- matrix(signif(runif(20),4), ncol = 2)
 df2 &lt;- setColClass(df1, 2, 'character')
 str(df1)
-R&gt;   num [1:10, 1:2] 0.787 0.291 0.346 0.568 0.357 ...
+R&gt;   num [1:10, 1:2] 0.147 0.951 0.534 0.775 0.048 ...
 str(df2)
 R&gt;  'data.frame':   10 obs. of  2 variables:
-R&gt;   $ V1: num  0.787 0.291 0.346 0.568 0.357 ...
-R&gt;   $ V2: chr  "0.1567" "0.7885" "0.4512" "0.166" ...</pre></body></html></div>
+R&gt;   $ V1: num  0.147 0.951 0.534 0.775 0.048 ...
+R&gt;   $ V2: chr  "0.4433" "0.4697" "0.7065" "0.9088" ...</pre></body></html></div>
 </div>
 <div id="create-data-frame-from-scratch-or-from-other-data-frame" class="section level2">
 <h2 class="hasAnchor">

@@ -73,7 +73,7 @@ of a given data frame." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.3.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
       </span>
     </div>
 
@@ -162,9 +162,9 @@ same order as <code>colid</code>. By default, <code>cls</code> is repeated until
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>df1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>signif</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span>(<span class='fl'>20</span>),<span class='fl'>4</span>), <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>)
 <span class='no'>df2</span> <span class='kw'>&lt;-</span> <span class='fu'>setColClass</span>(<span class='no'>df1</span>, <span class='fl'>2</span>, <span class='st'>'character'</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>df1</span>)</div><div class='output co'>#&gt;  num [1:10, 1:2] 0.393 0.4 0.275 0.164 0.867 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>df2</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  2 variables:
-#&gt;  $ V1: num  0.393 0.4 0.275 0.164 0.867 ...
-#&gt;  $ V2: chr  "0.6433" "0.3144" "0.2275" "0.06346" ...</div></pre>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>df1</span>)</div><div class='output co'>#&gt;  num [1:10, 1:2] 0.6433 0.3144 0.2275 0.0635 0.0785 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>df2</span>)</div><div class='output co'>#&gt; 'data.frame':	10 obs. of  2 variables:
+#&gt;  $ V1: num  0.6433 0.3144 0.2275 0.0635 0.0785 ...
+#&gt;  $ V2: chr  "0.9258" "0.9202" "0.152" "0.6542" ...</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
