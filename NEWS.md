@@ -1,6 +1,8 @@
 # inSilecoMisc 0.4.0 (devel)
 
-* add `seqRg` that generates a regular sequence based on the range of a vector.
+* add `seqRg()` that generates a regular sequence based on the range of a vector.
+* add `seqRow()` and ``seqCol()` that generate a regular sequences based on the number of rows and columns (respectively) of a data frame (or a matrix).
+
 
 # inSilecoMisc 0.4.0
 
@@ -78,13 +80,13 @@
 
 ## Addition of R functions
 
-- New function \code{loremIpsum()} to get a piece of a placeholder text.
-- New function \code{readYamlHeader()} to read YAML headers.
-- New function \code{stApply()} to apply a function to a subset of strings.
+- New function `loremIpsum()` to get a piece of a placeholder text.
+- New function `readYamlHeader()` to read YAML headers.
+- New function `stApply()` to apply a function to a subset of strings.
 
 ## Addition of new parameters
 
-- New parameter `ignore` in `stLength()` to ignore a specific selection of character.
+- New parameter `ignore` in `strLength()` to ignore a specific selection of character.
 
 
 
@@ -96,14 +98,14 @@
 
 ## Addition of R functions:
 
-  - New functions \code{findReplace()} and \code{grepReplace()}.
-  - New functions \code{logistic()} and \code{logistic2()}.
-  - New function \code{addWebIcon()}.
-  - New function \code{meanAlong()}, a simple moving window function.
+  - New functions `findReplace()` and `grepReplace()`.
+  - New functions `logistic()` and \code{logistic2()}.
+  - New function `addWebIcon()`.
+  - New function `meanAlong()`, a simple moving window function.
 
 ## Changes in existing R functions:
 
-  - New argument \code{exclude} in \code{wordCount()} to select characters to be excluded.
+  - New argument \code{exclude} in `wordCount()` to select characters to be excluded.
 
 
 ---------
@@ -114,15 +116,15 @@
 
 ### Addition of R functions:
 
-  - New function \code{addURL()}
-  - New function \code{findRef()}
-  - New function \code{keepWords()}
-  - New function \code{logit()}
-  - New function \code{multiMatch()}
-  - New function \code{signifSymbol()}
-  - New function \code{stLength()}
-  - New function \code{substrBib()}
-  - New function \code{wordCount()} that adresses #1 (@KevCaz)
+  - New function `addURL()`
+  - New function `findRef()`
+  - New function `keepWords()`
+  - New function `logit()`
+  - New function `multiMatch()`
+  - New function `signifSymbol()`
+  - New function `stLength()`
+  - New function `substrBib()`
+  - New function `wordCount()` that adresses #1 (@KevCaz)
 
 ### Changes in the package structure:
 
@@ -133,13 +135,13 @@
 
 ### Initial functions:
 
-- New function \code{adjustSting()}
-- New function \code{aggregateCol()}
-- New function \code{setColClass()}
-- New function \code{assignIds()}
-- New function \code{categorize()}
-- New function \code{duplicateRow()}
-- New function \code{findThem()}
-- New function \code{gaussianShape()}
-- New function \code{keepWords()}
-- New function \code{squaretize()}
+- New function `adjustSting()`
+- New function `aggregateCol()`
+- New function `setColClass()`
+- New function `assignIds()`
+- New function `categorize()`
+- New function `duplicateRow()`
+- New function `findThem()`
+- New function `gaussianShape()`
+- New function `keepWords()`
+- New function `squaretize()`

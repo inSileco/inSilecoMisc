@@ -2,9 +2,15 @@
 % Please edit documentation in R/seqRg.R
 \name{seqRg}
 \alias{seqRg}
-\title{Generate a regular sequence using the range of a vector}
+\alias{seqCol}
+\alias{seqRow}
+\title{Generate a regular sequence based on the range of a vector}
 \usage{
 seqRg(x, n, offset = 0, prop = TRUE)
+
+seqCol(df)
+
+seqRow(df)
 }
 \arguments{
 \item{x}{a vector.}
@@ -14,11 +20,21 @@ seqRg(x, n, offset = 0, prop = TRUE)
 \item{offset}{extend or reduce the range .}
 
 \item{prop}{a logical. If \code{TRUE}, then \code{offset} is a proportion of the range, otherwise \code{offset} is used as is.}
+
+\item{df}{a data frame or a matrix.}
 }
 \description{
-Generate a regular sequence using the range of a vector
+Generate a regular sequence based on the range of a vector
 }
+\section{Functions}{
+\itemize{
+\item \code{seqCol}: a regular sequence based on the number of columns in a data frame.
+
+\item \code{seqRow}: a regular sequence based on the number of rows in a data frame.
+}}
+
 \examples{
 seqRg(runif(10), 10)
 seqRg(1:10, 10, .5)
+seqCol(matrix(1, 3, 2))
 }

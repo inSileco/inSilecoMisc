@@ -31,6 +31,8 @@ remotes::install_github("inSileco/inSilecoMisc")
 
 ## Documentation
 
-On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html), see 
+On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html), you may be interested in the following post on our blog [inSileco](https://insileco.github.io/)
 
 1. https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/
+
+2. https://insileco.github.io/2020/04/14/insilecomisc-0.4.0-part-1/2/

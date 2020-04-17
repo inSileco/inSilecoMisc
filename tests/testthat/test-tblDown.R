@@ -33,9 +33,9 @@ test_that("check file creation", {
 ct_fl2 <- readLines(fl2)
 ct_fl3 <- readLines(fl3)
 
-cat("\n")
-cat(ct_fl3, sep = "\n")
-cat("\n")
+# cat("\n")
+# cat(ct_fl3, sep = "\n")
+# cat("\n")
 
 test_that("check file content", {
     expect_equal(length(ct_fl2), 11)
