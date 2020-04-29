@@ -36,3 +36,5 @@ On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/ov
 1. https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/
 
 2. https://insileco.github.io/2020/04/14/insilecomisc-0.4.0-part-1/2/
+
+3. https://insileco.github.io/2020/04/21/insilecomisc-0.4.0-part-2/2/
