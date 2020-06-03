@@ -6,7 +6,7 @@
 #' @param digits number of digits displayed.
 #'
 #' @export
-#' @example
+#' @examples
 #' \dontrun{
 #' stopwatch(10)
 #' stopwatch(20)

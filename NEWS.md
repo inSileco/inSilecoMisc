@@ -1,5 +1,7 @@
 # inSilecoMisc (devel)
 
+* `dfTemplateMatch()` gains one argument `order` to order column of the output
+dataframe according to the template.
 * add `stopwatch()` and `timer()`.
 * add `seqRg()` that generates a regular sequence based on the range of a vector.
 * add `seqRow()` and ``seqCol()` that generate a regular sequences based on the number of rows and columns (respectively) of a data frame (or a matrix).

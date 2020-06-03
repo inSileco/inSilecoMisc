@@ -26,3 +26,9 @@ Timer and Stopwatch
 \item \code{timer}: Timer
 }}
 
+\examples{
+\dontrun{
+stopwatch(10)
+stopwatch(20)
+}
+}

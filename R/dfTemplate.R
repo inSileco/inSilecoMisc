@@ -17,16 +17,27 @@
 #' @param yonly a logical. Should only `y` (or the `names(y)`) be used for the
 #' data frame to be returned? Default is set to `FALSE` meaning that both the
 #' names of `x` and the names of `y` are used.
-#' @param ... further arguments to be passed to `dfTemplate`.
+#' @param order a logical. Should column of the output data frame be ordered
+#' according to the template. Not that if there are more columns in `x` that
+#' are not in `y`, then if `order = TRUE` column of `y` will be added first
+#' (on the left of the output data frame).
+#'
+#' @param ... further arguments to be passed to `dfTemplate()`.
 #'
 #' @return
 #' Returns a data frame with the desired characteristics.
+#'
+#' @references
+#' <https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/>
 #'
 #' @export
 #' @examples
 #' dfTemplate(5, 2)
 #' dfTemplate(5, 2, col_classes = "character")
-
+#' dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+#' dfTemplateMatch(dfA, c("col4", "col2"))
+#' dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE)
+#' dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE, order = TRUE)
 
 dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
 
@@ -63,7 +74,7 @@ dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
 
 #' @describeIn dfTemplate Returns a data frame that matches names in `y`.
 #' @export
-dfTemplateMatch <- function(x, y, yonly = FALSE, ...) {
+dfTemplateMatch <- function(x, y, yonly = FALSE, order = FALSE, ...) {
 
   stopifnot(is.data.frame(x))
   stopifnot(class(y) %in% c("data.frame", "character"))
@@ -71,13 +82,17 @@ dfTemplateMatch <- function(x, y, yonly = FALSE, ...) {
   if (is.data.frame(y))
     nmy <- names(y) else nmy <- y
 
-  if (yonly)
-    nm <- nmy else nm <- unique(c(nmy, names(x)))
+  if (yonly) nm <- nmy else nm <- unique(c(nmy, names(x)))
 
   if (sum(!nm %in% names(x))) {
-    cbind(
+    out <- cbind(
       x[names(x)[names(x) %in% nm]],
       dfTemplate(nm[!nm %in% names(x)], nrow(x), ...)
     )
-  } else x[names(x)[names(x) %in% nm]]
+  } else out <- x[names(x)[names(x) %in% nm]]
+
+  if (order) {
+    out[nm]
+  } else out
+
 }

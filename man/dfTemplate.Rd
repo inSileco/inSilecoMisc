@@ -7,7 +7,7 @@
 \usage{
 dfTemplate(cols, nrows = 1, col_classes = NULL, fill = NA)
 
-dfTemplateMatch(x, y, yonly = FALSE, ...)
+dfTemplateMatch(x, y, yonly = FALSE, order = FALSE, ...)
 }
 \arguments{
 \item{cols}{either a number of column or a vector of character used as
@@ -29,7 +29,12 @@ the column names of the data frame to be output.}
 data frame to be returned? Default is set to \code{FALSE} meaning that both the
 names of \code{x} and the names of \code{y} are used.}
 
-\item{...}{further arguments to be passed to \code{dfTemplate}.}
+\item{order}{a logical. Should column of the output data frame be ordered
+according to the template. Not that if there are more columns in \code{x} that
+are not in \code{y}, then if \code{order = TRUE} column of \code{y} will be added first
+(on the left of the output data frame).}
+
+\item{...}{further arguments to be passed to \code{dfTemplate()}.}
 }
 \value{
 Returns a data frame with the desired characteristics.
@@ -48,4 +53,11 @@ columns.
 \examples{
 dfTemplate(5, 2)
 dfTemplate(5, 2, col_classes = "character")
+dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+dfTemplateMatch(dfA, c("col4", "col2"))
+dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE)
+dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE, order = TRUE)
+}
+\references{
+\url{https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/}
 }

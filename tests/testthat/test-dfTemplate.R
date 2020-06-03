@@ -11,6 +11,7 @@ df4 <- dfTemplateMatch(dfA, c("col4"))
 df5 <- dfTemplateMatch(dfA, dfB)
 df6 <- dfTemplateMatch(dfA, c("col1", "col4"), yonly = TRUE)
 df7 <- dfTemplateMatch(dfA, c("col2", "col1"), yonly = TRUE, col_classes = "numeric", fill = 0)
+df8 <- dfTemplateMatch(dfA, c("col2", "col1"), order = TRUE)
 
 rna <- rep(NA, 2)
 
@@ -26,4 +27,5 @@ test_that("dfTemplateMatch", {
   expect_identical(df5, df4)
   expect_identical(df6, cbind(dfA[1], col4 = rna))
   expect_identical(df7, dfA)
+  expect_identical(df8, dfA[2:1])
 })
