@@ -12,8 +12,7 @@
 #' By default, the class is determined by `fill`.
 #' @param fill character or number used to fill out the columns. Default is `NA`.
 #' @param x a data frame.
-#' @param y data frame or a vector of strings that includes part of or all of
-#'the column names of the data frame to be output.
+#' @param y a data frame or a vector of strings use to specifies column names to be included in the data frame.
 #' @param yonly a logical. Should only `y` (or the `names(y)`) be used for the
 #' data frame to be returned? Default is set to `FALSE` meaning that both the
 #' names of `x` and the names of `y` are used.
@@ -35,9 +34,10 @@
 #' dfTemplate(5, 2)
 #' dfTemplate(5, 2, col_classes = "character")
 #' dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+#' dfB <- data.frame(col4 = c(1, 2), col2 = LETTERS[1:2])
 #' dfTemplateMatch(dfA, c("col4", "col2"))
 #' dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE)
-#' dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE, order = TRUE)
+#' dfTemplateMatch(dfA, dfB, yonly = TRUE, order = TRUE)
 
 dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
 
@@ -72,7 +72,7 @@ dfTemplate <- function(cols, nrows = 1, col_classes = NULL, fill = NA) {
 }
 
 
-#' @describeIn dfTemplate Returns a data frame that matches names in `y`.
+#' @describeIn dfTemplate Returns a data frame that includes all columns specifies in `y`.
 #' @export
 dfTemplateMatch <- function(x, y, yonly = FALSE, order = FALSE, ...) {
 

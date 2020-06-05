@@ -22,8 +22,7 @@ By default, the class is determined by \code{fill}.}
 
 \item{x}{a data frame.}
 
-\item{y}{data frame or a vector of strings that includes part of or all of
-the column names of the data frame to be output.}
+\item{y}{a data frame or a vector of strings use to specifies column names to be included in the data frame.}
 
 \item{yonly}{a logical. Should only \code{y} (or the \code{names(y)}) be used for the
 data frame to be returned? Default is set to \code{FALSE} meaning that both the
@@ -47,16 +46,17 @@ columns.
 }
 \section{Functions}{
 \itemize{
-\item \code{dfTemplateMatch}: Returns a data frame that matches names in \code{y}.
+\item \code{dfTemplateMatch}: Returns a data frame that includes all columns specifies in \code{y}.
 }}
 
 \examples{
 dfTemplate(5, 2)
 dfTemplate(5, 2, col_classes = "character")
 dfA <- data.frame(col1 = c(1, 2), col2 = LETTERS[1:2])
+dfB <- data.frame(col4 = c(1, 2), col2 = LETTERS[1:2])
 dfTemplateMatch(dfA, c("col4", "col2"))
 dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE)
-dfTemplateMatch(dfA, c("col4", "col2"), yonly = TRUE, order = TRUE)
+dfTemplateMatch(dfA, dfB, yonly = TRUE, order = TRUE)
 }
 \references{
 \url{https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/}
