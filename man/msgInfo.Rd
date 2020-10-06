@@ -7,23 +7,26 @@
 \alias{msgWarning}
 \title{Pre-formatted message functions}
 \usage{
-msgInfo(...)
+msgInfo(..., appendLF = TRUE)
 
-msgError(...)
+msgError(..., appendLF = TRUE)
 
-msgSuccess(...)
+msgSuccess(..., appendLF = TRUE)
 
-msgWarning(...)
+msgWarning(..., appendLF = TRUE)
 }
 \arguments{
 \item{...}{text to be passed to \code{\link[=paste]{paste()}}.}
+
+\item{appendLF}{a logical. Should messages given as a character string have
+a new line appended ?}
 }
 \value{
 Reports an info.
 }
 \description{
-Convenient functions to sent notices to the user while a function/script is
-being executed.
+Convenient wrappers around \code{\link[=message]{message()}} to sent styled notices to the user
+while a function/script is being executed.
 }
 \section{Functions}{
 \itemize{
@@ -44,5 +47,5 @@ msgError("you got it wrong")
 msgWarning("be careful")
 }
 \seealso{
-\link[cli:symbol]{cli::symbol} \code{\link[=message]{message()}}
+\code{\link[cli:symbol]{cli::symbol()}} \code{\link[=message]{message()}}
 }

@@ -22,12 +22,12 @@ A vector containing values standing for categories into which elements of x have
 }
 \description{
 The \code{gaussianShape()} function computes a personnalisable Gaussian function.
-Default values are the same as in \code{\link[stats:dnorm]{stats::dnorm()}}.
+Default values are the same as in \code{\link[stats:Normal]{stats::dnorm()}}.
 }
 \examples{
 gaussianShape(0)
 plot(gaussianShape(1:1000, 500, 2, 250, pow=5), type='l')
 }
 \seealso{
-\code{\link[stats:dnorm]{stats::dnorm()}}
+\code{\link[stats:Normal]{stats::dnorm()}}
 }

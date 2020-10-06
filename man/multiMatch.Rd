@@ -20,7 +20,7 @@ A vector of character strings matching \code{pattern} argument.
 Seek all elements matching a given pattern in a character strings.
 }
 \details{
-\code{multiMatch} is essentially a wrapper around \code{\link[base:regexec]{base::regexec()}} and
+\code{multiMatch} is essentially a wrapper around \code{\link[base:grep]{base::regexec()}} and
 \code{\link[base:regmatches]{base::regmatches()}} to find more than one match.
 }
 \examples{

@@ -1,7 +1,7 @@
 Package: inSilecoMisc
 Title: inSileco Miscellaneous Functions
-Date: 2020-06-05
-Version: 0.5.0
+Date: 2020-10-06
+Version: 0.5.0.9000
 Authors@R: c(
   person("Kevin", "Cazelles", email = "kevin.cazelles@gmail.com", comment = c(ORCID = "0000-0001-6619-9874"), role = c("aut", "cre")),
   person("David", "Beauchesne", role = c("aut")),
@@ -30,5 +30,5 @@ URL: https://github.com/inSileco/inSilecoMisc, http://insileco.github.io/inSilec
 BugReports: https://github.com/inSileco/inSilecoMisc/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)

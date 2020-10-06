@@ -1,3 +1,7 @@
+# inSilecoMisc 0.5.9000
+
+* `msg*()` functions all gain an argument `appendLF` to append a new line or not.
+
 # inSilecoMisc 0.5.0
 
 * `dfTemplateMatch()` gains an argument `order` to order column of the output

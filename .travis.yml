@@ -8,7 +8,7 @@ jobs:
       r: oldrel
     - stage: Check package, code coverage and deploy pkgdown website
       os: linux
-      dist: xenial
+      dist: bionic
       r: release
       r_packages:
         - covr
@@ -33,7 +33,7 @@ jobs:
       r: release
     - stage: Check package
       os: linux
-      dist: bionic
+      dist: focal
       r: devel
 
 notifications:
