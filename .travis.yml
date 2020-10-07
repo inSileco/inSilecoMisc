@@ -6,12 +6,14 @@ jobs:
   include:
     - stage: Check package
       r: oldrel
+      dist: bionic
     - stage: Check package, code coverage and deploy pkgdown website
       os: linux
-      dist: bionic
+      dist: focal
       r: release
       r_packages:
         - covr
+        - ragg
         - pkgdown
       after_success:
         - Rscript -e 'covr::codecov()'
