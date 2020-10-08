@@ -73,7 +73,7 @@ to a positive integer passed as an argument)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.0.9000</span>
       </span>
     </div>
 
@@ -134,7 +134,7 @@ to a positive integer passed as an argument)." />
 to a positive integer passed as an argument).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>100</span>, <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>x</span>), <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>x</span>))</pre>
+    <pre class="usage"><span class='fu'>scaleWithin</span><span class='op'>(</span><span class='va'>x</span>, n <span class='op'>=</span> <span class='fl'>100</span>, mn <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>, mx <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -173,8 +173,10 @@ above <code>mx</code> will be set to <code>mx</code> (and thus to 1 in the outpu
 number of colors to be used used in is given by <code>n</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>stats</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span>(<span class='fl'>20</span>, <span class='fl'>20</span>)
-<span class='fu'>scaleWithin</span>(<span class='no'>x</span>, <span class='fl'>20</span>, <span class='fl'>10</span>, <span class='fl'>30</span>)</div><div class='output co'>#&gt;  [1] 10 13 13 12  9 12 15 14  5  9 13 15  5  9 12  9  5  6  9 13</div><div class='input'><span class='fu'>scaleWithin</span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>x</span>, <span class='fl'>10</span>, <span class='fl'>2</span>), <span class='kw'>mn</span> <span class='kw'>=</span> <span class='fl'>20</span>, <span class='kw'>mx</span> <span class='kw'>=</span> <span class='fl'>30</span>)</div><div class='output co'>#&gt;       [,1] [,2]
+    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'>stats</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/stats/Poisson.html'>rpois</a></span><span class='op'>(</span><span class='fl'>20</span>, <span class='fl'>20</span><span class='op'>)</span>
+<span class='fu'>scaleWithin</span><span class='op'>(</span><span class='va'>x</span>, <span class='fl'>20</span>, <span class='fl'>10</span>, <span class='fl'>30</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  [1] 10 13 13 12  9 12 15 14  5  9 13 15  5  9 12  9  5  6  9 13</div><div class='input'><span class='fu'>scaleWithin</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='fl'>10</span>, <span class='fl'>2</span><span class='op'>)</span>, mn <span class='op'>=</span> <span class='fl'>20</span>, mx <span class='op'>=</span> <span class='fl'>30</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       [,1] [,2]
 #&gt;  [1,]    1   21
 #&gt;  [2,]   21   41
 #&gt;  [3,]   21    1
@@ -200,7 +202,7 @@ number of colors to be used used in is given by <code>n</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

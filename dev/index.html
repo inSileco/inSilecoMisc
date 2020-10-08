@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.0.9000</span>
       </span>
     </div>
 
@@ -90,15 +90,16 @@
 <h2 class="hasAnchor">
 <a href="#description" class="anchor"></a>Description</h2>
 <p>The <em>inSilecoMisc</em> package is a set of miscellaneous and handy R functions written to be used with base R, see the <a href="http://insileco.github.io/inSilecoMisc/articles/overview.html">tour vignette</a> for more information.</p>
-<p>Note that some of the function and may already be available in other packages (especially in packages of the <a href="https://www.tidyverse.org/">tidyverse</a>). We used camelCase to name functions (<em>e.g.</em> <code>keepWords()</code>).</p>
+<p>Note that some of the function and may already be available in other packages (especially in packages of the <a href="https://www.tidyverse.org/">tidyverse</a>). We used camelCase to name functions (<em>e.g.</em> <code><a href="reference/keepWords.html">keepWords()</a></code>).</p>
 <p>So far, we do not intend to release this package on the CRAN. If you however find one (or more) function useful and intend to use it in your own package, please do 😄!</p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>The current development is on GitHub and can be install with the <a href="http://cran.r-project.org/web/packages/remotes">remotes</a> 📦:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span> (!<span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="st">"remotes"</span>)) <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"inSileco/inSilecoMisc"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"inSileco/inSilecoMisc"</span><span class="op">)</span></pre></div>
 </div>
 <div id="documentation" class="section level2">
 <h2 class="hasAnchor">
@@ -163,7 +164,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

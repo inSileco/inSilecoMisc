@@ -74,7 +74,7 @@ characters." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.0.9000</span>
       </span>
     </div>
 
@@ -136,13 +136,13 @@ to constraint the size of the string or to add a specific number of extra
 characters.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>adjustStrings</span>(
-  <span class='no'>x</span>,
-  <span class='no'>n</span>,
-  <span class='kw'>extra</span> <span class='kw'>=</span> <span class='fl'>0</span>,
-  <span class='kw'>align</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"right"</span>, <span class='st'>"left"</span>, <span class='st'>"center"</span>),
-  <span class='kw'>add</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>
-)</pre>
+    <pre class="usage"><span class='fu'>adjustStrings</span><span class='op'>(</span>
+  <span class='va'>x</span>,
+  <span class='va'>n</span>,
+  extra <span class='op'>=</span> <span class='fl'>0</span>,
+  align <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"right"</span>, <span class='st'>"left"</span>, <span class='st'>"center"</span><span class='op'>)</span>,
+  add <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -188,7 +188,9 @@ is longer than expected, it will be adequately cut off.</p>
     <div class='dont-index'><p><code><a href='https://rdrr.io/r/base/sprintf.html'>base::sprintf()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>'myfilename'</span>, <span class='fu'>adjustStrings</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>2</span>,<span class='fl'>10</span>,<span class='fl'>100</span>), <span class='fl'>3</span>))</div><div class='output co'>#&gt; [1] "myfilename001" "myfilename002" "myfilename010" "myfilename100"</div><div class='input'><span class='fu'>adjustStrings</span>(<span class='st'>'# Comment '</span>, <span class='fl'>20</span>, <span class='st'>'#'</span>, <span class='kw'>align</span> <span class='kw'>=</span> <span class='st'>"left"</span>)</div><div class='output co'>#&gt; [1] "# Comment ##########"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>'myfilename'</span>, <span class='fu'>adjustStrings</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>10</span>,<span class='fl'>100</span><span class='op'>)</span>, <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "myfilename001" "myfilename002" "myfilename010" "myfilename100"</div><div class='input'><span class='fu'>adjustStrings</span><span class='op'>(</span><span class='st'>'# Comment '</span>, <span class='fl'>20</span>, <span class='st'>'#'</span>, align <span class='op'>=</span> <span class='st'>"left"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "# Comment ##########"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -204,7 +206,7 @@ is longer than expected, it will be adequately cut off.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

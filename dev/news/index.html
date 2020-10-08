@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.4.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.5.0.9000</span>
       </span>
     </div>
 
@@ -126,35 +126,54 @@
       <small>Source: <a href='https://github.com/inSileco/inSilecoMisc/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="insilecomisc-0-5-9000" class="section level1">
+<h1 class="page-header" data-toc-text="0.5.9000">
+<a href="#insilecomisc-0-5-9000" class="anchor"></a>inSilecoMisc 0.5.9000</h1>
+<ul>
+<li>
+<code>msg*()</code> functions all gain an argument <code>appendLF</code> to append a new line or not.</li>
+</ul>
+</div>
+    <div id="insilecomisc-0-5-0" class="section level1">
+<h1 class="page-header" data-toc-text="0.5.0">
+<a href="#insilecomisc-0-5-0" class="anchor"></a>inSilecoMisc 0.5.0</h1>
+<ul>
+<li>
+<code><a href="../reference/dfTemplate.html">dfTemplateMatch()</a></code> gains an argument <code>order</code> to order column of the output data frame according to the template (see <a href='https://github.com/inSileco/inSilecoMisc/issues/20'>#20</a>).</li>
+<li>add <code><a href="../reference/stopwatch.html">stopwatch()</a></code> and <code><a href="../reference/stopwatch.html">timer()</a></code>.</li>
+<li>add <code><a href="../reference/seqRg.html">seqRg()</a></code> that generates a regular sequence based on the range of a vector.</li>
+<li>add <code><a href="../reference/seqRg.html">seqRow()</a></code> and `<code><a href="../reference/seqRg.html">seqCol()</a></code> that generate a regular sequences based on the number of rows and columns (respectively) of a data frame (or a matrix).</li>
+</ul>
+</div>
     <div id="insilecomisc-0-4-0" class="section level1">
 <h1 class="page-header" data-toc-text="0.4.0">
 <a href="#insilecomisc-0-4-0" class="anchor"></a>inSilecoMisc 0.4.0</h1>
 <ul>
-<li>New functions <code>msgInfo()</code>, <code>msgError()</code>, <code>msgSuccess()</code> <code>msgWarning()</code> to send notices to user while a function is being executed.</li>
-<li>New function <code>keepInitials()</code> to keep the initials of character strings.</li>
+<li>New functions <code><a href="../reference/msgInfo.html">msgInfo()</a></code>, <code><a href="../reference/msgInfo.html">msgError()</a></code>, <code><a href="../reference/msgInfo.html">msgSuccess()</a></code> <code><a href="../reference/msgInfo.html">msgWarning()</a></code> to send notices to user while a function is being executed.</li>
+<li>New function <code><a href="../reference/keepWords.html">keepInitials()</a></code> to keep the initials of character strings.</li>
 <li>
-<code>keepWords()</code>, <code>keepLetters()</code> and <code>wordCount()</code> have been re-written.</li>
+<code><a href="../reference/keepWords.html">keepWords()</a></code>, <code><a href="../reference/keepWords.html">keepLetters()</a></code> and <code><a href="../reference/keepWords.html">wordCount()</a></code> have been re-written.</li>
 <li>
 <code>LoremIpsum()</code> now includes 2 paragraphs and any number of words can be requested.</li>
 <li>Remove <code>magrittr</code> from the list of dependencies and thus all pipes, see <a href='https://github.com/inSileco/inSilecoMisc/issues/14'>#14</a>.</li>
-<li>in <code>scaleWithin()</code>, <code>nval</code> is now <code>n</code>.</li>
+<li>in <code><a href="../reference/scaleWithin.html">scaleWithin()</a></code>, <code>nval</code> is now <code>n</code>.</li>
 <li>Remove <code>addURL()</code> and <code>addWebIcon()</code>, see <a href='https://github.com/inSileco/inSilecoMisc/issues/16'>#16</a>.</li>
 <li>Remove <code>findReplace()</code> and <code>grepReplace()</code>m see <a href='https://github.com/inSileco/inSilecoMisc/issues/15'>#15</a>.</li>
 <li>
-<code>adjustString()</code> has been entirely re-written and has been renamed <code>adjustStrings()</code> as it now accepts vectors of character strings. Argument <code>nzchar</code> no longer accepts negative real or strings and has been renamed <code>n</code>. Also <code>before</code> becomes <code>align</code> and can takes “right”, “left” or “center”. Last, it gains the argument <code>add</code> that allows the user to add make <code>n</code> a number of character to be added.</li>
+<code>adjustString()</code> has been entirely re-written and has been renamed <code><a href="../reference/adjustStrings.html">adjustStrings()</a></code> as it now accepts vectors of character strings. Argument <code>nzchar</code> no longer accepts negative real or strings and has been renamed <code>n</code>. Also <code>before</code> becomes <code>align</code> and can takes “right”, “left” or “center”. Last, it gains the argument <code>add</code> that allows the user to add make <code>n</code> a number of character to be added.</li>
 </ul>
 </div>
     <div id="insilecomisc-0-3-0" class="section level1">
 <h1 class="page-header" data-toc-text="0.3.0">
 <a href="#insilecomisc-0-3-0" class="anchor"></a>inSilecoMisc 0.3.0</h1>
 <ul>
-<li>Add <code>tblDown()</code> to quickly export a list of data frames as a document.</li>
+<li>Add <code><a href="../reference/tblDown.html">tblDown()</a></code> to quickly export a list of data frames as a document.</li>
 <li>
 <code>findRef()</code> and <code>substrBib()</code> has been removed, see <a href='https://github.com/inSileco/inSilecoMisc/issues/11'>#11</a>.</li>
 <li>
-<code>unlist</code> is no longer an argument of <code>keepWords()</code> and <code>keepLetters()</code>.</li>
-<li>Review <code>scaleWithin()</code> documentation.</li>
-<li>Add <code>keepLetters()</code> and <code>rmPunct()</code> ✨ see <a href='https://github.com/inSileco/inSilecoMisc/issues/10'>#10</a>.</li>
+<code>unlist</code> is no longer an argument of <code><a href="../reference/keepWords.html">keepWords()</a></code> and <code><a href="../reference/keepWords.html">keepLetters()</a></code>.</li>
+<li>Review <code><a href="../reference/scaleWithin.html">scaleWithin()</a></code> documentation.</li>
+<li>Add <code><a href="../reference/keepWords.html">keepLetters()</a></code> and <code>rmPunct()</code> ✨ see <a href='https://github.com/inSileco/inSilecoMisc/issues/10'>#10</a>.</li>
 <li>Drop <a href='https://github.com/author'>@author</a> (to be used for contributors).</li>
 <li>Add <a href='https://github.com/importFrom'>@importFrom</a> have been moved to <code>inSilecoMisc.R</code>.</li>
 <li>The pkgdown website is now deployed on gh-pages by Travis so <code>docs/</code> is now ignored.</li>
@@ -180,10 +199,10 @@
 <code>stLength()</code> has been removed (see <a href='https://github.com/inSileco/inSilecoMisc/issues/9'>#9</a>).</li>
 <li>
 <code>logit()</code> has been removed (see <a href='https://github.com/inSileco/inSilecoMisc/issues/8'>#8</a>).</li>
-<li>In <code>dfTemplate()</code> the values of argument <code>col_classes</code> are now checked, a test has been added.</li>
-<li>In <code>dfTemplate()</code> <code>fill</code> is now a vector whose values are replicated so its length equals the number of columns.</li>
-<li>In <code>dfTemplate()</code>, <code>col_classes</code> values are replicated so its length equals the number of columns.</li>
-<li>In <code>dfTemplate()</code>, <code>fill</code> now determines the classes of the columns when <code>col_classes</code> if <code>NULL</code> which is the new default value.</li>
+<li>In <code><a href="../reference/dfTemplate.html">dfTemplate()</a></code> the values of argument <code>col_classes</code> are now checked, a test has been added.</li>
+<li>In <code><a href="../reference/dfTemplate.html">dfTemplate()</a></code> <code>fill</code> is now a vector whose values are replicated so its length equals the number of columns.</li>
+<li>In <code><a href="../reference/dfTemplate.html">dfTemplate()</a></code>, <code>col_classes</code> values are replicated so its length equals the number of columns.</li>
+<li>In <code><a href="../reference/dfTemplate.html">dfTemplate()</a></code>, <code>fill</code> now determines the classes of the columns when <code>col_classes</code> if <code>NULL</code> which is the new default value.</li>
 </ul>
 </div>
 </div>
@@ -206,22 +225,22 @@
 <li>Changes in function names
 <ul>
 <li>
-<code>assignClass2df()</code> =&gt; <code>setColClass()</code>
+<code><a href="../reference/assignClass2df.html">assignClass2df()</a></code> =&gt; <code><a href="../reference/setColClass.html">setColClass()</a></code>
 </li>
 <li>
 <code>strLength()</code> =&gt; <code>stLength()</code>
 </li>
 <li>
-<code>applyString()</code> =&gt; <code>stApply()</code>
+<code><a href="../reference/applyString.html">applyString()</a></code> =&gt; <code>stApply()</code>
 </li>
 </ul>
 </li>
 <li>New functions
 <ul>
 <li>
-<code>whichIs()</code> which looks for the values of a given vector in another one and returns the positions of matchs as a list;</li>
+<code><a href="../reference/whichIs.html">whichIs()</a></code> which looks for the values of a given vector in another one and returns the positions of matchs as a list;</li>
 <li>
-<code>dfTemplate()</code> and <code>dfTemplateMatch()</code> to create data frames from scratch or based on one or two data frames.</li>
+<code><a href="../reference/dfTemplate.html">dfTemplate()</a></code> and <code><a href="../reference/dfTemplate.html">dfTemplateMatch()</a></code> to create data frames from scratch or based on one or two data frames.</li>
 </ul>
 </li>
 </ul>
@@ -241,8 +260,8 @@
 <h2 class="hasAnchor">
 <a href="#addition-of-r-functions" class="anchor"></a>Addition of R functions</h2>
 <ul>
-<li>New function <code>loremIpsum()</code> to get a piece of a placeholder text.</li>
-<li>New function <code>readYamlHeader()</code> to read YAML headers.</li>
+<li>New function <code><a href="../reference/loremIpsum.html">loremIpsum()</a></code> to get a piece of a placeholder text.</li>
+<li>New function <code><a href="../reference/readYamlHeader.html">readYamlHeader()</a></code> to read YAML headers.</li>
 <li>New function <code>stApply()</code> to apply a function to a subset of strings.</li>
 </ul>
 </div>
@@ -269,16 +288,16 @@
 <a href="#addition-of-r-functions-1" class="anchor"></a>Addition of R functions:</h2>
 <ul>
 <li>New functions <code>findReplace()</code> and <code>grepReplace()</code>.</li>
-<li>New functions <code>logistic()</code> and \code{logistic2()}.</li>
+<li>New functions <code><a href="../reference/logistic.html">logistic()</a></code> and \code{logistic2()}.</li>
 <li>New function <code>addWebIcon()</code>.</li>
-<li>New function <code>meanAlong()</code>, a simple moving window function.</li>
+<li>New function <code><a href="../reference/meanAlong.html">meanAlong()</a></code>, a simple moving window function.</li>
 </ul>
 </div>
 <div id="changes-in-existing-r-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#changes-in-existing-r-functions" class="anchor"></a>Changes in existing R functions:</h2>
 <ul>
-<li>New argument \code{exclude} in <code>wordCount()</code> to select characters to be excluded.</li>
+<li>New argument \code{exclude} in <code><a href="../reference/keepWords.html">wordCount()</a></code> to select characters to be excluded.</li>
 </ul>
 <hr>
 </div>
@@ -300,7 +319,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
