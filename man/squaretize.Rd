@@ -7,11 +7,11 @@
 squaretize(x, fill = 0, reorder = TRUE)
 }
 \arguments{
-\item{x}{an R object to be coerced into matrix.}
+\item{x}{an object to be coerced into matrix.}
 
-\item{fill}{element used to fill the additional rows and/or columns.}
+\item{fill}{character string used to fill the additional rows and/or columns.}
 
-\item{reorder}{a logical indicating whether the names must be used to order rows and columns.}
+\item{reorder}{a logical. Should names must be used to order rows and columns?}
 }
 \value{
 A square matrix.

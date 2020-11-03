@@ -178,6 +178,14 @@ adjustStrings("ABCD", n = 6, extra = "efgh")
  ```
 
 
+## Extract file info 
+
+```{r fileinfo}
+getDetails("path1/path2/foo.R")
+getDetails(list.files())
+getExtension("foo.R")
+getBasename("foo.R")
+```
 
 
 ## Assign a symbol to a p-value

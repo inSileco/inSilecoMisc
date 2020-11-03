@@ -3,9 +3,9 @@
 #' Add missing rows or columns based on names and Duplicates rows and columns
 #' of a given a data frame.
 #'
-#' @param x an R object to be coerced into matrix.
-#' @param fill element used to fill the additional rows and/or columns.
-#' @param reorder a logical indicating whether the names must be used to order rows and columns.
+#' @param x an object to be coerced into matrix.
+#' @param fill character string used to fill the additional rows and/or columns.
+#' @param reorder a logical. Should names must be used to order rows and columns?
 #'
 #' @return
 #' A square matrix.

@@ -1,5 +1,6 @@
 # inSilecoMisc 0.5.9000
 
+* New functions `getBasename()`, `getDetails()`, `getDigits()`, `getExtension()`, `getFilename()`, `getLocation()`, `getName()` designed to help maniuplate file and directorynames.
 * `msg*()` functions all gain an argument `appendLF` to append a new line or not.
 
 # inSilecoMisc 0.5.0
