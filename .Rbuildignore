@@ -1,8 +1,6 @@
 ^inst/_pkgdown\.yml$
 ^\.Rproj\.user$
 ^.*\.Rproj$
-^appveyor\.yml$
-^\.travis\.yml$
 ^\.gitignore
 ^Makefile
 ^README\.md
@@ -14,3 +12,4 @@ record_updates.txt
 ^doc$
 ^Meta$
 ^index.Rmd
+^.github
