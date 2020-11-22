@@ -1,4 +1,4 @@
-# inSilecoMisc 0.5.9000
+# inSilecoMisc 0.6.0
 
 * Use GitHub actions instead of Travis CI and Appveyor.
 * New functions `getBasename()`, `getDetails()`, `getDigits()`, `getExtension()`, `getFilename()`, `getLocation()`, `getName()` designed to help maniuplate file and directorynames.

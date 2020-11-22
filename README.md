@@ -7,7 +7,7 @@
 
 ## Description
 
-The *inSilecoMisc* package is a set of miscellaneous and handy R functions
+The *inSilecoMisc* package is a set of miscellaneous R functions
 written to be used with base R, see the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html) for more information.
 
 Note that some of the function and may already be available in other packages
@@ -31,7 +31,7 @@ remotes::install_github("inSileco/inSilecoMisc")
 
 ## Documentation
 
-On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html), you may be interested in the following post on our blog [inSileco](https://insileco.github.io/)
+On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/overview.html), you may be interested in the following posts on our blog [inSileco](https://insileco.github.io/) : 
 
 1. https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/
 
