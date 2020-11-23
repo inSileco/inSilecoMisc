@@ -25,7 +25,7 @@ The current development is on GitHub and can be install with the
 [remotes](http://cran.r-project.org/web/packages/remotes) :package::
 
 ```r
-if (!require("remotes")) install.packages("remotes")
+install.packages("remotes")
 remotes::install_github("inSileco/inSilecoMisc")
 ```
 
