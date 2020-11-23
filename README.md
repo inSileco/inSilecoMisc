@@ -12,17 +12,12 @@ written to be used with base R, see the [tour vignette](http://insileco.github.i
 
 Note that some of the function and may already be available in other packages
 (especially in packages of the [tidyverse](https://www.tidyverse.org/)).
-We used camelCase to name functions (*e.g.* `keepWords()`).
-
-So far, we do not intend to release this package on the CRAN. If you however
-find one (or more) function useful and intend to use it in your own
-package, please do :smile:!
 
 
 ## Installation
 
-The current development is on GitHub and can be install with the
-[remotes](http://cran.r-project.org/web/packages/remotes) :package::
+The current development version can be installed with the
+[remotes](http://cran.r-project.org/web/packages/remotes) :package: as follows:
 
 ```r
 install.packages("remotes")
@@ -38,3 +33,9 @@ On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/ov
 2. https://insileco.github.io/2020/04/14/insilecomisc-0.4.0-part-1/2/
 
 3. https://insileco.github.io/2020/04/21/insilecomisc-0.4.0-part-2/2/
+
+
+## Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](https://docs.ropensci.org/rcites/CONDUCT.html).
+By participating in this project you agree to abide by its terms.

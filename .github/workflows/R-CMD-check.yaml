@@ -92,6 +92,8 @@ jobs:
           sudo apt-get install libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
           Rscript -e 'remotes::install_cran(c("pkgdown", "ragg", "httr"))'
           Rscript -e 'pkgdown::build_site()'
+          git fetch origin gh-pages:gh-pages
+          git --work-tree=docs checkout gh-pages -- .
             
       - name: Deploy website 
         if: matrix.config.os == 'ubuntu-20.04' && matrix.config.r == 'release'
@@ -99,4 +101,4 @@ jobs:
         with:
           github_token: ${{ secrets.PERSO_TOKEN }}
           # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./public
+          publish_dir: ./docs
