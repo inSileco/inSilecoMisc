@@ -1,3 +1,9 @@
+# inSilecoMisc (devel)
+
+* Add code of conduct.
+* Add contributing.
+
+
 # inSilecoMisc 0.6.0
 
 * Use GitHub actions instead of Travis CI and Appveyor.
