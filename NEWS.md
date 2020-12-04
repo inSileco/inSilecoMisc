@@ -1,5 +1,6 @@
 # inSilecoMisc (devel)
 
+* New function `commaAnd()` to collpase elements of a vector and add element separators.
 * Add code of conduct.
 * Add contributing.
 

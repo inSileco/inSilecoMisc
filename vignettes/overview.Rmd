@@ -210,6 +210,14 @@ getDigits(c("a1", "032hdje2832"))
 ```
 
 
+## Collapse elements of a vector and add element separators
+
+
+```{r commaAnd}
+commaAnd(c("Judith", "Peter", "Rebecca", "Eric"))
+```
+
+
 
 
 # Vectors manipulations

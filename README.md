@@ -34,6 +34,8 @@ On top of the [tour vignette](http://insileco.github.io/inSilecoMisc/articles/ov
 
 3. https://insileco.github.io/2020/04/21/insilecomisc-0.4.0-part-2/2/
 
+4. https://insileco.github.io/2020/11/24/continuous-integration-for-r-projects-from-travis-ci-to-github-actions-step-by-step/
+
 
 ## Code of Conduct
 
