@@ -1,4 +1,4 @@
-# inSilecoMisc (devel)
+# inSilecoMisc 0.7.0
 
 * New function `rename()` to rename data frames, list, etc.
 * New function `commaAnd()` to collapse elements of a vector and add element separators.
