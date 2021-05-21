@@ -1,8 +1,9 @@
 # inSilecoMisc (devel)
 
-* New function `commaAnd()` to collpase elements of a vector and add element separators.
+* New function `rename()` to rename data frames, list, etc.
+* New function `commaAnd()` to collapse elements of a vector and add element separators.
 * Add code of conduct.
-* Add contributing.
+* Add contributing guidelines.
 
 
 # inSilecoMisc 0.6.0
@@ -18,7 +19,7 @@
 data frame according to the template (see #20).
 * add `stopwatch()` and `timer()`.
 * add `seqRg()` that generates a regular sequence based on the range of a vector.
-* add `seqRow()` and ``seqCol()` that generate a regular sequences based on the number of rows and columns (respectively) of a data frame (or a matrix).
+* add `seqRow()` and `seqCol()` that generate a regular sequences based on the number of rows and columns (respectively) of a data frame (or a matrix).
 
 
 # inSilecoMisc 0.4.0
