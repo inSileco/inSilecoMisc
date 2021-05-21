@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">inSilecoMisc</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.6.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.0</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -65,7 +65,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/inSileco/inSilecoMisc/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -79,14 +79,13 @@
 
       
 
-      </header><script src="overview_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="overview_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="overview_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="overview_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>inSilecoMisc: an overview</h1>
                         <h4 class="author">inSileco group</h4>
             
-            <h4 class="date">2020-11-23</h4>
+            <h4 class="date">2021-05-21</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/inSileco/inSilecoMisc/blob/master/vignettes/overview.Rmd"><code>vignettes/overview.Rmd</code></a></small>
       <div class="hidden name"><code>overview.Rmd</code></div>
@@ -263,6 +262,12 @@
 <span id="cb21-5"><a href="#cb21-5"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">2</span>]]</span>
 <span id="cb21-6"><a href="#cb21-6"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">"032"</span>  <span class="st">"2832"</span></span></code></pre></div>
 </div>
+<div id="collapse-elements-of-a-vector-and-add-element-separators" class="section level2">
+<h2 class="hasAnchor">
+<a href="#collapse-elements-of-a-vector-and-add-element-separators" class="anchor"></a>Collapse elements of a vector and add element separators</h2>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">commaAnd</span>(<span class="kw">c</span>(<span class="st">"Judith"</span>, <span class="st">"Peter"</span>, <span class="st">"Rebecca"</span>, <span class="st">"Eric"</span>))</span>
+<span id="cb22-2"><a href="#cb22-2"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">"Judith, Peter, Rebecca and Eric"</span></span></code></pre></div>
+</div>
 </div>
 <div id="vectors-manipulations" class="section level1">
 <h1 class="hasAnchor">
@@ -270,43 +275,43 @@
 <div id="whichis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#whichis" class="anchor"></a>whichIs</h2>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>vec &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>]</span>
-<span id="cb22-2"><a href="#cb22-2"></a>spl &lt;-<span class="st"> </span><span class="kw">sample</span>(vec)</span>
-<span id="cb22-3"><a href="#cb22-3"></a><span class="kw">whichIs</span>(vec, spl)</span>
-<span id="cb22-4"><a href="#cb22-4"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">1</span>]]</span>
-<span id="cb22-5"><a href="#cb22-5"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">3</span></span>
-<span id="cb22-6"><a href="#cb22-6"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-7"><a href="#cb22-7"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">2</span>]]</span>
-<span id="cb22-8"><a href="#cb22-8"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">2</span></span>
-<span id="cb22-9"><a href="#cb22-9"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-10"><a href="#cb22-10"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">3</span>]]</span>
-<span id="cb22-11"><a href="#cb22-11"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">1</span></span>
-<span id="cb22-12"><a href="#cb22-12"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-13"><a href="#cb22-13"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">4</span>]]</span>
-<span id="cb22-14"><a href="#cb22-14"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">4</span></span>
-<span id="cb22-15"><a href="#cb22-15"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-16"><a href="#cb22-16"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">5</span>]]</span>
-<span id="cb22-17"><a href="#cb22-17"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">5</span></span>
-<span id="cb22-18"><a href="#cb22-18"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-19"><a href="#cb22-19"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">6</span>]]</span>
-<span id="cb22-20"><a href="#cb22-20"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">7</span></span>
-<span id="cb22-21"><a href="#cb22-21"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
-<span id="cb22-22"><a href="#cb22-22"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">7</span>]]</span>
-<span id="cb22-23"><a href="#cb22-23"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">6</span></span>
-<span id="cb22-24"><a href="#cb22-24"></a>id &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">whichIs</span>(vec, spl))</span>
-<span id="cb22-25"><a href="#cb22-25"></a>spl[id]</span>
-<span id="cb22-26"><a href="#cb22-26"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">"A"</span> <span class="st">"B"</span> <span class="st">"C"</span> <span class="st">"D"</span> <span class="st">"E"</span> <span class="st">"F"</span> <span class="st">"G"</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>vec &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>]</span>
+<span id="cb23-2"><a href="#cb23-2"></a>spl &lt;-<span class="st"> </span><span class="kw">sample</span>(vec)</span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="kw">whichIs</span>(vec, spl)</span>
+<span id="cb23-4"><a href="#cb23-4"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">1</span>]]</span>
+<span id="cb23-5"><a href="#cb23-5"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">5</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">2</span>]]</span>
+<span id="cb23-8"><a href="#cb23-8"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">4</span></span>
+<span id="cb23-9"><a href="#cb23-9"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-10"><a href="#cb23-10"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">3</span>]]</span>
+<span id="cb23-11"><a href="#cb23-11"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">2</span></span>
+<span id="cb23-12"><a href="#cb23-12"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-13"><a href="#cb23-13"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">4</span>]]</span>
+<span id="cb23-14"><a href="#cb23-14"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">6</span></span>
+<span id="cb23-15"><a href="#cb23-15"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-16"><a href="#cb23-16"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">5</span>]]</span>
+<span id="cb23-17"><a href="#cb23-17"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">3</span></span>
+<span id="cb23-18"><a href="#cb23-18"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-19"><a href="#cb23-19"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">6</span>]]</span>
+<span id="cb23-20"><a href="#cb23-20"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">7</span></span>
+<span id="cb23-21"><a href="#cb23-21"></a>R<span class="op">&gt;</span><span class="st">  </span></span>
+<span id="cb23-22"><a href="#cb23-22"></a>R<span class="op">&gt;</span><span class="st">  </span>[[<span class="dv">7</span>]]</span>
+<span id="cb23-23"><a href="#cb23-23"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="dv">1</span></span>
+<span id="cb23-24"><a href="#cb23-24"></a>id &lt;-<span class="st"> </span><span class="kw">unlist</span>(<span class="kw">whichIs</span>(vec, spl))</span>
+<span id="cb23-25"><a href="#cb23-25"></a>spl[id]</span>
+<span id="cb23-26"><a href="#cb23-26"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="st">"A"</span> <span class="st">"B"</span> <span class="st">"C"</span> <span class="st">"D"</span> <span class="st">"E"</span> <span class="st">"F"</span> <span class="st">"G"</span></span></code></pre></div>
 </div>
 <div id="meanalong" class="section level2">
 <h2 class="hasAnchor">
 <a href="#meanalong" class="anchor"></a>meanAlong</h2>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">meanAlong</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>)</span>
-<span id="cb23-2"><a href="#cb23-2"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">1.5</span> <span class="fl">2.5</span> <span class="fl">3.5</span> <span class="fl">4.5</span> <span class="fl">5.5</span> <span class="fl">6.5</span> <span class="fl">7.5</span> <span class="fl">8.5</span> <span class="fl">9.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">meanAlong</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">2</span>)</span>
+<span id="cb24-2"><a href="#cb24-2"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">1.5</span> <span class="fl">2.5</span> <span class="fl">3.5</span> <span class="fl">4.5</span> <span class="fl">5.5</span> <span class="fl">6.5</span> <span class="fl">7.5</span> <span class="fl">8.5</span> <span class="fl">9.5</span></span></code></pre></div>
 </div>
 <div id="scalewithin" class="section level2">
 <h2 class="hasAnchor">
 <a href="#scalewithin" class="anchor"></a>scaleWithin</h2>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">val</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">1000</span>, <span class="fl">0</span>, <span class="fl">100</span><span class="op">)</span>
 <span class="va">res1</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/scaleWithin.html">scaleWithin</a></span><span class="op">(</span><span class="va">val</span>, <span class="fl">20</span>, <span class="fl">40</span>, <span class="fl">60</span><span class="op">)</span></code></pre></div>
 </div>
@@ -317,96 +322,96 @@
 <div id="assign-a-category" class="section level2">
 <h2 class="hasAnchor">
 <a href="#assign-a-category" class="anchor"></a>Assign a category</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>(seqv &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw">runif</span>(<span class="dv">40</span>))</span>
-<span id="cb25-2"><a href="#cb25-2"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">1</span>] <span class="fl">0.551398160</span> <span class="fl">0.427992139</span> <span class="fl">0.426027018</span> <span class="fl">0.929930685</span> <span class="fl">0.204527057</span> <span class="fl">0.323334110</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">7</span>] <span class="fl">0.606864635</span> <span class="fl">0.861132969</span> <span class="fl">0.452190650</span> <span class="fl">0.408920678</span> <span class="fl">0.021816608</span> <span class="fl">0.359344454</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">13</span>] <span class="fl">0.206219778</span> <span class="fl">0.737482951</span> <span class="fl">0.928924479</span> <span class="fl">0.621768837</span> <span class="fl">0.873684085</span> <span class="fl">0.250650671</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">19</span>] <span class="fl">0.516151104</span> <span class="fl">0.128136917</span> <span class="fl">0.598681902</span> <span class="fl">0.596114289</span> <span class="fl">0.904571149</span> <span class="fl">0.737910491</span></span>
-<span id="cb25-6"><a href="#cb25-6"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">25</span>] <span class="fl">0.013568773</span> <span class="fl">0.755560795</span> <span class="fl">0.502415674</span> <span class="fl">0.932817948</span> <span class="fl">0.508011014</span> <span class="fl">0.451623382</span></span>
-<span id="cb25-7"><a href="#cb25-7"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">31</span>] <span class="fl">0.263489194</span> <span class="fl">0.799927742</span> <span class="fl">0.196300054</span> <span class="fl">0.080385159</span> <span class="fl">0.737474270</span> <span class="fl">0.072178364</span></span>
-<span id="cb25-8"><a href="#cb25-8"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">37</span>] <span class="fl">0.880284427</span> <span class="fl">0.380528565</span> <span class="fl">0.002922281</span> <span class="fl">0.658134640</span></span>
-<span id="cb25-9"><a href="#cb25-9"></a><span class="kw">categorize</span>(seqv, <span class="dt">categ=</span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
-<span id="cb25-10"><a href="#cb25-10"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">1</span>]  <span class="dv">6</span>  <span class="dv">5</span>  <span class="dv">5</span> <span class="dv">10</span>  <span class="dv">3</span>  <span class="dv">4</span>  <span class="dv">7</span>  <span class="dv">9</span>  <span class="dv">5</span>  <span class="dv">5</span>  <span class="dv">1</span>  <span class="dv">4</span>  <span class="dv">3</span>  <span class="dv">8</span> <span class="dv">10</span>  <span class="dv">7</span>  <span class="dv">9</span>  <span class="dv">3</span>  <span class="dv">6</span>  <span class="dv">2</span>  <span class="dv">6</span>  <span class="dv">6</span> <span class="dv">10</span>  <span class="dv">8</span>  <span class="dv">1</span></span>
-<span id="cb25-11"><a href="#cb25-11"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">26</span>]  <span class="dv">8</span>  <span class="dv">6</span> <span class="dv">10</span>  <span class="dv">6</span>  <span class="dv">5</span>  <span class="dv">3</span>  <span class="dv">8</span>  <span class="dv">2</span>  <span class="dv">1</span>  <span class="dv">8</span>  <span class="dv">1</span>  <span class="dv">9</span>  <span class="dv">4</span>  <span class="dv">1</span>  <span class="dv">7</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>(seqv &lt;-<span class="st"> </span>stats<span class="op">::</span><span class="kw">runif</span>(<span class="dv">40</span>))</span>
+<span id="cb26-2"><a href="#cb26-2"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">1</span>] <span class="fl">0.63042815</span> <span class="fl">0.58693177</span> <span class="fl">0.97164879</span> <span class="fl">0.05721109</span> <span class="fl">0.76278066</span> <span class="fl">0.99091058</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">7</span>] <span class="fl">0.86432829</span> <span class="fl">0.40159905</span> <span class="fl">0.54257505</span> <span class="fl">0.12733074</span> <span class="fl">0.25211191</span> <span class="fl">0.40995843</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">13</span>] <span class="fl">0.35975758</span> <span class="fl">0.54819281</span> <span class="fl">0.49195079</span> <span class="fl">0.09516467</span> <span class="fl">0.91139601</span> <span class="fl">0.18027073</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">19</span>] <span class="fl">0.25665887</span> <span class="fl">0.18505672</span> <span class="fl">0.92010612</span> <span class="fl">0.67200910</span> <span class="fl">0.80446073</span> <span class="fl">0.37684180</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">25</span>] <span class="fl">0.04882883</span> <span class="fl">0.59666772</span> <span class="fl">0.47882137</span> <span class="fl">0.67185190</span> <span class="fl">0.33610476</span> <span class="fl">0.20732247</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">31</span>] <span class="fl">0.27076152</span> <span class="fl">0.09145961</span> <span class="fl">0.83766851</span> <span class="fl">0.03626630</span> <span class="fl">0.19154348</span> <span class="fl">0.36568206</span></span>
+<span id="cb26-8"><a href="#cb26-8"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">37</span>] <span class="fl">0.25928700</span> <span class="fl">0.81079768</span> <span class="fl">0.73103295</span> <span class="fl">0.31277435</span></span>
+<span id="cb26-9"><a href="#cb26-9"></a><span class="kw">categorize</span>(seqv, <span class="dt">categ=</span><span class="kw">seq</span>(<span class="fl">0.1</span>,<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
+<span id="cb26-10"><a href="#cb26-10"></a>R<span class="op">&gt;</span><span class="st">   </span>[<span class="dv">1</span>]  <span class="dv">7</span>  <span class="dv">6</span> <span class="dv">10</span>  <span class="dv">1</span>  <span class="dv">8</span> <span class="dv">10</span>  <span class="dv">9</span>  <span class="dv">5</span>  <span class="dv">6</span>  <span class="dv">2</span>  <span class="dv">3</span>  <span class="dv">5</span>  <span class="dv">4</span>  <span class="dv">6</span>  <span class="dv">5</span>  <span class="dv">1</span> <span class="dv">10</span>  <span class="dv">2</span>  <span class="dv">3</span>  <span class="dv">2</span> <span class="dv">10</span>  <span class="dv">7</span>  <span class="dv">9</span>  <span class="dv">4</span>  <span class="dv">1</span></span>
+<span id="cb26-11"><a href="#cb26-11"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">26</span>]  <span class="dv">6</span>  <span class="dv">5</span>  <span class="dv">7</span>  <span class="dv">4</span>  <span class="dv">3</span>  <span class="dv">3</span>  <span class="dv">1</span>  <span class="dv">9</span>  <span class="dv">1</span>  <span class="dv">2</span>  <span class="dv">4</span>  <span class="dv">3</span>  <span class="dv">9</span>  <span class="dv">8</span>  <span class="dv">4</span></span></code></pre></div>
 </div>
 <div id="turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="section level2">
 <h2 class="hasAnchor">
 <a href="#turn-a-matrix-or-a-data-frame-into-a-squared-matrix" class="anchor"></a>Turn a matrix or a data frame into a squared matrix</h2>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dt">dimnames =</span> <span class="kw">list</span>(LETTERS[<span class="dv">3</span><span class="op">:</span><span class="dv">1</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]))</span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="kw">print</span>(mat)</span>
-<span id="cb26-3"><a href="#cb26-3"></a>R<span class="op">&gt;</span><span class="st">    </span>A B C  D  E</span>
-<span id="cb26-4"><a href="#cb26-4"></a>R<span class="op">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></span>
-<span id="cb26-5"><a href="#cb26-5"></a>R<span class="op">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></span>
-<span id="cb26-6"><a href="#cb26-6"></a>R<span class="op">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></span>
-<span id="cb26-7"><a href="#cb26-7"></a><span class="kw">squaretize</span>(mat, <span class="dt">reorder =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb26-8"><a href="#cb26-8"></a>R<span class="op">&gt;</span><span class="st">    </span>A B C  D  E</span>
-<span id="cb26-9"><a href="#cb26-9"></a>R<span class="op">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></span>
-<span id="cb26-10"><a href="#cb26-10"></a>R<span class="op">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></span>
-<span id="cb26-11"><a href="#cb26-11"></a>R<span class="op">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></span>
-<span id="cb26-12"><a href="#cb26-12"></a>R<span class="op">&gt;</span><span class="st">  </span>D <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></span>
-<span id="cb26-13"><a href="#cb26-13"></a>R<span class="op">&gt;</span><span class="st">  </span>E <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>mat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">15</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dt">dimnames =</span> <span class="kw">list</span>(LETTERS[<span class="dv">3</span><span class="op">:</span><span class="dv">1</span>], LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]))</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="kw">print</span>(mat)</span>
+<span id="cb27-3"><a href="#cb27-3"></a>R<span class="op">&gt;</span><span class="st">    </span>A B C  D  E</span>
+<span id="cb27-4"><a href="#cb27-4"></a>R<span class="op">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></span>
+<span id="cb27-5"><a href="#cb27-5"></a>R<span class="op">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></span>
+<span id="cb27-6"><a href="#cb27-6"></a>R<span class="op">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></span>
+<span id="cb27-7"><a href="#cb27-7"></a><span class="kw">squaretize</span>(mat, <span class="dt">reorder =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb27-8"><a href="#cb27-8"></a>R<span class="op">&gt;</span><span class="st">    </span>A B C  D  E</span>
+<span id="cb27-9"><a href="#cb27-9"></a>R<span class="op">&gt;</span><span class="st">  </span>C <span class="dv">1</span> <span class="dv">4</span> <span class="dv">7</span> <span class="dv">10</span> <span class="dv">13</span></span>
+<span id="cb27-10"><a href="#cb27-10"></a>R<span class="op">&gt;</span><span class="st">  </span>B <span class="dv">2</span> <span class="dv">5</span> <span class="dv">8</span> <span class="dv">11</span> <span class="dv">14</span></span>
+<span id="cb27-11"><a href="#cb27-11"></a>R<span class="op">&gt;</span><span class="st">  </span>A <span class="dv">3</span> <span class="dv">6</span> <span class="dv">9</span> <span class="dv">12</span> <span class="dv">15</span></span>
+<span id="cb27-12"><a href="#cb27-12"></a>R<span class="op">&gt;</span><span class="st">  </span>D <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></span>
+<span id="cb27-13"><a href="#cb27-13"></a>R<span class="op">&gt;</span><span class="st">  </span>E <span class="dv">0</span> <span class="dv">0</span> <span class="dv">0</span>  <span class="dv">0</span>  <span class="dv">0</span></span></code></pre></div>
 </div>
 <div id="assign-classes-to-data-frames-columns" class="section level2">
 <h2 class="hasAnchor">
 <a href="#assign-classes-to-data-frames-columns" class="anchor"></a>Assign classes to data frames’ columns</h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">signif</span>(<span class="kw">runif</span>(<span class="dv">20</span>),<span class="dv">4</span>), <span class="dt">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb27-2"><a href="#cb27-2"></a>df2 &lt;-<span class="st"> </span><span class="kw">setColClass</span>(df1, <span class="dv">2</span>, <span class="st">'character'</span>)</span>
-<span id="cb27-3"><a href="#cb27-3"></a><span class="kw">str</span>(df1)</span>
-<span id="cb27-4"><a href="#cb27-4"></a>R<span class="op">&gt;</span><span class="st">   </span>num [<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>] <span class="fl">0.213</span> <span class="fl">0.122</span> <span class="fl">0.102</span> <span class="fl">0.411</span> <span class="fl">0.153</span> ...</span>
-<span id="cb27-5"><a href="#cb27-5"></a><span class="kw">str</span>(df2)</span>
-<span id="cb27-6"><a href="#cb27-6"></a>R<span class="op">&gt;</span><span class="st">  'data.frame'</span><span class="op">:</span><span class="st">   </span><span class="dv">10</span> obs. of  <span class="dv">2</span> variables<span class="op">:</span></span>
-<span id="cb27-7"><a href="#cb27-7"></a>R<span class="op">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V1<span class="op">:</span><span class="st"> </span>num  <span class="fl">0.213</span> <span class="fl">0.122</span> <span class="fl">0.102</span> <span class="fl">0.411</span> <span class="fl">0.153</span> ...</span>
-<span id="cb27-8"><a href="#cb27-8"></a>R<span class="op">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V2<span class="op">:</span><span class="st"> </span>chr  <span class="st">"0.05488"</span> <span class="st">"0.1825"</span> <span class="st">"0.6628"</span> <span class="st">"0.02641"</span> ...</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>df1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">signif</span>(<span class="kw">runif</span>(<span class="dv">20</span>),<span class="dv">4</span>), <span class="dt">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb28-2"><a href="#cb28-2"></a>df2 &lt;-<span class="st"> </span><span class="kw">setColClass</span>(df1, <span class="dv">2</span>, <span class="st">'character'</span>)</span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="kw">str</span>(df1)</span>
+<span id="cb28-4"><a href="#cb28-4"></a>R<span class="op">&gt;</span><span class="st">   </span>num [<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>] <span class="fl">0.674</span> <span class="fl">0.879</span> <span class="fl">0.888</span> <span class="fl">0.181</span> <span class="fl">0.793</span> ...</span>
+<span id="cb28-5"><a href="#cb28-5"></a><span class="kw">str</span>(df2)</span>
+<span id="cb28-6"><a href="#cb28-6"></a>R<span class="op">&gt;</span><span class="st">  'data.frame'</span><span class="op">:</span><span class="st">   </span><span class="dv">10</span> obs. of  <span class="dv">2</span> variables<span class="op">:</span></span>
+<span id="cb28-7"><a href="#cb28-7"></a>R<span class="op">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V1<span class="op">:</span><span class="st"> </span>num  <span class="fl">0.674</span> <span class="fl">0.879</span> <span class="fl">0.888</span> <span class="fl">0.181</span> <span class="fl">0.793</span> ...</span>
+<span id="cb28-8"><a href="#cb28-8"></a>R<span class="op">&gt;</span><span class="st">   </span><span class="er">$</span><span class="st"> </span>V2<span class="op">:</span><span class="st"> </span>chr  <span class="st">"0.9284"</span> <span class="st">"0.4397"</span> <span class="st">"0.7401"</span> <span class="st">"0.4072"</span> ...</span></code></pre></div>
 </div>
 <div id="create-data-frame-from-scratch-or-from-other-data-frame" class="section level2">
 <h2 class="hasAnchor">
 <a href="#create-data-frame-from-scratch-or-from-other-data-frame" class="anchor"></a>Create data frame from scratch or from other data frame</h2>
 <p>See also this <a href="https://insileco.github.io/2019/02/03/creating-empty-data-frames-with-dftemplate-and-dftemplatematch/">blog post on inSileco</a>.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>dfA &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="dt">col2 =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])</span>
-<span id="cb28-2"><a href="#cb28-2"></a>dfB &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1 =</span> <span class="dv">2</span>, <span class="dt">col4 =</span> <span class="st">"cool"</span>)</span>
-<span id="cb28-3"><a href="#cb28-3"></a></span>
-<span id="cb28-4"><a href="#cb28-4"></a><span class="kw">dfTemplate</span>(<span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb28-5"><a href="#cb28-5"></a>R<span class="op">&gt;</span><span class="st">    </span>Var1 Var2</span>
-<span id="cb28-6"><a href="#cb28-6"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>   <span class="ot">NA</span>   <span class="ot">NA</span></span>
-<span id="cb28-7"><a href="#cb28-7"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>   <span class="ot">NA</span>   <span class="ot">NA</span></span>
-<span id="cb28-8"><a href="#cb28-8"></a><span class="kw">dfTemplate</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">fill =</span> <span class="dv">0</span>)</span>
-<span id="cb28-9"><a href="#cb28-9"></a>R<span class="op">&gt;</span><span class="st">    </span>Var1 Var2</span>
-<span id="cb28-10"><a href="#cb28-10"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">0</span>    <span class="dv">0</span></span>
-<span id="cb28-11"><a href="#cb28-11"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">0</span>    <span class="dv">0</span></span>
-<span id="cb28-12"><a href="#cb28-12"></a><span class="kw">dfTemplate</span>(<span class="kw">c</span>(<span class="st">"value"</span>, <span class="st">"name"</span>), <span class="dv">2</span>, <span class="dt">col_classes =</span> <span class="kw">c</span>(<span class="st">"numeric"</span>, <span class="st">"character"</span>))</span>
-<span id="cb28-13"><a href="#cb28-13"></a>R<span class="op">&gt;</span><span class="st">    </span>value name</span>
-<span id="cb28-14"><a href="#cb28-14"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="ot">NA</span> <span class="op">&lt;</span><span class="ot">NA</span><span class="op">&gt;</span></span>
-<span id="cb28-15"><a href="#cb28-15"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="ot">NA</span> <span class="op">&lt;</span><span class="ot">NA</span><span class="op">&gt;</span></span>
-<span id="cb28-16"><a href="#cb28-16"></a></span>
-<span id="cb28-17"><a href="#cb28-17"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col4"</span>))</span>
-<span id="cb28-18"><a href="#cb28-18"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2 col4</span>
-<span id="cb28-19"><a href="#cb28-19"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A   <span class="ot">NA</span></span>
-<span id="cb28-20"><a href="#cb28-20"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B   <span class="ot">NA</span></span>
-<span id="cb28-21"><a href="#cb28-21"></a><span class="kw">dfTemplateMatch</span>(dfA, dfB)</span>
-<span id="cb28-22"><a href="#cb28-22"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2 col4</span>
-<span id="cb28-23"><a href="#cb28-23"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A   <span class="ot">NA</span></span>
-<span id="cb28-24"><a href="#cb28-24"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B   <span class="ot">NA</span></span>
-<span id="cb28-25"><a href="#cb28-25"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col1"</span>, <span class="st">"col4"</span>), <span class="dt">yonly =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb28-26"><a href="#cb28-26"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col4</span>
-<span id="cb28-27"><a href="#cb28-27"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>   <span class="ot">NA</span></span>
-<span id="cb28-28"><a href="#cb28-28"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>   <span class="ot">NA</span></span>
-<span id="cb28-29"><a href="#cb28-29"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col1"</span>, <span class="st">"col2"</span>), <span class="dt">yonly =</span> <span class="ot">TRUE</span>, <span class="dt">col_classes =</span> <span class="st">"numeric"</span>, <span class="dt">fill =</span> <span class="dv">0</span>)</span>
-<span id="cb28-30"><a href="#cb28-30"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2</span>
-<span id="cb28-31"><a href="#cb28-31"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A</span>
-<span id="cb28-32"><a href="#cb28-32"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>dfA &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1 =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="dt">col2 =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])</span>
+<span id="cb29-2"><a href="#cb29-2"></a>dfB &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1 =</span> <span class="dv">2</span>, <span class="dt">col4 =</span> <span class="st">"cool"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3"></a></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="kw">dfTemplate</span>(<span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb29-5"><a href="#cb29-5"></a>R<span class="op">&gt;</span><span class="st">    </span>Var1 Var2</span>
+<span id="cb29-6"><a href="#cb29-6"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>   <span class="ot">NA</span>   <span class="ot">NA</span></span>
+<span id="cb29-7"><a href="#cb29-7"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>   <span class="ot">NA</span>   <span class="ot">NA</span></span>
+<span id="cb29-8"><a href="#cb29-8"></a><span class="kw">dfTemplate</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">fill =</span> <span class="dv">0</span>)</span>
+<span id="cb29-9"><a href="#cb29-9"></a>R<span class="op">&gt;</span><span class="st">    </span>Var1 Var2</span>
+<span id="cb29-10"><a href="#cb29-10"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">0</span>    <span class="dv">0</span></span>
+<span id="cb29-11"><a href="#cb29-11"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">0</span>    <span class="dv">0</span></span>
+<span id="cb29-12"><a href="#cb29-12"></a><span class="kw">dfTemplate</span>(<span class="kw">c</span>(<span class="st">"value"</span>, <span class="st">"name"</span>), <span class="dv">2</span>, <span class="dt">col_classes =</span> <span class="kw">c</span>(<span class="st">"numeric"</span>, <span class="st">"character"</span>))</span>
+<span id="cb29-13"><a href="#cb29-13"></a>R<span class="op">&gt;</span><span class="st">    </span>value name</span>
+<span id="cb29-14"><a href="#cb29-14"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="ot">NA</span> <span class="op">&lt;</span><span class="ot">NA</span><span class="op">&gt;</span></span>
+<span id="cb29-15"><a href="#cb29-15"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="ot">NA</span> <span class="op">&lt;</span><span class="ot">NA</span><span class="op">&gt;</span></span>
+<span id="cb29-16"><a href="#cb29-16"></a></span>
+<span id="cb29-17"><a href="#cb29-17"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col4"</span>))</span>
+<span id="cb29-18"><a href="#cb29-18"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2 col4</span>
+<span id="cb29-19"><a href="#cb29-19"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A   <span class="ot">NA</span></span>
+<span id="cb29-20"><a href="#cb29-20"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B   <span class="ot">NA</span></span>
+<span id="cb29-21"><a href="#cb29-21"></a><span class="kw">dfTemplateMatch</span>(dfA, dfB)</span>
+<span id="cb29-22"><a href="#cb29-22"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2 col4</span>
+<span id="cb29-23"><a href="#cb29-23"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A   <span class="ot">NA</span></span>
+<span id="cb29-24"><a href="#cb29-24"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B   <span class="ot">NA</span></span>
+<span id="cb29-25"><a href="#cb29-25"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col1"</span>, <span class="st">"col4"</span>), <span class="dt">yonly =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb29-26"><a href="#cb29-26"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col4</span>
+<span id="cb29-27"><a href="#cb29-27"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>   <span class="ot">NA</span></span>
+<span id="cb29-28"><a href="#cb29-28"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>   <span class="ot">NA</span></span>
+<span id="cb29-29"><a href="#cb29-29"></a><span class="kw">dfTemplateMatch</span>(dfA, <span class="kw">c</span>(<span class="st">"col1"</span>, <span class="st">"col2"</span>), <span class="dt">yonly =</span> <span class="ot">TRUE</span>, <span class="dt">col_classes =</span> <span class="st">"numeric"</span>, <span class="dt">fill =</span> <span class="dv">0</span>)</span>
+<span id="cb29-30"><a href="#cb29-30"></a>R<span class="op">&gt;</span><span class="st">    </span>col1 col2</span>
+<span id="cb29-31"><a href="#cb29-31"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>    <span class="dv">1</span>    A</span>
+<span id="cb29-32"><a href="#cb29-32"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span>    <span class="dv">2</span>    B</span></code></pre></div>
 </div>
 <div id="packagesused" class="section level2">
 <h2 class="hasAnchor">
 <a href="#packagesused" class="anchor"></a>packagesUsed</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">packagesUsed</span>(<span class="kw">c</span>(<span class="st">'utils'</span>, <span class="st">'methods'</span>))</span>
-<span id="cb29-2"><a href="#cb29-2"></a>R<span class="op">&gt;</span><span class="st">       </span>name version</span>
-<span id="cb29-3"><a href="#cb29-3"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>   utils   <span class="dv">4</span>.<span class="fl">0.3</span></span>
-<span id="cb29-4"><a href="#cb29-4"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span> methods   <span class="dv">4</span>.<span class="fl">0.3</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">packagesUsed</span>(<span class="kw">c</span>(<span class="st">'utils'</span>, <span class="st">'methods'</span>))</span>
+<span id="cb30-2"><a href="#cb30-2"></a>R<span class="op">&gt;</span><span class="st">       </span>name version</span>
+<span id="cb30-3"><a href="#cb30-3"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">1</span>   utils   <span class="dv">4</span>.<span class="fl">1.0</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>R<span class="op">&gt;</span><span class="st">  </span><span class="dv">2</span> methods   <span class="dv">4</span>.<span class="fl">1.0</span></span></code></pre></div>
 </div>
 <div id="export-a-data-frame-or-a-list-of-data-frames" class="section level2">
 <h2 class="hasAnchor">
 <a href="#export-a-data-frame-or-a-list-of-data-frames" class="anchor"></a>Export a data frame or a list of data frames</h2>
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/tblDown.html">tblDown</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">CO2</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span>, <span class="op">]</span>, <span class="va">CO2</span><span class="op">[</span><span class="fl">3</span><span class="op">:</span><span class="fl">6</span>,<span class="op">]</span><span class="op">)</span>, <span class="st">"./tables.docx"</span>,
   section <span class="op">=</span> <span class="st">"section"</span>, caption <span class="op">=</span> <span class="st">"CO2"</span>, title <span class="op">=</span> <span class="st">"Tables"</span><span class="op">)</span></code></pre></div>
 </div>
@@ -415,47 +420,47 @@
 <h1 class="hasAnchor">
 <a href="#messages" class="anchor"></a>Messages</h1>
 <p><code>inSilecoMisc</code> includes four simple message functions to standardize messages in scripts:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># 1. msgInfo() indicates what the upcoming computation</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="kw">msgInfo</span>(<span class="st">"this is what's gonna happen next"</span>)</span>
-<span id="cb31-3"><a href="#cb31-3"></a>R<span class="op">&gt;</span><span class="st">  </span>ℹ this is what<span class="st">'s gonna happen next</span></span></code></pre></div>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co"># 2. msgWarning() reminds me something important that should not affect the run</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a><span class="kw">msgWarning</span>(<span class="st">"Got to be careful"</span>)</span>
-<span id="cb32-3"><a href="#cb32-3"></a>R<span class="op">&gt;</span><span class="st">  </span>⚠ Got to be careful</span></code></pre></div>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># 3. msgError() when something went wrong (and I anticipated that it could happen)</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="kw">msgError</span>(<span class="st">"Something wrong"</span>)</span>
-<span id="cb33-3"><a href="#cb33-3"></a>R<span class="op">&gt;</span><span class="st">  </span>✖ Something wrong</span></code></pre></div>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># 4. msgSuccess() when a step/ a computation has been successfully completed</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">msgSuccess</span>(<span class="st">"All good"</span>)</span>
-<span id="cb34-3"><a href="#cb34-3"></a>R<span class="op">&gt;</span><span class="st">  </span>✔ All good</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co"># 1. msgInfo() indicates what the upcoming computation</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a><span class="kw">msgInfo</span>(<span class="st">"this is what's gonna happen next"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3"></a>R<span class="op">&gt;</span><span class="st">  </span>ℹ this is what<span class="st">'s gonna happen next</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># 2. msgWarning() reminds me something important that should not affect the run</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a><span class="kw">msgWarning</span>(<span class="st">"Got to be careful"</span>)</span>
+<span id="cb33-3"><a href="#cb33-3"></a>R<span class="op">&gt;</span><span class="st">  </span>⚠ Got to be careful</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># 3. msgError() when something went wrong (and I anticipated that it could happen)</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">msgError</span>(<span class="st">"Something wrong"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3"></a>R<span class="op">&gt;</span><span class="st">  </span>✖ Something wrong</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># 4. msgSuccess() when a step/ a computation has been successfully completed</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="kw">msgSuccess</span>(<span class="st">"All good"</span>)</span>
+<span id="cb35-3"><a href="#cb35-3"></a>R<span class="op">&gt;</span><span class="st">  </span>✔ All good</span></code></pre></div>
 <p>They are meant to help structuring scripts, here is a somewhat contrived example:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>scr_min &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="co"># msgInfo() lets me know where I am in the script</span></span>
-<span id="cb35-3"><a href="#cb35-3"></a>  <span class="kw">msgInfo</span>(<span class="st">"Average random values"</span>)</span>
-<span id="cb35-4"><a href="#cb35-4"></a>  <span class="kw">set.seed</span>(<span class="dv">111</span>)</span>
-<span id="cb35-5"><a href="#cb35-5"></a>  out &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">runif</span>(<span class="dv">100</span>))</span>
-<span id="cb35-6"><a href="#cb35-6"></a>  <span class="kw">msgSuccess</span>(<span class="st">"Done!"</span>)</span>
-<span id="cb35-7"><a href="#cb35-7"></a>  <span class="co"># msgSuccess() indicates the successful completion of this part</span></span>
-<span id="cb35-8"><a href="#cb35-8"></a>  out</span>
-<span id="cb35-9"><a href="#cb35-9"></a>}</span>
-<span id="cb35-10"><a href="#cb35-10"></a><span class="kw">scr_min</span>()</span>
-<span id="cb35-11"><a href="#cb35-11"></a>R<span class="op">&gt;</span><span class="st">  </span>ℹ Average random values</span>
-<span id="cb35-12"><a href="#cb35-12"></a>R<span class="op">&gt;</span><span class="st">  </span>✔ Done<span class="op">!</span></span>
-<span id="cb35-13"><a href="#cb35-13"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">0.4895239</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>scr_min &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="co"># msgInfo() lets me know where I am in the script</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">msgInfo</span>(<span class="st">"Average random values"</span>)</span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="kw">set.seed</span>(<span class="dv">111</span>)</span>
+<span id="cb36-5"><a href="#cb36-5"></a>  out &lt;-<span class="st"> </span><span class="kw">mean</span>(<span class="kw">runif</span>(<span class="dv">100</span>))</span>
+<span id="cb36-6"><a href="#cb36-6"></a>  <span class="kw">msgSuccess</span>(<span class="st">"Done!"</span>)</span>
+<span id="cb36-7"><a href="#cb36-7"></a>  <span class="co"># msgSuccess() indicates the successful completion of this part</span></span>
+<span id="cb36-8"><a href="#cb36-8"></a>  out</span>
+<span id="cb36-9"><a href="#cb36-9"></a>}</span>
+<span id="cb36-10"><a href="#cb36-10"></a><span class="kw">scr_min</span>()</span>
+<span id="cb36-11"><a href="#cb36-11"></a>R<span class="op">&gt;</span><span class="st">  </span>ℹ Average random values</span>
+<span id="cb36-12"><a href="#cb36-12"></a>R<span class="op">&gt;</span><span class="st">  </span>✔ Done<span class="op">!</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">0.4895239</span></span></code></pre></div>
 <p>As these functions are based on <code><a href="https://rdrr.io/r/base/message.html">message()</a></code>, one can execute the script quietly by calling <code><a href="https://rdrr.io/r/base/message.html">suppressMessages()</a></code> beforehand:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># quiet run</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a><span class="kw">suppressMessages</span>(<span class="kw">scr_min</span>())</span>
-<span id="cb36-3"><a href="#cb36-3"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">0.4895239</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># quiet run</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="kw">suppressMessages</span>(<span class="kw">scr_min</span>())</span>
+<span id="cb37-3"><a href="#cb37-3"></a>R<span class="op">&gt;</span><span class="st">  </span>[<span class="dv">1</span>] <span class="fl">0.4895239</span></span></code></pre></div>
 </div>
 <div id="writing-tables-in-document" class="section level1">
 <h1 class="hasAnchor">
 <a href="#writing-tables-in-document" class="anchor"></a>Writing tables in document</h1>
 <p><code><a href="../reference/tblDown.html">tblDown()</a></code> writes a data frame (and list of data frame) in a document in various formats (<code>.docx</code> by default)</p>
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># NB tblDown(head(CO2)) creates table.docx by default</span>
 <span class="fu"><a href="../reference/tblDown.html">tblDown</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">CO2</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"table.odt"</span><span class="op">)</span></code></pre></div>
 <p><img src="table_odt.png"></p>
 <p><code><a href="../reference/tblDown.html">tblDown()</a></code> handles lists of data frames and the user can also pass a set of captions for every table and even separate them with section headers:</p>
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/tblDown.html">tblDown</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">CO2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span><span class="op">(</span><span class="va">CO2</span><span class="op">)</span><span class="op">)</span>, output_file <span class="op">=</span> <span class="st">"tables.pdf"</span>,
   caption <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"This is the head of CO2"</span>, <span class="st">"This is the tail of CO2"</span><span class="op">)</span>,
   section <span class="op">=</span> <span class="st">"Table"</span><span class="op">)</span></code></pre></div>
@@ -468,7 +473,7 @@
 <div id="logistic-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#logistic-functions" class="anchor"></a>Logistic functions</h2>
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">seqx</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">0.1</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">seqx</span>, <span class="fu"><a href="../reference/logistic.html">logistic</a></span><span class="op">(</span><span class="va">seqx</span><span class="op">)</span>, type <span class="op">=</span> <span class="st">"l"</span><span class="op">)</span>
@@ -480,7 +485,7 @@
 <div id="gaussian-shape" class="section level2">
 <h2 class="hasAnchor">
 <a href="#gaussian-shape" class="anchor"></a>Gaussian shape</h2>
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="../reference/gaussianShape.html">gaussianShape</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, pow<span class="op">=</span><span class="fl">5</span><span class="op">)</span>, type<span class="op">=</span><span class="st">'l'</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="fu"><a href="../reference/gaussianShape.html">gaussianShape</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, pow<span class="op">=</span><span class="fl">2</span><span class="op">)</span>, lty <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span><span class="fu"><a href="../reference/gaussianShape.html">gaussianShape</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>, <span class="fl">500</span>, <span class="fl">2</span>, <span class="fl">250</span>, pow<span class="op">=</span><span class="fl">1</span><span class="op">)</span>, lty <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
