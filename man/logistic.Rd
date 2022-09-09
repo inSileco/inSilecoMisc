@@ -44,6 +44,6 @@ A slightly different version is:
 }
 \section{Functions}{
 \itemize{
-\item \code{logistic2}: A slightly different logistic function.
-}}
+\item \code{logistic2()}: A slightly different logistic function.
 
+}}

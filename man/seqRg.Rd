@@ -19,7 +19,8 @@ seqRow(df)
 
 \item{offset}{extend or reduce the range .}
 
-\item{prop}{a logical. If \code{TRUE}, then \code{offset} is a proportion of the range, otherwise \code{offset} is used as is.}
+\item{prop}{a logical. If \code{TRUE}, then \code{offset} is a proportion of the
+range, otherwise \code{offset} is used as is.}
 
 \item{df}{a data frame or a matrix.}
 }
@@ -28,11 +29,11 @@ Generate a regular sequence based on the range of a vector
 }
 \section{Functions}{
 \itemize{
-\item \code{seqCol}: a regular sequence based on the number of columns in a data frame.
+\item \code{seqCol()}: a regular sequence based on the number of columns in a data frame.
 
-\item \code{seqRow}: a regular sequence based on the number of rows in a data frame.
+\item \code{seqRow()}: a regular sequence based on the number of rows in a data frame.
+
 }}
-
 \examples{
 seqRg(runif(10), 10)
 seqRg(1:10, 10, .5)

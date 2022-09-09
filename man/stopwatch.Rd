@@ -23,9 +23,9 @@ Timer and Stopwatch
 }
 \section{Functions}{
 \itemize{
-\item \code{timer}: Timer
-}}
+\item \code{timer()}: Timer
 
+}}
 \examples{
 \dontrun{
 stopwatch(10)

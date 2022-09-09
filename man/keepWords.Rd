@@ -53,14 +53,14 @@ Select words or letters based on their position in character strings.
 }
 \section{Functions}{
 \itemize{
-\item \code{keepLetters}: A vector (or a list) of the selected letters.
+\item \code{keepLetters()}: A vector (or a list) of the selected letters.
 
-\item \code{keepInitials}: A vector (or a list) of initials.
+\item \code{keepInitials()}: A vector (or a list) of initials.
 
-\item \code{wordCount}: A vector of the number of words for every character
+\item \code{wordCount()}: A vector of the number of words for every character
 strings passed as an input.
-}}
 
+}}
 \examples{
 keepWords(loremIpsum(), 1:3)
 keepWords(c(loremIpsum(),'Another character string!'), slc = c(1,4))

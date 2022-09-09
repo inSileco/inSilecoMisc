@@ -30,13 +30,13 @@ while a function/script is being executed.
 }
 \section{Functions}{
 \itemize{
-\item \code{msgError}: Reports an Error.
+\item \code{msgError()}: Reports an Error.
 
-\item \code{msgSuccess}: Reports a success.
+\item \code{msgSuccess()}: Reports a success.
 
-\item \code{msgWarning}: Reports a warning.
+\item \code{msgWarning()}: Reports a warning.
+
 }}
-
 \note{
 All of these functions call \code{\link[=message]{message()}}, so for any function \code{FUN()} using #' them, \code{suppressMessages(FUN())} is sufficient to mute all messages.
 }

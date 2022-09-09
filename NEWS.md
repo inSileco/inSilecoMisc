@@ -1,3 +1,7 @@
+# inSilecoMisc (devel)
+
+* Classes are now properly tested in `duplicateRow()`.
+
 # inSilecoMisc 0.7.0
 
 * New function `rename()` to rename data frames, list, etc.

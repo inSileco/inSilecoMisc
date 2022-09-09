@@ -4,7 +4,8 @@
 #' @param df a data frame or a matrix.
 #' @param n the number of values in the output sequence.
 #' @param offset extend or reduce the range .
-#' @param prop a logical. If `TRUE`, then `offset` is a proportion of the range, otherwise `offset` is used as is.
+#' @param prop a logical. If `TRUE`, then `offset` is a proportion of the 
+#' range, otherwise `offset` is used as is.
 #'
 #'
 #' @export

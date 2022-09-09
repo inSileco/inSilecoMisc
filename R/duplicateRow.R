@@ -10,17 +10,24 @@
 #'
 #' @export
 #' @examples
-#' data(iris, package='datasets')
-#' iris2 <- duplicateRow(iris, id.el=1:50, times=2)
-#' iris3 <- duplicateCol(iris, id.el=c('Petal.Length', 'Petal.Width'), times=c(1,2), append=TRUE)
-
+#' data(iris, package = "datasets")
+#' iris2 <- duplicateRow(iris, id.el = 1:50, times = 2)
+#' iris3 <- duplicateCol(
+#' iris,
+#' id.el = c("Petal.Length", "Petal.Width"),
+#' times = c(1, 2),
+#' append = TRUE)
+#'
 duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- sort(rep(id.el, times))
-    if (class(pos) == "character")
-        ord <- c(rownames(x), pos) else ord <- c(seq_len(nrow(x)), pos)
-    if (!append)
+    if (inherits(pos, "character")) {
+        ord <- c(rownames(x), pos)
+    } else {
+        ord <- c(seq_len(nrow(x)), pos)
+    }
+    if (!append) {
         ord <- sort(ord)
-
+    }
     x[ord, ]
 }
 
@@ -28,9 +35,13 @@ duplicateRow <- function(x, id.el = 1, times = 1, append = FALSE) {
 #' @export
 duplicateCol <- function(x, id.el = 1, times = 1, append = FALSE) {
     pos <- sort(rep(id.el, times))
-    if (class(pos) == "character")
-        ord <- c(colnames(x), pos) else ord <- c(seq_len(ncol(x)), pos)
-    if (!append)
+    if (inherits(pos, "character")) {
+        ord <- c(colnames(x), pos)
+    } else {
+        ord <- c(seq_len(ncol(x)), pos)
+    }
+    if (!append) {
         ord <- sort(ord)
+    }
     x[, ord]
 }

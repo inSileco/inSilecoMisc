@@ -16,7 +16,8 @@ whichIs(x, y, isPattern = FALSE, ...)
 \item{...}{further arguments to be passed to \code{\link[base:which]{base::which()}}.}
 }
 \value{
-A list of positions. Each element corresponds to the matches for a specific x value.
+A list of positions. Each element corresponds to the matches for a specific
+x value.
 }
 \description{
 Search values or patterns in a vector.

@@ -46,9 +46,9 @@ columns.
 }
 \section{Functions}{
 \itemize{
-\item \code{dfTemplateMatch}: Returns a data frame that includes all columns specifies in \code{y}.
-}}
+\item \code{dfTemplateMatch()}: Returns a data frame that includes all columns specifies in \code{y}.
 
+}}
 \examples{
 dfTemplate(5, 2)
 dfTemplate(5, 2, col_classes = "character")

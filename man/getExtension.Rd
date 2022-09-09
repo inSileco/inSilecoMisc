@@ -37,17 +37,17 @@ For more functionalities, have a look at package fs.
 }
 \section{Functions}{
 \itemize{
-\item \code{getFilename}: Extract the file name from a character string, that is the base name and the file extension
+\item \code{getFilename()}: Extract the file name from a character string, that is the base name and the file extension
 
-\item \code{getName}: Extract the name of a file or a directory from a character string.
+\item \code{getName()}: Extract the name of a file or a directory from a character string.
 
-\item \code{getBasename}: Extract the base name of a file from a character string.
+\item \code{getBasename()}: Extract the base name of a file from a character string.
 
-\item \code{getLocation}: Extract the location of the parent folfder from a character string.
+\item \code{getLocation()}: Extract the location of the parent folfder from a character string.
 
-\item \code{getDetails}: Return a data frame with basic information for all elements of a vector of paths.
+\item \code{getDetails()}: Return a data frame with basic information for all elements of a vector of paths.
+
 }}
-
 \examples{
 getExtension("path1/path2/foo.R")
 getFilename("path1/path2/foo.R")
